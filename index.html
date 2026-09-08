@@ -10,11 +10,12 @@
   <style>
     :root {
       --bg: #ffffff;
+      --card: #f3f2ef;
       --ink: #1c1712;
-      --muted: #6d6458;
-      --rule: #e8e6e1;
-      --needs: #9c2f1c;
-      --waiting: #8a5a12;
+      --muted: #5c554c;
+      --rule: #ddd9d1;
+      --blue: #1e3a5f;
+      --waiting: #c45e12;
       --noise: #3f5a45;
       --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
@@ -36,6 +37,7 @@
       text-transform: uppercase;
       color: var(--muted);
       border: 1px solid var(--rule);
+      background: var(--card);
       padding: 3px 8px;
       border-radius: 6px;
       margin-bottom: 14px;
@@ -53,10 +55,11 @@
       font-weight: 600;
       letter-spacing: 0.01em;
       margin: 0 0 6px;
+      color: var(--blue);
     }
     .sub { color: var(--muted); margin: 0 0 24px; font-size: 14px; }
     .card {
-      background: var(--bg);
+      background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 14px;
       padding: 16px 18px 18px;
@@ -73,9 +76,9 @@
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid color-mix(in srgb, var(--waiting) 35%, white);
-      background: color-mix(in srgb, var(--waiting) 12%, white);
-      color: var(--waiting);
+      border: 1px solid color-mix(in srgb, var(--blue) 30%, white);
+      background: color-mix(in srgb, var(--blue) 10%, white);
+      color: var(--blue);
     }
     .meta { font-size: 13px; color: var(--muted); margin: 0; }
     h2 {
@@ -84,6 +87,7 @@
       font-weight: 600;
       margin: 22px 0 10px;
       letter-spacing: 0.01em;
+      color: var(--ink);
     }
     .ship-title {
       font-family: var(--font-display);
@@ -123,19 +127,20 @@
     }
     .waterfall li.done .dot {
       border-color: var(--noise);
-      background: color-mix(in srgb, var(--noise) 12%, white);
+      background: color-mix(in srgb, var(--noise) 14%, white);
       color: var(--noise);
     }
     .waterfall li.done:not(:last-child)::before {
-      background: color-mix(in srgb, var(--noise) 40%, var(--rule));
+      background: color-mix(in srgb, var(--noise) 45%, var(--rule));
     }
     .waterfall li.current .dot {
-      border-color: var(--waiting);
-      background: var(--waiting);
+      border-color: var(--blue);
+      background: var(--blue);
       color: #fff;
     }
+    .waterfall li.current .stage-title { color: var(--blue); }
     .waterfall li.current:not(:last-child)::before {
-      background: color-mix(in srgb, var(--waiting) 35%, var(--rule));
+      background: color-mix(in srgb, var(--blue) 40%, var(--rule));
     }
     .stage-title {
       font-family: var(--font-display);
@@ -148,7 +153,7 @@
     .ask {
       border-left: 3px solid var(--waiting);
       padding: 10px 12px;
-      background: color-mix(in srgb, var(--waiting) 8%, white);
+      background: color-mix(in srgb, var(--waiting) 12%, white);
       border-radius: 0 10px 10px 0;
       margin: 12px 0 0;
     }
@@ -173,15 +178,18 @@
       width: 100%;
       min-height: 110px;
       resize: vertical;
-      border: 1px solid var(--rule);
+      border: 1px solid color-mix(in srgb, var(--ink) 22%, var(--rule));
       border-radius: 10px;
       padding: 12px 14px;
       font: inherit;
+      font-size: 16px;
+      line-height: 1.5;
       background: #fff;
       color: var(--ink);
     }
+    textarea::placeholder { color: #8a8378; opacity: 1; }
     textarea:focus {
-      outline: 2px solid color-mix(in srgb, var(--needs) 35%, white);
+      outline: 2px solid color-mix(in srgb, var(--blue) 40%, white);
       outline-offset: 1px;
     }
     .actions {
