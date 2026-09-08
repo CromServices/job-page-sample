@@ -6,15 +6,9 @@
   <title>Crom Services · sample job page</title>
   <style>
     :root {
-      --ink: #1c1916;
-      --muted: #6a6258;
       --paper: #efe8dc;
-      --card: #fffcf7;
-      --line: #ddd4c6;
-      --green: #2c6a4a;
-      --amber: #8a6a2a;
-      --done: #2c6a4a;
-      --todo: #a39a8c;
+      --ink: #1c1916;
+      --accent: #2c6a4a;
     }
     * { box-sizing: border-box; }
     body {
@@ -31,9 +25,10 @@
       font-size: 10px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      background: #f3eee4;
+      color: var(--ink);
+      opacity: 0.55;
+      border: 1px solid color-mix(in srgb, var(--ink) 22%, var(--paper));
+      background: color-mix(in srgb, var(--ink) 6%, var(--paper));
       padding: 3px 8px;
       border-radius: 6px;
       margin-bottom: 12px;
@@ -43,14 +38,15 @@
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--ink);
+      opacity: 0.55;
       margin-bottom: 8px;
     }
     h1 { font-size: 26px; margin: 0 0 4px; font-weight: 600; }
-    .sub { color: var(--muted); margin: 0 0 22px; font-size: 15px; }
+    .sub { opacity: 0.65; margin: 0 0 22px; font-size: 15px; }
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 35%, white);
+      border: 1px solid color-mix(in srgb, var(--ink) 18%, var(--paper));
       border-radius: 14px;
       padding: 16px 18px 18px;
       margin-bottom: 12px;
@@ -66,14 +62,14 @@
       text-transform: uppercase;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid #c5d9cc;
-      background: #e6f0ea;
-      color: var(--green);
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--paper));
+      background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+      color: var(--accent);
     }
     .meta {
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 13px;
-      color: var(--muted);
+      opacity: 0.65;
       margin: 0;
     }
     h2 {
@@ -81,10 +77,9 @@
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--muted);
+      opacity: 0.55;
       margin: 18px 0 8px;
     }
-    /* waterfall / milestones */
     .waterfall { list-style: none; padding: 0; margin: 0; }
     .waterfall li {
       display: grid;
@@ -101,64 +96,70 @@
       top: 22px;
       bottom: 0;
       width: 2px;
-      background: var(--line);
+      background: color-mix(in srgb, var(--ink) 18%, var(--paper));
     }
     .dot {
       width: 28px; height: 28px;
       border-radius: 50%;
-      border: 2px solid var(--line);
-      background: var(--card);
+      border: 2px solid color-mix(in srgb, var(--ink) 22%, var(--paper));
+      background: color-mix(in srgb, var(--paper) 35%, white);
       display: flex; align-items: center; justify-content: center;
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 11px;
-      color: var(--muted);
+      color: var(--ink);
+      opacity: 0.55;
       z-index: 1;
     }
     .waterfall li.done .dot {
-      border-color: var(--done);
-      background: #e6f0ea;
-      color: var(--done);
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+      color: var(--accent);
+      opacity: 1;
     }
     .waterfall li.current .dot {
-      border-color: var(--amber);
-      background: #faf6ec;
-      color: var(--amber);
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      opacity: 1;
       font-weight: 700;
     }
     .stage-title { font-size: 15px; margin: 2px 0 2px; }
-    .stage-note { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: var(--muted); margin: 0; }
+    .stage-note {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      opacity: 0.65;
+      margin: 0;
+    }
     .ask {
-      border-left: 3px solid var(--amber);
+      border-left: 3px solid var(--accent);
       padding: 10px 12px;
-      background: #faf6ec;
+      background: color-mix(in srgb, var(--accent) 8%, var(--paper));
       border-radius: 0 10px 10px 0;
       margin: 12px 0 0;
     }
     .ask strong { display: block; font-size: 14px; margin-bottom: 4px; }
-
-    /* client reply */
     label {
       display: block;
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
+      opacity: 0.55;
       margin-bottom: 8px;
     }
     textarea {
       width: 100%;
       min-height: 110px;
       resize: vertical;
-      border: 1px solid var(--line);
+      border: 1px solid color-mix(in srgb, var(--ink) 18%, var(--paper));
       border-radius: 10px;
       padding: 12px 14px;
       font: inherit;
-      background: #fff;
+      background: white;
       color: var(--ink);
     }
     textarea:focus {
-      outline: 2px solid #c5d9cc;
+      outline: 2px solid color-mix(in srgb, var(--accent) 45%, var(--paper));
       outline-offset: 1px;
     }
     .actions {
@@ -172,32 +173,32 @@
       border-radius: 10px;
       border: 1px solid var(--ink);
       background: var(--ink);
-      color: var(--card);
+      color: var(--paper);
       cursor: pointer;
     }
     button.ghost {
-      background: var(--card);
+      background: transparent;
       color: var(--ink);
-      border-color: var(--line);
+      border-color: color-mix(in srgb, var(--ink) 22%, var(--paper));
     }
     .hint {
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
-      color: var(--muted);
+      opacity: 0.55;
     }
     .toast {
       display: none;
       margin-top: 10px;
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 13px;
-      color: var(--green);
+      color: var(--accent);
     }
     .toast.show { display: block; }
     footer {
       margin-top: 22px;
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
-      color: var(--muted);
+      opacity: 0.55;
     }
   </style>
 </head>
@@ -213,7 +214,7 @@
         <span class="pill">In progress</span>
         <p class="meta">Target · a few days after kickoff</p>
       </div>
-      <p style="margin:0 0 6px"><b>What we’re shipping</b></p>
+      <p style="margin:0 0 6px"><b>What we&rsquo;re shipping</b></p>
       <p class="meta" style="margin:0">Scoped delivery for this job · clear handoff when ready</p>
       <div class="ask">
         <strong>Waiting on you</strong>
