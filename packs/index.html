@@ -89,18 +89,24 @@
       background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 14px;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       min-height: 100%;
+      /* no overflow:hidden — never crop thumbs */
     }
-    .pack img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
+    .pack-media {
       background: #fff;
       border-bottom: 1px solid var(--rule);
+      border-radius: 14px 14px 0 0;
+      line-height: 0;
+    }
+    .pack-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      background: #fff;
     }
     .pack-body {
       padding: 14px 16px 16px;
@@ -162,7 +168,9 @@
 
     <div class="grid">
       <article class="pack">
-        <img src="./crom-thumb-audit.png" width="1600" height="900" alt="Technical audit pack thumbnail" />
+        <div class="pack-media">
+          <img src="./crom-thumb-audit.png?v=2" width="1600" height="900" alt="Technical audit pack thumbnail" />
+        </div>
         <div class="pack-body">
           <h2>Independent technical audit</h2>
           <p>Structured review of code, prompts, or a PR: verdict, block / should / nit findings, hours band. Sample pack you can open now.</p>
@@ -171,7 +179,9 @@
       </article>
 
       <article class="pack">
-        <img src="./crom-thumb-status.png" width="1600" height="900" alt="Job status page pack thumbnail" />
+        <div class="pack-media">
+          <img src="./crom-thumb-status.png?v=2" width="1600" height="900" alt="Job status page pack thumbnail" />
+        </div>
         <div class="pack-body">
           <h2>Client job status page</h2>
           <p>A private status page for one job — stages, what’s shipping, what’s waiting on the client. Live sample below.</p>
@@ -180,7 +190,9 @@
       </article>
 
       <article class="pack">
-        <img src="./crom-thumb-api.png" width="1600" height="900" alt="API and webhooks pack thumbnail" />
+        <div class="pack-media">
+          <img src="./crom-thumb-api.png?v=2" width="1600" height="900" alt="API and webhooks pack thumbnail" />
+        </div>
         <div class="pack-body">
           <h2>API &amp; webhook integration</h2>
           <p>Small, scoped Express webhook with HMAC verification — a concrete sample of how we ship integration work.</p>
@@ -189,7 +201,9 @@
       </article>
 
       <article class="pack">
-        <img src="./crom-thumb-next-ui.png" width="1600" height="900" alt="Next UI pack thumbnail" />
+        <div class="pack-media">
+          <img src="./crom-thumb-next-ui.png?v=2" width="1600" height="900" alt="Next UI pack thumbnail" />
+        </div>
         <div class="pack-body">
           <h2>Next UI sample</h2>
           <p>Scoped React / Next UI work — a public sample of how we ship interface packs.</p>
@@ -198,7 +212,9 @@
       </article>
 
       <article class="pack">
-        <img src="./crom-thumb-rest.png" width="1600" height="900" alt="REST API pack thumbnail" />
+        <div class="pack-media">
+          <img src="./crom-thumb-rest.png?v=2" width="1600" height="900" alt="REST API pack thumbnail" />
+        </div>
         <div class="pack-body">
           <h2>REST API sample</h2>
           <p>A small TypeScript REST API sample for portfolio and proposal use.</p>
