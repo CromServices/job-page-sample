@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crom Services — fixed-scope packs</title>
+  <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #f3f2ef;
+      --ink: #1c1712;
+      --muted: #5c554c;
+      --rule: #ddd9d1;
+      --blue: #1e3a5f;
+      --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+      --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-ui);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    a { color: var(--blue); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px 64px; }
+    .sample {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--rule);
+      background: var(--card);
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+    .banner {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+      color: var(--blue);
+    }
+    .sub { color: var(--muted); margin: 0 0 10px; font-size: 15px; max-width: 42rem; }
+    .hero-bits {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin: 0 0 28px; padding: 0; list-style: none;
+    }
+    .hero-bits li {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--blue);
+      background: color-mix(in srgb, var(--blue) 8%, white);
+      border: 1px solid color-mix(in srgb, var(--blue) 22%, white);
+      border-radius: 999px;
+      padding: 5px 11px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    }
+    .pack {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .pack img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #fff;
+      border-bottom: 1px solid var(--rule);
+    }
+    .pack-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .pack h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+    }
+    .pack p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      flex: 1;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 6px;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      width: fit-content;
+    }
+    .cta:hover { opacity: 0.92; }
+    .cta.ghost {
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--rule);
+    }
+    .board {
+      margin-top: 28px;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    .board strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .board p { margin: 0; color: var(--muted); font-size: 14px; }
+    footer {
+      margin-top: 22px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer .more {
+      display: flex; flex-wrap: wrap; gap: 10px 14px;
+      margin: 0 0 10px; padding: 0; list-style: none;
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sample">Public demo · fixed-scope packs</div>
+    <div class="banner">Crom Services · Australia</div>
+    <h1>Crom Services — fixed-scope packs</h1>
+    <p class="sub">Remote delivery with a clear boundary. Pick a pack, open a live sample, then reply on the board where you found us.</p>
+    <ul class="hero-bits" aria-label="Highlights">
+      <li>Fixed price</li>
+      <li>Remote</li>
+      <li>AU</li>
+    </ul>
+
+    <div class="grid">
+      <article class="pack">
+        <img src="./crom-thumb-audit.png" width="640" height="360" alt="Technical audit pack thumbnail" />
+        <div class="pack-body">
+          <h2>Independent technical audit</h2>
+          <p>Structured review of code, prompts, or a PR: verdict, block / should / nit findings, hours band. Sample pack you can open now.</p>
+          <a class="cta" href="https://github.com/CromServices/review-pack-sample" rel="noopener noreferrer">Open review sample</a>
+        </div>
+      </article>
+
+      <article class="pack">
+        <img src="./crom-thumb-status.png" width="640" height="360" alt="Job status page pack thumbnail" />
+        <div class="pack-body">
+          <h2>Client job status page</h2>
+          <p>A private status page for one job — stages, what’s shipping, what’s waiting on the client. Live sample below.</p>
+          <a class="cta" href="https://cromservices.github.io/job-page-sample/" rel="noopener noreferrer">Open status sample</a>
+        </div>
+      </article>
+
+      <article class="pack">
+        <img src="./crom-thumb-api.png" width="640" height="360" alt="API and webhooks pack thumbnail" />
+        <div class="pack-body">
+          <h2>API &amp; webhook integration</h2>
+          <p>Small, scoped Express webhook with HMAC verification — a concrete sample of how we ship integration work.</p>
+          <a class="cta" href="https://github.com/CromServices/api-webhook-sample" rel="noopener noreferrer">Open API sample</a>
+        </div>
+      </article>
+    </div>
+
+    <section class="board" aria-label="How to reach us">
+      <strong>Reply on the board</strong>
+      <p>Message us on Malt / PeoplePerHour / Freelancer — or reply on the board where you found this link. No forms on this page.</p>
+    </section>
+
+    <footer>
+      <ul class="more">
+        <li><a href="https://github.com/CromServices/next-ui-sample" rel="noopener noreferrer">Next UI sample</a></li>
+        <li><a href="https://github.com/CromServices/rest-api-sample" rel="noopener noreferrer">REST API sample</a></li>
+        <li><a href="https://github.com/CromServices" rel="noopener noreferrer">CromServices on GitHub</a></li>
+      </ul>
+      <p>Crom Services · fixed-scope remote packs · sample only</p>
+    </footer>
+  </div>
+</body>
+</html>
