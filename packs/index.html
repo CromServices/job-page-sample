@@ -4,24 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services — fixed-scope packs</title>
-  <!-- cachebust:1789018952 -->
+  <!-- cachebust:1789019195 -->
   <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0a0a0a;
-      --card: #141414;
-      --ink: #f5f5f5;
-      --muted: #9a9a9a;
-      --rule: #2a2a2a;
+      --bg: #ffffff;
+      --card: #f3f2ef;
+      --ink: #1c1712;
+      --muted: #5c554c;
+      --rule: #ddd9d1;
+      --blue: #1e3a5f;
       --green: #2c6a4a;
-      --green-bright: #3d8f63;
-      --blue: #3d8f63;
-      --waiting: #d4893a;
-      --noise: #3d8f63;
-      --font-display: "Figtree", "Segoe UI", system-ui, sans-serif;
+      --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
@@ -33,7 +30,7 @@
       font-size: 16px;
       line-height: 1.45;
     }
-    a { color: var(--green-bright); }
+    a { color: var(--blue); }
     .wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px 64px; }
     .sample {
       display: inline-block;
@@ -47,43 +44,21 @@
       border-radius: 6px;
       margin-bottom: 14px;
     }
-    .brand-hero {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      margin: 0 0 22px;
-      border: 1px solid var(--rule);
-      min-height: 168px;
-      background: #000 center/cover no-repeat;
-      background-image: url("./crom-banner-medium.png?v=1789018952");
-      display: flex;
-      align-items: flex-end;
-    }
-    .brand-hero .scrim {
-      width: 100%;
-      padding: 22px 20px 18px;
-      background: linear-gradient(transparent, rgba(0,0,0,.75));
-    }
-    .brand-hero .wm {
-      margin: 0;
-      font-weight: 700;
-      font-size: clamp(22px, 4vw, 30px);
-      color: #fff;
-      letter-spacing: -0.02em;
-    }
-    .brand-hero .wm-sub {
-      margin: 4px 0 0;
-      font-size: 13px;
-      color: #c8c8c8;
+    .banner {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
     h1 {
-      font-family: var(--font-ui);
-      font-size: clamp(22px, 3.5vw, 28px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      text-transform: none;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
       margin: 0 0 8px;
-      color: var(--ink);
+      color: var(--blue);
     }
     .sub { color: var(--muted); margin: 0 0 10px; font-size: 15px; max-width: 42rem; }
     .hero-bits {
@@ -95,9 +70,9 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 600;
-      color: var(--green-bright);
-      background: color-mix(in srgb, var(--green) 22%, black);
-      border: 1px solid color-mix(in srgb, var(--green) 45%, black);
+      color: var(--blue);
+      background: color-mix(in srgb, var(--blue) 8%, white);
+      border: 1px solid color-mix(in srgb, var(--blue) 22%, white);
       border-radius: 999px;
       padding: 5px 11px;
     }
@@ -119,6 +94,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100%;
+      /* no overflow:hidden — never crop thumbs */
     }
     .pack-media {
       background: #fff;
@@ -142,11 +118,11 @@
       flex: 1;
     }
     .pack h2 {
-      font-family: var(--font-ui);
-      font-size: 17px;
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
       margin: 0;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
       color: var(--ink);
     }
     .pack p {
@@ -166,30 +142,56 @@
       text-decoration: none;
       padding: 9px 14px;
       border-radius: 10px;
-      border: 1px solid var(--green);
-      background: var(--green);
+      border: 1px solid var(--ink);
+      background: var(--ink);
       color: #fff;
       width: fit-content;
     }
-    .cta:hover { background: var(--green-bright); border-color: var(--green-bright); }
+    .cta:hover { opacity: 0.92; }
     footer {
       margin-top: 28px;
       font-size: 12px;
       color: var(--muted);
     }
     footer a { color: var(--muted); }
+
+    .brand-hero {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 0 0 22px;
+      border: 1px solid var(--rule);
+      min-height: 168px;
+      background: #f7f6f3 center/cover no-repeat;
+      background-image: url("./crom-banner-medium-invert.png?v=1789019195");
+      display: flex;
+      align-items: flex-end;
+    }
+    .brand-hero .scrim {
+      width: 100%;
+      padding: 18px 20px 16px;
+      background: linear-gradient(transparent, rgba(255,255,255,.55));
+    }
+    .brand-hero .wm {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: clamp(22px, 4vw, 30px);
+      color: #111;
+      letter-spacing: -0.02em;
+    }
+    .brand-hero .wm-sub {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="sample">Public demo · fixed-scope packs</div>
-    <div class="brand-hero" role="img" aria-label="Crom Services banner with green crow flock">
-      <div class="scrim">
-        <p class="wm">Crom Services</p>
-        <p class="wm-sub">Australia · fixed-scope remote packs</p>
-      </div>
-    </div>
-    <h1>Fixed-scope packs</h1>
+    <div class="banner">Crom Services · Australia</div>
+    <h1>Crom Services — fixed-scope packs</h1>
     <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
     <ul class="hero-bits" aria-label="Highlights">
       <li>Fixed price</li>
