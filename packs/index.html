@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services — fixed-scope packs</title>
-  <!-- cachebust:1789019284 -->
+  <!-- cachebust:1789019542 -->
   <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700" rel="stylesheet" />
   <style>
     :root {
       --bg: #ffffff;
@@ -17,7 +17,10 @@
       --muted: #5c554c;
       --rule: #ddd9d1;
       --blue: #1e3a5f;
-      --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+      --green: #2c6a4a;
+      --waiting: #c45e12;
+      --noise: #2c6a4a;
+      --font-display: "Figtree", "Segoe UI", system-ui, sans-serif;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
@@ -156,20 +159,24 @@
 
     .brand-logo {
       display: block;
-      width: 100%;
-      max-width: 960px;
+      width: min(340px, 72vw);
       height: auto;
-      border-radius: 14px;
-      border: 1px solid var(--rule);
-      margin: 0 0 22px;
-      background: #000;
+      margin: 0 0 20px;
+      border-radius: 10px;
+      background: #fff;
+    }
+    h1, h2, .ship-title, .stage-title, .ask strong, .pack h2 {
+      font-family: var(--font-ui) !important;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: none;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="sample">Public demo · fixed-scope packs</div>
-    <img class="brand-logo" src="./crom-banner-medium.png?v=1789019284" width="1600" height="900" alt="Crom Services" />
+    <img class="brand-logo" src="./crom-logo-white-sans.png?v=1789019542" width="680" height="380" alt="Crom Services" />
     <div class="banner">Australia · fixed-scope remote packs</div>
     <h1>Fixed-scope packs</h1>
     <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
