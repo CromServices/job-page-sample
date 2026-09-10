@@ -228,14 +228,35 @@
       color: var(--muted);
     }
 
+    .brand-header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.25rem 0 0.5rem;
+      margin: 0 0 8px;
+      overflow: hidden;
+      min-height: 200px;
+    }
+    .brand-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url(./packs/crom-banner-geometry.png?v=1789026792) center / cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
     .brand-logo {
+      position: relative;
+      z-index: 1;
       display: block;
       width: min(300px, 72vw);
       max-width: 100%;
       height: auto;
       margin: 0 auto 18px;
       padding: 0;
-      background: #fff;
+      background: transparent;
       object-fit: contain;
       object-position: center top;
     }
@@ -250,7 +271,7 @@
 <body>
   <div class="wrap">
     <div class="sample">Sample · example project</div>
-    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789025362" width="579" height="555" alt="Crom Services" />
+    <div class="brand-header"><img class="brand-logo" src="./packs/logo-C-light.png?v=1789026792" width="579" height="555" alt="Crom Services" /></div>
     <div class="banner">Crom Services · private job page</div>
     <h1>Sample project</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
