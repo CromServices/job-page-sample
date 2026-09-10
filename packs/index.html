@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services — fixed-scope packs</title>
-  <!-- cachebust:1789027761 -->
+  <!-- cachebust:1789028136 -->
   <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,14 +24,17 @@
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background: var(--bg);
+      background: #fff url(./crom-banner-plexus-b.png?v=1789028136) center top / 100% auto no-repeat;
+      background-color: #fff;
       color: var(--ink);
       font-family: var(--font-ui);
       font-size: 16px;
       line-height: 1.45;
     }
+
     a { color: var(--blue); }
     .wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px 64px; }
     .sample {
@@ -157,28 +160,8 @@
     }
     footer a { color: var(--muted); }
 
-    .brand-header {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.25rem 0 0.5rem;
-      margin: 0 0 8px;
-      overflow: hidden;
-      min-height: 200px;
-    }
-    .brand-header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url(./crom-banner-plexus-b.png?v=1789027761) center / cover no-repeat;
-      opacity: 0.55;
-      pointer-events: none;
-      z-index: 0;
-    }
+
     .brand-logo {
-      position: relative;
-      z-index: 1;
       display: block;
       width: min(300px, 72vw);
       max-width: 100%;
@@ -200,7 +183,7 @@
 <body>
   <div class="wrap">
     <div class="sample">Public demo · fixed-scope packs</div>
-    <div class="brand-header"><img class="brand-logo" src="./logo-C-light.png?v=1789027761" width="579" height="555" alt="Crom Services" /></div>
+    <img class="brand-logo" src="./logo-C-light.png?v=1789028136" width="579" height="555" alt="Crom Services" />
     <div class="banner">Australia · fixed-scope remote packs</div>
     <h1>Fixed-scope packs</h1>
     <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
