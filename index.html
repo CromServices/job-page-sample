@@ -35,7 +35,7 @@
       display: inline-block;
       font-size: 11px;
       letter-spacing: 0.1em;
-      text-transform: none;
+      text-transform: uppercase;
       color: var(--muted);
       border: 1px solid var(--rule);
       background: var(--card);
@@ -52,14 +52,14 @@
     }
     h1 {
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: clamp(24px, 4vw, 32px);
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      margin: 0 0 6px;
+      margin: 0 0 8px;
       color: var(--blue);
     }
-    .sub { color: var(--muted); margin: 0 0 24px; font-size: 14px; }
+    .sub { color: var(--muted); margin: 0 0 24px; font-size: 15px; max-width: 42rem; }
     .card {
       background: var(--card);
       border: 1px solid var(--rule);
@@ -250,9 +250,9 @@
 <body>
   <div class="wrap">
     <div class="sample">Sample · example project</div>
-    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789023852" width="579" height="555" alt="Crom Services" />
+    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789025362" width="579" height="555" alt="Crom Services" />
     <div class="banner">Crom Services · private job page</div>
-    <h1>SAMPLE PROJECT</h1>
+    <h1>Sample project</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
 
     <div class="card">
