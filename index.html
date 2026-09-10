@@ -6,18 +6,20 @@
   <title>Crom Services · sample job page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #ffffff;
-      --card: #f3f2ef;
-      --ink: #1c1712;
-      --muted: #5c554c;
-      --rule: #ddd9d1;
-      --blue: #1e3a5f;
-      --waiting: #c45e12;
-      --noise: #3f5a45;
-      --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+      --bg: #0a0a0a;
+      --card: #141414;
+      --ink: #f5f5f5;
+      --muted: #9a9a9a;
+      --rule: #2a2a2a;
+      --green: #2c6a4a;
+      --green-bright: #3d8f63;
+      --blue: #3d8f63;
+      --waiting: #d4893a;
+      --noise: #3d8f63;
+      --font-display: "Figtree", "Segoe UI", system-ui, sans-serif;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
@@ -119,7 +121,7 @@
       width: 28px; height: 28px;
       border-radius: 50%;
       border: 2px solid var(--rule);
-      background: #fff;
+      background: var(--card);
       display: flex; align-items: center; justify-content: center;
       font-size: 12px;
       font-weight: 600;
@@ -185,8 +187,9 @@
       font: inherit;
       font-size: 16px;
       line-height: 1.5;
-      background: #fff;
+      background: #1a1a1a;
       color: var(--ink);
+      border-color: var(--rule);
     }
     textarea::placeholder { color: #8a8378; opacity: 1; }
     textarea:focus {
@@ -209,7 +212,7 @@
       cursor: pointer;
     }
     button.ghost {
-      background: #fff;
+      background: var(--card);
       color: var(--ink);
       border-color: var(--rule);
     }
@@ -225,6 +228,37 @@
       margin-top: 22px;
       font-size: 12px;
       color: var(--muted);
+    }
+
+    .brand-hero {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 0 0 18px;
+      border: 1px solid var(--rule);
+      min-height: 140px;
+      background: #000 center/cover no-repeat;
+      background-image: url("./packs/crom-banner-medium.png?v=1789018952");
+      display: flex;
+      align-items: flex-end;
+    }
+    .brand-hero .scrim {
+      width: 100%;
+      padding: 18px 16px 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,.75));
+    }
+    .brand-hero .wm {
+      margin: 0;
+      font-weight: 700;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    h1 { text-transform: none; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); }
+    .pill {
+      border-color: color-mix(in srgb, var(--green) 40%, black);
+      background: color-mix(in srgb, var(--green) 18%, black);
+      color: var(--green-bright);
     }
   </style>
 </head>
