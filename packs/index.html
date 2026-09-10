@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services — fixed-scope packs</title>
-  <!-- cachebust:1789023852 -->
+  <!-- cachebust:1789026792 -->
   <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -157,14 +157,35 @@
     }
     footer a { color: var(--muted); }
 
+    .brand-header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.25rem 0 0.5rem;
+      margin: 0 0 8px;
+      overflow: hidden;
+      min-height: 200px;
+    }
+    .brand-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url(./crom-banner-geometry.png?v=1789026792) center / cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
     .brand-logo {
+      position: relative;
+      z-index: 1;
       display: block;
       width: min(300px, 72vw);
       max-width: 100%;
       height: auto;
       margin: 0 auto 18px;
       padding: 0;
-      background: #fff;
+      background: transparent;
       object-fit: contain;
       object-position: center top;
     }
@@ -179,7 +200,7 @@
 <body>
   <div class="wrap">
     <div class="sample">Public demo · fixed-scope packs</div>
-    <img class="brand-logo" src="./logo-C-light.png?v=1789023852" width="579" height="555" alt="Crom Services" />
+    <div class="brand-header"><img class="brand-logo" src="./logo-C-light.png?v=1789026792" width="579" height="555" alt="Crom Services" /></div>
     <div class="banner">Australia · fixed-scope remote packs</div>
     <h1>Fixed-scope packs</h1>
     <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
