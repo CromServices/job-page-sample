@@ -230,10 +230,14 @@
 
     .brand-logo {
       display: block;
-      width: min(520px, 92vw);
+      width: min(300px, 72vw);
+      max-width: 100%;
       height: auto;
-      margin: 0 0 22px;
+      margin: 0 0 18px 0;
+      padding: 0;
       background: #fff;
+      object-fit: contain;
+      object-position: left top;
     }
     h1, h2, .ship-title, .stage-title, .ask strong, .pack h2 {
       font-family: var(--font-ui) !important;
@@ -246,7 +250,7 @@
 <body>
   <div class="wrap">
     <div class="sample">Sample · example project</div>
-    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789023482" width="1280" height="720" alt="Crom Services" />
+    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789023739" width="579" height="555" alt="Crom Services" />
     <div class="banner">Crom Services · private job page</div>
     <h1>SAMPLE PROJECT</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
