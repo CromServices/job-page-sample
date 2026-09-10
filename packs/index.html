@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services — fixed-scope packs</title>
-  <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks." />
+  <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
@@ -79,8 +79,11 @@
       grid-template-columns: 1fr;
       gap: 14px;
     }
-    @media (min-width: 760px) {
-      .grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
     }
     .pack {
       background: var(--card);
@@ -137,34 +140,10 @@
       width: fit-content;
     }
     .cta:hover { opacity: 0.92; }
-    .cta.ghost {
-      background: #fff;
-      color: var(--ink);
-      border-color: var(--rule);
-    }
-    .board {
-      margin-top: 28px;
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 14px;
-      padding: 16px 18px;
-    }
-    .board strong {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .board p { margin: 0; color: var(--muted); font-size: 14px; }
     footer {
-      margin-top: 22px;
+      margin-top: 28px;
       font-size: 12px;
       color: var(--muted);
-    }
-    footer .more {
-      display: flex; flex-wrap: wrap; gap: 10px 14px;
-      margin: 0 0 10px; padding: 0; list-style: none;
     }
     footer a { color: var(--muted); }
   </style>
@@ -174,7 +153,7 @@
     <div class="sample">Public demo · fixed-scope packs</div>
     <div class="banner">Crom Services · Australia</div>
     <h1>Crom Services — fixed-scope packs</h1>
-    <p class="sub">Remote delivery with a clear boundary. Pick a pack, open a live sample, then reply on the board where you found us.</p>
+    <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
     <ul class="hero-bits" aria-label="Highlights">
       <li>Fixed price</li>
       <li>Remote</li>
@@ -208,20 +187,28 @@
           <a class="cta" href="https://github.com/CromServices/api-webhook-sample" rel="noopener noreferrer">Open API sample</a>
         </div>
       </article>
+
+      <article class="pack">
+        <img src="./crom-thumb-next-ui.png" width="640" height="360" alt="Next UI pack thumbnail" />
+        <div class="pack-body">
+          <h2>Next UI sample</h2>
+          <p>Scoped React / Next UI work — a public sample of how we ship interface packs.</p>
+          <a class="cta" href="https://github.com/CromServices/next-ui-sample" rel="noopener noreferrer">Open Next UI sample</a>
+        </div>
+      </article>
+
+      <article class="pack">
+        <img src="./crom-thumb-rest.png" width="640" height="360" alt="REST API pack thumbnail" />
+        <div class="pack-body">
+          <h2>REST API sample</h2>
+          <p>A small TypeScript REST API sample for portfolio and proposal use.</p>
+          <a class="cta" href="https://github.com/CromServices/rest-api-sample" rel="noopener noreferrer">Open REST sample</a>
+        </div>
+      </article>
     </div>
 
-    <section class="board" aria-label="How to reach us">
-      <strong>Reply on the board</strong>
-      <p>Message us on Malt / PeoplePerHour / Freelancer — or reply on the board where you found this link. No forms on this page.</p>
-    </section>
-
     <footer>
-      <ul class="more">
-        <li><a href="https://github.com/CromServices/next-ui-sample" rel="noopener noreferrer">Next UI sample</a></li>
-        <li><a href="https://github.com/CromServices/rest-api-sample" rel="noopener noreferrer">REST API sample</a></li>
-        <li><a href="https://github.com/CromServices" rel="noopener noreferrer">CromServices on GitHub</a></li>
-      </ul>
-      <p>Crom Services · fixed-scope remote packs · sample only</p>
+      <p><a href="https://github.com/CromServices" rel="noopener noreferrer">CromServices on GitHub</a> · fixed-scope remote packs · sample only</p>
     </footer>
   </div>
 </body>
