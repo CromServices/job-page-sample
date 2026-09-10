@@ -6,7 +6,7 @@
   <title>Crom Services · sample job page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700" rel="stylesheet" />
   <style>
     :root {
       --bg: #ffffff;
@@ -15,9 +15,10 @@
       --muted: #5c554c;
       --rule: #ddd9d1;
       --blue: #1e3a5f;
+      --green: #2c6a4a;
       --waiting: #c45e12;
-      --noise: #3f5a45;
-      --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+      --noise: #2c6a4a;
+      --font-display: "Figtree", "Segoe UI", system-ui, sans-serif;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
@@ -34,7 +35,7 @@
       display: inline-block;
       font-size: 11px;
       letter-spacing: 0.1em;
-      text-transform: uppercase;
+      text-transform: none;
       color: var(--muted);
       border: 1px solid var(--rule);
       background: var(--card);
@@ -229,19 +230,24 @@
 
     .brand-logo {
       display: block;
-      width: 100%;
+      width: min(340px, 72vw);
       height: auto;
-      border-radius: 14px;
-      border: 1px solid var(--rule);
-      margin: 0 0 18px;
-      background: #000;
+      margin: 0 0 20px;
+      border-radius: 10px;
+      background: #fff;
+    }
+    h1, h2, .ship-title, .stage-title, .ask strong, .pack h2 {
+      font-family: var(--font-ui) !important;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: none;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="sample">Sample · example project</div>
-    <img class="brand-logo" src="./packs/crom-banner-medium.png?v=1789019284" width="1600" height="900" alt="Crom Services" />
+    <img class="brand-logo" src="./packs/crom-logo-white-sans.png?v=1789019542" width="680" height="380" alt="Crom Services" />
     <div class="banner">Crom Services · private job page</div>
     <h1>SAMPLE PROJECT</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
