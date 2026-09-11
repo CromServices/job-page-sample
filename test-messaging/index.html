@@ -273,7 +273,7 @@
     <h1>TEST — Director ↔ Nathan messaging</h1>
     <p class="sub">Internal check · not a client job · job id <code>crom-test-msg-001</code></p>
 
-    <p class="test-banner">TEST page. Send saves to the thread on this device only (no auto email). To reach Crom, use <a href="mailto:cromservices@gmail.com?subject=%5Bjob-status-test%5D%20crom-test-msg-001" style="color:#9fd4c0">cromservices@gmail.com</a> — or wait until Director webhook is wired.</p>
+    <p class="test-banner">TEST page. Send keeps a local copy; Crom replies appear from the shared thread. To email Crom, use <a href="mailto:cromservices@gmail.com?subject=%5Bjob-status-test%5D%20crom-test-msg-001" style="color:#9fd4c0">cromservices@gmail.com</a> — or wait until Director webhook is wired.</p>
 
     <div class="card">
       <div class="row">
@@ -344,7 +344,7 @@
         <button type="button" class="ghost" id="clear">Clear</button>
         <span class="hint">Saves on this page only · email Crom via the link above if needed</span>
       </div>
-      <p class="toast" id="toast">Saved on this page. Email Crom via the Gmail link above if you want it in the firm inbox.</p>
+      <p class="toast" id="toast">Saved locally. Crom replies show here when Director posts them after Nathan approves.</p>
     </div>
 
     <h2>Delivery</h2>
@@ -357,17 +357,28 @@
   <script>
     const JOB = 'crom-test-msg-001';
     const KEY = 'crom-status-thread-' + JOB;
+    const SHARED_URL = './thread.json?v=' + Date.now();
     const reply = document.getElementById('reply');
     const toast = document.getElementById('toast');
     const thread = document.getElementById('thread');
     const empty = document.getElementById('empty-thread');
 
-    function load() {
+    function loadLocal() {
       try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; }
     }
-    function save(msgs) {
+    function saveLocal(msgs) {
       localStorage.setItem(KEY, JSON.stringify(msgs));
-      render(msgs);
+    }
+    function stamp() {
+      return new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }) + ' PT';
+    }
+    function merge(shared, local) {
+      const map = new Map();
+      for (const m of [...shared, ...local]) {
+        const k = (m.id || '') + '|' + m.role + '|' + m.text + '|' + m.at;
+        if (!map.has(k)) map.set(k, m);
+      }
+      return [...map.values()].sort((a, b) => String(a.at).localeCompare(String(b.at)));
     }
     function render(msgs) {
       thread.innerHTML = '';
@@ -375,32 +386,42 @@
       for (const m of msgs) {
         const el = document.createElement('div');
         el.className = 'bubble ' + (m.role === 'crom' ? 'crom' : 'client');
-        el.innerHTML = '<div class="who">' + (m.role === 'crom' ? 'Crom Services' : 'You') + '</div>' +
-          '<div></div><div class="when"></div>';
+        el.innerHTML = '<div class="who"></div><div></div><div class="when"></div>';
+        el.children[0].textContent = m.role === 'crom' ? 'Crom Services' : 'You';
         el.children[1].textContent = m.text;
-        el.children[2].textContent = m.at;
+        el.children[2].textContent = m.at || '';
         thread.appendChild(el);
       }
     }
-    function stamp() {
-      return new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }) + ' PT';
+    async function refresh() {
+      let shared = [];
+      try {
+        const res = await fetch('./thread.json', { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          shared = Array.isArray(data.messages) ? data.messages : [];
+        }
+      } catch (e) {}
+      render(merge(shared, loadLocal()));
     }
 
     document.getElementById('send').addEventListener('click', () => {
       const text = (reply.value || '').trim();
       if (!text) { reply.focus(); return; }
-      const msgs = load();
-      msgs.push({ role: 'client', text, at: stamp() });
-      save(msgs);
+      const msgs = loadLocal();
+      msgs.push({ id: 'local-' + Date.now(), role: 'client', text, at: stamp() });
+      saveLocal(msgs);
       toast.classList.add('show');
       reply.value = '';
+      refresh();
     });
     document.getElementById('clear').addEventListener('click', () => {
       reply.value = '';
       toast.classList.remove('show');
       reply.focus();
     });
-    render(load());
+    refresh();
+    setInterval(refresh, 8000);
   </script>
 </body>
 </html>
