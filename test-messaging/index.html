@@ -273,7 +273,7 @@
     <h1>TEST — Director ↔ Nathan messaging</h1>
     <p class="sub">Internal check · not a client job · job id <code>crom-test-msg-001</code></p>
 
-    <p class="test-banner">Send a reply below. It opens your mail client to <strong>cromservices@gmail.com</strong> with subject <code>[job-status-test] crom-test-msg-001</code>. Inbox files it; Director sees it. Thread below is local to this browser only.</p>
+    <p class="test-banner">TEST page. Send saves to the thread on this device only (no auto email). To reach Crom, use <a href="mailto:cromservices@gmail.com?subject=%5Bjob-status-test%5D%20crom-test-msg-001" style="color:#9fd4c0">cromservices@gmail.com</a> — or wait until Director webhook is wired.</p>
 
     <div class="card">
       <div class="row">
@@ -284,7 +284,7 @@
       <p class="meta" style="margin:0">Prove Reply → Send reaches Crom (Inbox → Director), then we mirror a Crom note back on this page.</p>
       <div class="ask">
         <strong>Waiting on you</strong>
-        Send one short test message (e.g. “ping from Nathan — messaging check”).
+        Type a test message and Send — it stays on this page. Use the Gmail link to reach Crom until webhook is live.
       </div>
     </div>
 
@@ -342,9 +342,9 @@
       <div class="actions">
         <button type="button" id="send">Send reply</button>
         <button type="button" class="ghost" id="clear">Clear</button>
-        <span class="hint">Opens mail to cromservices@gmail.com · also saves here locally</span>
+        <span class="hint">Saves on this page only · email Crom via the link above if needed</span>
       </div>
-      <p class="toast" id="toast">Mail draft opened — send it so Inbox can file the test.</p>
+      <p class="toast" id="toast">Saved on this page. Email Crom via the Gmail link above if you want it in the firm inbox.</p>
     </div>
 
     <h2>Delivery</h2>
@@ -392,11 +392,6 @@
       const msgs = load();
       msgs.push({ role: 'client', text, at: stamp() });
       save(msgs);
-      const subject = encodeURIComponent('[job-status-test] ' + JOB);
-      const body = encodeURIComponent(
-        'Job: ' + JOB + '\nFrom: client (Nathan test)\nPage: https://cromservices.github.io/job-page-sample/test-messaging/\n\n' + text
-      );
-      window.location.href = 'mailto:cromservices@gmail.com?subject=' + subject + '&body=' + body;
       toast.classList.add('show');
       reply.value = '';
     });
