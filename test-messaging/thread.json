@@ -1,0 +1,12 @@
+{
+  "jobId": "crom-test-msg-001",
+  "updatedAt": "2026-09-11T06:11:41.490276+00:00",
+  "messages": [
+    {
+      "id": "crom-seed-1",
+      "role": "crom",
+      "text": "Shared thread is live. I\u2019ll reply here after Nathan approves \u2014 never auto.",
+      "at": "11/09/2026, 2:11:41 PM PT"
+    }
+  ]
+}
