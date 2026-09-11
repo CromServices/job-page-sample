@@ -1,24 +1,27 @@
 {
   "jobId": "crom-test-msg-001",
-  "updatedAt": "2026-09-11T06:17:55.369752Z",
+  "updatedAt": "2026-09-11T06:20:13.881670Z",
   "messages": [
     {
       "id": "crom-seed-1",
       "role": "crom",
-      "text": "Shared thread is live. I\u2019ll reply here after Nathan approves \u2014 never auto.",
-      "at": "11/09/2026, 2:11:41 PM PT"
+      "text": "Shared thread is live. I'll reply here after Nathan approves \u2014 never auto.",
+      "at": "11/09/2026, 2:11:41 PM PT",
+      "ts": "2026-09-11T06:11:41+00:00"
     },
     {
-      "id": "client-1789107475",
+      "id": "client-working",
       "role": "client",
       "text": "working",
-      "at": "11/09/2026, 02:17:55 PM PT"
+      "at": "11/09/2026, 2:17:50 PM PT",
+      "ts": "2026-09-11T06:17:50+00:00"
     },
     {
-      "id": "crom-1789107475",
+      "id": "crom-reply-1",
       "role": "crom",
-      "text": "Thanks \u2014 shared thread check received. When this is a live job I\u2019ll collate anything you need, clear it with Nathan, then reply here as Crom.",
-      "at": "11/09/2026, 02:17:55 PM PT"
+      "text": "Thanks \u2014 shared thread check received. When this is a live job I'll collate anything you need, clear it with Nathan, then reply here as Crom.",
+      "at": "11/09/2026, 2:17:55 PM PT",
+      "ts": "2026-09-11T06:17:55+00:00"
     }
   ]
 }
