@@ -1,27 +1,5 @@
 {
-  "jobId": "crom-test-msg-001",
-  "updatedAt": "2026-09-11T06:27:45.410312Z",
-  "messages": [
-    {
-      "id": "crom-seed-1",
-      "role": "crom",
-      "text": "Hi \u2014 this private job page is ready. Send a message anytime and we\u2019ll reply here.",
-      "at": "11/09/2026, 2:11:41 PM PT",
-      "ts": "2026-09-11T06:11:41+00:00"
-    },
-    {
-      "id": "client-working",
-      "role": "client",
-      "text": "working",
-      "at": "11/09/2026, 2:17:50 PM PT",
-      "ts": "2026-09-11T06:17:50+00:00"
-    },
-    {
-      "id": "crom-reply-1",
-      "role": "crom",
-      "text": "Thanks \u2014 message received. We\u2019ll follow up here with anything you need.",
-      "at": "11/09/2026, 2:17:55 PM PT",
-      "ts": "2026-09-11T06:17:55+00:00"
-    }
-  ]
+  "jobId": "",
+  "messages": [],
+  "note": "retired-public"
 }
