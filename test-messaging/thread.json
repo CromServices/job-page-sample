@@ -1,11 +1,11 @@
 {
   "jobId": "crom-test-msg-001",
-  "updatedAt": "2026-09-11T06:20:13.881670Z",
+  "updatedAt": "2026-09-11T06:27:45.410312Z",
   "messages": [
     {
       "id": "crom-seed-1",
       "role": "crom",
-      "text": "Shared thread is live. I'll reply here after Nathan approves \u2014 never auto.",
+      "text": "Hi \u2014 this private job page is ready. Send a message anytime and we\u2019ll reply here.",
       "at": "11/09/2026, 2:11:41 PM PT",
       "ts": "2026-09-11T06:11:41+00:00"
     },
@@ -19,7 +19,7 @@
     {
       "id": "crom-reply-1",
       "role": "crom",
-      "text": "Thanks \u2014 shared thread check received. When this is a live job I'll collate anything you need, clear it with Nathan, then reply here as Crom.",
+      "text": "Thanks \u2014 message received. We\u2019ll follow up here with anything you need.",
       "at": "11/09/2026, 2:17:55 PM PT",
       "ts": "2026-09-11T06:17:55+00:00"
     }
