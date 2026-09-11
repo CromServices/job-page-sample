@@ -378,7 +378,11 @@
         const k = (m.id || '') + '|' + m.role + '|' + m.text + '|' + m.at;
         if (!map.has(k)) map.set(k, m);
       }
-      return [...map.values()].sort((a, b) => String(a.at).localeCompare(String(b.at)));
+      return [...map.values()].sort((a, b) => {
+          const ta = a.ts || a.at || '';
+          const tb = b.ts || b.at || '';
+          return String(ta).localeCompare(String(tb));
+        });
     }
     function render(msgs) {
       thread.innerHTML = '';
