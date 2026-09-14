@@ -4,40 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services · sample job page</title>
+  <!-- cachebust:1789368781 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #ffffff;
-      --card: #f3f2ef;
-      --ink: #1c1712;
-      --muted: #5c554c;
-      --rule: #ddd9d1;
-      --blue: #1e3a5f;
-      --green: #2c6a4a;
-      --waiting: #c45e12;
-      --noise: #2c6a4a;
-      --font-display: "Oswald", "Segoe UI", system-ui, sans-serif;
+      --bg: #050c07;
+      --fg: #edebe2;
+      --ink: #edebe2;
+      --card: #0c170f;
+      --primary: #4ca871;
+      --muted-bg: #18221b;
+      --muted: #9da89d;
+      --border: #27382c;
+      --rule: #27382c;
+      --waiting: #d08a45;
       --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
 
+    html { color-scheme: dark; }
 
     body {
       margin: 0;
-      background-color: #fff;
-      background-image: url(./packs/crom-banner-flock.png?v=1789028867);
-      background-position: center top;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: var(--ink);
+      min-height: 100vh;
+      color: var(--fg);
       font-family: var(--font-ui);
       font-size: 16px;
       line-height: 1.45;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 90% 55% at 50% -8%, rgba(76, 168, 113, 0.16), transparent 58%),
+        radial-gradient(circle at 1px 1px, rgba(237, 235, 226, 0.04) 1px, transparent 0);
+      background-size: auto, 22px 22px;
     }
-
 
     .wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 64px; }
     .sample {
@@ -46,11 +47,10 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
-      border: 1px solid var(--rule);
-      background: var(--card);
-      padding: 3px 8px;
-      border-radius: 6px;
-      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      background: var(--muted-bg);
+      padding: 4px 10px;
+      border-radius: 999px;
     }
     .banner {
       font-size: 12px;
@@ -60,18 +60,17 @@
       margin-bottom: 8px;
     }
     h1 {
-      font-family: var(--font-display);
+      font-family: var(--font-ui);
       font-size: clamp(24px, 4vw, 32px);
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       margin: 0 0 8px;
-      color: var(--blue);
+      color: var(--fg);
     }
     .sub { color: var(--muted); margin: 0 0 24px; font-size: 15px; max-width: 42rem; }
     .card {
       background: var(--card);
-      border: 1px solid var(--rule);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 16px 18px 18px;
       margin-bottom: 12px;
@@ -87,24 +86,26 @@
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid color-mix(in srgb, var(--blue) 30%, white);
-      background: color-mix(in srgb, var(--blue) 10%, white);
-      color: var(--blue);
+      border: 1px solid color-mix(in srgb, var(--primary) 45%, var(--border));
+      background: color-mix(in srgb, var(--primary) 16%, var(--muted-bg));
+      color: var(--primary);
     }
     .meta { font-size: 13px; color: var(--muted); margin: 0; }
     h2 {
-      font-family: var(--font-display);
+      font-family: var(--font-ui);
       font-size: 22px;
-      font-weight: 600;
+      font-weight: 700;
       margin: 22px 0 10px;
-      letter-spacing: 0.01em;
-      color: var(--ink);
+      letter-spacing: -0.02em;
+      color: var(--fg);
     }
     .ship-title {
-      font-family: var(--font-display);
+      font-family: var(--font-ui);
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       margin: 0 0 4px;
+      color: var(--fg);
     }
 
     .waterfall { list-style: none; padding: 0; margin: 0; }
@@ -123,13 +124,13 @@
       top: 24px;
       bottom: 0;
       width: 2px;
-      background: var(--rule);
+      background: var(--border);
     }
     .dot {
       width: 28px; height: 28px;
       border-radius: 50%;
-      border: 2px solid var(--rule);
-      background: #fff;
+      border: 2px solid var(--border);
+      background: var(--muted-bg);
       display: flex; align-items: center; justify-content: center;
       font-size: 12px;
       font-weight: 600;
@@ -137,42 +138,46 @@
       z-index: 1;
     }
     .waterfall li.done .dot {
-      border-color: var(--noise);
-      background: color-mix(in srgb, var(--noise) 14%, white);
-      color: var(--noise);
+      border-color: var(--primary);
+      background: color-mix(in srgb, var(--primary) 18%, var(--card));
+      color: var(--primary);
     }
+    .waterfall li.done .stage-title { color: var(--primary); }
     .waterfall li.done:not(:last-child)::before {
-      background: color-mix(in srgb, var(--noise) 45%, var(--rule));
+      background: color-mix(in srgb, var(--primary) 45%, var(--border));
     }
     .waterfall li.current .dot {
-      border-color: var(--blue);
-      background: var(--blue);
-      color: #fff;
+      border-color: var(--primary);
+      background: var(--primary);
+      color: var(--bg);
     }
-    .waterfall li.current .stage-title { color: var(--blue); }
+    .waterfall li.current .stage-title { color: var(--primary); }
     .waterfall li.current:not(:last-child)::before {
-      background: color-mix(in srgb, var(--blue) 40%, var(--rule));
+      background: color-mix(in srgb, var(--primary) 40%, var(--border));
     }
     .stage-title {
-      font-family: var(--font-display);
+      font-family: var(--font-ui);
       font-size: 17px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       margin: 2px 0 2px;
+      color: var(--fg);
     }
     .stage-note { font-size: 13px; color: var(--muted); margin: 0; }
 
     .ask {
       border-left: 3px solid var(--waiting);
       padding: 10px 12px;
-      background: color-mix(in srgb, var(--waiting) 12%, white);
+      background: color-mix(in srgb, var(--waiting) 14%, var(--card));
       border-radius: 0 10px 10px 0;
       margin: 12px 0 0;
     }
     .ask strong {
       display: block;
-      font-family: var(--font-display);
+      font-family: var(--font-ui);
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: var(--waiting);
       margin-bottom: 4px;
     }
@@ -189,18 +194,18 @@
       width: 100%;
       min-height: 110px;
       resize: vertical;
-      border: 1px solid color-mix(in srgb, var(--ink) 22%, var(--rule));
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 12px 14px;
       font: inherit;
       font-size: 16px;
       line-height: 1.5;
-      background: #fff;
-      color: var(--ink);
+      background: var(--muted-bg);
+      color: var(--fg);
     }
-    textarea::placeholder { color: #8a8378; opacity: 1; }
+    textarea::placeholder { color: color-mix(in srgb, var(--muted) 80%, var(--fg)); opacity: 1; }
     textarea:focus {
-      outline: 2px solid color-mix(in srgb, var(--blue) 40%, white);
+      outline: 2px solid color-mix(in srgb, var(--primary) 55%, var(--border));
       outline-offset: 1px;
     }
     .actions {
@@ -212,23 +217,24 @@
       font-size: 14px;
       font-weight: 600;
       padding: 9px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--ink);
-      background: var(--ink);
-      color: #fff;
+      border-radius: 999px;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: var(--bg);
       cursor: pointer;
     }
+    button:hover { opacity: 0.92; }
     button.ghost {
-      background: #fff;
-      color: var(--ink);
-      border-color: var(--rule);
+      background: var(--muted-bg);
+      color: var(--fg);
+      border-color: var(--border);
     }
     .hint { font-size: 12px; color: var(--muted); }
     .toast {
       display: none;
       margin-top: 10px;
       font-size: 13px;
-      color: var(--noise);
+      color: var(--primary);
     }
     .toast.show { display: block; }
     footer {
@@ -236,7 +242,6 @@
       font-size: 12px;
       color: var(--muted);
     }
-
 
     .topbar {
       display: flex;
@@ -259,19 +264,13 @@
       border-radius: 8px;
       flex: 0 0 auto;
     }
-    h1, h2, .ship-title, .stage-title, .ask strong, .pack h2 {
-      font-family: var(--font-ui) !important;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      text-transform: none;
-    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="topbar">
       <div class="brand">
-        <img class="brand-logo" src="./assets/logo-C-dark.png?v=1789358400" width="38" height="36" alt="Crom Services" />
+        <img class="brand-logo" src="./assets/logo-C-dark.png?v=1789368781" width="38" height="36" alt="Crom Services" />
       </div>
       <div class="sample">Sample · example project</div>
     </header>
