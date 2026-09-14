@@ -238,16 +238,26 @@
     }
 
 
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
     .brand-logo {
       display: block;
-      width: min(300px, 72vw);
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 18px;
-      padding: 0;
-      background: transparent;
-      object-fit: contain;
-      object-position: center top;
+      height: 36px;
+      width: auto;
+      border-radius: 8px;
+      flex: 0 0 auto;
     }
     h1, h2, .ship-title, .stage-title, .ask strong, .pack h2 {
       font-family: var(--font-ui) !important;
@@ -259,8 +269,12 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="sample">Sample · example project</div>
-    <img class="brand-logo" src="./packs/logo-C-light.png?v=1789028867" width="547" height="523" alt="Crom Services" />
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/logo-C-dark.png?v=1789358400" width="38" height="36" alt="Crom Services" />
+      </div>
+      <div class="sample">Sample · example project</div>
+    </header>
     <div class="banner">Crom Services · private job page</div>
     <h1>Sample project</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
