@@ -16,7 +16,7 @@ Two public React demos (static HTML + vendored React 18, no build step). After m
 
 Hub: https://cromservices.github.io/job-page-sample/demos/
 
-These are **Crom interaction samples**, not client sites. No invented clinic names, no HIPAA language, no clinical claims. The slider uses abstract placeholder frames, not patient photos.
+These are **Crom interaction samples**, not client sites. No invented clinic names, no HIPAA language, no clinical claims. Card labels (Whitening / Implants / Check-up) are marketing-only. The slider uses placeholder smiles, not patient photos.
 
 Palette: midnight navy (`#0a1628`) with brushed-gold accents.
 

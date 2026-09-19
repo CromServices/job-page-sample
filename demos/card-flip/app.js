@@ -4,27 +4,27 @@
 
   const CARDS = [
     {
-      id: "hygiene",
-      kicker: "Service card",
-      title: "Hygiene",
+      id: "whitening",
+      kicker: "Service",
+      title: "Whitening",
       front: "A sample services tile. Flip for the reverse-face layout.",
-      back: "Placeholder only — shows how a services grid can hold a short follow-up on the reverse. Not a clinic offering.",
+      back: "Marketing label only. This reverse face is UI filler so reviewers can judge the motion — not a treatment claim.",
       icon: "spark",
     },
     {
-      id: "restorative",
-      kicker: "Service card",
-      title: "Restorative",
+      id: "implants",
+      kicker: "Service",
+      title: "Implants",
       front: "Generic category label for the 3D flip pattern.",
-      back: "Crom interaction sample. The copy here is UI filler so reviewers can judge motion, not treatment claims.",
+      back: "Crom interaction sample. Short follow-up copy on the reverse. Not a clinic offering and not patient information.",
       icon: "arc",
     },
     {
-      id: "consult",
-      kicker: "Service card",
-      title: "Consult",
+      id: "checkup",
+      kicker: "Service",
+      title: "Check-up",
       front: "Tap, click, or use the keyboard to rotate this card.",
-      back: "Focus stays on the control. Enter or Space flips. This is not a patient record and not a live practice site.",
+      back: "Focus stays on the control. Enter or Space flips. Not a live practice site.",
       icon: "node",
     },
   ];
@@ -93,7 +93,7 @@
               "div",
               null,
               e("div", { className: "icon" }, e(Icon, { name: card.icon })),
-              e("p", { className: "kicker", style: { marginTop: 18 } }, card.kicker),
+              e("p", { className: "kicker", style: { marginTop: 22 } }, card.kicker),
               e("h2", null, card.title),
               e("p", null, card.front)
             ),
@@ -143,7 +143,7 @@
       e(
         "p",
         { className: "sub" },
-        "Midnight navy with brushed-gold accents. Three sample service cards — click, tap, or keyboard-activate to rotate. Crom portfolio unlocker, not a clinic website."
+        "Midnight navy and brushed gold. Three sample service cards — click, tap, or keyboard-activate to rotate. Crom portfolio unlocker, not a clinic website."
       ),
       e("hr", { className: "gold-rule" }),
       e(
@@ -156,7 +156,7 @@
       e(
         "p",
         { className: "help" },
-        "Each card is a button with visible focus. Enter or Space flips. No clinical claims, no patient data."
+        "Each card is a button with visible focus. Enter or Space flips. Labels are marketing-only. No clinical claims, no patient data."
       ),
       e(
         "footer",

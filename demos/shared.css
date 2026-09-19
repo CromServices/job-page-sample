@@ -1,14 +1,14 @@
 :root {
   --navy: #0a1628;
-  --navy-deep: #06101c;
+  --navy-deep: #070f1c;
   --navy-mid: #122033;
-  --navy-lift: #1a2d45;
+  --navy-lift: #18283d;
   --gold: #c9a46c;
   --gold-bright: #e8d19a;
   --gold-deep: #8a7040;
-  --ivory: #f3efe4;
-  --muted: #9aa6b8;
-  --line: rgba(201, 164, 108, 0.28);
+  --ivory: #f4f0e6;
+  --muted: #a7b1c2;
+  --line: rgba(201, 164, 108, 0.34);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-ui: "Outfit", "Segoe UI", system-ui, sans-serif;
 }
@@ -24,35 +24,33 @@ body {
   font-family: var(--font-ui);
   font-size: 16px;
   line-height: 1.5;
-  background-color: var(--navy);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 164, 108, 0.14), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(18, 45, 80, 0.55), transparent 50%),
-    linear-gradient(180deg, var(--navy-deep), var(--navy) 40%, #0c1a30);
+  background:
+    radial-gradient(ellipse 70% 42% at 50% -8%, rgba(201, 164, 108, 0.1), transparent 52%),
+    var(--navy);
 }
 
 a { color: var(--gold-bright); }
 a:hover { color: var(--ivory); }
 
 .wrap {
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 22px 18px 56px;
+  padding: 28px 22px 64px;
 }
 
 .topbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   text-decoration: none;
   color: inherit;
   min-width: 0;
@@ -60,43 +58,40 @@ a:hover { color: var(--ivory); }
 
 .brand-mark {
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
 .sample-banner {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  width: fit-content;
   font-size: 11px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   border: 1px solid var(--line);
-  background: rgba(18, 32, 51, 0.72);
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 999px;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 14px;
+  gap: 8px 16px;
   font-size: 13px;
+  font-weight: 500;
 }
 
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
   color: var(--gold-bright);
-  border-bottom-color: var(--gold);
 }
 
 .eyebrow {
@@ -104,34 +99,35 @@ a:hover { color: var(--ivory); }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 
 h1 {
   font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(34px, 5vw, 52px);
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 10px;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 12px;
 }
 
 .sub {
   color: var(--muted);
-  margin: 0 0 28px;
-  max-width: 40rem;
-  font-size: 15px;
+  margin: 0 0 36px;
+  max-width: 38rem;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .gold-rule {
   height: 1px;
   border: 0;
-  margin: 0 0 28px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 0 36px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright), transparent);
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 48px;
   font-size: 12px;
   color: var(--muted);
 }
