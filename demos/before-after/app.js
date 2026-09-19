@@ -27,78 +27,74 @@
 
   function SmileFrame({ variant }) {
     const after = variant === "after";
-    const tooth = after ? "#f6f1e6" : "#8d97a6";
-    const toothEdge = after ? "#d7c7a0" : "#6f7a8a";
-    const well = after ? "#1a1212" : "#151920";
-    const face = after ? "#2c4158" : "#2a3140";
-    const bg = after ? "#16324a" : "#1a2230";
-    const lip = after ? "#c9a46c" : "#6d7888";
+    const tooth = after ? "#f7f2e6" : "#9aa3b0";
+    const toothEdge = after ? "#d4c196" : "#7b8492";
+    const well = after ? "#140f10" : "#12161d";
+    const bg = after ? "#12283c" : "#151c28";
+    const lip = after ? "#c9a46c" : "#7d8794";
 
     return e(
       "svg",
-      {
-        viewBox: "0 0 960 600",
-        role: "img",
-        "aria-hidden": "true",
-        preserveAspectRatio: "xMidYMid slice",
-      },
-      e("rect", { width: 960, height: 600, fill: bg }),
-      after
-        ? e("ellipse", { cx: 480, cy: 300, rx: 320, ry: 210, fill: "#c9a46c", opacity: 0.14 })
-        : e("ellipse", { cx: 220, cy: 80, rx: 180, ry: 80, fill: "#2c3a4e", opacity: 0.5 }),
-      e("ellipse", { cx: 480, cy: 308, rx: 228, ry: 268, fill: face }),
-      e("ellipse", { cx: 400, cy: 250, rx: 18, ry: 10, fill: after ? "#3d536b" : "#3a4250" }),
-      e("ellipse", { cx: 560, cy: 250, rx: 18, ry: 10, fill: after ? "#3d536b" : "#3a4250" }),
-      e("ellipse", { cx: 480, cy: 368, rx: 168, ry: 78, fill: well }),
-      e(
-        "g",
-        { fill: tooth, stroke: toothEdge, strokeWidth: 1.5 },
-        UPPER.map(function (pt, i) {
-          return e("rect", {
-            key: "u" + i,
-            x: pt[0] - 14,
-            y: pt[1] - 22,
-            width: 28,
-            height: 42,
-            rx: 8,
-          });
-        }),
-        LOWER.map(function (pt, i) {
-          return e("rect", {
-            key: "l" + i,
-            x: pt[0] - 13,
-            y: pt[1] - 12,
-            width: 26,
-            height: 34,
-            rx: 8,
-          });
-        })
-      ),
-      e("path", {
-        d: "M318 348 C390 300 570 300 642 348",
-        fill: "none",
-        stroke: lip,
-        strokeWidth: after ? 10 : 8,
-        strokeLinecap: "round",
-      }),
-      e("path", {
-        d: "M330 400 C400 458 560 458 630 400",
-        fill: "none",
-        stroke: lip,
-        strokeWidth: after ? 9 : 7,
-        strokeLinecap: "round",
-      }),
-      e(
-        "text",
         {
-          x: 48,
-          y: 556,
-          fill: after ? "#e8d19a" : "#8b96a6",
-          fontFamily: "Georgia, serif",
-          fontSize: 22,
+          viewBox: "0 0 960 600",
+          role: "img",
+          "aria-hidden": "true",
+          preserveAspectRatio: "xMidYMid slice",
         },
-        after ? "Sample frame · warmer pass" : "Sample frame · cooler pass"
-      )
+        e("rect", { width: 960, height: 600, fill: bg }),
+        after
+          ? e("ellipse", { cx: 480, cy: 310, rx: 300, ry: 160, fill: "#c9a46c", opacity: 0.1 })
+          : null,
+        e("ellipse", { cx: 480, cy: 368, rx: 176, ry: 82, fill: well }),
+        e(
+          "g",
+          { fill: tooth, stroke: toothEdge, strokeWidth: 1.4 },
+          UPPER.map(function (pt, i) {
+            return e("rect", {
+              key: "u" + i,
+              x: pt[0] - 14,
+              y: pt[1] - 22,
+              width: 28,
+              height: 42,
+              rx: 8,
+            });
+          }),
+          LOWER.map(function (pt, i) {
+            return e("rect", {
+              key: "l" + i,
+              x: pt[0] - 13,
+              y: pt[1] - 12,
+              width: 26,
+              height: 34,
+              rx: 8,
+            });
+          })
+        ),
+        e("path", {
+          d: "M318 348 C390 300 570 300 642 348",
+          fill: "none",
+          stroke: lip,
+          strokeWidth: after ? 9 : 7,
+          strokeLinecap: "round",
+        }),
+        e("path", {
+          d: "M330 400 C400 458 560 458 630 400",
+          fill: "none",
+          stroke: lip,
+          strokeWidth: after ? 8 : 6,
+          strokeLinecap: "round",
+        }),
+        e(
+          "text",
+          {
+            x: 48,
+            y: 556,
+            fill: after ? "#e8d19a" : "#8b96a6",
+            fontFamily: "Georgia, serif",
+            fontSize: 20,
+          },
+          after ? "Sample frame · warmer pass" : "Sample frame · cooler pass"
+        )
     );
   }
 
