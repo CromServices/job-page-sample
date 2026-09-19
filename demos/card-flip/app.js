@@ -7,24 +7,24 @@
       id: "whitening",
       kicker: "Service",
       title: "Whitening",
-      front: "A sample services tile. Flip for the reverse-face layout.",
-      back: "Marketing label only. This reverse face is UI filler so reviewers can judge the motion — not a treatment claim.",
+      front: "Shade and finish — a sample tile for a services row.",
+      back: "Marketing label only. Reverse-face copy so reviewers can judge the motion, not a treatment offer.",
       icon: "spark",
     },
     {
       id: "implants",
       kicker: "Service",
       title: "Implants",
-      front: "Generic category label for the 3D flip pattern.",
-      back: "Crom interaction sample. Short follow-up copy on the reverse. Not a clinic offering and not patient information.",
+      front: "A placeholder category in the same navy and gold grid.",
+      back: "Crom interaction sample. Short follow-up on the reverse. Not a clinic offering and not patient information.",
       icon: "arc",
     },
     {
       id: "checkup",
       kicker: "Service",
       title: "Check-up",
-      front: "Tap, click, or use the keyboard to rotate this card.",
-      back: "Focus stays on the control. Enter or Space flips. Not a live practice site.",
+      front: "A routine-visit tile. Tap, click, or keyboard-activate to flip.",
+      back: "Focus stays on the control. Enter or Space flips. Sample copy only — not a live practice site.",
       icon: "node",
     },
   ];
@@ -143,7 +143,7 @@
       e(
         "p",
         { className: "sub" },
-        "Midnight navy and brushed gold. Three sample service cards — click, tap, or keyboard-activate to rotate. Crom portfolio unlocker, not a clinic website."
+        "Midnight navy and brushed gold. Whitening, Implants, and Check-up — marketing labels on sample tiles. Click, tap, or keyboard-activate to rotate. Not a clinic website."
       ),
       e("hr", { className: "gold-rule" }),
       e(

@@ -2,99 +2,75 @@
   const e = React.createElement;
   const { useState, useRef, useCallback } = React;
 
-  const UPPER = [
-    [338, 332],
-    [372, 320],
-    [408, 312],
-    [444, 308],
-    [480, 306],
-    [516, 308],
-    [552, 312],
-    [588, 320],
-    [622, 332],
-  ];
-
-  const LOWER = [
-    [356, 392],
-    [390, 404],
-    [426, 410],
-    [462, 414],
-    [498, 414],
-    [534, 410],
-    [570, 404],
-    [604, 392],
+  const TEETH = [
+    { x: 292, y: 318, w: 28, h: 40 },
+    { x: 324, y: 300, w: 32, h: 50 },
+    { x: 360, y: 286, w: 34, h: 58 },
+    { x: 398, y: 276, w: 38, h: 66 },
+    { x: 440, y: 270, w: 40, h: 70 },
+    { x: 484, y: 270, w: 40, h: 70 },
+    { x: 528, y: 276, w: 38, h: 66 },
+    { x: 570, y: 286, w: 34, h: 58 },
+    { x: 608, y: 300, w: 32, h: 50 },
+    { x: 644, y: 318, w: 28, h: 40 },
   ];
 
   function SmileFrame({ variant }) {
     const after = variant === "after";
-    const tooth = after ? "#f7f2e6" : "#9aa3b0";
-    const toothEdge = after ? "#d4c196" : "#7b8492";
-    const well = after ? "#140f10" : "#12161d";
-    const bg = after ? "#12283c" : "#151c28";
-    const lip = after ? "#c9a46c" : "#7d8794";
+    const tooth = after ? "#f6f1e4" : "#8e97a4";
+    const toothEdge = after ? "#d2c094" : "#6f7886";
+    const bg = after ? "#122033" : "#101826";
+    const lip = after ? "#c9a46c" : "#7a8492";
 
     return e(
       "svg",
+      {
+        viewBox: "0 0 960 600",
+        role: "img",
+        "aria-hidden": "true",
+        preserveAspectRatio: "xMidYMid slice",
+      },
+      e("rect", { width: 960, height: 600, fill: bg }),
+      e("path", {
+        d: "M270 356 C360 428 600 428 690 356",
+        fill: "none",
+        stroke: lip,
+        strokeWidth: after ? 11 : 8,
+        strokeLinecap: "round",
+      }),
+      e(
+        "g",
+        { fill: tooth, stroke: toothEdge, strokeWidth: 1.2 },
+        TEETH.map(function (t, i) {
+          return e("rect", {
+            key: "t" + i,
+            x: t.x,
+            y: t.y,
+            width: t.w,
+            height: t.h,
+            rx: 9,
+          });
+        })
+      ),
+      e("path", {
+        d: "M278 348 C370 292 590 292 682 348",
+        fill: "none",
+        stroke: lip,
+        strokeWidth: after ? 4 : 3,
+        strokeLinecap: "round",
+        opacity: 0.85,
+      }),
+      e(
+        "text",
         {
-          viewBox: "0 0 960 600",
-          role: "img",
-          "aria-hidden": "true",
-          preserveAspectRatio: "xMidYMid slice",
+          x: 48,
+          y: 556,
+          fill: after ? "#e8d19a" : "#8b96a6",
+          fontFamily: "Georgia, serif",
+          fontSize: 20,
         },
-        e("rect", { width: 960, height: 600, fill: bg }),
-        after
-          ? e("ellipse", { cx: 480, cy: 310, rx: 300, ry: 160, fill: "#c9a46c", opacity: 0.1 })
-          : null,
-        e("ellipse", { cx: 480, cy: 368, rx: 176, ry: 82, fill: well }),
-        e(
-          "g",
-          { fill: tooth, stroke: toothEdge, strokeWidth: 1.4 },
-          UPPER.map(function (pt, i) {
-            return e("rect", {
-              key: "u" + i,
-              x: pt[0] - 14,
-              y: pt[1] - 22,
-              width: 28,
-              height: 42,
-              rx: 8,
-            });
-          }),
-          LOWER.map(function (pt, i) {
-            return e("rect", {
-              key: "l" + i,
-              x: pt[0] - 13,
-              y: pt[1] - 12,
-              width: 26,
-              height: 34,
-              rx: 8,
-            });
-          })
-        ),
-        e("path", {
-          d: "M318 348 C390 300 570 300 642 348",
-          fill: "none",
-          stroke: lip,
-          strokeWidth: after ? 9 : 7,
-          strokeLinecap: "round",
-        }),
-        e("path", {
-          d: "M330 400 C400 458 560 458 630 400",
-          fill: "none",
-          stroke: lip,
-          strokeWidth: after ? 8 : 6,
-          strokeLinecap: "round",
-        }),
-        e(
-          "text",
-          {
-            x: 48,
-            y: 556,
-            fill: after ? "#e8d19a" : "#8b96a6",
-            fontFamily: "Georgia, serif",
-            fontSize: 20,
-          },
-          after ? "Sample frame · warmer pass" : "Sample frame · cooler pass"
-        )
+        after ? "Sample frame · warmer pass" : "Sample frame · cooler pass"
+      )
     );
   }
 
@@ -226,7 +202,7 @@
       e(
         "p",
         { className: "sub" },
-        "A smile-style comparison slider in midnight navy and brushed gold. Drag the divider or use the keyboard-focusable range. Crom portfolio unlocker, not a clinic result."
+        "A smile-style comparison slider in midnight navy and brushed gold. Drag the divider or use the keyboard-focusable range. Placeholder frames only — not a clinic result."
       ),
       e("hr", { className: "gold-rule" }),
       e(BeforeAfter),
