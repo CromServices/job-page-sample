@@ -1,0 +1,146 @@
+:root {
+  --navy: #0a1628;
+  --navy-deep: #070f1c;
+  --navy-mid: #122033;
+  --navy-lift: #18283d;
+  --gold: #c9a46c;
+  --gold-bright: #e8d19a;
+  --gold-deep: #8a7040;
+  --ivory: #f4f0e6;
+  --muted: #a7b1c2;
+  --line: rgba(201, 164, 108, 0.34);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Outfit", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ivory);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  background:
+    radial-gradient(ellipse 70% 42% at 50% -8%, rgba(201, 164, 108, 0.1), transparent 52%),
+    var(--navy);
+}
+
+a { color: var(--gold-bright); }
+a:hover { color: var(--ivory); }
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 22px 64px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.brand-mark {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.sample-banner {
+  display: inline-flex;
+  width: fit-content;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--gold-bright);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 36px;
+  max-width: 38rem;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.gold-rule {
+  height: 1px;
+  border: 0;
+  margin: 0 0 36px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright), transparent);
+}
+
+footer {
+  margin-top: 48px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
