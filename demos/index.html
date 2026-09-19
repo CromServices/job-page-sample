@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crom Services · interaction samples</title>
+  <meta name="description" content="Public Crom Services interaction samples: 3D card flip and before/after slider. Not client sites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./shared.css" />
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 22px 20px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--navy-mid);
+      text-decoration: none;
+      color: inherit;
+      min-height: 220px;
+    }
+    .tile:hover { border-color: var(--gold); }
+    .tile h2 {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .tile p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+    .cta {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">Crom Services</span>
+        <span class="sample-banner">Interaction samples · not client sites</span>
+      </div>
+      <nav class="nav-links" aria-label="Site">
+        <a href="./" aria-current="page">All demos</a>
+        <a href="../packs/">Packs</a>
+        <a href="../">Job page sample</a>
+      </nav>
+    </header>
+    <p class="eyebrow">Public live demos</p>
+    <h1>Crom interaction samples</h1>
+    <p class="sub">Two small React demos on this GitHub Pages site — a 3D services card flip and a before/after slider. Portfolio unlockers, not clinic websites.</p>
+    <hr class="gold-rule" />
+    <div class="grid">
+      <a class="tile" href="./card-flip/">
+        <p class="eyebrow">React · 3D CSS</p>
+        <h2>Services card flip</h2>
+        <p>Three service cards rotate on click, tap, or keyboard. Midnight navy with brushed-gold accents.</p>
+        <span class="cta">Open live demo</span>
+      </a>
+      <a class="tile" href="./before-after/">
+        <p class="eyebrow">React · slider</p>
+        <h2>Before / after</h2>
+        <p>Drag or use a focusable range to compare two abstract sample frames. Not patient photos.</p>
+        <span class="cta">Open live demo</span>
+      </a>
+    </div>
+    <footer>Crom Services · sample only · React 18 on static GitHub Pages</footer>
+  </div>
+</body>
+</html>

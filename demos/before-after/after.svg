@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d">
+  <title id="t">Sample after frame</title>
+  <desc id="d">Abstract brighter dental-adjacent composition. Placeholder only.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2c44"/>
+      <stop offset="1" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a7040"/>
+      <stop offset="0.45" stop-color="#e8d19a"/>
+      <stop offset="1" stop-color="#c9a46c"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f2e6"/>
+      <stop offset="1" stop-color="#d8c9a4"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="760" cy="70" rx="180" ry="80" fill="#c9a46c" opacity="0.16"/>
+  <ellipse cx="480" cy="620" rx="340" ry="90" fill="#061018" opacity="0.5"/>
+  <path d="M180 340 C220 210 320 150 480 150 C640 150 740 210 780 340 C790 390 740 430 700 410 C640 380 560 360 480 360 C400 360 320 380 260 410 C220 430 170 390 180 340 Z" fill="#24344a"/>
+  <g fill="url(#ivory)" filter="url(#glow)">
+    <rect x="250" y="250" width="52" height="92" rx="18"/>
+    <rect x="314" y="236" width="52" height="108" rx="18"/>
+    <rect x="378" y="226" width="54" height="118" rx="18"/>
+    <rect x="444" y="220" width="56" height="124" rx="18"/>
+    <rect x="512" y="226" width="54" height="118" rx="18"/>
+    <rect x="578" y="236" width="52" height="108" rx="18"/>
+    <rect x="642" y="250" width="52" height="92" rx="18"/>
+  </g>
+  <path d="M250 250 C300 210 380 190 480 190 C580 190 660 210 710 250" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <rect x="72" y="64" width="120" height="3" fill="url(#gold)" rx="2"/>
+  <text x="48" y="552" fill="#e8d19a" font-family="Georgia, serif" font-size="22">Sample frame · warmer pass</text>
+</svg>
