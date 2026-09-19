@@ -1,0 +1,116 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+@media (min-width: 720px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.scene {
+  perspective: 1400px;
+}
+
+.flip-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 18px;
+}
+
+.card {
+  position: relative;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.front {
+  background:
+    linear-gradient(180deg, rgba(201, 164, 108, 0.08), transparent 42%),
+    var(--navy-mid);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background:
+    linear-gradient(160deg, rgba(201, 164, 108, 0.16), transparent 50%),
+    var(--navy-lift);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: rgba(10, 22, 40, 0.55);
+  color: var(--gold);
+}
+
+.icon svg { display: block; }
+
+.kicker {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.face h2 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.face p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hint {
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.help {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+}
