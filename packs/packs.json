@@ -1,0 +1,156 @@
+{
+  "_generated": "Generated from the Crom proof list by build_proof.py. Do not edit by hand; edit the proof list.",
+  "cards": [
+    {
+      "id": "audit",
+      "public": true,
+      "title": "Independent technical audit",
+      "body_html": "Structured review of code, prompts, or a PR: verdict, block / should / nit findings, hours band. Sample pack you can open now.",
+      "thumb": {
+        "png": "crom-thumb-audit.png",
+        "alt": "Technical audit pack thumbnail",
+        "v": "1789021212"
+      },
+      "ctas": [
+        {
+          "label": "Open review sample",
+          "href": "https://github.com/CromServices/review-pack-sample",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "public": true,
+      "title": "Client job status page",
+      "body_html": "A private status page for one job — stages, what’s shipping, what’s waiting on the client. Live sample below.",
+      "thumb": {
+        "png": "crom-thumb-status.png",
+        "alt": "Job status page pack thumbnail",
+        "v": "1789021212"
+      },
+      "ctas": [
+        {
+          "label": "Open status sample",
+          "href": "https://cromservices.github.io/job-page-sample/",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "public": true,
+      "title": "API & webhook integration",
+      "body_html": "Small, scoped Express webhook with HMAC verification — a concrete sample of how we ship integration work. Live demo for illustration; your integration runs on your own hosting.",
+      "thumb": {
+        "png": "crom-thumb-api.png",
+        "alt": "API and webhooks pack thumbnail",
+        "v": "1789021212"
+      },
+      "ctas": [
+        {
+          "label": "Open live health",
+          "href": "https://crom-api-webhook-demo.fly.dev/health",
+          "public": true
+        },
+        {
+          "label": "Open walkthrough",
+          "href": "https://cromservices.github.io/api-webhook-sample/",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "next-ui",
+      "public": true,
+      "title": "Next UI sample",
+      "body_html": "Scoped React / Next UI work — a public sample of how we ship interface packs.",
+      "thumb": {
+        "png": "crom-thumb-next-ui.png",
+        "alt": "Next UI pack thumbnail",
+        "v": "1789021212"
+      },
+      "ctas": [
+        {
+          "label": "Open live Next UI sample",
+          "href": "https://cromservices.github.io/next-ui-sample/",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "public": true,
+      "title": "REST API sample",
+      "body_html": "A small TypeScript REST API sample for portfolio and proposal use.",
+      "thumb": {
+        "png": "crom-thumb-rest.png",
+        "alt": "REST API pack thumbnail",
+        "v": "1789021212"
+      },
+      "ctas": [
+        {
+          "label": "Open REST sample",
+          "href": "https://github.com/CromServices/rest-api-sample",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "workflow",
+      "public": true,
+      "title": "Workflow Agent Pack",
+      "body_html": "Specialist agents for <strong>one</strong> workflow on your tools — rules, escalate map, test checklist, handoff. Openable sample: prompts, escalate map, test checklist, seating steps. You keep the runtime bill.",
+      "thumb": {
+        "png": "crom-thumb-ai-workflow.png",
+        "alt": "Workflow AI pack thumbnail",
+        "v": "1789087187"
+      },
+      "ctas": [
+        {
+          "label": "Open sample pack",
+          "href": "https://github.com/CromServices/workflow-ai-pack-sample",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "wix",
+      "public": true,
+      "title": "Wix site build or rebuild",
+      "body_html": "A clean Wix site built or rebuilt on your account: pages, forms, mobile checks, handover. First draft 2 business days after your content, live 2 business days after sign-off.",
+      "thumb": {
+        "png": "crom-thumb-wix.png",
+        "webp": "crom-thumb-wix.webp",
+        "alt": "Wix site build or rebuild pack thumbnail",
+        "v": "1790827399"
+      },
+      "ctas": [
+        {
+          "label": "Open live Wix rebuild",
+          "href": "https://www.generalpower.com.au",
+          "public": true
+        }
+      ]
+    },
+    {
+      "id": "lovable",
+      "public": true,
+      "title": "Lovable website",
+      "body_html": "A fast, modern website built on Lovable, with booking or enquiry flows where needed. First draft 2 business days after scope is agreed, live 2 business days after sign-off.",
+      "thumb": {
+        "png": "crom-thumb-lovable.png",
+        "webp": "crom-thumb-lovable.webp",
+        "alt": "Lovable website pack thumbnail",
+        "v": "1790827399"
+      },
+      "ctas": [
+        {
+          "label": "Open live Lovable sample",
+          "href": "https://little-chip-dental.lovable.app/",
+          "public": true
+        }
+      ]
+    }
+  ]
+}
