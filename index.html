@@ -5,274 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crom Services · sample job page</title>
   <!-- cachebust:1789908001 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cromservices.github.io/crom-shared/theme.css" />
+  <script src="https://cromservices.github.io/crom-shared/header.js" defer></script>
+  <script src="https://cromservices.github.io/crom-shared/footer.js" defer></script>
   <style>
-    :root {
-      --bg: #050c07;
-      --fg: #edebe2;
-      --ink: #edebe2;
-      --card: #0c170f;
-      --primary: #4ca871;
-      --muted-bg: #18221b;
-      --muted: #9da89d;
-      --border: #27382c;
-      --rule: #27382c;
-      --waiting: #d08a45;
-      --font-ui: "Figtree", "Segoe UI", system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-
-    html { color-scheme: dark; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--fg);
-      font-family: var(--font-ui);
-      font-size: 16px;
-      line-height: 1.45;
-      background-color: var(--bg);
-      background-image:
-        radial-gradient(ellipse 90% 55% at 50% -8%, rgba(76, 168, 113, 0.16), transparent 58%),
-        radial-gradient(circle at 1px 1px, rgba(237, 235, 226, 0.04) 1px, transparent 0);
-      background-size: auto, 22px 22px;
-    }
-
-    .wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 64px; }
-    .sample {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      background: var(--muted-bg);
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-    .banner {
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    h1 {
-      font-family: var(--font-ui);
-      font-size: clamp(24px, 4vw, 32px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 8px;
-      color: var(--fg);
-    }
-    .sub { color: var(--muted); margin: 0 0 24px; font-size: 15px; max-width: 42rem; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px 18px 18px;
-      margin-bottom: 12px;
-    }
-    .row {
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-      justify-content: space-between; margin-bottom: 10px;
-    }
-    .pill {
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid color-mix(in srgb, var(--primary) 45%, var(--border));
-      background: color-mix(in srgb, var(--primary) 16%, var(--muted-bg));
-      color: var(--primary);
-    }
-    .meta { font-size: 13px; color: var(--muted); margin: 0; }
-    h2 {
-      font-family: var(--font-ui);
-      font-size: 22px;
-      font-weight: 700;
-      margin: 22px 0 10px;
-      letter-spacing: -0.02em;
-      color: var(--fg);
-    }
-    .ship-title {
-      font-family: var(--font-ui);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 4px;
-      color: var(--fg);
-    }
-
+    /* Job page layout only. Colours, type, header and footer come from crom-shared theme.css (light + dark). */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px var(--gutter) 0; }
+    .banner { font-size: var(--fs-small); font-weight: 500; color: var(--muted); margin: 0 0 8px; }
+    h1 { font-size: var(--fs-h1); line-height: 1.18; font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 24px; font-size: var(--fs-note); max-width: 42rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--card-pad); margin-bottom: 12px; }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .pill { font-size: var(--fs-small); font-weight: 500; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid var(--border); background: var(--soft); color: var(--fg); display: inline-flex; align-items: center; gap: 8px; }
+    .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green); }
+    .meta { font-size: var(--fs-small); color: var(--muted); margin: 0; }
+    h2 { font-size: 22px; font-weight: 600; letter-spacing: var(--tracking-tight); margin: 32px 0 12px; }
+    .ship-title { font-size: var(--fs-h3); font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0 0 4px; }
     .waterfall { list-style: none; padding: 0; margin: 0; }
-    .waterfall li {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 12px;
-      position: relative;
-      padding-bottom: 18px;
-    }
+    .waterfall li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; position: relative; padding-bottom: 18px; }
     .waterfall li:last-child { padding-bottom: 0; }
-    .waterfall li:not(:last-child)::before {
-      content: "";
-      position: absolute;
-      left: 13px;
-      top: 24px;
-      bottom: 0;
-      width: 2px;
-      background: var(--border);
-    }
-    .dot {
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      border: 2px solid var(--border);
-      background: var(--muted-bg);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
-      z-index: 1;
-    }
-    .waterfall li.done .dot {
-      border-color: var(--primary);
-      background: color-mix(in srgb, var(--primary) 18%, var(--card));
-      color: var(--primary);
-    }
-    .waterfall li.done .stage-title { color: var(--primary); }
-    .waterfall li.done:not(:last-child)::before {
-      background: color-mix(in srgb, var(--primary) 45%, var(--border));
-    }
-    .waterfall li.current .dot {
-      border-color: var(--primary);
-      background: var(--primary);
-      color: var(--bg);
-    }
-    .waterfall li.current .stage-title { color: var(--primary); }
-    .waterfall li.current:not(:last-child)::before {
-      background: color-mix(in srgb, var(--primary) 40%, var(--border));
-    }
-    .stage-title {
-      font-family: var(--font-ui);
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 2px 0 2px;
-      color: var(--fg);
-    }
-    .stage-note { font-size: 13px; color: var(--muted); margin: 0; }
-
-    .ask {
-      border-left: 3px solid var(--waiting);
-      padding: 10px 12px;
-      background: color-mix(in srgb, var(--waiting) 14%, var(--card));
-      border-radius: 0 10px 10px 0;
-      margin: 12px 0 0;
-    }
-    .ask strong {
-      display: block;
-      font-family: var(--font-ui);
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--waiting);
-      margin-bottom: 4px;
-    }
-
-    label {
-      display: block;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    textarea {
-      width: 100%;
-      min-height: 110px;
-      resize: vertical;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 14px;
-      font: inherit;
-      font-size: 16px;
-      line-height: 1.5;
-      background: var(--muted-bg);
-      color: var(--fg);
-    }
-    textarea::placeholder { color: color-mix(in srgb, var(--muted) 80%, var(--fg)); opacity: 1; }
-    textarea:focus {
-      outline: 2px solid color-mix(in srgb, var(--primary) 55%, var(--border));
-      outline-offset: 1px;
-    }
-    .actions {
-      display: flex; flex-wrap: wrap; gap: 8px;
-      margin-top: 10px; align-items: center;
-    }
-    button {
-      font-family: var(--font-ui);
-      font-size: 14px;
-      font-weight: 600;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--primary);
-      background: var(--primary);
-      color: var(--bg);
-      cursor: pointer;
-    }
-    button:hover { opacity: 0.92; }
-    button.ghost {
-      background: var(--muted-bg);
-      color: var(--fg);
-      border-color: var(--border);
-    }
-    .hint { font-size: 12px; color: var(--muted); }
-    .toast {
-      display: none;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--primary);
-    }
+    .waterfall li:not(:last-child)::before { content: ""; position: absolute; left: 13px; top: 28px; bottom: 0; width: 2px; background: var(--border); }
+    .dot { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border); background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--muted); z-index: 1; }
+    .waterfall li.done .dot { border-color: var(--fg); background: var(--card); color: var(--fg); }
+    .waterfall li.done:not(:last-child)::before { background: var(--fg); }
+    .waterfall li.current .dot { border-color: var(--primary); background: var(--primary); color: var(--primary-fg); }
+    .stage-title { font-size: 17px; font-weight: 600; letter-spacing: var(--tracking-tight); margin: 2px 0; }
+    .waterfall li:not(.done):not(.current) .stage-title { color: var(--muted); }
+    .stage-note { font-size: var(--fs-small); color: var(--muted); margin: 0; }
+    .ask { border-left: 3px solid var(--fg); padding: 12px 14px; background: var(--soft); border-radius: 0 12px 12px 0; margin: 12px 0 0; }
+    .ask strong { display: block; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    label { display: block; font-size: var(--fs-small); font-weight: 500; color: var(--muted); margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 110px; resize: vertical; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font: inherit; font-size: 16px; line-height: 1.5; background: var(--card); color: var(--fg); }
+    textarea::placeholder { color: var(--muted); opacity: 1; }
+    textarea:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+    button { font-family: var(--font-ui); font-size: 16px; font-weight: 500; line-height: 24px; min-height: var(--btn-min-h); padding: var(--btn-pad); border-radius: var(--radius-pill); border: 1px solid var(--primary); background: var(--primary); color: var(--primary-fg); cursor: pointer; transition: background-color 150ms var(--ease); }
+    button:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+    button.ghost { background: transparent; color: var(--fg); border-color: var(--fg); }
+    button.ghost:hover { background: var(--outline-hover); border-color: var(--fg); }
+    .hint { font-size: var(--fs-small); color: var(--muted); }
+    .toast { display: none; margin-top: 10px; font-size: var(--fs-small); color: var(--fg); }
     .toast.show { display: block; }
-    footer {
-      margin-top: 22px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-    .brand-logo {
-      display: block;
-      height: 80px;
-      width: auto;
-      flex: 0 0 auto;
-    }
   </style>
 </head>
 <body>
+  <header data-crom-header data-tag="Sample · example project"></header>
   <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img class="brand-logo" src="https://cromservices.github.io/job-page-sample/assets/logo-current-dark.png" width="87" height="80" alt="Crom Services" />
-      </div>
-      <div class="sample">Sample · example project</div>
-    </header>
     <div class="banner">Crom Services · private job page</div>
     <h1>Sample project</h1>
     <p class="sub">Example only · a real job gets its own private link</p>
@@ -348,7 +126,10 @@
       <p class="meta" style="margin:0">Empty until handoff — then checklist and links land here.</p>
     </div>
 
-    <footer>Crom Services · sample only · not a live client project · <a href="./demos/" style="color:inherit">interaction samples</a></footer>
+    <footer data-crom-footer data-contact="off">
+      <p>Sample only · not a live client project · <a href="./demos/">interaction samples</a></p>
+    </footer>
+    <noscript><p class="crom-small">Crom Services · Australia</p></noscript>
   </div>
   <script>
     const reply = document.getElementById('reply');
