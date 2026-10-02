@@ -151,6 +151,25 @@
           "public": true
         }
       ]
+    },
+    {
+      "id": "booking",
+      "public": true,
+      "title": "Booking website with admin desk",
+      "body_html": "A booking site for a small business: services, live slots, guest booking and a simple admin desk to manage the day. Live demo you can click through.",
+      "thumb": {
+        "png": "crom-thumb-booking.png",
+        "webp": "crom-thumb-booking.webp",
+        "alt": "Booking website pack thumbnail",
+        "v": "1790961951"
+      },
+      "ctas": [
+        {
+          "label": "Open booking demo",
+          "href": "https://cromservices.github.io/booking-demo/",
+          "public": true
+        }
+      ]
     }
   ]
 }
