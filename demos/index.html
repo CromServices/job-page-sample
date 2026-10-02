@@ -7,7 +7,7 @@
   <meta name="description" content="Public Crom Services interaction samples: 3D card flip and before/after slider. Not client sites." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cromservices.github.io/crom-shared/theme.css" />
   <link rel="stylesheet" href="./shared.css" />
   <style>
     .grid {
@@ -23,26 +23,28 @@
       flex-direction: column;
       gap: 10px;
       padding: 22px 20px 20px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: var(--navy-mid);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      background: var(--card);
       text-decoration: none;
       color: inherit;
       min-height: 220px;
     }
-    .tile:hover { border-color: var(--gold); }
+    .tile:hover { border-color: var(--fg); }
     .tile h2 {
-      font-family: var(--font-display);
-      font-size: 30px;
+      font-family: var(--font-ui);
+      font-size: 24px;
+      letter-spacing: var(--tracking-tight);
       font-weight: 600;
       margin: 0;
     }
-    .tile p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+    .tile p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
     .cta {
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gold-bright);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--fg);
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
   </style>
 </head>
