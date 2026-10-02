@@ -37,3 +37,14 @@ Existing job-page and packs URLs are unchanged:
 
 - https://cromservices.github.io/job-page-sample/
 - https://cromservices.github.io/job-page-sample/packs/
+
+## Packs page cards
+
+The card grid on `/packs/` is generated. Edit `packs/packs.json` (card copy, thumbs, buttons), then:
+
+```bash
+python3 tools/render_packs.py          # rewrites the block between the packs:cards markers in packs/index.html
+python3 tools/render_packs.py --check  # exits 1 if packs/index.html is out of date
+```
+
+`packs.json` holds only public card fields. Thumbs get a `?v=` cache-buster (the `v` in the data, or a hash of the image file). Everything outside the marker comments in `packs/index.html` is left alone.
