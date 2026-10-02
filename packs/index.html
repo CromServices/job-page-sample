@@ -6,203 +6,49 @@
   <title>Crom Services — fixed-scope packs</title>
   <!-- cachebust:1790827399 -->
   <meta name="description" content="Fixed-scope remote packs from Crom Services (Australia): technical audit, job status page, API &amp; webhooks, Next UI, REST API, Wix sites, Lovable websites." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cromservices.github.io/crom-shared/theme.css" />
+  <script src="https://cromservices.github.io/crom-shared/header.js" defer></script>
+  <script src="https://cromservices.github.io/crom-shared/footer.js" defer></script>
   <style>
-    :root {
-      /* Crom firm light scheme. Measured from https://cromservices.lovable.app/ on 1 Oct 2026 */
-      --bg: #f3f2ef;            /* page (live --paper) */
-      --card: #ffffff;          /* cards (live --surface) */
-      --fg: #111111;            /* body text, headings (live --ink) */
-      --muted: #6b6b6b;         /* muted / small text (live --ink-soft) */
-      --border: #e4e2dc;        /* card borders, header rule, section dividers (live --rule) */
-      --soft: #eeede9;          /* chips, soft panels (live --secondary) */
-      --primary: #111111;       /* primary button bg */
-      --primary-fg: #ffffff;    /* primary button text */
-      --primary-hover: #333333; /* primary button hover (live --ink-hover) */
-      --outline-hover: rgba(17, 17, 17, 0.06); /* outline button hover */
-      --ring: #111111;          /* focus outline */
-      --radius-card: 16px;
-      --radius-pill: 9999px;
-      --shell: 1040px;          /* max-width incl. 20px side padding, so 1000px content */
-      --gutter: 20px;
-      --gap: 20px;
-      --card-pad: 24px;
-      --btn-pad: 10px 24px;
-      --btn-min-h: 44px;
-      --logo-h: 64px;           /* mobile */
-      --logo-h-md: 84px;        /* ≥768px */
-      --font-ui: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { overflow-x: clip; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--fg);
-      background: var(--bg);
-      font-family: var(--font-ui);
-      font-size: 17px;
-      line-height: 1.55;
-    }
-    @media (min-width: 768px) { body { font-size: 18px; } }
-
-    a { color: var(--fg); text-underline-offset: 4px; }
-    a:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
-    .wrap { max-width: var(--shell); margin: 0 auto; padding: 0 var(--gutter) 40px; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 0 calc(-1 * var(--gutter)) 56px;
-      padding: 12px var(--gutter);
-      background: var(--bg);
-    }
-    /* full-bleed rules: header bar, hero divider and footer rule run edge to edge like the firm site */
-    .topbar::before, .hero-bits::after, footer::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      width: 100vw;
-      margin-left: -50vw;
-      pointer-events: none;
-    }
-    .topbar::before { top: 0; bottom: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: -1; }
-    .hero-bits::after { bottom: 0; border-top: 1px solid var(--border); }
-    footer::before { top: 0; border-top: 1px solid var(--border); }
-    @media (min-width: 768px) { .topbar { margin-bottom: 96px; } }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      text-decoration: none;
-      color: inherit;
-    }
-    .brand-logo { display: block; height: var(--logo-h); width: auto; }
-    @media (min-width: 768px) { .brand-logo { height: var(--logo-h-md); } }
-    .sample {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      background: var(--card);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      white-space: nowrap;
-    }
-    .banner { font-size: 14px; font-weight: 500; color: var(--muted); margin: 0 0 12px; }
-    h1 {
-      font-family: var(--font-ui);
-      font-size: 2.05rem;
-      line-height: 1.18;
-      font-weight: 600;
-      letter-spacing: -0.018em;
-      margin: 0;
-      color: var(--fg);
-    }
-    @media (min-width: 768px) { h1 { font-size: 3.4rem; line-height: 1.12; } }
-    .sub { margin: 24px 0 0; max-width: 62ch; font-size: 1.0625rem; color: var(--fg); }
-    @media (min-width: 768px) { .sub { font-size: 1.2rem; } }
+    /* Page layout only. Colours, type, header and footer come from crom-shared theme.css (light + dark). */
+    .wrap { max-width: var(--shell); margin: 0 auto; padding: 56px var(--gutter) 0; }
+    @media (min-width: 768px) { .wrap { padding-top: 96px; } }
+    .banner { font-size: var(--fs-small); font-weight: 500; color: var(--muted); margin: 0 0 12px; }
+    h1 { font-size: var(--fs-h1); line-height: 1.18; font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0; color: var(--fg); }
+    @media (min-width: 768px) { h1 { font-size: var(--fs-h1-md); line-height: 1.12; } }
+    .sub { margin: 24px 0 0; max-width: 62ch; font-size: var(--fs-lead); color: var(--fg); }
+    @media (min-width: 768px) { .sub { font-size: var(--fs-lead-md); } }
     .hero-bits {
       display: flex; flex-wrap: wrap; gap: 8px;
       margin: 24px 0 64px; padding: 0 0 40px; list-style: none;
-      position: relative;
+      border-bottom: 1px solid var(--border);
     }
     @media (min-width: 768px) { .hero-bits { margin-bottom: 96px; padding-bottom: 48px; } }
-    .hero-bits li {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--fg);
-      background: var(--soft);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-pill);
-      padding: 4px 12px;
-    }
+    .hero-bits li { font-size: var(--fs-small); font-weight: 500; color: var(--fg); background: var(--soft); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 4px 12px; }
     .grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
     @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-    .pack {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-card);
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      overflow: hidden;
-    }
-    .pack-media { background: #fff; border-bottom: 1px solid var(--border); line-height: 0; }
-    .pack-media img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      object-fit: contain;
-      background: #fff;
-    }
-    .pack-body {
-      padding: var(--card-pad);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .pack h2 {
-      font-family: var(--font-ui);
-      font-size: 18.4px;
-      line-height: 1.2;
-      font-weight: 600;
-      letter-spacing: -0.018em;
-      margin: 0;
-      color: var(--fg);
-    }
+    .pack { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card); display: flex; flex-direction: column; min-height: 100%; overflow: hidden; }
+    .pack-media { background: var(--thumb-bg); border-bottom: 1px solid var(--border); line-height: 0; }
+    .pack-media img { display: block; width: 100%; height: auto; max-width: 100%; object-fit: contain; background: var(--thumb-bg); }
+    .pack-body { padding: var(--card-pad); display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .pack h2 { font-size: var(--fs-h3); line-height: 1.2; font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0; color: var(--fg); }
     .pack p { margin: 0; color: var(--fg); flex: 1; }
     .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 8px;
-      min-height: var(--btn-min-h);
-      padding: var(--btn-pad);
-      font-family: var(--font-ui);
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      text-decoration: none;
-      border-radius: var(--radius-pill);
-      border: 0;
-      background: var(--primary);
-      color: var(--primary-fg);
-      transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-      width: fit-content;
+      display: inline-flex; align-items: center; justify-content: center; margin-top: 8px;
+      min-height: var(--btn-min-h); padding: var(--btn-pad);
+      font-family: var(--font-ui); font-size: 16px; font-weight: 500; line-height: 24px;
+      text-decoration: none; border-radius: var(--radius-pill); border: 0;
+      background: var(--primary); color: var(--primary-fg);
+      transition: background-color 150ms var(--ease); width: fit-content;
     }
     .cta:hover { background: var(--primary-hover); }
     .cta:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
-    footer {
-      margin-top: 64px;
-      padding-top: 32px;
-      position: relative;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
+  <header data-crom-header data-tag="Public demo · fixed-scope packs"></header>
   <div class="wrap">
-    <header class="topbar">
-      <a class="brand" href="https://cromservices.lovable.app/" rel="noopener noreferrer" aria-label="Crom Services home">
-        <img class="brand-logo" src="./logo-v26-lock-inverse-transparent-tight.png?v=1790827399" width="526" height="481" alt="Crom Services" />
-      </a>
-      <span class="sample">Public demo · fixed-scope packs</span>
-    </header>
     <div class="banner">Australia · fixed-scope remote packs</div>
     <h1>Fixed-scope packs</h1>
     <p class="sub">Remote delivery with a clear boundary. Pick a pack and open a live sample.</p>
@@ -311,9 +157,10 @@
       <!-- packs:cards:end -->
     </div>
 
-    <footer>
-      <p><a href="https://cromservices.lovable.app/" rel="noopener noreferrer">Booking websites for local businesses</a> · <a href="https://github.com/CromServices" rel="noopener noreferrer">CromServices on GitHub</a> · <a href="../demos/">interaction samples</a> · fixed-scope remote packs · sample only</p>
+    <footer data-crom-footer data-contact="off">
+      <p><a href="https://cromservices.com.au/" rel="noopener noreferrer">Booking websites for local businesses</a> · <a href="https://github.com/CromServices" rel="noopener noreferrer">CromServices on GitHub</a> · <a href="../demos/">interaction samples</a> · fixed-scope remote packs · sample only</p>
     </footer>
+    <noscript><p class="crom-small">Crom Services · Australia</p></noscript>
   </div>
 </body>
 </html>
