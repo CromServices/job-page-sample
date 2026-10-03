@@ -5,7 +5,7 @@
       "id": "audit",
       "public": true,
       "title": "Independent technical audit",
-      "body_html": "Structured review of code, prompts, or a PR: verdict, block / should / nit findings, hours band. Sample pack you can open now.",
+      "body_html": "An independent check of your website, app, automation or a recent change. You get a clear verdict, fixes ranked by priority and an hours estimate. Sample pack you can open now.",
       "thumb": {
         "png": "crom-thumb-audit.png",
         "alt": "Technical audit pack thumbnail",
@@ -40,11 +40,11 @@
     {
       "id": "api",
       "public": true,
-      "title": "API & webhook integration",
-      "body_html": "Small, scoped Express webhook with HMAC verification — a concrete sample of how we ship integration work. Live demo for illustration; your integration runs on your own hosting.",
+      "title": "Connect your systems",
+      "body_html": "Your website, bookings and business tools pass details to each other on their own. Only genuine requests get through. Less manual work and fewer mistakes. Live demo for illustration; your integration runs on your own hosting.",
       "thumb": {
         "png": "crom-thumb-api.png",
-        "alt": "API and webhooks pack thumbnail",
+        "alt": "Connect your systems pack thumbnail",
         "v": "1789021212"
       },
       "ctas": [
@@ -63,16 +63,16 @@
     {
       "id": "next-ui",
       "public": true,
-      "title": "Next UI sample",
-      "body_html": "Scoped React / Next UI work — a public sample of how we ship interface packs.",
+      "title": "Website and app screens",
+      "body_html": "Clean, easy-to-use screens for your website or app, built to a fixed scope. A live sample you can click through.",
       "thumb": {
         "png": "crom-thumb-next-ui.png",
-        "alt": "Next UI pack thumbnail",
+        "alt": "Website and app screens pack thumbnail",
         "v": "1789021212"
       },
       "ctas": [
         {
-          "label": "Open live Next UI sample",
+          "label": "Open live screens sample",
           "href": "https://cromservices.github.io/next-ui-sample/",
           "public": true
         }
@@ -81,16 +81,16 @@
     {
       "id": "rest",
       "public": true,
-      "title": "REST API sample",
-      "body_html": "A small TypeScript REST API sample for portfolio and proposal use.",
+      "title": "Data service sample",
+      "body_html": "A small behind-the-scenes service that stores and serves business data. A sample for portfolio and proposal use.",
       "thumb": {
         "png": "crom-thumb-rest.png",
-        "alt": "REST API pack thumbnail",
+        "alt": "Data service pack thumbnail",
         "v": "1789021212"
       },
       "ctas": [
         {
-          "label": "Open REST sample",
+          "label": "Open data service sample",
           "href": "https://github.com/CromServices/rest-api-sample",
           "public": true
         }
@@ -99,12 +99,13 @@
     {
       "id": "workflow",
       "public": true,
-      "title": "Workflow Agent Pack",
-      "body_html": "Specialist agents for <strong>one</strong> workflow on your tools — rules, escalate map, test checklist, handoff. Openable sample: prompts, escalate map, test checklist, seating steps. You keep the runtime bill.",
+      "title": "Workflow automation",
+      "body_html": "Automation for <strong>one</strong> workflow, set up in the tools you already use. Less manual work and fewer mistakes. You get clear rules, a plan for when a person steps in, testing and a handover. Sample pack you can open now. You pay any running costs directly.",
       "thumb": {
-        "png": "crom-thumb-ai-workflow.png",
-        "alt": "Workflow AI pack thumbnail",
-        "v": "1789087187"
+        "png": "crom-thumb-workflow.png",
+        "webp": "crom-thumb-workflow.webp",
+        "alt": "Workflow automation pack thumbnail",
+        "v": "1791002060"
       },
       "ctas": [
         {
