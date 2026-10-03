@@ -43,9 +43,10 @@
       "title": "Connect your systems",
       "body_html": "Your website, bookings and business tools pass details to each other on their own. Only genuine requests get through. Less manual work and fewer mistakes. Live demo for illustration; your integration runs on your own hosting.",
       "thumb": {
-        "png": "crom-thumb-api.png",
-        "alt": "Connect your systems pack thumbnail",
-        "v": "1789021212"
+        "png": "crom-thumb-connect-systems.png",
+        "webp": "crom-thumb-connect-systems.webp",
+        "alt": "Connect your systems pack thumbnail: your tools, working together",
+        "v": "1791003236"
       },
       "ctas": [
         {
@@ -66,9 +67,10 @@
       "title": "Website and app screens",
       "body_html": "Clean, easy-to-use screens for your website or app, built to a fixed scope. A live sample you can click through.",
       "thumb": {
-        "png": "crom-thumb-next-ui.png",
-        "alt": "Website and app screens pack thumbnail",
-        "v": "1789021212"
+        "png": "crom-thumb-screens.png",
+        "webp": "crom-thumb-screens.webp",
+        "alt": "Website and app screens pack thumbnail: clean screens people enjoy using",
+        "v": "1791003236"
       },
       "ctas": [
         {
@@ -84,9 +86,10 @@
       "title": "Data service sample",
       "body_html": "A small behind-the-scenes service that stores and serves business data. A sample for portfolio and proposal use.",
       "thumb": {
-        "png": "crom-thumb-rest.png",
-        "alt": "Data service pack thumbnail",
-        "v": "1789021212"
+        "png": "crom-thumb-data-service.png",
+        "webp": "crom-thumb-data-service.webp",
+        "alt": "Data service pack thumbnail: your data, ready when you need it",
+        "v": "1791003236"
       },
       "ctas": [
         {
@@ -140,10 +143,10 @@
       "title": "Lovable website",
       "body_html": "A fast, modern website built on Lovable, with booking or enquiry flows where needed. First draft 2 business days after scope is agreed, live 2 business days after sign-off.",
       "thumb": {
-        "png": "crom-thumb-lovable.png",
-        "webp": "crom-thumb-lovable.webp",
-        "alt": "Lovable website pack thumbnail",
-        "v": "1790827399"
+        "png": "crom-thumb-lovable-rebuild.png",
+        "webp": "crom-thumb-lovable-rebuild.webp",
+        "alt": "Lovable website pack thumbnail: a friendly local business homepage with online booking",
+        "v": "1791003236"
       },
       "ctas": [
         {
