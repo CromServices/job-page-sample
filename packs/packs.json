@@ -161,6 +161,12 @@
       "public": true,
       "title": "Automated website tests",
       "body_html": "Changes keep breaking your site, and you only find out from customers? We write automated tests around the journeys that matter to your business, like booking, enquiring or paying, and check them on a phone-sized screen and a desktop browser. You get a clear pass or fail report, with a screenshot of anything that failed.",
+      "thumb": {
+        "png": "crom-thumb-web-tests.png",
+        "webp": "crom-thumb-web-tests.webp",
+        "alt": "Automated website tests pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     },
     {
@@ -168,6 +174,12 @@
       "public": true,
       "title": "Facebook ad leads into your sheet",
       "body_html": "Copying Facebook ad leads by hand means some get missed and some get copied twice. We connect your Facebook lead form straight to the sheet you already use, or your CRM on request. Each new lead arrives once, you get an alert with the name, number and what they want, and anything that isn’t from Facebook is turned away.",
+      "thumb": {
+        "png": "crom-thumb-ad-leads.png",
+        "webp": "crom-thumb-ad-leads.webp",
+        "alt": "Facebook ad leads pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     },
     {
@@ -175,6 +187,12 @@
       "public": true,
       "title": "WhatsApp orders",
       "body_html": "Every WhatsApp order message is answered, and every enquiry is kept in one list, so none slip through.",
+      "thumb": {
+        "png": "crom-thumb-whatsapp.png",
+        "webp": "crom-thumb-whatsapp.webp",
+        "alt": "WhatsApp orders pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     },
     {
@@ -182,6 +200,12 @@
       "public": true,
       "title": "Speed + SEO fix",
       "body_html": "We make your pages load faster and fix what stops Google finding them, then show you the before and after.",
+      "thumb": {
+        "png": "crom-thumb-speed-seo.png",
+        "webp": "crom-thumb-speed-seo.webp",
+        "alt": "Speed + SEO fix pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     },
     {
@@ -189,6 +213,12 @@
       "public": true,
       "title": "Squarespace page fix or new page",
       "body_html": "Up to 5 fixes on existing pages, or 1 new page plus up to 3 fixes. Your text and photos placed and tidied. Checked on phones and desktop before handover.",
+      "thumb": {
+        "png": "crom-thumb-squarespace.png",
+        "webp": "crom-thumb-squarespace.webp",
+        "alt": "Squarespace page fix pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     },
     {
@@ -196,6 +226,12 @@
       "public": true,
       "title": "Monthly care plan",
       "body_html": "Every month we test your setup, fix anything that broke, make small changes and send you a short note.",
+      "thumb": {
+        "png": "crom-thumb-care-plan.png",
+        "webp": "crom-thumb-care-plan.webp",
+        "alt": "Monthly care plan pack thumbnail",
+        "v": "1791986997"
+      },
       "ctas": []
     }
   ]
