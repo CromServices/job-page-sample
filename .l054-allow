@@ -1,0 +1,3 @@
+# L-054 allowed exceptions (regex on file:line:text)
+# Client tool names in outreach samples (tool names are allowed):
+Seated on .*\(ChatGPT, Claude, or your LLM keys\)
