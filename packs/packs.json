@@ -155,6 +155,48 @@
           "public": true
         }
       ]
+    },
+    {
+      "id": "web-tests",
+      "public": true,
+      "title": "Automated website tests",
+      "body_html": "Changes keep breaking your site, and you only find out from customers? We write automated tests around the journeys that matter to your business, like booking, enquiring or paying, and check them on a phone-sized screen and a desktop browser. You get a clear pass or fail report, with a screenshot of anything that failed.",
+      "ctas": []
+    },
+    {
+      "id": "ad-leads",
+      "public": true,
+      "title": "Facebook ad leads into your sheet",
+      "body_html": "Copying Facebook ad leads by hand means some get missed and some get copied twice. We connect your Facebook lead form straight to the sheet you already use, or your CRM on request. Each new lead arrives once, you get an alert with the name, number and what they want, and anything that isn’t from Facebook is turned away.",
+      "ctas": []
+    },
+    {
+      "id": "whatsapp",
+      "public": true,
+      "title": "WhatsApp orders",
+      "body_html": "Every WhatsApp order message is answered, and every enquiry is kept in one list, so none slip through.",
+      "ctas": []
+    },
+    {
+      "id": "speed-seo",
+      "public": true,
+      "title": "Speed + SEO fix",
+      "body_html": "We make your pages load faster and fix what stops Google finding them, then show you the before and after.",
+      "ctas": []
+    },
+    {
+      "id": "squarespace",
+      "public": true,
+      "title": "Squarespace page fix or new page",
+      "body_html": "Up to 5 fixes on existing pages, or 1 new page plus up to 3 fixes. Your text and photos placed and tidied. Checked on phones and desktop before handover.",
+      "ctas": []
+    },
+    {
+      "id": "care-plan",
+      "public": true,
+      "title": "Monthly care plan",
+      "body_html": "Every month we test your setup, fix anything that broke, make small changes and send you a short note.",
+      "ctas": []
     }
   ]
 }
