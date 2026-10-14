@@ -7,10 +7,9 @@
       "title": "Independent technical audit",
       "body_html": "An independent check of your website, app, automation or a recent change. You get a clear verdict, fixes ranked by priority and an hours estimate. Sample pack you can open now.",
       "thumb": {
-        "png": "crom-thumb-site-audit.png",
-        "webp": "crom-thumb-site-audit.webp",
-        "alt": "Technical audit pack image: a booking page after the review fixes",
-        "v": "1791987247"
+        "png": "crom-thumb-audit.png",
+        "alt": "Technical audit pack thumbnail",
+        "v": "1789021212"
       },
       "ctas": [
         {
@@ -44,10 +43,10 @@
       "title": "Connect your systems",
       "body_html": "Your website, bookings and business tools pass details to each other on their own. Only genuine requests get through. Less manual work and fewer mistakes. Live demo for illustration; your integration runs on your own hosting.",
       "thumb": {
-        "png": "crom-thumb-site-api.png",
-        "webp": "crom-thumb-site-api.webp",
-        "alt": "Connect your systems pack image: orders and stock in sync",
-        "v": "1791987247"
+        "png": "crom-thumb-connect-systems.png",
+        "webp": "crom-thumb-connect-systems.webp",
+        "alt": "Connect your systems pack thumbnail: your tools, working together",
+        "v": "1791003236"
       },
       "ctas": [
         {
@@ -125,10 +124,10 @@
       "title": "Wix site build or rebuild",
       "body_html": "A clean Wix site built or rebuilt on your account: pages, forms, mobile checks, handover. First draft 2 business days after your content, live 2 business days after sign-off.",
       "thumb": {
-        "png": "crom-thumb-site-wix.png",
-        "webp": "crom-thumb-site-wix.webp",
+        "png": "crom-thumb-wix-rebuild.png",
+        "webp": "crom-thumb-wix-rebuild.webp",
         "alt": "Wix site rebuild pack thumbnail: a clean local business homepage with a free quote button",
-        "v": "1791987247"
+        "v": "1791002558"
       },
       "ctas": [
         {
