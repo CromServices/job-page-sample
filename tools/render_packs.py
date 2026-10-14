@@ -34,8 +34,22 @@ def bust(thumb, key):
         return hashlib.md5(f.read()).hexdigest()[:10]
 
 
+def icon_svg(c):
+    path = os.path.join(ROOT, "packs", "icons", c["id"] + ".svg")
+    if not os.path.exists(path):
+        sys.exit(f"card {c['id']}: missing icon packs/icons/{c['id']}.svg")
+    with open(path, encoding="utf-8") as f:
+        return f.read().strip()
+
+
 def card_html(c):
-    t = c["thumb"]
+    t = c.get("thumb")
+    if not t:
+        return card_text(c, "")
+    return card_text(c, media_html(t))
+
+
+def media_html(t):
     v = bust(t, "png")
     alt = esc(t["alt"])
     if t.get("webp"):
@@ -47,16 +61,23 @@ def card_html(c):
         )
     else:
         media = f'          <img src="./{esc(t["png"])}?v={v}" width="1600" height="900" alt="{alt}" />\n'
+    return (
+        '        <div class="pack-media">\n'
+        f'{media}'
+        '        </div>\n'
+    )
+
+
+def card_text(c, media):
     ctas = "".join(
         f'          <a class="cta" href="{esc(x["href"])}" rel="noopener noreferrer">{esc(x["label"])}</a>\n'
         for x in c["ctas"] if x.get("public") is True
     )
     return (
         '      <article class="pack">\n'
-        '        <div class="pack-media">\n'
         f'{media}'
-        '        </div>\n'
         '        <div class="pack-body">\n'
+        f'          <span class="pack-icon">{icon_svg(c)}</span>\n'
         f'          <h2>{esc(c["title"])}</h2>\n'
         f'          <p>{c["body_html"]}</p>\n'
         f'{ctas}'
@@ -70,7 +91,7 @@ def validate(d):
         extra = set(c) - ALLOWED_CARD
         if extra:
             sys.exit(f"card {c.get('id')}: non-public fields not allowed in packs.json: {sorted(extra)}")
-        if set(c["thumb"]) - ALLOWED_THUMB:
+        if set(c.get("thumb") or {}) - ALLOWED_THUMB:
             sys.exit(f"card {c['id']}: bad thumb fields")
         for x in c["ctas"]:
             if set(x) - ALLOWED_CTA:

@@ -7,9 +7,10 @@
       "title": "Independent technical audit",
       "body_html": "An independent check of your website, app, automation or a recent change. You get a clear verdict, fixes ranked by priority and an hours estimate. Sample pack you can open now.",
       "thumb": {
-        "png": "crom-thumb-audit.png",
+        "png": "crom-card-audit.png",
+        "webp": "crom-card-audit.webp",
         "alt": "Technical audit pack thumbnail",
-        "v": "1789021212"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -25,9 +26,10 @@
       "title": "Client job status page",
       "body_html": "A private status page for one job — stages, what’s shipping, what’s waiting on the client. Live sample below.",
       "thumb": {
-        "png": "crom-thumb-status.png",
+        "png": "crom-card-status.png",
+        "webp": "crom-card-status.webp",
         "alt": "Job status page pack thumbnail",
-        "v": "1789021212"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -43,10 +45,10 @@
       "title": "Connect your systems",
       "body_html": "Your website, bookings and business tools pass details to each other on their own. Only genuine requests get through. Less manual work and fewer mistakes. Live demo for illustration; your integration runs on your own hosting.",
       "thumb": {
-        "png": "crom-thumb-connect-systems.png",
-        "webp": "crom-thumb-connect-systems.webp",
+        "png": "crom-card-api.png",
+        "webp": "crom-card-api.webp",
         "alt": "Connect your systems pack thumbnail: your tools, working together",
-        "v": "1791003236"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -67,10 +69,10 @@
       "title": "Website and app screens",
       "body_html": "Clean, easy-to-use screens for your website or app, built to a fixed scope. A live sample you can click through.",
       "thumb": {
-        "png": "crom-thumb-screens.png",
-        "webp": "crom-thumb-screens.webp",
+        "png": "crom-card-next-ui.png",
+        "webp": "crom-card-next-ui.webp",
         "alt": "Website and app screens pack thumbnail: clean screens people enjoy using",
-        "v": "1791003236"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -86,10 +88,10 @@
       "title": "Data service sample",
       "body_html": "A small behind-the-scenes service that stores and serves business data. A sample for portfolio and proposal use.",
       "thumb": {
-        "png": "crom-thumb-data-service.png",
-        "webp": "crom-thumb-data-service.webp",
+        "png": "crom-card-rest.png",
+        "webp": "crom-card-rest.webp",
         "alt": "Data service pack thumbnail: your data, ready when you need it",
-        "v": "1791003236"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -105,10 +107,10 @@
       "title": "Workflow automation",
       "body_html": "Automation for <strong>one</strong> workflow, set up in the tools you already use. Less manual work and fewer mistakes. You get clear rules, a plan for when a person steps in, testing and a handover. Sample pack you can open now. You pay any running costs directly.",
       "thumb": {
-        "png": "crom-thumb-workflow.png",
-        "webp": "crom-thumb-workflow.webp",
+        "png": "crom-card-workflow.png",
+        "webp": "crom-card-workflow.webp",
         "alt": "Workflow automation pack thumbnail",
-        "v": "1791002060"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -124,10 +126,10 @@
       "title": "Wix site build or rebuild",
       "body_html": "A clean Wix site built or rebuilt on your account: pages, forms, mobile checks, handover. First draft 2 business days after your content, live 2 business days after sign-off.",
       "thumb": {
-        "png": "crom-thumb-wix-rebuild.png",
-        "webp": "crom-thumb-wix-rebuild.webp",
+        "png": "crom-card-wix.png",
+        "webp": "crom-card-wix.webp",
         "alt": "Wix site rebuild pack thumbnail: a clean local business homepage with a free quote button",
-        "v": "1791002558"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -143,10 +145,10 @@
       "title": "Lovable website",
       "body_html": "A fast, modern website built on Lovable, with booking or enquiry flows where needed. First draft 2 business days after scope is agreed, live 2 business days after sign-off.",
       "thumb": {
-        "png": "crom-thumb-lovable-rebuild.png",
-        "webp": "crom-thumb-lovable-rebuild.webp",
+        "png": "crom-card-lovable.png",
+        "webp": "crom-card-lovable.webp",
         "alt": "Lovable website pack thumbnail: a friendly local business homepage with online booking",
-        "v": "1791003236"
+        "v": "1791988324"
       },
       "ctas": [
         {
@@ -155,6 +157,84 @@
           "public": true
         }
       ]
+    },
+    {
+      "id": "web-tests",
+      "public": true,
+      "title": "Automated website tests",
+      "body_html": "Changes keep breaking your site, and you only find out from customers? We write automated tests around the journeys that matter to your business, like booking, enquiring or paying, and check them on a phone-sized screen and a desktop browser. You get a clear pass or fail report, with a screenshot of anything that failed.",
+      "thumb": {
+        "png": "crom-card-web-tests.png",
+        "webp": "crom-card-web-tests.webp",
+        "alt": "Automated website tests pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
+    },
+    {
+      "id": "ad-leads",
+      "public": true,
+      "title": "Facebook ad leads into your sheet",
+      "body_html": "Copying Facebook ad leads by hand means some get missed and some get copied twice. We connect your Facebook lead form straight to the sheet you already use, or your CRM on request. Each new lead arrives once, you get an alert with the name, number and what they want, and anything that isn’t from Facebook is turned away.",
+      "thumb": {
+        "png": "crom-card-ad-leads.png",
+        "webp": "crom-card-ad-leads.webp",
+        "alt": "Facebook ad leads pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
+    },
+    {
+      "id": "whatsapp",
+      "public": true,
+      "title": "WhatsApp orders",
+      "body_html": "Every WhatsApp order message is answered, and every enquiry is kept in one list, so none slip through.",
+      "thumb": {
+        "png": "crom-card-whatsapp.png",
+        "webp": "crom-card-whatsapp.webp",
+        "alt": "WhatsApp orders pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
+    },
+    {
+      "id": "speed-seo",
+      "public": true,
+      "title": "Speed + SEO fix",
+      "body_html": "We make your pages load faster and fix what stops Google finding them, then show you the before and after.",
+      "thumb": {
+        "png": "crom-card-speed-seo.png",
+        "webp": "crom-card-speed-seo.webp",
+        "alt": "Speed + SEO fix pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
+    },
+    {
+      "id": "squarespace",
+      "public": true,
+      "title": "Squarespace page fix or new page",
+      "body_html": "Up to 5 fixes on existing pages, or 1 new page plus up to 3 fixes. Your text and photos placed and tidied. Checked on phones and desktop before handover.",
+      "thumb": {
+        "png": "crom-card-squarespace.png",
+        "webp": "crom-card-squarespace.webp",
+        "alt": "Squarespace page fix pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
+    },
+    {
+      "id": "care-plan",
+      "public": true,
+      "title": "Monthly care plan",
+      "body_html": "Every month we test your setup, fix anything that broke, make small changes and send you a short note.",
+      "thumb": {
+        "png": "crom-card-care-plan.png",
+        "webp": "crom-card-care-plan.webp",
+        "alt": "Monthly care plan pack thumbnail",
+        "v": "1791988324"
+      },
+      "ctas": []
     }
   ]
 }
