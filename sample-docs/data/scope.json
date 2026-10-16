@@ -1,0 +1,51 @@
+{
+  "kind": "scope",
+  "doc_title": "Scope of Work",
+  "doc_date": "14 Oct 2026",
+  "start_date": "15 Oct 2026",
+  "client_name": "Sam (Saltbush Café, sample)",
+  "project_name": "Online ordering page",
+  "job_ref": "Sample job SB-104",
+  "platform": "Direct (sample)",
+  "doc_version": "1.0",
+  "contact_line": "Messages on your private job page",
+  "project_summary": "A fixed-price build of a simple order-ahead page for a small fictional café. All names and figures are made up for this sample.",
+  "goal": "Let regulars order coffee and breakfast ahead from their phone, so the morning queue moves faster.",
+  "in_scope": "- One mobile-first ordering page with the café menu\n- Order-ahead form with pickup time\n- Order emails to the café inbox\n- A short handover guide",
+  "out_of_scope": "- Online payments\n- Delivery or driver tracking\n- New logo, photography or copywriting\n- Changes to the café's other pages",
+  "deliverables": "- **Ordering page**, live on the café's site\n- **Menu set-up** from the café's current menu\n- **Handover guide** for updating prices and items",
+  "milestones": [
+    {
+      "name": "Draft page",
+      "outcome": "Clickable draft to review",
+      "due": "17 Oct 2026"
+    },
+    {
+      "name": "Live page",
+      "outcome": "Ordering page live and tested",
+      "due": "21 Oct 2026"
+    },
+    {
+      "name": "Handover",
+      "outcome": "Guide and walk-through",
+      "due": "22 Oct 2026"
+    }
+  ],
+  "payments": [
+    {
+      "label": "Kickoff",
+      "amount": "A$150",
+      "when": "At the start"
+    },
+    {
+      "label": "Handover",
+      "amount": "A$250",
+      "when": "After you accept the live page"
+    }
+  ],
+  "price_total": "A$400",
+  "price_notes": "Fixed price, no extras unless agreed in writing first.",
+  "client_needs": "- Current menu and prices\n- Opening hours and pickup times\n- The email address that should receive orders\n- Replies within 2 business days, so dates hold",
+  "assumptions": "- The café's site is live and we can add a page to it\n- The menu stays under 40 items\n- Dates move by the same amount if inputs arrive late",
+  "change_notes": "Payments, a loyalty card or extra pages can be quoted as a separate fixed price."
+}

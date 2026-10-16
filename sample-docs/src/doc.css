@@ -1,0 +1,33 @@
+/* Crom Contra look: white paper, ink, warm hairlines, Inter. Tokens from crom-shared theme. */
+:root{--ink:#111;--body:#333;--muted:#6b6b6b;--line:#e4e2dc;--soft:#f3f2ef;--accent:#4caf78}
+@page{size:A4;margin:16mm 16mm 18mm}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:var(--body);font-size:10.2pt;line-height:1.5;background:#fff}
+@media screen{body{background:var(--soft);padding:10mm 0}.cover,main,.doc-foot{max-width:190mm;margin:0 auto;background:#fff;padding:12mm 14mm}.cover{border-radius:3mm 3mm 0 0}}
+.cover{border-bottom:1.5px solid var(--ink);padding-bottom:6mm;margin-bottom:6mm}
+.logo{height:13mm;display:block;margin-bottom:8mm}
+.kicker{font-size:8pt;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+h1{font-size:24pt;line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin:2mm 0 5mm}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:0}
+.meta dt{font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.meta dd{margin:0;color:var(--ink);font-weight:600}
+.blk{break-inside:avoid;padding:4mm 0;border-bottom:1px solid var(--line)}
+.blk h2{font-size:12.5pt;color:var(--ink);margin:0 0 2mm;display:flex;gap:3mm;align-items:baseline}
+.blk h2 .n{font-size:8pt;color:var(--muted);font-weight:600;letter-spacing:.1em}
+.blk p{margin:0 0 2mm}.blk ul{margin:0 0 2mm;padding-left:5mm}
+.callout{background:var(--soft);border-left:1.2mm solid var(--ink);padding:3mm 4mm;border-radius:0 2mm 2mm 0}
+table{width:100%;border-collapse:collapse;font-size:9.5pt}
+th{text-align:left;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1.5px solid var(--ink);padding:1.5mm 2mm}
+td{border-bottom:1px solid var(--line);padding:2mm;vertical-align:top}td p{margin:0}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:2mm 0}
+.ba figure{margin:0}.ba .slot{aspect-ratio:16/10;background:var(--soft);border:1px dashed #c9c5bb;border-radius:2mm;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:8.5pt;overflow:hidden}
+.ba img{width:100%;height:100%;object-fit:cover}.ba figcaption{font-size:8pt;color:var(--muted);margin-top:1mm}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:3mm}.sign div{border-top:1px solid var(--ink);padding-top:1.5mm;font-size:8.5pt;color:var(--muted);min-height:16mm}
+.ph{background:#fff4c2;color:#5a4600;border-radius:1mm;padding:0 .8mm;font-family:ui-monospace,Menlo,monospace;font-size:.88em}
+.ex{display:inline-block;font-size:6.8pt;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:2mm;padding:0 1.4mm;vertical-align:1px}
+.doc-foot{font-size:8pt;color:var(--muted);padding-top:4mm}
+@media print{.ph{background:none;border-bottom:1px dotted #8a7a2a}}
+/* Document-type pill + accent (data: doc_type). In PDF the pill/accent repeat via Chrome's page header (render.py), so the in-page copy is screen-only. */
+.cover{position:relative}
+.doc-type{position:absolute;top:0;right:0;font-size:9.15pt;font-weight:700;letter-spacing:.14em;line-height:1;padding:1.95mm 3.9mm;border-radius:99px;background:var(--dt-bg);background-image:linear-gradient(180deg,var(--dt-top),var(--dt-bottom));border:1px solid var(--dt-border);box-shadow:0 1px 2px rgba(17,17,17,.10),inset 0 1px 0 rgba(255,255,255,.7);color:var(--dt-color)}
+@media screen{.cover{border-top:3px solid var(--dt-accent)}.doc-type{top:12mm;right:14mm}}
+@media print{.doc-type{display:none}}

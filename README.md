@@ -48,3 +48,14 @@ python3 tools/render_packs.py --check  # exits 1 if packs/index.html is out of d
 ```
 
 `packs.json` holds only public card fields. Thumbs get a `?v=` cache-buster (the `v` in the data, or a hash of the image file). Everything outside the marker comments in `packs/index.html` is left alone.
+
+## Sample job page: Documents (Scope / Delivery)
+
+The root page shows a made-up job (Saltbush Café, fictional) with the Documents dock. The documents are pre-rendered with Brand's locked v1 templates, unchanged:
+
+```bash
+BRAND_TEMPLATES=/path/to/brand/templates tools/build_sample_docs.sh   # writes sample-docs/out/*.html|.pdf
+python3 tools/check_banned.py                                         # L-054 banned patterns (text + PDFs)
+```
+
+Edit only `sample-docs/data/*.json` (fictional content). `sample-docs/src/doc.css` is Brand's file, checked by `sample-docs/DOC-CSS-MD5.txt`. CI for these checks is parked in `ci/ci.yml`.

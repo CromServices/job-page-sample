@@ -47,6 +47,52 @@
     .hint { font-size: var(--fs-small); color: var(--muted); }
     .toast { display: none; margin-top: 10px; font-size: var(--fs-small); color: var(--fg); }
     .toast.show { display: block; }
+    /* Documents (Scope / Delivery) + dock, matching the private job host. */
+    .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 32px 0 12px; }
+    .sec-head h2 { margin: 0; }
+    .sec-hint { font-size: var(--fs-small); color: var(--muted); }
+    .hint-touch { display: none; }
+    @media (pointer: coarse) { .hint-touch { display: inline; } .hint-click { display: none; } }
+    .card.list { padding: 0; overflow: hidden; }
+    .doc-row { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 20px; cursor: pointer; }
+    .doc-row + .doc-row { border-top: 1px solid var(--border); }
+    .doc-row:hover { background: var(--soft); }
+    .doc-row:focus-visible { outline: 2px solid var(--fg); outline-offset: -2px; }
+    .dt { flex-shrink: 0; font-size: 11px; line-height: 1; font-weight: 700; letter-spacing: .14em; padding: 6px 11px; border-radius: 99px; box-shadow: 0 1px 2px rgba(17,17,17,.10); }
+    .dt-scope { color: #1f4fa8; background-image: linear-gradient(180deg,#f2f7ff,#d9e6ff); border: 1px solid #b3c9f0; }
+    .dt-delivery { color: #1d6b3f; background-image: linear-gradient(180deg,#eff9f3,#d3ecdd); border: 1px solid #a9d5ba; }
+    .doc-main { flex: 1; min-width: 0; }
+    .doc-title { display: block; font-weight: 600; color: var(--fg); }
+    .doc-status { display: block; font-size: var(--fs-small); color: var(--muted); }
+    .doc-view { flex-shrink: 0; font-size: var(--fs-small); font-weight: 500; color: var(--fg); }
+    .scrim { position: fixed; inset: 0; background: rgba(0,0,0,.25); z-index: 1000; }
+    .scrim[hidden] { display: none; }
+    .dock { position: fixed; top: 0; right: 0; bottom: 0; width: min(760px, 92vw); z-index: 1001; display: flex; flex-direction: column; background: var(--bg, #f3f2ef); border-left: 1px solid var(--border); transform: translateX(100%); visibility: hidden; transition: transform 200ms ease-out, visibility 0s 200ms; }
+    .dock.open { transform: none; visibility: visible; box-shadow: -8px 0 32px rgba(17,17,17,.18); transition: transform 200ms ease-out; }
+    @media (prefers-reduced-motion: reduce) { .dock, .dock.open { transition: none; } }
+    .dock-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .dock-title { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .dock-title h2 { margin: 0; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .dock-actions { display: flex; align-items: center; gap: 8px; }
+    a.pdf { display: inline-flex; align-items: center; gap: 8px; border-radius: 99px; background: var(--primary); color: var(--primary-fg); padding: 8px 16px; font-size: 14px; font-weight: 600; text-decoration: none; }
+    button.x { min-height: 0; width: 36px; height: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--fg); border: 1px solid var(--border); font-size: 18px; line-height: 1; }
+    button.x:hover { background: var(--soft); border-color: var(--border); }
+    .dock-tabs { display: flex; gap: 8px; padding: 8px 16px; border-bottom: 1px solid var(--border); }
+    .dock-tabs button { min-height: 0; padding: 4px 12px; font-size: 14px; background: transparent; color: var(--muted); border: 0; }
+    .dock-tabs button[aria-current="true"] { background: var(--soft); color: var(--fg); }
+    .dock iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+    @media (max-width: 640px) { .dock { width: 100%; border-left: 0; } .scrim { display: none; } }
+    /* Thread bubbles: Crom Services right (ink), Client left (warm grey); label + time under each. */
+    .thread { display: flex; flex-direction: column; gap: 14px; }
+    .note { font-size: var(--fs-small); color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; margin: 0; }
+    .msg { display: flex; flex-direction: column; gap: 4px; max-width: 88%; min-width: 0; }
+    .msg.crom { align-self: flex-end; align-items: flex-end; }
+    .msg.client { align-self: flex-start; align-items: flex-start; }
+    .bubble { border-radius: 18px; padding: 12px 16px; line-height: 1.5; overflow-wrap: anywhere; }
+    .crom .bubble { background: #111; color: #fff; border-bottom-right-radius: 6px; }
+    .client .bubble { background: #ebe9e4; color: #111; border-bottom-left-radius: 6px; }
+    .who { font-size: 12.5px; color: var(--muted); }
+    .who b { color: var(--fg); font-weight: 700; margin-right: 6px; }
   </style>
   <link rel="icon" href="https://cromservices.github.io/crom-shared/brand/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="https://cromservices.github.io/crom-shared/brand/favicon/favicon.svg">
@@ -56,8 +102,8 @@
   <header data-crom-header data-tag="Sample · example project"></header>
   <div class="wrap">
     <div class="banner">Crom Services · private job page</div>
-    <h1>Sample project</h1>
-    <p class="sub">Example only · a real job gets its own private link</p>
+    <h1>Online ordering page · Saltbush Café</h1>
+    <p class="sub">Example only · a made-up café and job · a real job gets its own private link</p>
 
     <div class="card">
       <div class="row">
@@ -65,7 +111,7 @@
         <p class="meta">Target · a few days after kickoff</p>
       </div>
       <p class="ship-title">What we&rsquo;re shipping</p>
-      <p class="meta" style="margin:0">Scoped delivery for this job · clear handoff when ready</p>
+      <p class="meta" style="margin:0">Order-ahead page for regulars · fixed price · handover guide included</p>
       <div class="ask">
         <strong>Waiting on you</strong>
         Share anything we still need to start or unblock the current stage.
@@ -113,21 +159,50 @@
       </ol>
     </div>
 
+    <section aria-labelledby="documents-heading">
+      <div class="sec-head">
+        <h2 id="documents-heading">Documents</h2>
+        <span class="sec-hint"><span class="hint-click">Click to view</span><span class="hint-touch">Tap to view</span></span>
+      </div>
+      <div class="card list">
+        <button type="button" class="doc-row" data-doc-open="scope" data-doc-card aria-haspopup="dialog" aria-expanded="false" aria-controls="doc-dock">
+          <span class="dt dt-scope">SCOPE</span>
+          <span class="doc-main"><span class="doc-title">Scope of Work</span><span class="doc-status">Agreed scope</span></span>
+          <span class="doc-view">View &rarr;</span>
+        </button>
+        <button type="button" class="doc-row" data-doc-open="delivery" data-doc-card aria-haspopup="dialog" aria-expanded="false" aria-controls="doc-dock">
+          <span class="dt dt-delivery">DELIVERY</span>
+          <span class="doc-main"><span class="doc-title">Delivery and Handover</span><span class="doc-status">Delivery report</span></span>
+          <span class="doc-view">View &rarr;</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="sec-head"><h2>Files</h2><span class="sec-hint">Newest first · this job only</span></div>
+    <div class="card">
+      <p class="meta" style="margin:0">Files you and Crom Services share land here, with name, size and time.</p>
+    </div>
+
+    <div class="sec-head"><h2>Thread</h2><span class="sec-hint">Sample conversation</span></div>
+    <div class="card">
+      <div class="thread">
+        <p class="note">We reply within 5&ndash;15 minutes while online. If you send a few messages, we&rsquo;ll answer them together.</p>
+        <div class="msg crom"><div class="bubble">Hi Sam, your private job page is ready. The scope is under Documents. Tap it any time to check what&rsquo;s included.</div><div class="who"><b>Crom Services</b>14 Oct 2026, 9:05 am</div></div>
+        <div class="msg client"><div class="bubble">Thanks! Can the pickup times start at 6:30 on weekdays?</div><div class="who"><b>Client</b>14 Oct 2026, 9:12 am</div></div>
+        <div class="msg crom"><div class="bubble">Yes, 6:30 am on weekdays and 7:30 am on weekends. Send the menu when it suits and we&rsquo;ll start the draft.</div><div class="who"><b>Crom Services</b>14 Oct 2026, 9:16 am</div></div>
+        <div class="msg client"><div class="bubble">Menu attached. Flat white is $5.20 now.</div><div class="who"><b>Client</b>14 Oct 2026, 9:31 am</div></div>
+      </div>
+    </div>
+
     <h2>Your reply</h2>
     <div class="card">
       <label for="reply">Message to Crom Services</label>
       <textarea id="reply" placeholder="Ask a question, share a link, or confirm details…"></textarea>
       <div class="actions">
         <button type="button" id="send">Send reply</button>
-        <button type="button" class="ghost" id="clear">Clear</button>
         <span class="hint">Sample only — nothing is sent from this page</span>
       </div>
       <p class="toast" id="toast">Thanks — on a live job this would reach Crom Services.</p>
-    </div>
-
-    <h2>Delivery</h2>
-    <div class="card">
-      <p class="meta" style="margin:0">Empty until handoff — then checklist and links land here.</p>
     </div>
 
     <footer data-crom-footer data-contact="off">
@@ -135,14 +210,82 @@
     </footer>
     <noscript><p class="crom-small">Crom Services · Australia</p></noscript>
   </div>
+  <div class="scrim" id="doc-scrim" hidden></div>
+  <div class="dock" id="doc-dock" role="dialog" aria-modal="true" aria-labelledby="doc-dock-title" aria-hidden="true" data-doc-dock="closed" inert>
+    <div class="dock-head">
+      <div class="dock-title"><span class="dt" id="doc-dock-label"></span><h2 id="doc-dock-title"></h2></div>
+      <div class="dock-actions">
+        <a class="pdf" id="doc-dock-pdf" data-doc-pdf href="#" download>&darr; Download PDF</a>
+        <button type="button" class="x" id="doc-dock-close" data-doc-close aria-label="Close document">&times;</button>
+      </div>
+    </div>
+    <nav class="dock-tabs" aria-label="Switch document">
+      <button type="button" data-doc-tab="scope">Scope of Work</button>
+      <button type="button" data-doc-tab="delivery">Delivery and Handover</button>
+    </nav>
+    <iframe id="doc-dock-frame" title="Document"></iframe>
+  </div>
   <script>
     const reply = document.getElementById('reply');
     const toast = document.getElementById('toast');
     document.getElementById('send').addEventListener('click', () => toast.classList.add('show'));
-    document.getElementById('clear').addEventListener('click', () => {
-      reply.value = '';
-      toast.classList.remove('show');
-      reply.focus();
+    // Documents dock: same behaviour as the private job page (Esc closes, focus in and back out).
+    const DOCS = {
+      scope: { label: 'SCOPE', title: 'Scope of Work', cls: 'dt-scope' },
+      delivery: { label: 'DELIVERY', title: 'Delivery and Handover', cls: 'dt-delivery' },
+    };
+    // Screen-only fit for the docked frame; Brand's doc.css is left as is.
+    const FIT = '@media screen{body{padding:0!important;background:#fff!important}.cover,main,.doc-foot{max-width:none!important;border-radius:0!important}}@media screen and (max-width:600px){.cover,main,.doc-foot{padding-left:18px!important;padding-right:18px!important}.doc-type{top:18px!important;right:18px!important}}';
+    const dock = document.getElementById('doc-dock');
+    const scrim = document.getElementById('doc-scrim');
+    const frame = document.getElementById('doc-dock-frame');
+    const closeBtn = document.getElementById('doc-dock-close');
+    let returnTo = null, active = null;
+    function show(kind) {
+      const d = DOCS[kind]; active = kind;
+      const label = document.getElementById('doc-dock-label');
+      label.textContent = d.label; label.className = 'dt ' + d.cls;
+      document.getElementById('doc-dock-title').textContent = d.title;
+      const pdf = document.getElementById('doc-dock-pdf');
+      pdf.href = './sample-docs/out/' + kind + '.pdf';
+      pdf.setAttribute('download', 'saltbush-cafe-sample-' + kind + '.pdf');
+      frame.title = d.title + ' (' + d.label + ')';
+      frame.src = './sample-docs/out/' + kind + '.html';
+      document.querySelectorAll('[data-doc-tab]').forEach(b => b.dataset.docTab === kind ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'));
+      document.querySelectorAll('[data-doc-open]').forEach(b => b.setAttribute('aria-expanded', String(b.dataset.docOpen === kind)));
+    }
+    function open(kind) {
+      if (!returnTo) returnTo = document.activeElement;
+      show(kind);
+      dock.classList.add('open'); dock.removeAttribute('inert'); dock.setAttribute('aria-hidden', 'false'); dock.dataset.docDock = 'open';
+      scrim.hidden = false;
+      if (matchMedia('(max-width: 640px)').matches) document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+    function close() {
+      dock.classList.remove('open'); dock.setAttribute('inert', ''); dock.setAttribute('aria-hidden', 'true'); dock.dataset.docDock = 'closed';
+      scrim.hidden = true; document.body.style.overflow = '';
+      document.querySelectorAll('[data-doc-open]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      const back = returnTo; returnTo = null; active = null;
+      if (back) back.focus();
+    }
+    document.querySelectorAll('[data-doc-open]').forEach(b => b.addEventListener('click', () => open(b.dataset.docOpen)));
+    document.querySelectorAll('[data-doc-tab]').forEach(b => b.addEventListener('click', () => show(b.dataset.docTab)));
+    closeBtn.addEventListener('click', close);
+    scrim.addEventListener('click', close);
+    frame.addEventListener('load', () => {
+      const d = frame.contentDocument; if (!d || !d.head) return;
+      const st = d.createElement('style'); st.textContent = FIT; d.head.appendChild(st);
+      d.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    });
+    document.addEventListener('keydown', e => {
+      if (!active) return;
+      if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+      if (e.key !== 'Tab') return;
+      const f = dock.querySelectorAll('button, a[href], iframe');
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     });
   </script>
 </body>

@@ -1,0 +1,34 @@
+{
+  "kind": "delivery",
+  "doc_title": "Delivery and Handover",
+  "doc_date": "22 Oct 2026",
+  "client_name": "Sam (Saltbush Café, sample)",
+  "project_name": "Online ordering page",
+  "job_ref": "Sample job SB-104",
+  "platform": "Direct (sample)",
+  "doc_version": "1.0",
+  "contact_line": "Messages on your private job page",
+  "summary": "The ordering page is live. Regulars can order ahead and pick a time, and orders land in the café inbox.",
+  "delivered": "- Mobile-first ordering page\n- Menu with 28 items and prices\n- Order emails to the café inbox\n- Handover guide",
+  "before_after": [
+    {
+      "caption": "Morning ordering, before and after",
+      "before_img": "Before: queue at the counter",
+      "after_img": "After: order-ahead page"
+    }
+  ],
+  "how_to_use": "- Open the guide to change a price or hide a sold-out item\n- Check the order inbox from 6:30 am\n- Test an order on your phone after any menu change",
+  "links": [
+    {
+      "label": "Ordering page",
+      "location": "Live on the café site (sample)"
+    },
+    {
+      "label": "Handover guide (PDF)",
+      "location": "Files on this job page"
+    }
+  ],
+  "known_limits": "- No online payment: customers pay at pickup\n- Orders need someone to check the inbox\n- Menu photos are not included",
+  "free_fix_until": "29 Oct 2026",
+  "next_steps": "- **Monthly care plan:** we keep an eye on the page and handle small menu changes each month\n- **Payments add-on:** card payments at checkout for a separate fixed price\n- **Nothing more:** you keep the page and guide; no follow-up needed"
+}
