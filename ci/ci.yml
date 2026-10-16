@@ -1,0 +1,15 @@
+# Parked: move to .github/workflows/ci.yml once the pushing login has the GitHub "workflow" scope.
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y poppler-utils
+      - run: python3 tools/check_banned.py
+      - run: python3 tools/render_packs.py --check
+      - run: cd sample-docs && md5sum -c DOC-CSS-MD5.txt
