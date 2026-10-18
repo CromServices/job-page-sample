@@ -155,6 +155,11 @@
           "label": "Open live Lovable sample",
           "href": "https://little-chip-dental.lovable.app/",
           "public": true
+        },
+        {
+          "label": "Advocate 4 U, a support-finder app",
+          "href": "https://advocate4u.lovable.app",
+          "public": true
         }
       ]
     },
