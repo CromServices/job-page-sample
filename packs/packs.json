@@ -123,17 +123,17 @@
     {
       "id": "wix",
       "public": true,
-      "title": "Wix site build or rebuild",
-      "body_html": "A clean Wix site built or rebuilt on your account: pages, forms, mobile checks, handover. First draft 2 business days after your content, live 2 business days after sign-off.",
+      "title": "Website rebuild",
+      "body_html": "A clean website on your account: pages, forms, mobile checks, handover. First draft 2 business days after your content, live 2 business days after sign-off.",
       "thumb": {
         "png": "crom-card-wix.png",
         "webp": "crom-card-wix.webp",
-        "alt": "Wix site rebuild pack thumbnail: a clean local business homepage with a free quote button",
+        "alt": "Website rebuild pack thumbnail: a clean local business homepage with a free quote button",
         "v": "1791988324"
       },
       "ctas": [
         {
-          "label": "Open live Wix rebuild",
+          "label": "Open live website rebuild",
           "href": "https://www.generalpower.com.au",
           "public": true
         }
@@ -142,17 +142,17 @@
     {
       "id": "lovable",
       "public": true,
-      "title": "Lovable website",
-      "body_html": "A fast, modern website built on Lovable, with booking or enquiry flows where needed. First draft 2 business days after scope is agreed, live 2 business days after sign-off.",
+      "title": "Modern website with booking",
+      "body_html": "A fast, modern website with booking or enquiry flows where needed. First draft 2 business days after scope is agreed, live 2 business days after sign-off.",
       "thumb": {
         "png": "crom-card-lovable.png",
         "webp": "crom-card-lovable.webp",
-        "alt": "Lovable website pack thumbnail: a friendly local business homepage with online booking",
+        "alt": "Modern website with booking pack thumbnail: a friendly local business homepage with online booking",
         "v": "1791988324"
       },
       "ctas": [
         {
-          "label": "Open live Lovable sample",
+          "label": "Open live website",
           "href": "https://little-chip-dental.lovable.app/",
           "public": true
         },
