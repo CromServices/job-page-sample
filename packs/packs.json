@@ -133,7 +133,7 @@
       },
       "ctas": [
         {
-          "label": "Open live website rebuild",
+          "label": "Open live sample",
           "href": "https://www.generalpower.com.au",
           "public": true
         }
@@ -152,7 +152,7 @@
       },
       "ctas": [
         {
-          "label": "Open live website",
+          "label": "Open live sample",
           "href": "https://little-chip-dental.lovable.app/",
           "public": true
         },
