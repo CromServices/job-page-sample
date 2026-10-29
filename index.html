@@ -102,7 +102,7 @@
   <header data-crom-header data-tag="Sample · example project"></header>
   <div class="wrap">
     <div class="banner">Crom Services · private job page</div>
-    <h1>Online ordering page · Saltbush Café</h1>
+    <h1>Online ordering page · Marlock Corner Café</h1>
     <p class="sub">Example only · a made-up café and job · a real job gets its own private link</p>
 
     <div class="card">
@@ -248,7 +248,7 @@
       document.getElementById('doc-dock-title').textContent = d.title;
       const pdf = document.getElementById('doc-dock-pdf');
       pdf.href = './sample-docs/out/' + kind + '.pdf';
-      pdf.setAttribute('download', 'saltbush-cafe-sample-' + kind + '.pdf');
+      pdf.setAttribute('download', 'marlock-corner-cafe-sample-' + kind + '.pdf');
       frame.title = d.title + ' (' + d.label + ')';
       frame.src = './sample-docs/out/' + kind + '.html';
       document.querySelectorAll('[data-doc-tab]').forEach(b => b.dataset.docTab === kind ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'));
