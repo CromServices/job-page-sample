@@ -51,7 +51,7 @@ python3 tools/render_packs.py --check  # exits 1 if packs/index.html is out of d
 
 ## Sample job page: Documents (Scope / Delivery)
 
-The root page shows a made-up job (Saltbush Café, fictional) with the Documents dock. The documents are pre-rendered with Brand's locked v1 templates, unchanged:
+The root page shows a made-up job (Marlock Corner Café, fictional) with the Documents dock. The documents are pre-rendered with Brand's locked v1 templates, unchanged:
 
 ```bash
 BRAND_TEMPLATES=/path/to/brand/templates tools/build_sample_docs.sh   # writes sample-docs/out/*.html|.pdf
