@@ -18,7 +18,7 @@ Hub: https://cromservices.github.io/job-page-sample/demos/
 
 These are **Crom interaction samples**, not client sites. No invented clinic names, no HIPAA language, no clinical claims. Card labels (Whitening / Implants / Check-up) are marketing-only. The slider uses placeholder smiles, not patient photos.
 
-Palette: midnight navy (`#0a1628`) with brushed-gold accents.
+Palette: the page chrome uses the shared Crom theme ([crom-shared](https://github.com/CromServices/crom-shared) `theme.css`, v1). It is light by default (paper `#f3f2ef`, white cards, ink `#111111`) and switches to warm charcoal (`#1b1a17`, cards `#26241f`) when the visitor's system asks for dark. Type is Inter. The demo widgets themselves (the flip cards and the before/after stage) keep their sample midnight-navy and brushed-gold look, which the demo copy describes.
 
 ## Local preview
 

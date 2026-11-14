@@ -1,5 +1,6 @@
 .stage {
   background: var(--navy-mid);
+  color: var(--ivory);
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 14px;
@@ -87,7 +88,7 @@
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--demo-muted);
   margin-bottom: 8px;
 }
 
@@ -143,6 +144,6 @@ input[type="range"]::-moz-range-thumb {
 
 .note {
   margin: 12px 0 0;
-  color: var(--muted);
+  color: var(--demo-muted);
   font-size: 13px;
 }
