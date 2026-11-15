@@ -1,6 +1,6 @@
-# Site-generation prompt: WooCommerce / WoodMart fashion shop (bid concept v1)
+# Site-generation prompt: WooCommerce / WoodMart fashion shop (bid concept v2)
 
-Quick bid wireframe for PeoplePerHour job 4531126, 15 Nov 2026. Proposed premium direction for the homepage and shop, built to fit WoodMart and WPBakery layout patterns. The existing site has not been seen (access is only shared with the shortlist). Do not publish.
+Feeling-led v2 of the PeoplePerHour job 4531126 wireframe, 15 Nov 2026. v1 is left untouched. The concept is what the client wants their customer to feel while using the shop — quiet luxury — not a list of tasks. Proposed premium direction for the homepage and shop, built to fit WoodMart and WPBakery layout patterns. The existing site has not been seen (access is only shared with the shortlist). Do not publish.
 
 ---
 
@@ -97,26 +97,60 @@ Cues taken: a clean sans, a clear primary button, generous product photographs, 
 
 ## Emotion of the scope
 
-**The shop already feels open.**
+Client wants customers to feel: a “polished, premium” shop with a “cohesive premium look” and a “slick, elegant fashion/lifestyle appearance”, where “visual quality matters as much as technical functionality”, and the shop and product pages are “intuitive and attractive” on a phone as well as a desktop. (Quoted from the client post.)
 
-The visitor should feel they have walked into a considered shop, not a theme still waiting to be finished. Desire comes first: cloth, light and a calm room, with the pieces already in place. Then certainty: a size that can be checked, shipping that can be understood, and a short path to pay. Nothing should feel loud, rushed or half-built. The client reading the asset spec and the Launch plan should feel the same steadiness — they can see what to supply, and they can see how the store reaches a tested launch.
+**Quiet luxury.**
 
-- **Hero:** “I’ve walked into a finished shop.”
-- **Image hotspots:** “I can see a piece in the room, and go straight to it.”
-- **Product grid:** “I can find the piece, and see it clearly.”
-- **Product page:** “I know the size, I can see the cloth, and I trust the buy.”
-- **Cart, checkout and shipping:** “Paying, and knowing what shipping will cost, is straightforward.”
-- **Asset spec:** “I know exactly what photographs and video to supply, and where they go.”
-- **Launch plan:** “I can see the path to a tested, launch-ready store.”
+Not a task. A hush in a beautiful room, cloth close enough to want, then the ease of taking a piece home.
+
+### Feeling journey
+
+#### Arrive — hush
+- Feeling word: hush
+- Inner voice: “The room goes quiet. Warm light on wool. No one is hurrying me.”
+- Design levers: a full-bleed photograph of the shop interior, starting at the top of the viewport with the nav sitting on it and no empty band (L-109); a deep left-to-right scrim so the headline sits in the darker air and stays at 4.5:1; Manrope 800, a two-to-three-line H1, high in the frame, never centred; ivory type on the scrim; almost no motion on the first screen; a short lede spoken softly, with no feature list.
+
+#### Explore — desire
+- Feeling word: desire
+- Inner voice: “That knit wants a hand on it. The rail feels close enough to touch.”
+- Design levers: art-directed 4:5 crops that sit close to the cloth; a hotspot rail with a slow, quiet pulse on the marks and a card that appears as if lifted from the hanging pieces; wide gaps between products; tactile names (“The wrap coat”, “The merino poncho”); a slow scale on hover; filters present but visually quiet, so the photographs stay first; copy that invites looking, not sorting.
+
+#### Decide — confidence
+- Feeling word: confidence
+- Inner voice: “This is the one. The wool looks heavy enough. The belt already sits in my hand.”
+- Design levers: a large worn portrait of the coat, with a close crop of the wrap and the wool beside it; the size guide open next to the buy button, so the body is considered without anxiety; calm price typography; unhurried, sensory copy; ample space around the form; no urgency, no scarcity countdown.
+
+#### Act — ease
+- Feeling word: ease
+- Inner voice: “Paying is as quiet as looking. The way home is already thought of.”
+- Design levers: a short form in a still, ivory field; shipping and the total visible before a card is entered; UK and international weight-based rates spoken plainly (sample figures, labelled); no countdown, no “hurry”, no clutter; buttons at 48px and unclipped; a soft line of reassurance under the last step.
+
+#### After — calm
+- Feeling word: calm
+- Inner voice: “It’s done. A note will find me. If it doesn’t sit right, sending it back is already clear.”
+- Design levers: a typographic confirmation, no confetti or noise; a still photograph held in reserve, or a quiet field of type; Delivery and Returns named gently and linked; sample content clearly tagged; the same type, space and palette as the shop, so the aftertaste matches the room.
+
+The Asset spec and Launch plan panels are for the client reading the bid. They carry the same feeling into the work itself: the Asset spec holds the photography and placement that make *desire* and *hush* possible; the Launch plan holds the tested path that makes *ease* and *calm* possible after a real purchase. Both stay in `screens.html`, tagged with those feeling words.
+
+Never feel:
+
+- Cheap
+- Rushed
+- Unfinished, or still waiting for pictures
+- Unsure at checkout
+- Anxious about shipping
+- Crowded
+- Shouty
+- Like a theme demonstration
+- Sold to
+- Visually careless
 
 ---
-
 ## Rationale
 
-The client asked for design ideas, not empty boxes filled in, on a WoodMart and WPBakery store we have not yet been able to open. This concept is therefore a proposed premium direction for the homepage and shop, fitted to WoodMart’s own patterns: a full-bleed hero with the header sitting on the photograph, a WPBakery image-hotspot band, a filtered and sortable product grid, a product page with a gallery and a size guide, and a short cart and checkout that already shows UK and international weight-based shipping. Five sample products stand in for the catalogue the client says is ready, and every price, size and shipping figure is tagged “Sample content”. The asset-spec panel answers the request for advice on image and video size, style and placement. The Launch plan panel holds the setup-only work: staging, backups, payment gateways, shipping, stock and order emails, end-to-end tests, legal pages, SEO, security, privacy and performance, with WoodMart and WPBakery kept, and any plugin or licence cost flagged in advance. Unknowns stay marked “ask in bid”.
+The client asked for a slick, elegant fashion and lifestyle store, with visual quality held as high as the technical work, and for ideas rather than empty boxes filled in. v1 showed the right scope — hero, hotspots, five products, a size guide, checkout with shipping, an asset spec and a launch plan — but the visitor lines read as tasks (“I can find the piece”, “I know the size”). v2 is led by the feeling the customer should have: quiet luxury. The page opens in a hush (warm rails, a high headline, no hurry), moves through desire (cloth, close crops, a rail you can almost touch), into confidence on the product (the wool, the belt, the size guide beside the button), into ease at checkout (shipping already considered, nothing shouted), and into calm after the order (a note, and a clear way back). Sample products, prices and shipping figures stay tagged “Sample content”. The Asset spec and Launch plan remain, because they are how that feeling is built and kept. Unknowns stay marked “ask in bid”.
 
 ---
-
 ## Type
 
 - **Manrope**, 400 and 800 (already a free face on WordPress and easy to load beside WoodMart). Fall back to Inter Tight or Archivo if the client’s own heading face is a normal-width sans.
@@ -150,7 +184,7 @@ If the client’s brand colour is supplied, `--accent` becomes that colour, dark
 - **Lighting:** warm interior shop light on the hero; soft daylight on product stills. True colour, not a heavy grade.
 - **Texture:** wool, cotton, leather, timber rails, a quiet room. Calm and close, never loud.
 - **Scrims:** a left-to-right dark gradient on desktop so the headline, lede and buttons sit on the darker side and reach 4.5:1. On phone, a stronger top-to-bottom scrim, because the type sits in the upper part of the hero.
-- **Motion:** none required. Hover only on buttons and product cards. Respect reduced motion.
+- **Motion:** almost none on arrival. A slow scale on product stills when the pointer hovers, and a quiet pulse on the hotspot marks, so the rail feels alive without becoming busy. Button hover only, a slight lift in brightness. Respect reduced motion: all of this stills.
 - **Never:** a made-up logo or business name, empty photo slots, line-drawing stand-ins, text baked into images, or sample products that could be read as this client’s real catalogue.
 
 ---
@@ -188,18 +222,18 @@ All stills are free-licence Unsplash or Pexels photographs, downloaded locally a
 |---|---|---|
 | Complete the homepage; replace placeholder images, video and copy | `screens.html` Homepage hero, Image hotspots | yes |
 | Improve typography, spacing, colours, alignment, imagery and layout for a cohesive premium look | `screens.html` (the whole page) | yes |
-| Suggest creative improvements to the homepage, product presentation and shopping experience | `screens.html` hero, hotspots, product grid, product page, cart and checkout | yes |
+| Suggest creative improvements to the homepage, product presentation and shopping experience | `screens.html` hero, hotspots, product grid, product page, cart and checkout, and After | yes |
 | Complete interactive image hotspots | `screens.html` Image hotspots | yes |
 | Check the header, footer, menus, links and buttons | `screens.html` nav, footer, and buttons on each section | yes |
 | Upload/configure about 5 products with photos, descriptions, prices, sizes, variations and stock | `screens.html` Product grid (five sample products) | yes |
 | Finish product pages, galleries, size guides and product information | `screens.html` Product page | yes |
 | Keyword search, filters for size/colour/price, and sort by price or newest, using WoodMart features | `screens.html` Product grid (search, filters and sort) | yes |
 | Shop and product pages intuitive and attractive on desktop and mobile | `screens.html` Product grid and Product page; `proofs/desktop-1440.png`, `proofs/phone-390.png` | yes |
-| Payment gateways, shopping cart and secure checkout | `screens.html` Cart, checkout and shipping; Launch plan (payments) | yes |
+| Payment gateways, shopping cart and secure checkout | `screens.html` Cart, checkout and shipping; After (confirmation); Launch plan (payments) | yes |
 | UK and international shipping, including weight-based rates for multi-item orders | `screens.html` Cart, checkout and shipping; Launch plan (shipping) | yes |
 | Stock control, order processing, customer emails and WooCommerce settings | `screens.html` Launch plan; stock line on the Product page | yes |
-| Whole purchase process checked, including shipping charges and payment confirmation | `screens.html` Launch plan (end-to-end tests) | yes |
-| About, Contact, Delivery, Returns, Privacy Policy and Terms & Conditions, from agreed content | `screens.html` footer links, and Launch plan (legal pages) | yes |
+| Whole purchase process checked, including shipping charges and payment confirmation | `screens.html` After (confirmation); Launch plan (end-to-end tests) | yes |
+| About, Contact, Delivery, Returns, Privacy Policy and Terms & Conditions, from agreed content | `screens.html` After (Delivery and Returns, spoken gently), footer links, and Launch plan (legal pages) | yes |
 | Responsive layouts on desktop, tablet and mobile | `screens.html` layouts; desktop and phone proofs | yes |
 | Technical issues resolved; essential SEO, security, privacy and performance settings | `screens.html` Launch plan | yes |
 | End-to-end tests of payments, checkout, shipping, orders, notifications and stock updates | `screens.html` Launch plan (end-to-end tests) | yes |
