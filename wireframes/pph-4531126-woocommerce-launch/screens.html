@@ -12,8 +12,8 @@
 <header class="nav">
   <a class="wordmark" href="#top">Client brand</a>
   <nav class="nav-links" aria-label="Primary">
-    <a class="nav-text" href="#shop">Shop</a>
-    <a class="nav-text nav-hide" href="#product">A product</a>
+    <a class="nav-text" href="#shop">The shop</a>
+    <a class="nav-text nav-hide" href="#product">This piece</a>
     <a class="nav-text nav-hide" href="#checkout">Bag</a>
     <form class="nav-search" role="search" action="#shop" method="get">
       <label class="visually-hidden" for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search the shop</label>
@@ -23,27 +23,27 @@
   </nav>
 </header>
 
-<section class="hero" id="top">
+<section class="hero" id="top" data-feeling="hush">
   <img class="hero-photo" src="images/hero-shop.webp" alt="Warmly lit shop interior with clothes hanging on timber rails. Stock photograph." width="1600" height="1066">
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-copy">
       <p class="eyebrow">Client brand</p>
-      <h1>A finished shop.<br>Clear pieces.<br>A short path to buy.</h1>
-      <p class="lede">A calm front for a fashion and lifestyle store: the collection shown clearly, sizes easy to check, and a checkout that already accounts for UK and international shipping.</p>
+      <h1>Quiet luxury.<br>Close enough<br>to touch.</h1>
+      <p class="lede">Warm rails, unhurried space, and cloth shown as it feels in the hand.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#shop">Shop the collection</a>
-        <a class="btn btn-ghost" href="#hotspots">Shop the rail</a>
+        <a class="btn btn-primary" href="#shop">Step inside</a>
+        <a class="btn btn-ghost" href="#hotspots">Come closer</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="hotspots">
+<section class="section" id="hotspots" data-feeling="desire">
   <div class="wrap">
-    <p class="section-kicker">Homepage · Image hotspots</p>
-    <h2>See a piece in the room, then go straight to it.</h2>
-    <p class="section-lede">Each mark on the rail opens a short product card. The photograph is a stock stand-in for a styled rail or look the client supplies. The products shown are sample content.</p>
+    <p class="section-kicker">The rail</p>
+    <h2>Close enough to touch.</h2>
+    <p class="section-lede">A single piece, lifted from the hanging cloth. The photograph is a stock stand-in for a rail the client will style. The products shown are sample content.</p>
     <div class="hotspot-frame">
       <img src="images/hotspot-rail.webp" alt="Neutral shirts and knits hanging on a white rail in daylight. Stock photograph." width="1600" height="1066">
       <button class="dot dot-1" type="button" aria-label="The everyday knit, sample product"></button>
@@ -60,11 +60,11 @@
   </div>
 </section>
 
-<section class="section section-alt" id="shop">
+<section class="section section-alt" id="shop" data-feeling="desire">
   <div class="wrap">
-    <p class="section-kicker">Shop</p>
-    <h2>Five pieces, easy to scan and filter.</h2>
-    <p class="section-lede">About five products, as the brief asks for at launch. Each card carries a photograph, a short name, a price, a colour mark and available sizes. Search, then filter by size, colour and price, and sort by newest or by price. Everything in this grid is sample content, not this client’s real catalogue.</p>
+    <p class="section-kicker">The collection</p>
+    <h2>Five pieces, given room to be wanted.</h2>
+    <p class="section-lede">Each one held in its own quiet space. Look slowly. Filter if you wish — by size, colour, or price — or simply follow the cloth. Everything here is sample content, not this client’s real catalogue.</p>
 
     <form class="toolbar" action="#shop" method="get">
       <div class="field search-field">
@@ -114,7 +114,7 @@
 
     <div class="grid-products">
       <a class="product-card" href="#product">
-        <div class="photo-wrap"><img src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps. Stock photograph." width="1067" height="1600"></div>
+        <div class="photo-wrap"><img class="crop-coat" src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps. Stock photograph." width="1067" height="1600"></div>
         <div class="card-body">
           <p class="sample-tag">Sample content</p>
           <h3>The wrap coat</h3>
@@ -124,7 +124,7 @@
         </div>
       </a>
       <a class="product-card" href="#shop">
-        <div class="photo-wrap"><img src="images/product-knit.webp" alt="Cream fringed knit hanging on a wooden hanger. Stock photograph." width="1114" height="1600"></div>
+        <div class="photo-wrap"><img class="crop-knit" src="images/product-knit.webp" alt="Cream fringed knit hanging on a wooden hanger. Stock photograph." width="1114" height="1600"></div>
         <div class="card-body">
           <p class="sample-tag">Sample content</p>
           <h3>The merino poncho</h3>
@@ -134,7 +134,7 @@
         </div>
       </a>
       <a class="product-card" href="#shop">
-        <div class="photo-wrap"><img src="images/product-jean.webp" alt="Dark straight jeans laid flat on a pale cloth. Stock photograph." width="1095" height="1600"></div>
+        <div class="photo-wrap"><img class="crop-jean" src="images/product-jean.webp" alt="Dark straight jeans laid flat on a pale cloth. Stock photograph." width="1095" height="1600"></div>
         <div class="card-body">
           <p class="sample-tag">Sample content</p>
           <h3>The straight jean</h3>
@@ -144,7 +144,7 @@
         </div>
       </a>
       <a class="product-card" href="#product">
-        <div class="photo-wrap"><img src="images/product-shirt.webp" alt="White cotton shirts hanging on a rail, one being lifted. Stock photograph." width="1067" height="1600"></div>
+        <div class="photo-wrap"><img class="crop-shirt" src="images/product-shirt.webp" alt="White cotton shirts hanging on a rail, one being lifted. Stock photograph." width="1067" height="1600"></div>
         <div class="card-body">
           <p class="sample-tag">Sample content</p>
           <h3>The cotton shirt</h3>
@@ -154,7 +154,7 @@
         </div>
       </a>
       <a class="product-card" href="#shop">
-        <div class="photo-wrap"><img src="images/product-bag.webp" alt="Tan leather satchel with dark straps, photographed from the front. Stock photograph." width="1600" height="1068"></div>
+        <div class="photo-wrap"><img class="crop-bag" src="images/product-bag.webp" alt="Tan leather satchel with dark straps, photographed from the front. Stock photograph." width="1600" height="1068"></div>
         <div class="card-body">
           <p class="sample-tag">Sample content</p>
           <h3>The leather satchel</h3>
@@ -167,15 +167,15 @@
   </div>
 </section>
 
-<section class="section" id="product">
+<section class="section" id="product" data-feeling="confidence">
   <div class="wrap">
-    <p class="section-kicker">Product</p>
+    <p class="section-kicker">This piece</p>
     <h2>The wrap coat</h2>
-    <p class="section-lede">A finished product page: a gallery, a short description, sizes, stock, and a size guide kept next to the buy button — not buried. This product, its price and its measurements are sample content.</p>
+    <p class="section-lede">Camel wool, mid-weight, falling to the knee. Stay with it a moment. This product, its price and its measurements are sample content.</p>
     <div class="product-layout">
       <div class="gallery">
         <div class="gallery-main">
-          <img src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps, full length. Stock photograph." width="1067" height="1600">
+          <img class="crop-coat" src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps, full length. Stock photograph." width="1067" height="1600">
         </div>
         <div class="gallery-thumbs">
           <div class="photo-wrap">
@@ -192,7 +192,7 @@
           <p class="price">£245</p>
           <p class="stock">In stock · 6 left in this colour</p>
         </div>
-        <p class="product-copy">A mid-weight wrap coat in camel wool, cut to sit cleanly at the knee. The belt holds the shape without a heavy fastening. Worn over the cotton shirt, or over the merino poncho when the weather turns.</p>
+        <p class="product-copy">The belt holds without a heavy fastening. Over a shirt in soft weather; over the poncho when the air turns. The wool looks as it feels: close, warm, considered.</p>
         <form class="buy-form" action="#checkout" method="get">
           <div class="field">
             <label id="size-label">Size</label>
@@ -209,8 +209,8 @@
         </form>
         <aside class="size-guide" id="size-guide">
           <p class="sample-tag">Sample content</p>
-          <h3>Size guide</h3>
-          <p class="note">Opened from the product form, so it sits next to the sizes. These figures are sample measurements for the layout, not this client’s real guide.</p>
+          <h3>How it sits</h3>
+          <p class="note">How it is meant to sit. These figures are sample measurements for the layout, not this client’s real guide.</p>
           <table>
             <caption>UK sizes, with EU and US equivalents, and a chest measurement in centimetres</caption>
             <thead>
@@ -230,14 +230,14 @@
   </div>
 </section>
 
-<section class="section section-alt" id="checkout">
+<section class="section section-alt" id="checkout" data-feeling="ease">
   <div class="wrap">
-    <p class="section-kicker">Cart, checkout and shipping</p>
-    <h2>A short path to pay, with shipping shown before the card.</h2>
-    <p class="section-lede">The bag, a compact checkout, and UK or international shipping calculated by weight — including multi-item orders. Payment gateways are configured in the build, once the client’s choice is agreed. Prices, quantities and shipping figures below are sample content.</p>
+    <p class="section-kicker">The last step</p>
+    <h2>As quiet as looking.</h2>
+    <p class="section-lede">No hurry. The total is plain. The journey home — in the UK, or further, by weight — sits in front of you before a card is entered. Figures below are sample content.</p>
     <div class="checkout-layout">
       <div>
-        <h3>Your bag</h3>
+        <h3>With you</h3>
         <div class="cart-list">
           <article class="cart-line">
             <img src="images/product-coat.webp" alt="Camel wrap coat. Stock photograph." width="1067" height="1600">
@@ -307,14 +307,38 @@
             <span>PayPal, if that is the gateway the client chooses.</span>
           </label>
         </fieldset>
-        <button class="btn btn-primary" type="submit">Place the order</button>
-        <p class="note">Checkout is served over a secure connection. A payment confirmation and an order email are sent once the gateway is in place and tested.</p>
+        <button class="btn btn-primary" type="submit">Confirm the order</button>
+        <p class="note reassure">A secure, unhurried payment. A short note follows, once the live gateway is in place and tested.</p>
       </form>
     </div>
   </div>
 </section>
 
-<section class="section" id="assets">
+
+<section class="section" id="after" data-feeling="calm">
+  <div class="wrap">
+    <p class="section-kicker">After</p>
+    <h2>It’s done. A note is on its way.</h2>
+    <p class="section-lede">The same quiet as the shop. A short email follows the order. Delivery, and how to send something back, already wait in the pages set aside for them — written from the client’s agreed content.</p>
+    <article class="confirm">
+      <p class="sample-tag">Sample content</p>
+      <p class="confirm-kicker">An order, held</p>
+      <div class="confirm-body">
+        <div class="confirm-stills">
+          <img src="images/product-coat.webp" class="crop-coat" alt="The wrap coat. Stock photograph." width="1067" height="1600">
+          <img src="images/product-shirt.webp" class="crop-shirt" alt="The cotton shirt. Stock photograph." width="1067" height="1600">
+        </div>
+        <div class="confirm-copy">
+          <h3>The wrap coat, and the cotton shirt.</h3>
+          <p>A note will find you. The pieces here are sample content, not a real purchase.</p>
+          <p class="confirm-links"><a href="#legal">Delivery</a><span aria-hidden="true"> · </span><a href="#legal">Returns</a></p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="assets" data-feeling="desire">
   <div class="wrap">
     <p class="section-kicker">Asset spec</p>
     <h2>What to photograph, and where it sits in WoodMart.</h2>
@@ -368,7 +392,7 @@
   </div>
 </section>
 
-<section class="section section-alt" id="launch">
+<section class="section section-alt" id="launch" data-feeling="calm">
   <div class="wrap">
     <p class="section-kicker">Launch plan</p>
     <h2>How the store reaches a tested launch, on the foundation already in place.</h2>
