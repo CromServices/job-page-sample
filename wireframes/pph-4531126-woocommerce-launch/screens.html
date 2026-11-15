@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client brand</title>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="wordmark" href="#top">Client brand</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a class="nav-text" href="#shop">Shop</a>
+    <a class="nav-text nav-hide" href="#product">A product</a>
+    <a class="nav-text nav-hide" href="#checkout">Bag</a>
+    <form class="nav-search" role="search" action="#shop" method="get">
+      <label class="visually-hidden" for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search the shop</label>
+      <input id="q" type="search" name="q" placeholder="Search" aria-label="Search the shop">
+    </form>
+    <a class="nav-cart" href="#checkout">Bag<span class="cart-count">2</span></a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <img class="hero-photo" src="images/hero-shop.webp" alt="Warmly lit shop interior with clothes hanging on timber rails. Stock photograph." width="1600" height="1066">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Client brand</p>
+      <h1>A finished shop.<br>Clear pieces.<br>A short path to buy.</h1>
+      <p class="lede">A calm front for a fashion and lifestyle store: the collection shown clearly, sizes easy to check, and a checkout that already accounts for UK and international shipping.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#shop">Shop the collection</a>
+        <a class="btn btn-ghost" href="#hotspots">Shop the rail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hotspots">
+  <div class="wrap">
+    <p class="section-kicker">Homepage · Image hotspots</p>
+    <h2>See a piece in the room, then go straight to it.</h2>
+    <p class="section-lede">Each mark on the rail opens a short product card. The photograph is a stock stand-in for a styled rail or look the client supplies. The products shown are sample content.</p>
+    <div class="hotspot-frame">
+      <img src="images/hotspot-rail.webp" alt="Neutral shirts and knits hanging on a white rail in daylight. Stock photograph." width="1600" height="1066">
+      <button class="dot dot-1" type="button" aria-label="The everyday knit, sample product"></button>
+      <button class="dot dot-2" type="button" aria-label="The cotton shirt, sample product, card open"></button>
+      <button class="dot dot-3" type="button" aria-label="A shirt in a deeper colour, sample product"></button>
+      <article class="hotspot-card">
+        <p class="sample-tag">Sample content</p>
+        <img src="images/product-shirt.webp" alt="White cotton shirts hanging on a rail. Stock photograph." width="1067" height="1600">
+        <h3>The cotton shirt</h3>
+        <p class="price">£85</p>
+        <a class="btn btn-primary" href="#product">View the product</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="shop">
+  <div class="wrap">
+    <p class="section-kicker">Shop</p>
+    <h2>Five pieces, easy to scan and filter.</h2>
+    <p class="section-lede">About five products, as the brief asks for at launch. Each card carries a photograph, a short name, a price, a colour mark and available sizes. Search, then filter by size, colour and price, and sort by newest or by price. Everything in this grid is sample content, not this client’s real catalogue.</p>
+
+    <form class="toolbar" action="#shop" method="get">
+      <div class="field search-field">
+        <label for="shop-q">Keyword search</label>
+        <input id="shop-q" type="search" name="q" placeholder="Search products" value="">
+      </div>
+      <div class="field">
+        <label for="filter-size">Size</label>
+        <select id="filter-size" name="size">
+          <option value="">All sizes</option>
+          <option>8</option>
+          <option>10</option>
+          <option>12</option>
+          <option>14</option>
+          <option>16</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-colour">Colour</label>
+        <select id="filter-colour" name="colour">
+          <option value="">All colours</option>
+          <option>Camel</option>
+          <option>Cream</option>
+          <option>Indigo</option>
+          <option>White</option>
+          <option>Tan</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-price">Price</label>
+        <select id="filter-price" name="price">
+          <option value="">Any price</option>
+          <option>Under £100</option>
+          <option>£100 to £200</option>
+          <option>Over £200</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="sort">Sort</label>
+        <select id="sort" name="sort">
+          <option>Newest</option>
+          <option>Price, low to high</option>
+          <option>Price, high to low</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="grid-products">
+      <a class="product-card" href="#product">
+        <div class="photo-wrap"><img src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps. Stock photograph." width="1067" height="1600"></div>
+        <div class="card-body">
+          <p class="sample-tag">Sample content</p>
+          <h3>The wrap coat</h3>
+          <p class="price">£245</p>
+          <p class="stock">Sizes 8 to 16</p>
+          <div class="swatches" aria-label="Camel"><span class="swatch swatch-camel"></span></div>
+        </div>
+      </a>
+      <a class="product-card" href="#shop">
+        <div class="photo-wrap"><img src="images/product-knit.webp" alt="Cream fringed knit hanging on a wooden hanger. Stock photograph." width="1114" height="1600"></div>
+        <div class="card-body">
+          <p class="sample-tag">Sample content</p>
+          <h3>The merino poncho</h3>
+          <p class="price">£95</p>
+          <p class="stock">One size</p>
+          <div class="swatches" aria-label="Cream"><span class="swatch swatch-cream"></span></div>
+        </div>
+      </a>
+      <a class="product-card" href="#shop">
+        <div class="photo-wrap"><img src="images/product-jean.webp" alt="Dark straight jeans laid flat on a pale cloth. Stock photograph." width="1095" height="1600"></div>
+        <div class="card-body">
+          <p class="sample-tag">Sample content</p>
+          <h3>The straight jean</h3>
+          <p class="price">£90</p>
+          <p class="stock">Sizes 8 to 16</p>
+          <div class="swatches" aria-label="Indigo"><span class="swatch swatch-indigo"></span></div>
+        </div>
+      </a>
+      <a class="product-card" href="#product">
+        <div class="photo-wrap"><img src="images/product-shirt.webp" alt="White cotton shirts hanging on a rail, one being lifted. Stock photograph." width="1067" height="1600"></div>
+        <div class="card-body">
+          <p class="sample-tag">Sample content</p>
+          <h3>The cotton shirt</h3>
+          <p class="price">£85</p>
+          <p class="stock">Sizes 8 to 16</p>
+          <div class="swatches" aria-label="White"><span class="swatch swatch-white"></span></div>
+        </div>
+      </a>
+      <a class="product-card" href="#shop">
+        <div class="photo-wrap"><img src="images/product-bag.webp" alt="Tan leather satchel with dark straps, photographed from the front. Stock photograph." width="1600" height="1068"></div>
+        <div class="card-body">
+          <p class="sample-tag">Sample content</p>
+          <h3>The leather satchel</h3>
+          <p class="price">£160</p>
+          <p class="stock">In stock</p>
+          <div class="swatches" aria-label="Tan"><span class="swatch swatch-tan"></span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="product">
+  <div class="wrap">
+    <p class="section-kicker">Product</p>
+    <h2>The wrap coat</h2>
+    <p class="section-lede">A finished product page: a gallery, a short description, sizes, stock, and a size guide kept next to the buy button — not buried. This product, its price and its measurements are sample content.</p>
+    <div class="product-layout">
+      <div class="gallery">
+        <div class="gallery-main">
+          <img src="images/product-coat.webp" alt="Camel wrap coat worn on stone steps, full length. Stock photograph." width="1067" height="1600">
+        </div>
+        <div class="gallery-thumbs">
+          <div class="photo-wrap">
+            <img src="images/product-coat-detail.webp" alt="Close view of the coat’s wrap, belt and wool. Crop of the same stock photograph." width="1120" height="1008">
+          </div>
+          <div class="photo-wrap">
+            <img src="images/product-coat.webp" alt="Second view of the camel wrap coat. Stock photograph." width="1067" height="1600">
+          </div>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="sample-tag">Sample content</p>
+        <div class="price-row">
+          <p class="price">£245</p>
+          <p class="stock">In stock · 6 left in this colour</p>
+        </div>
+        <p class="product-copy">A mid-weight wrap coat in camel wool, cut to sit cleanly at the knee. The belt holds the shape without a heavy fastening. Worn over the cotton shirt, or over the merino poncho when the weather turns.</p>
+        <form class="buy-form" action="#checkout" method="get">
+          <div class="field">
+            <label id="size-label">Size</label>
+            <div class="size-row" role="group" aria-labelledby="size-label">
+              <button class="chip" type="button">8</button>
+              <button class="chip" type="button">10</button>
+              <button class="chip" type="button" aria-pressed="true">12</button>
+              <button class="chip" type="button">14</button>
+              <button class="chip" type="button">16</button>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Add to bag</button>
+          <a class="btn btn-ghost-ink" href="#size-guide">Size guide</a>
+        </form>
+        <aside class="size-guide" id="size-guide">
+          <p class="sample-tag">Sample content</p>
+          <h3>Size guide</h3>
+          <p class="note">Opened from the product form, so it sits next to the sizes. These figures are sample measurements for the layout, not this client’s real guide.</p>
+          <table>
+            <caption>UK sizes, with EU and US equivalents, and a chest measurement in centimetres</caption>
+            <thead>
+              <tr><th>UK</th><th>EU</th><th>US</th><th>Chest (cm)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>36</td><td>4</td><td>84</td></tr>
+              <tr><td>10</td><td>38</td><td>6</td><td>88</td></tr>
+              <tr><td>12</td><td>40</td><td>8</td><td>92</td></tr>
+              <tr><td>14</td><td>42</td><td>10</td><td>96</td></tr>
+              <tr><td>16</td><td>44</td><td>12</td><td>100</td></tr>
+            </tbody>
+          </table>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="checkout">
+  <div class="wrap">
+    <p class="section-kicker">Cart, checkout and shipping</p>
+    <h2>A short path to pay, with shipping shown before the card.</h2>
+    <p class="section-lede">The bag, a compact checkout, and UK or international shipping calculated by weight — including multi-item orders. Payment gateways are configured in the build, once the client’s choice is agreed. Prices, quantities and shipping figures below are sample content.</p>
+    <div class="checkout-layout">
+      <div>
+        <h3>Your bag</h3>
+        <div class="cart-list">
+          <article class="cart-line">
+            <img src="images/product-coat.webp" alt="Camel wrap coat. Stock photograph." width="1067" height="1600">
+            <div>
+              <p class="sample-tag">Sample content</p>
+              <h3>The wrap coat</h3>
+              <p>Size 12 · Qty 1</p>
+            </div>
+            <p class="price">£245</p>
+          </article>
+          <article class="cart-line">
+            <img src="images/product-shirt.webp" alt="White cotton shirt. Stock photograph." width="1067" height="1600">
+            <div>
+              <p class="sample-tag">Sample content</p>
+              <h3>The cotton shirt</h3>
+              <p>Size 12 · Qty 1</p>
+            </div>
+            <p class="price">£85</p>
+          </article>
+        </div>
+        <div class="totals">
+          <div><span>Subtotal</span><span>£330</span></div>
+          <div><span>Shipping, UK, by weight</span><span>£7.50</span></div>
+          <div class="grand"><span>Total</span><span>£337.50</span></div>
+        </div>
+        <p class="note" style="margin-top:12px">Sample content. The live rates follow the client’s weight-based table for UK and international orders.</p>
+      </div>
+      <form class="form" action="#checkout" method="get">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" type="text" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="address">Delivery address</label>
+          <textarea id="address" name="address" autocomplete="street-address" required></textarea>
+        </div>
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option selected>United Kingdom</option>
+            <option>International — other destinations</option>
+          </select>
+        </div>
+        <fieldset class="ship-options">
+          <legend class="section-kicker" style="margin-bottom:8px">Shipping</legend>
+          <label>
+            <input type="radio" name="shipping" value="uk" checked>
+            <span><strong>UK, weight-based.</strong> Sample rate for this bag: £7.50. Multi-item orders use the combined weight.</span>
+          </label>
+          <label>
+            <input type="radio" name="shipping" value="intl">
+            <span><strong>International, weight-based.</strong> Sample rate for this bag: £18.00. The live table is agreed in the build.</span>
+          </label>
+        </fieldset>
+        <fieldset class="pay-options">
+          <legend class="section-kicker" style="margin-bottom:8px">Payment</legend>
+          <label>
+            <input type="radio" name="pay" value="card" checked>
+            <span>Card. The live gateway is agreed at kick-off.</span>
+          </label>
+          <label>
+            <input type="radio" name="pay" value="paypal">
+            <span>PayPal, if that is the gateway the client chooses.</span>
+          </label>
+        </fieldset>
+        <button class="btn btn-primary" type="submit">Place the order</button>
+        <p class="note">Checkout is served over a secure connection. A payment confirmation and an order email are sent once the gateway is in place and tested.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="assets">
+  <div class="wrap">
+    <p class="section-kicker">Asset spec</p>
+    <h2>What to photograph, and where it sits in WoodMart.</h2>
+    <p class="section-lede">Advice for the images and video needed to finish a slick, elegant fashion and lifestyle store on the existing WoodMart and WPBakery foundation. Final pixel sizes should be confirmed against the live theme once access is shared, in case a slider height or product ratio is already set.</p>
+    <table class="spec">
+      <thead>
+        <tr>
+          <th>Asset</th>
+          <th>Size and format</th>
+          <th>Style and placement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Homepage hero, or slider slide</td>
+          <td>1920 × 800, or 1920 × 1080 if the current slider is closer to 16:9. WebP or high-quality JPEG. Keep each slide under about 300 KB where possible.</td>
+          <td>A calm area on one side for the headline, or type sits on a scrim. No words in the photograph. Soft shop light or daylight. Sits flush under the header, full width, with no empty band.</td>
+        </tr>
+        <tr>
+          <td>Optional hero or band video</td>
+          <td>1920 × 1080, MP4 H.264, 8 to 12 seconds, no sound needed, under 8 MB.</td>
+          <td>A quiet merch or rail loop. Replace the still hero, or sit in a band below it. Provide a still as the fallback.</td>
+        </tr>
+        <tr>
+          <td>Product stills</td>
+          <td>2000 × 2000 (1:1) or 1600 × 2000 (4:5). Pick one ratio and use it for all five products. WebP or high-quality JPEG.</td>
+          <td>Plain wall or soft daylight, true colour, the same crop distance on every piece. Main shot plus two to four gallery angles: front, back, a cloth detail, and a worn view if it can be done. Fills the product card and the product-page gallery.</td>
+        </tr>
+        <tr>
+          <td>Hotspot photograph</td>
+          <td>1920 × 1080 or 1600 × 900, landscape, WebP or JPEG.</td>
+          <td>A rail or a styled look with room for three to five marks, away from busy pattern. Used in WoodMart’s built-in image-hotspot element, on the homepage below the hero.</td>
+        </tr>
+        <tr>
+          <td>Optional product video</td>
+          <td>1080 × 1080 or 1920 × 1080, MP4, 10 to 15 seconds, under 10 MB.</td>
+          <td>A slow turn or a cloth detail. No type on screen. Sits in the product gallery.</td>
+        </tr>
+        <tr>
+          <td>Size guide</td>
+          <td>Type and a clean table, not a photograph of a chart.</td>
+          <td>A WoodMart size-guide popup or a product tab, opened from the buy form so it is next to the sizes.</td>
+        </tr>
+        <tr>
+          <td>Logo and favicon</td>
+          <td>Logo as SVG, or PNG on a clear ground, plus a dark and a light version if the header changes. Favicon at 32 and 180 pixels.</td>
+          <td>Header wordmark and the browser tab. The live mark replaces the “Client brand” label.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section section-alt" id="launch">
+  <div class="wrap">
+    <p class="section-kicker">Launch plan</p>
+    <h2>How the store reaches a tested launch, on the foundation already in place.</h2>
+    <p class="section-lede">Staging, backups, payments, shipping, tests and the legal pages — the setup work that sits behind the shop front. WoodMart and WPBakery stay. Anything still unknown is marked to be agreed in the bid.</p>
+    <div class="plan-blocks">
+      <article class="plan-block">
+        <h3>Staging</h3>
+        <p>Where practical, work is done on a staging copy of the existing site, so the live shop is not the review space. The client reviews the homepage, the five products, checkout and shipping there, and only then is the work moved to the live domain.</p>
+      </article>
+      <article class="plan-block">
+        <h3>Backups</h3>
+        <p>A full backup of the current site and its database is taken before any work starts. Existing content, products and settings are preserved, and a copy is kept until after launch is confirmed.</p>
+      </article>
+      <article class="plan-block">
+        <h3>Payment gateways</h3>
+        <p>WooCommerce checkout is completed with the gateway the client chooses. The preference is unknown — ask in bid. Card, PayPal, or another gateway the client already has in mind can be configured. Any plugin or transaction cost is disclosed before it is added. Checkout runs over a secure connection, with a payment confirmation on success.</p>
+      </article>
+      <article class="plan-block">
+        <h3>UK and international shipping</h3>
+        <p>WooCommerce shipping is set up for the United Kingdom and for international orders, with weight-based rates that add up correctly on multi-item bags. The destination list and the rate table are unknown — ask in bid. Sample figures on the checkout above are for the layout only.</p>
+      </article>
+      <article class="plan-block">
+        <h3>Stock, orders and customer emails</h3>
+        <p>Stock control is switched on for the five products, including variations. Order processing follows WooCommerce’s usual flow: new order, processing, completed. Customer emails (order received, processing, completed, and stock notices) are configured. The wording of those emails is unknown — ask in bid.</p>
+      </article>
+      <article class="plan-block">
+        <h3>End-to-end tests</h3>
+        <p>Before launch, the full purchase path is tested on desktop and on a phone:</p>
+        <ul>
+          <li>Add to bag, cart totals, and a variation change</li>
+          <li>Checkout, including a failed and a successful payment</li>
+          <li>UK and international shipping calculations on single-item and multi-item orders</li>
+          <li>Payment confirmation, order emails, and a stock decrement</li>
+        </ul>
+      </article>
+      <article class="plan-block" id="legal">
+        <h3>Legal and content pages</h3>
+        <p>About, Contact, Delivery, Returns, Privacy Policy and Terms &amp; Conditions are completed from agreed content and linked in the footer. That copy is unknown — ask in bid. No legal wording is invented for this concept.</p>
+      </article>
+      <article class="plan-block">
+        <h3>SEO, security, privacy and performance</h3>
+        <p>Essential settings are configured before launch: one clear H1 on each template, titles and meta descriptions in the client’s voice, SSL on checkout, privacy and cookie settings to match the Privacy page, and performance basics (image sizes, caching already available on the host). Anything that needs a paid plugin is disclosed in advance.</p>
+      </article>
+      <article class="plan-block">
+        <h3>Stack, costs and timescale</h3>
+        <p>WoodMart and WPBakery are retained. Built-in features cover the hotspots, the filters, the size guide and the product galleries, so extra custom development is avoided unless a gap appears once the site is reviewed. Any plugin, licence or third-party cost is disclosed before it is added. The client asked for a start immediately or within days, and would ideally finish in 2–3 working days, subject to the condition of the site and the assets being available. That window is confirmed in the bid, after a look at the existing site.</p>
+      </article>
+      <article class="plan-block">
+        <h3>The steps</h3>
+        <ol class="steps">
+          <li><span>Access, backup, and a short written gap list from the existing site.</span></li>
+          <li><span>Homepage, hotspots, the five products, and the size guide, on staging.</span></li>
+          <li><span>Payments, shipping, emails, legal pages, and essential settings.</span></li>
+          <li><span>End-to-end tests on desktop and phone, then a client review on staging.</span></li>
+          <li><span>Move to the live domain, a final purchase test, and a short hand-off note.</span></li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Client brand</strong></p>
+    <nav aria-label="Legal and information">
+      <a href="#legal">About</a>
+      <a href="#legal">Contact</a>
+      <a href="#legal">Delivery</a>
+      <a href="#legal">Returns</a>
+      <a href="#legal">Privacy Policy</a>
+      <a href="#legal">Terms &amp; Conditions</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
