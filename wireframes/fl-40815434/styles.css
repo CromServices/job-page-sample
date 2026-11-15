@@ -1,0 +1,108 @@
+
+@font-face{font-family:"Manrope";src:url("fonts/manrope.woff2") format("woff2");font-weight:200 800;font-display:swap}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Manrope",system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:"Manrope",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0 0 .5em}
+h1{font-size:60px;line-height:1.06;max-width:15ch}
+h2{font-size:38px;max-width:22ch}
+h3{font-size:23px;line-height:1.2}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.sec{padding:88px 0}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;color:var(--eyebrow,var(--brand))}
+.lede{font-size:21px;max-width:40ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 24px;border-radius:var(--radius,8px);font:800 17px/1.25 "Manrope",sans-serif;text-decoration:none;text-align:center;border:2px solid transparent;cursor:pointer;max-width:100%}
+.btn-primary{background:var(--btn-bg);color:var(--btn-ink)}
+.btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.sample{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--sample-bg,#fff3c4);color:var(--sample-ink,#4a3800);vertical-align:middle}
+.brandmark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brandmark .mark{height:64px;display:flex;align-items:center}
+.brandmark img{height:64px;width:auto}
+.brandlabel{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.nav{background:var(--nav-bg);color:var(--nav-ink);position:relative;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:700;font-size:16px}
+.nav ul a{text-decoration:none}
+.nav .btn{min-height:46px;padding:10px 20px;font-size:16px}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius,8px);overflow:hidden}
+.card .in{padding:22px 24px}
+.screen-label{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-weight:700;font-size:16px}
+.field input,.field select,.field textarea{font:400 17px/1.4 "Manrope",sans-serif;padding:13px 14px;border:1.5px solid var(--field-line,#767676);border-radius:6px;background:#fff;color:#1a1a1a;width:100%}
+.foot{background:var(--foot-bg);color:var(--foot-ink);padding:56px 0 40px;font-size:16px}
+.foot a{text-decoration:none}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:16px;background:var(--surface)}
+.chip.on{background:var(--brand);color:var(--btn-ink);border-color:var(--brand)}
+.hide-d{display:none}
+@media (max-width:900px){
+ .g3,.g4{grid-template-columns:repeat(2,1fr)}
+ .nav ul{display:none}
+}
+@media (max-width:700px){
+ body{font-size:17px}
+ .wrap{padding:0 20px}
+ .sec{padding:60px 0}
+ h1{font-size:38px;max-width:none}
+ h2{font-size:29px}
+ h3{font-size:21px}
+ .lede{font-size:18px}
+ .g2,.g3,.g4{grid-template-columns:1fr}
+ .brandmark .mark,.brandmark img{height:48px}
+ .nav .wrap{min-height:72px;gap:12px}
+ .nav .btn{padding:8px 14px;font-size:15px;min-height:44px}
+ .hide-m{display:none}
+ .hide-d{display:revert}
+}
+
+:root{--bg:#f4f8f9;--ink:#0d2236;--muted:#3f5566;--brand:#0b5c73;--btn-bg:#0b3a55;--btn-ink:#ffffff;--surface:#ffffff;--line:#cfdde3;--nav-bg:#ffffff;--nav-ink:#0d2236;--foot-bg:#0b2a40;--foot-ink:#e3eef3;--eyebrow:#0b5c73;--radius:10px}
+.mark svg{height:64px;width:64px}
+.nav{border-bottom:1px solid var(--line)}
+.hero{position:relative;color:#fff;min-height:620px;display:flex;align-items:center;background:#0b3a55}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,30,48,.88) 0%,rgba(6,30,48,.6) 50%,rgba(6,30,48,.1) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:90px}
+.hero .eyebrow{color:#9fe3ef}
+.hero .btn-primary{background:#ffd23f;color:#0d2236}
+.search{display:flex;gap:10px;max-width:560px;margin-top:26px;background:#fff;border-radius:12px;padding:8px}
+.search input{flex:1;border:0;font:400 17px "Manrope",sans-serif;padding:10px 12px;min-width:0;color:#0d2236}
+.search .btn{min-height:46px}
+.cats .card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.cats a{text-decoration:none}
+.cats ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:16px}
+.helper{background:#0b3a55;color:#eef6f8}
+.helper .eyebrow{color:#9fe3ef}
+.helper .card{background:#0f4a6a;border-color:#2a6585;color:#eef6f8}
+.helper .chip{background:#0f4a6a;color:#eef6f8;border-color:#5f93ad}
+.helper .chip.on{background:#ffd23f;color:#0d2236;border-color:#ffd23f}
+.helper .btn-primary{background:#ffd23f;color:#0d2236}
+.hp{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.plp{display:grid;grid-template-columns:260px 1fr;gap:32px}
+.filters h4{font-size:16px;margin:18px 0 8px;letter-spacing:0}
+.filters label{display:flex;gap:10px;align-items:center;font-size:16px;margin:6px 0}
+.filters input{width:20px;height:20px}
+.prod .in h3{font-size:19px}
+.prod img{aspect-ratio:1;object-fit:cover;width:100%}
+.ship{font-size:15px;color:#0b5c73;font-weight:700}
+.price{font-weight:800;font-size:20px}
+.pdp{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pdp img{border-radius:10px;aspect-ratio:1;object-fit:cover;width:100%}
+.fit{background:#e6f4f1;border:1.5px solid #3c8f7f;border-radius:10px;padding:14px 16px;font-weight:700;margin:16px 0}
+.co{display:grid;grid-template-columns:1.3fr 1fr;gap:36px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+.sum div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.track{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.track img{border-radius:10px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.parcel{border-left:4px solid #0b5c73;padding:6px 0 6px 16px;margin:14px 0}
+.admin{background:#e9f0f3}
+table.sync{width:100%;border-collapse:collapse;font-size:16px;background:#fff}
+table.sync th,table.sync td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+.ok{color:#1d6b3a;font-weight:800}
+.syncw{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.band{height:140px;background:url(images/pool-water-800.webp) center/cover}
+@media (max-width:700px){.hero{min-height:560px}.hp,.plp,.pdp,.co,.track{grid-template-columns:1fr;gap:24px}.mark svg{height:48px;width:48px}table.sync{font-size:14px}table.sync th,table.sync td{padding:8px 6px}.search{flex-direction:column}}
