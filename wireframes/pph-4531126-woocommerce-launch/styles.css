@@ -109,7 +109,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 50%;
+  object-position: 64% 42%;
 }
 .hero-scrim {
   position: absolute;
@@ -140,11 +140,11 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 h1 {
   font-weight: 800;
-  font-size: 64px;
-  line-height: 1.06;
-  letter-spacing: -0.02em;
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--hero);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .lede {
   font-size: 18px;
@@ -190,7 +190,7 @@ h1 {
 }
 .btn-ghost-ink:hover { background: rgba(23,20,18,0.06); }
 
-.section { padding: 88px 40px 96px; }
+.section { padding: 112px 48px 120px; }
 .section-alt { background: var(--paper-2); }
 .wrap { max-width: 1200px; margin: 0 auto; }
 .section-kicker {
@@ -217,10 +217,10 @@ h1 {
 }
 h2 {
   font-weight: 800;
-  font-size: 36px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  font-size: 40px;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
   color: var(--ink);
 }
 h3 {
@@ -232,8 +232,10 @@ h3 {
 }
 .section-lede {
   color: var(--muted);
-  max-width: 40em;
-  margin-bottom: 40px;
+  max-width: 34em;
+  margin-bottom: 48px;
+  font-size: 19px;
+  line-height: 1.55;
 }
 
 /* Hotspots */
@@ -338,7 +340,7 @@ h3 {
 .grid-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 36px 32px;
 }
 .product-card {
   display: flex;
@@ -555,7 +557,7 @@ footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .nav { padding: 0 20px; height: 64px; }
   .nav-search, .nav-hide { display: none; }
   .hero-inner { padding: 96px 20px 56px; }
-  h1 { font-size: 34px; line-height: 1.12; }
+  h1 { font-size: 34px; line-height: 1.12; letter-spacing: -0.03em; }
   .lede { font-size: 17px; }
   .hero-scrim {
     background:
@@ -564,8 +566,12 @@ footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
         rgba(18,16,14,0.62) 42%,
         rgba(18,16,14,0.28) 100%);
   }
-  .section { padding: 64px 20px 72px; }
-  h2 { font-size: 28px; }
+  .section { padding: 72px 20px 80px; }
+  h2 { font-size: 30px; }
+  .section-lede { font-size: 17px; }
+  .confirm { padding: 24px 20px 28px; }
+  .confirm-body { grid-template-columns: 1fr; gap: 20px; }
+  .confirm-stills img { height: 140px; }
   .grid-products, .product-layout, .checkout-layout, .gallery-thumbs {
     grid-template-columns: 1fr 1fr;
   }
@@ -588,6 +594,86 @@ footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .gallery-main { aspect-ratio: 4 / 5; }
   footer { padding: 28px 20px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+
+/* Art-directed crops */
+.crop-coat { object-position: 50% 12%; }
+.crop-knit { object-position: 50% 35%; }
+.crop-jean { object-position: 50% 18%; }
+.crop-shirt { object-position: 50% 42%; }
+.crop-bag { object-position: 50% 50%; }
+
+/* Quiet motion */
+.product-card .photo-wrap img,
+.gallery-main img,
+.hotspot-frame > img {
+  transition: transform 0.8s ease;
 }
+.product-card:hover .photo-wrap img,
+.product-card:focus-visible .photo-wrap img {
+  transform: scale(1.045);
+}
+.dot {
+  animation: hush-pulse 2.8s ease-in-out infinite;
+}
+@keyframes hush-pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(23,20,18,0.28); }
+  50% { box-shadow: 0 0 0 11px rgba(23,20,18,0.10); }
+}
+
+.reassure {
+  max-width: 28em;
+}
+
+/* After — confirmation */
+.confirm {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 36px 40px 40px;
+  max-width: 920px;
+}
+.confirm-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 4px 0 16px;
+}
+.confirm-body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.confirm-stills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.confirm-stills img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #2A2620;
+}
+.confirm-copy h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.confirm-copy p { color: var(--muted); }
+.confirm-links { margin-top: 16px; }
+.confirm-links a {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+.confirm-links a:hover { opacity: 0.7; }
+
+.toolbar { border-bottom-color: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
