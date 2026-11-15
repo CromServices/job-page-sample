@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client brand</title>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: Manrope;
+  src: url("fonts/manrope.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+:root {
+  --ink: #161410;
+  --paper: #F3EFE7;
+  --muted: #4A453E;
+  --line: #D9D2C6;
+  --accent: #9C4A1A;
+  --accent-hover: #7E3B14;
+  --hero: #F6F1EA;
+  --scrim: #10100E;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); color: var(--ink); }
+body {
+  font-family: Manrope, "Inter Tight", Archivo, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button, input, textarea { font: inherit; }
+
+/* NAV over the hero — no gap, L-109 */
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: linear-gradient(to bottom, rgba(16,16,14,0.45), rgba(16,16,14,0.0));
+}
+.wordmark {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--hero);
+  text-decoration: none;
+  line-height: 1;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-links a {
+  color: var(--hero);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+.nav-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* HERO sits at the top of the viewport */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: var(--hero);
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 50%;
+}
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(16,16,14,0.88) 0%,
+      rgba(16,16,14,0.74) 38%,
+      rgba(16,16,14,0.32) 68%,
+      rgba(16,16,14,0.18) 100%);
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 112px 40px 80px;
+  width: 100%;
+  max-width: 1280px;
+}
+.hero-copy { max-width: 640px; }
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #E8D3B3;
+  margin-bottom: 16px;
+}
+h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--hero);
+  margin-bottom: 20px;
+}
+.lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #F0EBE3;
+  max-width: 36em;
+  margin-bottom: 28px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn-ghost {
+  background: transparent;
+  color: var(--hero);
+  border-color: rgba(246,241,234,0.65);
+}
+.btn-ghost:hover { background: rgba(246,241,234,0.12); }
+
+/* WORK */
+.work {
+  padding: 88px 40px 96px;
+  background: var(--paper);
+}
+.wrap { max-width: 1200px; margin: 0 auto; }
+.section-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+h2 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.section-lede {
+  color: var(--muted);
+  max-width: 38em;
+  margin-bottom: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card { display: block; color: inherit; text-decoration: none; }
+.card figure { margin: 0; }
+.card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #2A2620;
+}
+.card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 14px 0 6px;
+  line-height: 1.25;
+}
+.card p { color: var(--muted); font-size: 17px; line-height: 1.5; }
+
+/* CONTACT */
+.contact {
+  background: #EBE6DC;
+  padding: 88px 40px 96px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.form {
+  display: grid;
+  gap: 16px;
+  background: var(--paper);
+  padding: 28px;
+  border: 1px solid var(--line);
+}
+label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+input, textarea {
+  width: 100%;
+  border: 1px solid #C9C1B3;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 17px;
+  line-height: 1.4;
+  min-height: 48px;
+}
+textarea { min-height: 128px; resize: vertical; }
+input:focus, textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+.form .btn { width: fit-content; min-width: 160px; }
+.note { color: var(--muted); font-size: 16px; margin-top: 8px; }
+
+footer {
+  background: var(--ink);
+  color: #D5CFC5;
+  padding: 28px 40px;
+  font-size: 15px;
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer strong { color: var(--paper); font-weight: 800; }
+
+@media (max-width: 900px) {
+  body { font-size: 17px; }
+  .nav { height: 64px; padding: 0 20px; }
+  .nav-links a.nav-text { display: none; }
+  .hero-scrim {
+    background:
+      linear-gradient(180deg,
+        rgba(16,16,14,0.82) 0%,
+        rgba(16,16,14,0.72) 42%,
+        rgba(16,16,14,0.45) 100%);
+  }
+  .hero-inner { padding: 92px 20px 64px; }
+  h1 { font-size: 34px; line-height: 1.1; }
+  .lede { font-size: 17px; }
+  .work, .contact { padding: 56px 20px 64px; }
+  h2 { font-size: 28px; }
+  .grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .btn { width: 100%; }
+  .form { padding: 20px; }
+  footer { padding: 24px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="wordmark" href="#top">Client brand</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a class="nav-text" href="#work">Work</a>
+    <a class="nav-text" href="#contact">Contact</a>
+    <a class="btn btn-primary" href="#contact">Get in touch</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <img class="hero-photo" src="images/hero-house.webp" alt="Finished house at dusk, lit from within, among trees. Stock photograph." width="1600" height="1066">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Client brand</p>
+      <h1>See the finished<br>work. Then get<br>in touch.</h1>
+      <p class="lede">A straightforward portfolio of completed jobs, with the services listed clearly and a short form when you are ready to talk.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#work">View the work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <p class="section-kicker">Selected work</p>
+    <h2>Completed jobs, plainly shown.</h2>
+    <p class="section-lede">Brief case-study notes will use the client’s own project descriptions. The photographs here are stand-ins, and will be replaced with the client’s project photos.</p>
+    <div class="grid">
+      <article class="card">
+        <figure>
+          <img class="card-photo" src="images/project-living.webp" alt="Open living space and kitchen with timber floors and large glass doors. Stock photograph." width="1600" height="1088" loading="lazy">
+        </figure>
+        <h3>Project one</h3>
+        <p>Short description to be supplied.</p>
+      </article>
+      <article class="card">
+        <figure>
+          <img class="card-photo" src="images/project-entry.webp" alt="Modern house entry with timber cladding and a metal upper facade. Stock photograph." width="1066" height="1600" loading="lazy">
+        </figure>
+        <h3>Project two</h3>
+        <p>Short description to be supplied.</p>
+      </article>
+      <article class="card">
+        <figure>
+          <img class="card-photo" src="images/project-kitchen.webp" alt="Kitchen island in marble and timber, with white cabinets behind. Stock photograph." width="1066" height="1600" loading="lazy">
+        </figure>
+        <h3>Project three</h3>
+        <p>Short description to be supplied.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="section-kicker">Contact</p>
+      <h2>Start a conversation.</h2>
+      <p class="section-lede">A short form, easy to find. Phone, email and other contact paths will be added once the client supplies them.</p>
+    </div>
+    <form class="form" action="#" method="post" onsubmit="return false;">
+      <p>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+      </p>
+      <p>
+        <label for="reach">Email or phone</label>
+        <input id="reach" name="reach" type="text" autocomplete="email">
+      </p>
+      <p>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </p>
+      <button class="btn btn-primary" type="submit">Send</button>
+      <p class="note">The form goes to the client’s inbox once details are supplied.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Client brand</strong></p>
+    <p>Photographs from Unsplash, for layout only.</p>
+  </div>
+</footer>
+
+</body>
+</html>
