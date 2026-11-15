@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The plan — Client brand</title>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav nav-solid">
+  <a class="wordmark" href="screens.html">Client brand</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a class="nav-text" href="screens.html#work">Work</a>
+    <a class="nav-text" href="screens.html#services">Services</a>
+    <a class="nav-text" href="plan.html" aria-current="page">The plan</a>
+    <a class="btn btn-primary" href="screens.html#contact">Get in touch</a>
+  </nav>
+</header>
+
+<section class="plan-hero">
+  <div class="wrap">
+    <p class="eyebrow">The plan</p>
+    <h1>Two parallel tasks,<br>one clear cutover.</h1>
+    <p class="lede">A clean website on your domain, and a full move of business mail to Google Workspace, with DNS updated so web and mail both keep working. Dates, mailbox counts and the preferred CMS are confirmed in the bid (ask in bid). Nothing here invents a timeline or a past job.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+
+    <article class="plan-block" id="website">
+      <p class="section-kicker">1. The website</p>
+      <h2>Build, publish, and hand over the CMS.</h2>
+      <p class="section-lede">The site is a straightforward portfolio: finished-work photographs, brief case-study descriptions, a clear list of services, and a short contact form that is easy to find. It is built to load quickly and to look polished on a phone. It is published on your domain, and CMS access is handed over so you can add new projects yourself. The business name, trade, logo, colours, real project photos, service list and contact details are taken from you (ask in bid).</p>
+    </article>
+
+    <article class="plan-block" id="mail">
+      <p class="section-kicker">2. Google Workspace migration</p>
+      <h2>Every message, folder and alias comes across.</h2>
+      <p class="section-lede">Business mail moves from the current provider to Google Workspace with existing messages, folders and aliases kept intact. Accounts are tested and verified before the old system is switched off. The current provider, the number of mailboxes and aliases, mail volume, and whether a Google Workspace account already exists are confirmed in the bid (ask in bid).</p>
+    </article>
+
+    <article class="plan-block" id="dns">
+      <p class="section-kicker">3. DNS cutover, web and mail</p>
+      <h2>No lost mail, and the site comes up on your domain.</h2>
+      <p class="section-lede">DNS is updated for both the website and mail, so the new domain-based accounts send and receive correctly and the site resolves on your domain. The cutover follows a fixed order:</p>
+      <ul class="dns-list">
+        <li>Lower the TTL on the relevant records in advance, so the later switch propagates quickly.</li>
+        <li>Switch the web records to the new host when the site is ready to publish.</li>
+        <li>Switch MX to Google Workspace at the agreed cutover point.</li>
+        <li>Publish SPF, DKIM and DMARC so mail from the new accounts authenticates.</li>
+        <li>Run a mail check after cutover: send and receive on each alias, and confirm that nothing is left on the old host.</li>
+      </ul>
+    </article>
+
+    <article class="plan-block" id="handoff">
+      <p class="section-kicker">4. The hand-off guide</p>
+      <h2>A short guide, not a long manual.</h2>
+      <p class="section-lede">A brief hand-off guide is a named deliverable. It covers:</p>
+      <ul class="guide-list">
+        <li>How to sign in to the CMS and add a project (title, photographs, notes, publish).</li>
+        <li>Where the live site and the staging copy sit.</li>
+        <li>The DNS records in place for web and mail, including MX, SPF, DKIM and DMARC.</li>
+        <li>How to add or change a Google Workspace user or alias after hand-over.</li>
+        <li>Who to contact if something needs a technical change.</li>
+      </ul>
+    </article>
+
+    <article class="plan-block" id="timeline">
+      <p class="section-kicker">5. Timeline</p>
+      <h2>The work runs in this order.</h2>
+      <p class="section-lede">Step lengths and a start date are set in the bid (ask in bid). The sequence itself does not change:</p>
+      <ol class="steps">
+        <li><strong>Confirm scope and supplies.</strong> <span>Domain, CMS preference, logo, photos, services, contact details, current mail host, and mailbox and alias list (ask in bid).</span></li>
+        <li><strong>Build the website on a staging CMS.</strong> <span>Portfolio, services, case studies and the contact form, ready to review on a phone and a desktop.</span></li>
+        <li><strong>Set up Google Workspace.</strong> <span>Users and aliases ready to receive the migrated mail.</span></li>
+        <li><strong>Migrate messages, folders and aliases.</strong> <span>Checked against the existing accounts before any DNS switch.</span></li>
+        <li><strong>Lower TTL, then cut over DNS.</strong> <span>Web records, MX, SPF, DKIM and DMARC, timed so mail is not lost.</span></li>
+        <li><strong>Mail and site check after cutover.</strong> <span>Send and receive tests, and a pass over the live pages on your domain.</span></li>
+        <li><strong>Hand over.</strong> <span>CMS access, the live site, and the brief hand-off guide.</span></li>
+      </ol>
+    </article>
+
+    <article class="plan-block" id="stack">
+      <p class="section-kicker">6. Stack</p>
+      <h2>WordPress or Webflow, confirmed in the bid.</h2>
+      <p class="section-lede">Either CMS meets the brief: a modern site you can update yourself after hand-over. The preferred platform is unknown — ask in bid. Both options below keep the same design.</p>
+      <div class="stack">
+        <article>
+          <h3>WordPress</h3>
+          <p>A simple project type in the CMS: title, photographs, case-study notes and a publish control. You add a job from one screen. Hosting and the exact plugin set are confirmed in the bid (ask in bid).</p>
+        </article>
+        <article>
+          <h3>Webflow</h3>
+          <p>A Projects collection with the same fields, edited in the Webflow Editor. You add a job from one screen, with no designer needed for ordinary updates. Hosting stays on Webflow unless you ask otherwise (ask in bid).</p>
+        </article>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Client brand</strong></p>
+    <p><a href="screens.html">The website</a> · Approach only. Dates and counts are confirmed in the bid (ask in bid).</p>
+  </div>
+</footer>
+
+</body>
+</html>
