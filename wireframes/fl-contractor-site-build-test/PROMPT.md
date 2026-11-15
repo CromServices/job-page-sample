@@ -1,12 +1,12 @@
-# Site-generation prompt: Contractor portfolio site (test concept v1)
+# Site-generation prompt: Contractor portfolio site (test concept v2)
 
-Test wireframe for the new bid step, 15 Nov 2026. Not a live bid. Do not publish.
+Test wireframe for the new bid step, 15 Nov 2026. Not a live bid. Do not publish. v1 is left untouched. This pack adds the services section, filled case studies, a CMS “Add a project” panel, and a second screen, The plan.
 
 ---
 
 ## SCOPE
 
-Taken only from the client post on Freelancer: "Contractor Site Build & Google Migration". Every gap is marked. Nothing below is invented.
+Taken only from the client post on Freelancer: “Contractor Site Build & Google Migration”. Every gap is marked. Nothing below is invented.
 
 ### What & where
 
@@ -20,13 +20,13 @@ The site’s sole purpose is to showcase past work and clearly outline the servi
 - Existing domain and current website: unknown — ask in bid
 - Preferred CMS: WordPress, Webflow, or a similarly intuitive CMS is fine; the specific choice is unknown — ask in bid
 
-Email migration (job scope, not shown on this website concept): transfer all existing messages, folders and aliases to Google Workspace, and update DNS so the new domain-based accounts send and receive correctly.
+Email migration: transfer all existing messages, folders and aliases to Google Workspace, and update DNS so the new domain-based accounts send and receive correctly.
 
 - Current email provider, mailbox and alias count, mail volume, and whether a Google Workspace account already exists: unknown — ask in bid
 
 ### Audience & arrival
 
-unknown — ask in bid. The post implies visitors who need to see completed work and the services on offer, then get in touch.
+unknown — ask in bid. The post implies visitors who need to see completed work and the services on offer, then get in touch. The plan screen is for the client reading the approach, timeline and stack.
 
 ### Deliverables
 
@@ -38,13 +38,23 @@ Timeline and budget: unknown — ask in bid.
 
 ### Sections (in order)
 
-This concept shows three key sections, each tied to an emotion line:
+Website concept (`screens.html`):
 
 1. Hero
-2. Selected work
-3. Contact
+2. Services
+3. Selected work (case-study cards)
+4. Case study (one sample project detail view)
+5. CMS panel (Add a project)
+6. Contact
 
-A full site would also outline services clearly (the client named this as part of the site’s purpose). The service list itself is unknown — ask in bid, and add a Services section or a short services band once it is supplied. Further pages (individual case-study pages, about, and so on) are unknown — ask in bid. The CMS must let the client add new projects after hand-over.
+Second screen (`plan.html`), The plan:
+
+1. The website build
+2. Google Workspace migration
+3. DNS cutover for web and mail
+4. The hand-off guide
+5. Timeline steps
+6. Stack options (WordPress or Webflow)
 
 ### Contact paths
 
@@ -52,11 +62,11 @@ An easy-to-find contact form is required. Phone, email address, WhatsApp, and th
 
 ### Client supplies
 
-unknown — ask in bid, and needed before a build: logo, colours, type, project photos, case-study descriptions, the service list, contact details, domain access, the current site if there is one, the current email provider, a mailbox and alias list, and whether Google Workspace is already in place.
+unknown — ask in bid, and needed before a build: logo, colours, type, project photos, case-study notes, the service list, contact details, domain access, the current site if there is one, the current email provider, a mailbox and alias list, and whether Google Workspace is already in place.
 
 ### Constraints
 
-Fast to load. Polished on mobile. Simple for the client to update (add new projects themselves after hand-over). WordPress, Webflow, or a similarly intuitive CMS. Licences, insurance, reviews, prices, years in business and results are not in the post — do not invent them.
+Fast to load. Polished on mobile. Simple for the client to update (add new projects themselves after hand-over). WordPress, Webflow, or a similarly intuitive CMS. Licences, insurance, reviews, prices, years in business and results are not in the post — do not invent them. Sample case studies and sample services are tagged “Sample content” and must never read as this client’s or Crom’s real past jobs.
 
 ### Voice
 
@@ -71,7 +81,7 @@ Used as styling cues only. Not cloned, and not presented as this client’s bran
 | quayhold-framer | Quayhold Framer demo | framer | https://quayhold.framer.website | demo | yes | | |
 | ojjm-hire-shopify | OJJM Hire Shopify demo | shopify | https://cromservices.github.io/ojjm-hire/ | demo | yes | | |
 
-Cues taken: a clean sans, a clear primary button, and a photo-led portfolio (from General Power and the Framer demos). Headline and hero photo sit high, with no empty band under the nav (L-109). No illustration panels and no “Your photo here” slots.
+Cues taken: a clean sans, a clear primary button, and a photo-led portfolio (from General Power and the Framer demos). Headline and hero photo sit high, with no empty band under the nav (L-109). No illustration panels and no empty photo slots.
 
 ---
 
@@ -79,17 +89,21 @@ Cues taken: a clean sans, a clear primary button, and a photo-led portfolio (fro
 
 **The work is already the proof.**
 
-The visitor should feel steady, not sold to. They arrive needing a contractor they can trust, and they should not have to take anyone’s word for it. The first thing they see is finished work, at a high standard, with a short path to get in touch. The page should feel solid, calm and unhurried — timber, dusk light, quiet confidence — never loud or promotional.
+The visitor should feel steady, not sold to. They arrive needing a contractor they can trust, and they should not have to take anyone’s word for it. The first thing they see is finished work, at a high standard, with services listed plainly and a short path to get in touch. The page should feel solid, calm and unhurried — timber, dusk light, quiet confidence — never loud or promotional. The client reading The plan should feel the same steadiness: the path is clear, and the mail will not get lost.
 
 - **Hero:** “I can already see the standard they work to.”
+- **Services:** “I know exactly what they cover.”
 - **Selected work:** “They’ve done jobs like mine.”
+- **Case study:** “I can see how a job actually ran.”
+- **CMS panel:** “I can add the next project myself.”
 - **Contact:** “It’s obvious how to start.”
+- **The plan:** “I can see how the whole job will run, and the mail won’t get lost.”
 
 ---
 
 ## Rationale
 
-The client asked for a straightforward portfolio: project photos, brief case-study notes, and a form that is easy to find. Most of that decision happens on a phone, in a few seconds, so the first screen is the work itself — a full-bleed finished-job photo with the headline and buttons sitting high, right under the nav, and no dead space (L-109). A three-card work grid comes next, because seeing more than one job turns a nice hero into proof. The form is short (three fields) and follows immediately, so the visitor never has to hunt for it. Business name, trade, colours, logo and real project photos are all unknown, so the concept uses a “Client brand” label, a neutral palette that can be re-skinned, and free-licence stock photographs marked as stand-ins. Nothing on the page invents a service list, a location, a review or a result.
+The client asked for a site whose sole purpose is to show completed work and to outline services, in a straightforward portfolio, with case-study notes, an easy form, a fast mobile page, and a CMS they can update themselves. v1 showed the work and the form, but it left services, filled case studies, the update flow and the second half of the job (mail, DNS, hand-off, timeline and stack) off the page. v2 puts a Services section on the first screen of content, turns every work card into a short case study (job type, what was done, timeframe, outcome) plus one detail view, and shows the “Add a project” CMS flow as a single panel. A second screen, The plan, is the proposal view: website build, Google Workspace migration of messages, folders and aliases, a DNS cutover that lowers TTL, switches MX, publishes SPF, DKIM and DMARC, and checks mail afterwards, plus the hand-off guide, the timeline steps and the WordPress or Webflow choice. Sample services and sample jobs are tagged “Sample content” so they never read as this client’s or Crom’s real work. Unknowns stay marked “ask in bid”.
 
 ---
 
@@ -126,7 +140,7 @@ If the client’s brand colour is supplied, `--accent` becomes that colour, dark
 - **Texture:** timber cladding, stone, glass, grass. Quiet and solid.
 - **Scrims:** a left-to-right dark gradient on desktop so the headline, lede and buttons sit on the darker side and reach 4.5:1. On phone, a stronger top-to-bottom scrim, because the type sits in the upper part of the hero. Never put body text on a mid-tone patch of the photo.
 - **Motion:** none required. Hover only on buttons (slightly brighter). Respect reduced motion.
-- **Never:** a made-up logo or business name, “Your photo here” boxes, line-drawing stand-ins, readable faces, text baked into images, invented jobs, reviews, licences, results or prices.
+- **Never:** a made-up logo or business name, empty photo slots, line-drawing stand-ins, readable faces, text baked into images, or sample jobs that could be read as this client’s or Crom’s real past work.
 
 ---
 
@@ -136,17 +150,43 @@ All four are Unsplash stills, downloaded locally as WebP at a 1600px long edge, 
 
 | File | Slot | Source URL |
 |---|---|---|
-| `images/hero-house.webp` | Hero background | https://images.unsplash.com/photo-1600585154340-be6161a56a0c |
-| `images/project-living.webp` | Selected work, Project one | https://images.unsplash.com/photo-1600607687939-ce8a6c25118c |
-| `images/project-entry.webp` | Selected work, Project two | https://images.unsplash.com/photo-1600585154526-990dced4db0d |
-| `images/project-kitchen.webp` | Selected work, Project three | https://images.unsplash.com/photo-1556912173-46c336c7fd55 |
+| `images/hero-house.webp` | Hero background, and a supporting still in the case study and CMS panel | https://images.unsplash.com/photo-1600585154340-be6161a56a0c |
+| `images/project-living.webp` | Selected work card one, case study main photograph, CMS thumb | https://images.unsplash.com/photo-1600607687939-ce8a6c25118c |
+| `images/project-entry.webp` | Selected work card two | https://images.unsplash.com/photo-1600585154526-990dced4db0d |
+| `images/project-kitchen.webp` | Selected work card three, case study supporting still, CMS thumb | https://images.unsplash.com/photo-1556912173-46c336c7fd55 |
 
 ---
 
 ## Build notes (not for the page)
 
-- L-109: the hero photograph starts at the top of the viewport. The nav sits over it. There is no empty band between nav and hero. The eyebrow, H1 and buttons sit in the upper part of the hero, not vertically centred.
+- L-109: the hero photograph starts at the top of the viewport. The nav sits over it. There is no empty band between nav and hero. The eyebrow, H1 and buttons sit in the upper part of the hero, not vertically centred. On The plan, the solid nav sits directly above the title band, with no empty gap.
 - Buttons have generous padding, a 48px minimum height, and must not clip.
-- First phone view should stay lean: one font file, hero loaded first, work images lazy-loaded.
-- Platform (WordPress / Webflow / other) is chosen in the bid, once the client’s preference is known.
-- Google Workspace migration, DNS and the hand-off guide stay in the proposal; they are not part of this page concept.
+- First phone view should stay lean: one font file, hero loaded first, later images lazy-loaded where they sit below the first screen.
+- Platform (WordPress / Webflow / other) is chosen in the bid, once the client’s preference is known. Both options are shown on The plan.
+- Proofs are full-page at DPR 2.
+
+---
+
+## Scope coverage
+
+| Client requirement or deliverable | Where it appears (section or screen) | Shown |
+|---|---|---|
+| Clean, modern website | `screens.html` hero, services, work, case study, contact | yes |
+| Showcase completed projects | `screens.html` Selected work, and the case study detail | yes |
+| Clearly outline service offerings | `screens.html` Services | yes |
+| Straightforward portfolio layout | `screens.html` Selected work (photo + case-study cards) | yes |
+| Space for project photos | `screens.html` work cards, case study, CMS photographs field | yes |
+| Brief case-study style descriptions | `screens.html` work cards (job type, what was done, timeframe, outcome) and the case study detail | yes |
+| Easy-to-find contact form | `screens.html` Contact, and the Get in touch control in the nav | yes |
+| Load quickly | `plan.html` The website; WebP images and one font file in the pack | yes |
+| Look polished on mobile | `screens.html` and `plan.html` phone layouts; `proofs/phone-390.png` and `proofs/plan-phone-390.png` | yes |
+| Simple for the client to update; add new projects after hand-over | `screens.html` CMS panel (Add a project: title, photographs, notes, publish) | yes |
+| WordPress, Webflow, or a similarly intuitive CMS | `plan.html` Stack; also named on the CMS panel | yes |
+| Website published on the client’s domain, CMS access handed over | `plan.html` The website, Timeline (hand over) | yes |
+| Full move from legacy business email to Google Workspace | `plan.html` Google Workspace migration | yes |
+| Existing messages, folders and aliases kept intact | `plan.html` Google Workspace migration | yes |
+| Email data migrated, tested and verified | `plan.html` Google Workspace migration, and Timeline (migrate, then mail check) | yes |
+| DNS updated for both web and mail, so accounts send and receive correctly | `plan.html` DNS cutover | yes |
+| Cutover with no lost mail: lowered TTL, MX switch, SPF/DKIM/DMARC, mail check after cutover | `plan.html` DNS cutover, and Timeline | yes |
+| Brief hand-off guide | `plan.html` The hand-off guide | yes |
+| Proposal with approach, timeline and tool stack | `plan.html` (the whole screen) | yes |
