@@ -1,0 +1,30 @@
+{
+ "1440": {
+  "violations": [],
+  "clipped": [],
+  "hscroll": false,
+  "h1_lines": 3,
+  "hero_gap_px": 0,
+  "logo_px": 64,
+  "p_font": "21px",
+  "height_css": 6043,
+  "first_view_KB": {
+   "dpr2": 564,
+   "dpr3": 563
+  }
+ },
+ "390": {
+  "violations": [],
+  "clipped": [],
+  "hscroll": false,
+  "h1_lines": 3,
+  "hero_gap_px": 0,
+  "logo_px": 48,
+  "p_font": "18px",
+  "height_css": 9171,
+  "first_view_KB": {
+   "dpr2": 189,
+   "dpr3": 563
+  }
+ }
+}
