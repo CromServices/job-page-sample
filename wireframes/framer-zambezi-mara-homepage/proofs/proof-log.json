@@ -1,0 +1,34 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 7483,
+  "first_view_bytes": 329928,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wf-framer-zambezi-mara-homepage-2026-11-16/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-375",
+  "width": "375",
+  "css_height": 8512,
+  "first_view_bytes": 219124,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wf-framer-zambezi-mara-homepage-2026-11-16/proofs/phone-375.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 8543,
+  "first_view_bytes": 219124,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wf-framer-zambezi-mara-homepage-2026-11-16/proofs/phone-390.png"
+ },
+ {
+  "name": "phone-430",
+  "width": "430",
+  "css_height": 8517,
+  "first_view_bytes": 289132,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wf-framer-zambezi-mara-homepage-2026-11-16/proofs/phone-430.png"
+ }
+]
