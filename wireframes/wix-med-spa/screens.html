@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Med spa · a polished, calm and professionally cared-for visit</title>
+<meta name="description" content="A clean, modern redesign of a med spa website: homepage, services and contact, with a calm path to get in touch.">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brandmark" href="#top" aria-label="Home">
+      <span class="plate mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="28" fill="#f3ece6" stroke="#5c3a3a" stroke-width="1.5"/>
+          <path d="M20 36c6-12 18-12 24 0" fill="none" stroke="#5c3a3a" stroke-width="2"/>
+          <circle cx="32" cy="26" r="5" fill="none" stroke="#c4a090" stroke-width="2"/>
+        </svg>
+      </span>
+      <span><strong>Med spa</strong><span class="brandlabel">Client brand</span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get in touch</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero" data-feeling="ease">
+    <img src="images/hero-treatment-800.webp" srcset="images/hero-treatment-800.webp 800w, images/hero-treatment-1600.webp 1600w" sizes="100vw" alt="A facial treatment in warm light, with gloved hands applying a mask" fetchpriority="high" style="object-position:center 30%">
+    <div class="wrap">
+      <p class="eyebrow">Med spa</p>
+      <div class="rule"></div>
+      <h1>Polished, unhurried rooms, true to the care you already give.</h1>
+      <p class="lede">A cleaner, calmer visit: the rooms, the treatments, and a quiet way to get in touch.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#services">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services" data-feeling="comfort">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>Treatments set out with room to breathe.</h2>
+      <p class="muted">Named as the spa would name them in the build. The list below is <span class="sample">Sample content</span> so the layout can be seen without inventing a menu.</p>
+      <div class="grid g3" style="margin-top:36px">
+        <article class="card">
+          <img src="images/clinical-facial-800.webp" srcset="images/clinical-facial-800.webp 800w, images/clinical-facial-1600.webp 1600w" sizes="(max-width:700px) 100vw, 33vw" alt="A clinician in gloves giving a facial treatment in a calm treatment room" loading="lazy" decoding="async">
+          <div class="in"><h3>Facial treatments</h3><p>Skin consultations and facial care, in a quiet room.</p></div>
+        </article>
+        <article class="card">
+          <img src="images/laser-800.webp" srcset="images/laser-800.webp 800w, images/laser-1600.webp 1600w" sizes="(max-width:700px) 100vw, 33vw" alt="A close, careful laser treatment on a client’s face" loading="lazy" decoding="async" style="object-position:center 20%">
+          <div class="in"><h3>Clinical skin treatments</h3><p>Device-led care, explained plainly, never crowded onto the page.</p></div>
+        </article>
+        <article class="card">
+          <img src="images/facial-calm-800.webp" srcset="images/facial-calm-800.webp 800w, images/facial-calm-1600.webp 1600w" sizes="(max-width:700px) 100vw, 33vw" alt="A relaxed facial with rose quartz tools in a softly lit room" loading="lazy" decoding="async">
+          <div class="in"><h3>Restorative care</h3><p>Time in the chair that still feels like the spa’s own rooms.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec soft" id="rooms" data-feeling="comfort">
+    <div class="wrap split">
+      <img src="images/treatment-bed-800.webp" srcset="images/treatment-bed-800.webp 800w, images/treatment-bed-1600.webp 1600w" sizes="(max-width:700px) 100vw, 50vw" alt="A client resting on a treatment bed during a calm facial" loading="lazy" decoding="async">
+      <div>
+        <p class="eyebrow">The look and feel</p>
+        <h2>Cleaner navigation, and a quieter page.</h2>
+        <p>Home, services and contact share one typography, one spacing, and one calm path through the site. Nothing on the screen is shouting for a booking.</p>
+        <div class="grid g2" style="margin-top:24px">
+          <div>
+            <img src="images/serum-800.webp" srcset="images/serum-800.webp 800w, images/serum-1600.webp 1600w" sizes="(max-width:700px) 100vw, 25vw" alt="A drop of serum falling from a pipette into a hand" loading="lazy" decoding="async" style="aspect-ratio:1;object-fit:cover">
+          </div>
+          <div>
+            <img src="images/cream-800.webp" srcset="images/cream-800.webp 800w, images/cream-1600.webp 1600w" sizes="(max-width:700px) 100vw, 25vw" alt="Hands smoothing a cream along a forearm" loading="lazy" decoding="async" style="aspect-ratio:1;object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" data-feeling="ready">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>A simple path, still considered.</h2>
+      <p class="muted">When someone is ready, getting in touch should feel as calm as the rooms.</p>
+    </div>
+  </section>
+  <section class="sec" id="write" data-feeling="considered">
+    <div class="wrap contact">
+      <div>
+        <p class="lede muted">The form is short on a phone as well as on a wide screen. A short message will do.</p>
+      </div>
+      <form class="panel" action="#sent" method="get">
+        <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" autocomplete="name"></div>
+        <div class="row2">
+          <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="s-phone">Phone</label><input id="s-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="s-about">What would you like to ask?</label>
+          <select id="s-about" name="about">
+            <option>A general question</option>
+            <option>Facial treatments</option>
+            <option>Clinical skin treatments</option>
+            <option>Restorative care</option>
+          </select>
+        </div>
+        <div class="field"><label for="s-msg">Message</label><textarea id="s-msg" name="message" rows="5"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send the message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="sent" data-feeling="cared">
+    <div class="wrap">
+      <div class="confirm">
+        <h2>Thank you. Your message is with us.</h2>
+        <p>When you come back, the path will still be easy to find. Nothing on the way home is asking more of you.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Med spa</strong> · <span class="brandlabel">Client brand</span></p>
+    <p>Home · Services · Contact</p>
+  </div>
+</footer>
+</body>
+</html>
