@@ -101,7 +101,7 @@ Build **HelpDesk Hub Help**, the help centre for HelpDesk Hub, a fictional Austr
 
 **Palette:** ink #2B2622 (type), sand #F6EFE4 (page), soft sand #ECE0CD, line #D9C9B2, terracotta #9C4A2A (actions, white text), light clay #C9774F (accents), sage #4F5D44 with #E4E8DA (person / success states), warm white #FFFDF9 (cards).
 
-**Type:** Manrope for headings and body. Body 18px desktop, 17px phone. H1 800 weight, two to three lines.
+**Type:** wordmark and headings in Bricolage Grotesque 800 with tight tracking; body and UI in Manrope (400 body, 700 UI). Body 18px desktop, 17px phone. H1 two to three lines.
 
 **Imagery and art direction:** realistic warm late-afternoon photography of an Australian garden: timber potting bench, terracotta pots, a young potted lemon tree, native grevillea, sandstone paving. No people, no stock-office imagery. Article thumbnails are close crops from the same world. Logo: a terracotta rounded square with a white speech bubble holding a sage leaf, about 64px on desktop and 48px on phone, beside the "HelpDesk Hub" wordmark.
 
