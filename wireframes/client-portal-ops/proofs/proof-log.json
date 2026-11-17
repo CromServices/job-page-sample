@@ -1,0 +1,18 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 6474,
+  "first_view_bytes": 107815,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/client-portal-ops/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 12182,
+  "first_view_bytes": 98285,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/client-portal-ops/proofs/phone-390.png"
+ }
+]
