@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saltlight Stays — find the house, book it your way (sample)</title>
+<meta name="description" content="Sample vacation rental site: each stay on its own page, live Guesty dates and rates, and the choice to book direct or open Airbnb or Vrbo.">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/hero-800.webp" as="image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="switcher" aria-label="Wireframe screens">
+  <span>Screens</span>
+  <a href="#home">Home</a>
+  <a href="#property">Property page</a>
+  <a href="#admin">Add a property</a>
+  <a href="#plan">Guesty plan</a>
+</nav>
+
+<!-- HOME -->
+<section class="page" id="home">
+<header class="site"><div class="wrap bar">
+<a class="brand" href="#home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#134740"/><path d="M8 22 L20 11 L32 22" fill="none" stroke="#F3EEE6" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 21.5 V29 H28 V21.5" fill="none" stroke="#F3EEE6" stroke-width="2.2"/><circle cx="20" cy="24.5" r="2.1" fill="none" stroke="#F3EEE6" stroke-width="1.7"/><path d="M20 26.6 V29" stroke="#F3EEE6" stroke-width="1.7"/></svg><span class="word"><b>Saltlight</b><i>Stays</i></span></a>
+<nav class="nav" aria-label="Site"><a href="#stays">Stays</a><a href="#guide">House guides</a><a class="owner-link" href="#admin">Add a property</a></nav>
+</div></header>
+<section class="hero" data-feeling="settled">
+  <img src="images/hero-800.webp" srcset="images/hero-800.webp 800w, images/hero-1600.webp 1600w" sizes="100vw" width="1600" height="1066" alt="White shingle house with a wraparound porch and lawn, sample stay">
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="copy">
+    <p class="kicker">Sample brand · stays</p>
+    <h1>Find the house. See every detail. Book it your way.</h1>
+    <p>A sample collection of short-term stays. Dates and rates come from Guesty. Book direct, or open the Airbnb or Vrbo listing — whichever you prefer.</p>
+    <div class="hero-actions btns">
+      <a class="btn btn-primary" href="#stays">See the stays</a>
+      <a class="btn btn-ghost" href="#property" style="color:#1C1916;background:#FFFBF6;border-color:#FFFBF6">Open a property page</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="stays" data-feeling="curious">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker">All stays</p>
+        <h2>Three sample houses, ready when you are.</h2>
+      </div>
+      <p class="sync"><i></i> Calendars and prices stay in sync with Guesty</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <a class="pic" href="#property"><img src="images/hero-800.webp" width="800" height="533" alt="The Porch House, wraparound porch and lawn" loading="lazy" decoding="async"></a>
+        <div class="body">
+          <h3>The Porch House</h3>
+          <p class="meta">4 bedrooms · sleeps 8 · <span class="sample">Sample content</span></p>
+          <p class="price">From $189 a night <span class="meta">sample figures</span></p>
+          <div class="btns">
+            <a class="btn btn-primary" href="#property">Book Now</a>
+            <a class="btn btn-ghost" href="#airbnb-listing">View on Airbnb</a>
+            <a class="btn btn-ghost" href="#vrbo-listing">View on Vrbo</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="pic" href="#property"><img src="images/palm-800.webp" width="800" height="533" alt="Palm Court, white house with a pool and palms" loading="lazy" decoding="async"></a>
+        <div class="body">
+          <h3>Palm Court</h3>
+          <p class="meta">3 bedrooms · sleeps 6 · <span class="sample">Sample content</span></p>
+          <p class="price">From $189 a night <span class="meta">sample figures</span></p>
+          <div class="btns">
+            <a class="btn btn-primary" href="#property">Book Now</a>
+            <a class="btn btn-ghost" href="#airbnb-listing">View on Airbnb</a>
+            <a class="btn btn-ghost" href="#vrbo-listing">View on Vrbo</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="pic" href="#property"><img src="images/cottage-800.webp" width="800" height="533" alt="The Red Door, white cottage with a picket fence" loading="lazy" decoding="async"></a>
+        <div class="body">
+          <h3>The Red Door</h3>
+          <p class="meta">2 bedrooms · sleeps 4 · <span class="sample">Sample content</span></p>
+          <p class="price">From $156 a night <span class="meta">sample figures</span></p>
+          <div class="btns">
+            <a class="btn btn-primary" href="#property">Book Now</a>
+            <a class="btn btn-ghost" href="#airbnb-listing">View on Airbnb</a>
+            <a class="btn btn-ghost" href="#vrbo-listing">View on Vrbo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<footer class="wrap foot"><p>Saltlight Stays · sample brand. Dates and rates sync from Guesty.</p><p><a href="#admin">Owner: add a property</a></p></footer>
+</section>
+
+<!-- PROPERTY PAGE -->
+<section class="page" id="property">
+<header class="site"><div class="wrap bar">
+<a class="brand" href="#home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#134740"/><path d="M8 22 L20 11 L32 22" fill="none" stroke="#F3EEE6" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 21.5 V29 H28 V21.5" fill="none" stroke="#F3EEE6" stroke-width="2.2"/><circle cx="20" cy="24.5" r="2.1" fill="none" stroke="#F3EEE6" stroke-width="1.7"/><path d="M20 26.6 V29" stroke="#F3EEE6" stroke-width="1.7"/></svg><span class="word"><b>Saltlight</b><i>Stays</i></span></a>
+<nav class="nav" aria-label="Site"><a href="#stays">Stays</a><a href="#guide">House guides</a><a class="owner-link" href="#admin">Add a property</a></nav>
+</div></header>
+<section data-feeling="certain">
+  <div class="wrap sec" style="padding-top:28px">
+    <p class="kicker">Sample stay · The Porch House</p>
+    <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin:.2em 0 .6em">A wraparound porch, eight pillows, and the beach a short walk away.</h1>
+    <div class="gallery" aria-label="Property photographs">
+      <a class="main" href="images/hero-1600.webp"><img src="images/hero-800.webp" srcset="images/hero-800.webp 800w, images/hero-1600.webp 1600w" sizes="(max-width:900px) 100vw, 70vw" width="1600" height="1066" alt="Front of The Porch House with wraparound porch" loading="lazy" decoding="async"></a>
+      <a href="images/living-800.webp"><img src="images/living-800.webp" width="800" height="533" alt="Living room with a long table and garden windows" loading="lazy" decoding="async"></a>
+      <a href="images/kitchen-800.webp"><img src="images/kitchen-800.webp" width="800" height="533" alt="Kitchen island with white cabinets and a wood base" loading="lazy" decoding="async"></a>
+      <a href="images/bedroom-800.webp"><img src="images/bedroom-800.webp" width="800" height="533" alt="Bedroom with linen bedding and a lamp on the nightstand" loading="lazy" decoding="async"></a>
+      <a href="images/dusk-800.webp"><img src="images/dusk-800.webp" width="800" height="533" alt="Garden and pool at dusk, lights on in the house" loading="lazy" decoding="async"></a>
+    </div>
+
+    <div class="split">
+      <div class="prose">
+        <h2>The house</h2>
+        <p>The Porch House is a sample stay: four bedrooms, two baths, and a porch that runs the width of the front. Mornings start with coffee on the steps. The living room opens to the garden, the kitchen is set up for a proper dinner, and beach chairs wait in the locker by the door.</p>
+        <p>This description would come from the property record you edit yourself. Nothing here is a live listing.</p>
+
+        <h2>Amenities</h2>
+        <ul class="amenities">
+          <li>Full kitchen</li>
+          <li>Washer and dryer</li>
+          <li>Fast wifi</li>
+          <li>Workspace</li>
+          <li>Wraparound porch</li>
+          <li>Outdoor shower</li>
+          <li>Beach chairs and cooler</li>
+          <li>Packed coffee and a crib on request</li>
+        </ul>
+
+        <h2>Where it sits</h2>
+        <p>An interactive map with the stay pin and a few nearby spots. Click the pin or a marker. <span class="sample">Sample location</span></p>
+        <div class="map" id="map" role="region" aria-label="Sample neighbourhood map. Click the pin or a marker for details.">
+          <svg viewBox="0 0 640 280">
+            <rect width="640" height="280" fill="#d5e4df"/>
+            <path d="M0 200 C120 170 200 230 320 210 C440 190 520 230 640 200 L640 280 L0 280 Z" fill="#7fa8a0"/>
+            <path d="M0 40 H640" stroke="#c3d2cb" stroke-width="10"/>
+            <path d="M0 110 H640" stroke="#c3d2cb" stroke-width="8"/>
+            <path d="M0 170 H400" stroke="#c3d2cb" stroke-width="8"/>
+            <path d="M180 0 V280" stroke="#c3d2cb" stroke-width="8"/>
+            <path d="M360 0 V280" stroke="#c3d2cb" stroke-width="10"/>
+            <path d="M520 0 V200" stroke="#c3d2cb" stroke-width="8"/>
+            <circle cx="140" cy="70" r="7" fill="#1C5C53" class="spot" data-spot="market" tabindex="0" role="button" aria-label="Morning market, six minute walk"/>
+            <circle cx="470" cy="150" r="7" fill="#1C5C53" class="spot" data-spot="bar" tabindex="0" role="button" aria-label="Oyster bar, eight minute drive"/>
+            <circle cx="560" cy="210" r="7" fill="#1C5C53" class="spot" data-spot="beach" tabindex="0" role="button" aria-label="Public beach access, 0.4 miles"/>
+            <g class="pin" tabindex="0" role="button" aria-label="The Porch House, sample address" data-spot="stay" transform="translate(300 96)">
+              <path d="M0 0 C-11 0 -20 9 -20 20 C-20 36 0 52 0 52 C0 52 20 36 20 20 C20 9 11 0 0 0Z" fill="#853616"/>
+              <circle cy="19" r="6" fill="#FFFBF6"/>
+            </g>
+          </svg>
+          <div class="popup" id="map-pop" hidden></div>
+        </div>
+        <ul class="nearby">
+          <li>Morning market <span>6 min walk</span></li>
+          <li>Public beach access <span>0.4 miles</span></li>
+          <li>Oyster bar <span>8 min drive</span></li>
+        </ul>
+
+        <h2>What guests have said</h2>
+        <p class="sample" style="margin-bottom:10px">Sample content — not live reviews</p>
+        <div class="reviews">
+          <article class="rev"><p class="stars" aria-label="5 out of 5">★★★★★</p><p>We cooked every night and still made the beach each morning. The porch is the reason we will come back.</p><p class="who">Amelia · June stay</p></article>
+          <article class="rev"><p class="stars" aria-label="5 out of 5">★★★★★</p><p>Clear house guide, quiet street, everything as described. Booking direct was simple.</p><p class="who">James · August stay</p></article>
+        </div>
+
+        <h2 id="guide" data-feeling="prepared">House guide</h2>
+        <p>A downloadable PDF and an online guide for wifi, bins, quiet hours and how to arrive. <span class="sample">Sample content</span></p>
+        <div class="btns">
+          <a class="btn btn-sea" href="images/porch-house-guide.pdf" download>Download the guide (PDF)</a>
+          <button class="btn btn-ghost" type="button" id="open-guide">View the guide online</button>
+        </div>
+      </div>
+
+      <aside class="book" data-feeling="unhurried" aria-labelledby="book-title">
+        <p class="sync"><i></i> Synced from Guesty · 12 min ago <span class="sample">Sample</span></p>
+        <h2 id="book-title">December 2026</h2>
+        <p class="rules"><strong>3-night minimum.</strong> Check-in after 4:00 pm · Checkout 10:00 am · No parties. Booking rules come straight from Guesty.</p>
+        <div class="cal" id="cal" aria-label="Live availability calendar"><span class="dow">Sun</span><span class="dow">Mon</span><span class="dow">Tue</span><span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span><span class="day off"></span><span class="day off"></span><button type="button" class="day" data-day="1" data-rate="189" aria-label="December 1, $189"><b>1</b><em>$189</em></button><button type="button" class="day" data-day="2" data-rate="189" aria-label="December 2, $189"><b>2</b><em>$189</em></button><button type="button" class="day" data-day="3" data-rate="189" aria-label="December 3, $189"><b>3</b><em>$189</em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 4 booked"><b>4</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 5 booked"><b>5</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 6 booked"><b>6</b><em></em></button><button type="button" class="day" data-day="7" data-rate="189" aria-label="December 7, $189"><b>7</b><em>$189</em></button><button type="button" class="day" data-day="8" data-rate="189" aria-label="December 8, $189"><b>8</b><em>$189</em></button><button type="button" class="day" data-day="9" data-rate="189" aria-label="December 9, $189"><b>9</b><em>$189</em></button><button type="button" class="day" data-day="10" data-rate="189" aria-label="December 10, $189"><b>10</b><em>$189</em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 11 booked"><b>11</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 12 booked"><b>12</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 13 booked"><b>13</b><em></em></button><button type="button" class="day" data-day="14" data-rate="189" aria-label="December 14, $189"><b>14</b><em>$189</em></button><button type="button" class="day" data-day="15" data-rate="189" aria-label="December 15, $189"><b>15</b><em>$189</em></button><button type="button" class="day" data-day="16" data-rate="189" aria-label="December 16, $189"><b>16</b><em>$189</em></button><button type="button" class="day" data-day="17" data-rate="189" aria-label="December 17, $189"><b>17</b><em>$189</em></button><button type="button" class="day sel" data-day="18" data-rate="229" aria-label="December 18, $189"><b>18</b><em>$229</em></button><button type="button" class="day in" data-day="19" data-rate="229" aria-label="December 19, $229"><b>19</b><em>$229</em></button><button type="button" class="day sel" data-day="20" data-rate="189" aria-label="December 20, $229"><b>20</b><em>$189</em></button><button type="button" class="day" data-day="21" data-rate="189" aria-label="December 21, $189"><b>21</b><em>$189</em></button><button type="button" class="day" data-day="22" data-rate="189" aria-label="December 22, $189"><b>22</b><em>$189</em></button><button type="button" class="day" data-day="23" data-rate="189" aria-label="December 23, $189"><b>23</b><em>$189</em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 24 booked"><b>24</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 25 booked"><b>25</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 26 booked"><b>26</b><em></em></button><button type="button" class="day booked" aria-disabled="true" data-state="booked" aria-label="December 27 booked"><b>27</b><em></em></button><button type="button" class="day" data-day="28" data-rate="189" aria-label="December 28, $189"><b>28</b><em>$189</em></button><button type="button" class="day" data-day="29" data-rate="189" aria-label="December 29, $189"><b>29</b><em>$189</em></button><button type="button" class="day" data-day="30" data-rate="189" aria-label="December 30, $189"><b>30</b><em>$189</em></button><button type="button" class="day" data-day="31" data-rate="189" aria-label="December 31, $189"><b>31</b><em>$189</em></button></div>
+        <p class="meta" id="range-label">18–21 Dec · 3 nights <span class="sample">Sample figures</span></p>
+        <div class="compare" id="compare">
+          <h3>Book direct and save</h3>
+          <div class="row"><span>Direct total (Guesty)</span> <strong id="direct-total">$732</strong></div>
+          <div class="row"><span>Typical Airbnb / Vrbo total, with guest fees</span> <strong id="ota-total">$834</strong></div>
+          <p class="save" id="save-line">You keep $102 by booking direct. Sample figures — the live site uses your Guesty rate and a stated guest-fee comparison.</p>
+        </div>
+        <div class="btns">
+          <button class="btn btn-primary" type="button" id="book-now">Book Now</button>
+          <a class="btn btn-ghost" href="#airbnb-listing">View on Airbnb</a>
+          <a class="btn btn-ghost" href="#vrbo-listing">View on Vrbo</a>
+        </div>
+        <p class="ux-note">Recommended UX: open the Guesty checkout in the same tab on a phone, with a clear “Back to the stay” link so the guest is not stranded. On a large screen a new tab is also fine. This wireframe uses the same-tab path.</p>
+      </aside>
+    </div>
+  </div>
+  <div class="book-bar-slot"><div class="book-bar" aria-label="Book this stay">
+    <div><strong id="bar-total">$732 direct</strong><div class="meta">18–21 Dec · sample</div></div>
+    <button class="btn btn-primary" type="button" id="bar-book">Book Now</button>
+  </div></div>
+</section>
+<footer class="wrap foot"><p>The Porch House · sample stay. Airbnb and Vrbo buttons use the listing URLs stored on this property.</p></footer>
+</section>
+
+<!-- ADMIN -->
+<section class="page admin" id="admin" data-feeling="prepared">
+<header class="site"><div class="wrap bar">
+<a class="brand" href="#home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#134740"/><path d="M8 22 L20 11 L32 22" fill="none" stroke="#F3EEE6" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 21.5 V29 H28 V21.5" fill="none" stroke="#F3EEE6" stroke-width="2.2"/><circle cx="20" cy="24.5" r="2.1" fill="none" stroke="#F3EEE6" stroke-width="1.7"/><path d="M20 26.6 V29" stroke="#F3EEE6" stroke-width="1.7"/></svg><span class="word"><b>Saltlight</b><i>Owner</i></span></a>
+<nav class="nav" aria-label="Site"><a href="#stays">Stays</a><a href="#guide">House guides</a></nav>
+</div></header>
+<div class="wrap sec">
+  <p class="kicker">Owner · content management</p>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.5rem);margin:.2em 0 .4em">Add a property yourself. No developer needed.</h1>
+  <p style="max-width:48ch;margin-bottom:24px">Paste the Guesty listing ID, the Airbnb and Vrbo URLs, and a house guide. Search title and description live on the public page. <span class="sample">Sample form</span></p>
+  <form class="form" action="#admin" method="get">
+    <label>Property name <input name="name" value="The Porch House" autocomplete="off"></label>
+    <label>Guesty listing ID <input name="guesty_id" value="lst_4f92ae" autocomplete="off"><span class="help">Calendars, rates and rules sync from this ID.</span></label>
+    <label class="full">Airbnb listing URL <input name="airbnb" type="url" value="https://www.airbnb.com/rooms/sample-porch-house" autocomplete="off"></label>
+    <label class="full">Vrbo listing URL <input name="vrbo" type="url" value="https://www.vrbo.com/sample-porch-house" autocomplete="off"></label>
+    <label>House guide (PDF) <input name="guide" type="file" accept="application/pdf"><span class="help">Guests can download this or read it online.</span></label>
+    <label>Cover photograph <input name="photo" type="file" accept="image/*"></label>
+    <label class="full">Short description <textarea name="desc" rows="4">Four bedrooms, a wraparound porch, and the beach a short walk away. Sample content for the owner form.</textarea></label>
+    <label class="full">SEO title <input name="seo_title" value="The Porch House | Saltlight Stays" maxlength="60" autocomplete="off"><span class="help">On-page title used in search results.</span></label>
+    <label class="full">SEO meta description <textarea name="seo_desc" rows="2" maxlength="160">A four-bedroom porch house with live Guesty dates. Book direct, or view it on Airbnb or Vrbo.</textarea></label>
+    <label>URL slug <input name="slug" value="the-porch-house" autocomplete="off"></label>
+    <div style="align-self:end"><button class="btn btn-sea" type="submit">Save property</button></div>
+  </form>
+
+  <div class="panel" style="margin-top:28px">
+    <h2 style="font-size:1.4rem;margin:0 0 8px">Analytics — Google Analytics / GA4</h2>
+    <p class="help" style="margin-bottom:14px">Paste your measurement ID. The live site ships with these events ready.</p>
+    <form action="#admin" method="get" style="display:grid;gap:12px;max-width:28rem">
+      <label>GA4 measurement ID <input name="ga4" value="G-XXXXXXXX" autocomplete="off"></label>
+      <button class="btn btn-ghost" type="submit" style="justify-self:start">Save measurement ID</button>
+    </form>
+    <h3 style="margin:20px 0 8px">Tracked events</h3>
+    <ul class="events">
+      <li><code>view_property</code> — a property page is opened</li>
+      <li><code>click_book_now</code> — Book Now, toward Guesty checkout</li>
+      <li><code>click_airbnb</code> — View on Airbnb</li>
+      <li><code>click_vrbo</code> — View on Vrbo</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- PLAN -->
+<section class="page" id="plan" data-feeling="certain">
+<header class="site"><div class="wrap bar">
+<a class="brand" href="#home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#134740"/><path d="M8 22 L20 11 L32 22" fill="none" stroke="#F3EEE6" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 21.5 V29 H28 V21.5" fill="none" stroke="#F3EEE6" stroke-width="2.2"/><circle cx="20" cy="24.5" r="2.1" fill="none" stroke="#F3EEE6" stroke-width="1.7"/><path d="M20 26.6 V29" stroke="#F3EEE6" stroke-width="1.7"/></svg><span class="word"><b>Saltlight</b><i>Owner</i></span></a>
+<nav class="nav" aria-label="Site"><a href="#stays">Stays</a><a href="#guide">House guides</a></nav>
+</div></header>
+<div class="wrap sec">
+  <p class="kicker">How it is built</p>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.5rem);margin:.2em 0 .4em">Guesty stays the source of truth. You still get the booking.</h1>
+  <div class="plan-grid">
+    <article class="panel">
+      <h3>The Guesty connection</h3>
+      <ol>
+        <li>Each property stores a Guesty listing ID. A short cache — about 15 minutes — pulls availability, nightly rates and booking rules from the Guesty Open API, so calendars stay in sync without over-calling the API.</li>
+        <li>Book Now opens that listing’s Guesty Booking Engine checkout in the same tab on phones, with a clear “Back to the stay” link. On a large screen a new tab is also fine.</li>
+        <li>Airbnb and Vrbo URLs are saved on the property in the CMS and used only for the “View on…” buttons. Guesty remains the source of truth for dates and rates.</li>
+      </ol>
+    </article>
+    <article class="panel">
+      <h3>Recommended stack</h3>
+      <p>WordPress with a Property post type, so you can add a new stay yourself — no code. Photographs, the Guesty ID, Airbnb and Vrbo URLs, the house guide and the search title all live on that record. Webflow CMS is also a fit if you would rather edit visually; the Guesty connection is the same either way.</p>
+      <p style="margin-top:12px" class="sync"><i></i> Future edits remain straightforward.</p>
+    </article>
+  </div>
+  <article class="panel" style="margin-top:18px">
+    <h3>Launch checklist</h3>
+    <p style="margin-bottom:12px">The site is signed off when each of these holds, in the client’s own words.</p>
+    <table class="check">
+      <thead><tr><th>Sign-off</th><th>How we test it</th></tr></thead>
+      <tbody>
+        <tr><td>All property pages display the elements listed above accurately.</td><td>Walk every property page against the list: photos, description, amenities, map, live calendar, rates, booking rules, reviews, nearby attractions, house guide, and the three booking buttons.</td></tr>
+        <tr><td>Guesty checkout opens and completes a test reservation without errors.</td><td>Book Now opens the Guesty Booking Engine for that listing. Complete a test reservation and confirm it lands in Guesty.</td></tr>
+        <tr><td>Airbnb and Vrbo buttons link to the correct external listings.</td><td>Each button opens the Airbnb or Vrbo URL stored on that property in the CMS.</td></tr>
+        <tr><td>Site passes a mobile-friendly test and core pages load under three seconds on a standard connection.</td><td>Run a mobile-friendly test and a standard-connection load on home and property pages; both must come in under three seconds.</td></tr>
+      </tbody>
+    </table>
+  </article>
+</div>
+<footer class="wrap foot"><p>Saltlight Stays · sample brand for a Guesty-connected rental site.</p></footer>
+</section>
+
+<!-- listing hint + dialogs -->
+<section class="sec" id="airbnb-listing" data-feeling="unhurried" style="padding-top:32px;padding-bottom:8px">
+  <div class="wrap panel">
+    <h2>View on Airbnb</h2>
+    <p>On the live site this button opens the Airbnb listing URL stored on the property. No live listing URL was given in the brief, so this is a sample target.</p>
+    <p style="margin-top:12px"><a class="btn btn-ghost" href="#property">Back to the stay</a></p>
+  </div>
+</section>
+<section class="sec" id="vrbo-listing" data-feeling="unhurried" style="padding-top:8px">
+  <div class="wrap panel">
+    <h2>View on Vrbo</h2>
+    <p>On the live site this button opens the Vrbo listing URL stored on the property. No live listing URL was given in the brief, so this is a sample target.</p>
+    <p style="margin-top:12px"><a class="btn btn-ghost" href="#property">Back to the stay</a></p>
+  </div>
+</section>
+
+<dialog class="dialog" id="checkout" aria-labelledby="co-title">
+  <div class="box">
+    <p class="sync"><i></i> Guesty checkout · same tab</p>
+    <h2 id="co-title">Confirm your stay</h2>
+    <p class="meta" id="co-range">The Porch House · 18–21 Dec · 3 nights</p>
+    <p style="margin:8px 0"><strong id="co-total">$732 direct</strong> · sample figures</p>
+    <form id="co-form" action="#" method="dialog">
+      <label>Guest name <input name="guest" value="Alex Morgan" autocomplete="name"></label>
+      <label style="margin-top:10px">Email <input name="email" type="email" value="alex@example.com" autocomplete="email"></label>
+      <div class="btns" style="margin-top:16px">
+        <button class="btn btn-primary" type="submit" id="co-submit">Complete test reservation</button>
+        <button class="btn btn-ghost" type="button" id="co-back">Back to the stay</button>
+      </div>
+    </form>
+    <div class="ok-msg" id="co-ok" hidden>Test reservation placed, with no errors. In the live site this step is the Guesty Booking Engine checkout, opened in this same tab on phones.</div>
+    <p class="ux-note">This is a sample checkout so you can walk the path. The live build completes the reservation in Guesty.</p>
+  </div>
+</dialog>
+
+<dialog class="dialog" id="guide-dlg" aria-labelledby="gd-title">
+  <div class="box">
+    <h2 id="gd-title">The Porch House · house guide</h2>
+    <p class="sample">Sample content</p>
+    <p style="margin:12px 0">Check-in after 4:00 pm. Checkout 10:00 am. The lockbox code is sent the morning of arrival. Wifi is on the card in the kitchen drawer. Bins go out on Monday evening. Beach chairs are in the porch locker. Quiet hours from 10:00 pm.</p>
+    <div class="btns">
+      <a class="btn btn-sea" href="images/porch-house-guide.pdf" download>Download PDF</a>
+      <button class="btn btn-ghost" type="button" id="gd-close">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  const booked=new Set([4,5,6,11,12,13,24,25,26,27]);
+  const rateOf=d=>[4,5,11,12,18,19,25,26].includes(d)?229:189;
+  const clean=85, fee=0.14;
+  let start=18, end=20;
+  const cal=document.getElementById('cal');
+  const $ = id=>document.getElementById(id);
+  function nights(){ const a=[],s=Math.min(start,end),e=Math.max(start,end); for(let d=s;d<=e;d++) a.push(d); return a; }
+  function paint(){
+    const sel=new Set(nights());
+    cal.querySelectorAll('.day[data-day]').forEach(btn=>{
+      const d=+btn.dataset.day;
+      btn.classList.remove('sel','in');
+      if(sel.has(d)) btn.classList.add(d===Math.min(start,end)||d===Math.max(start,end)?'sel':'in');
+    });
+    const ns=nights();
+    const stay=ns.reduce((t,d)=>t+rateOf(d),0);
+    const direct=stay+clean;
+    const ota=Math.round(direct*(1+fee));
+    const save=ota-direct;
+    const label=Math.min(start,end)+'–'+(Math.max(start,end)+1)+' Dec · '+ns.length+' night'+(ns.length===1?'':'s');
+    $('range-label').innerHTML=label+' <span class="sample">Sample figures</span>';
+    $('direct-total').textContent='$'+direct.toLocaleString();
+    $('ota-total').textContent='$'+ota.toLocaleString();
+    $('save-line').textContent='You keep $'+save+' by booking direct. Sample figures — the live site uses your Guesty rate and a stated guest-fee comparison.';
+    $('bar-total').textContent='$'+direct.toLocaleString()+' direct';
+    $('co-range').textContent='The Porch House · '+label;
+    $('co-total').textContent='$'+direct.toLocaleString()+' direct';
+  }
+  cal.addEventListener('click',e=>{
+    const btn=e.target.closest('.day[data-day]');
+    if(!btn||btn.classList.contains('booked')) return;
+    const d=+btn.dataset.day;
+    if(start==null||(start&&end&&start!==end)){ start=d; end=d; }
+    else {
+      const a=Math.min(start,d), b=Math.max(start,d);
+      for(let i=a;i<=b;i++) if(booked.has(i)){ start=d; end=d; paint(); return; }
+      if((b-a+1)<3){ start=d; end=d; paint(); return; }
+      start=a; end=b;
+    }
+    paint();
+  });
+  paint();
+
+  const co=$('checkout'), ok=$('co-ok'), form=$('co-form');
+  const openCo=()=>{ ok.hidden=true; form.hidden=false; co.showModal(); };
+  $('book-now').addEventListener('click',openCo);
+  $('bar-book').addEventListener('click',openCo);
+  $('co-back').addEventListener('click',()=>co.close());
+  form.addEventListener('submit',e=>{ e.preventDefault(); form.hidden=true; ok.hidden=false; });
+
+  const gd=$('guide-dlg');
+  $('open-guide').addEventListener('click',()=>gd.showModal());
+  $('gd-close').addEventListener('click',()=>gd.close());
+  const slot=document.querySelector('.book-bar-slot');
+  const prop=document.getElementById('property');
+  if(slot&&prop&&'IntersectionObserver' in window){
+    const io=new IntersectionObserver(([e])=>slot.classList.toggle('is-fixed', e.isIntersecting),{threshold:0});
+    io.observe(prop);
+  }
+
+  const pop=$('map-pop');
+  const copy={
+    stay:'The Porch House\nSample address on a quiet coastal street.',
+    market:'Morning market\n6 minute walk.',
+    bar:'Oyster bar\n8 minute drive.',
+    beach:'Public beach access\n0.4 miles.'
+  };
+  document.querySelectorAll('#map [data-spot]').forEach(el=>{
+    const show=()=>{ pop.hidden=false; pop.classList.add('on'); pop.textContent=copy[el.dataset.spot]; };
+    el.addEventListener('click',show);
+    el.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); show(); } });
+  });
+})();
+</script>
+</body>
+</html>

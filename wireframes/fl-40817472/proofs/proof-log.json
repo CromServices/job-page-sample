@@ -1,0 +1,60 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 8206,
+  "first_view_bytes": 607497,
+  "sections": [
+   [
+    "home",
+    37.140625,
+    1714
+   ],
+   [
+    "property",
+    1750.859375,
+    2606
+   ],
+   [
+    "admin",
+    4357.015625,
+    1992
+   ],
+   [
+    "plan",
+    6349.265625,
+    1331
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-17-hunt/packs/guesty-rental-site/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 12240,
+  "first_view_bytes": 278873,
+  "sections": [
+   [
+    "home",
+    62.28125,
+    2710
+   ],
+   [
+    "property",
+    2772.328125,
+    4133
+   ],
+   [
+    "admin",
+    6904.890625,
+    2273
+   ],
+   [
+    "plan",
+    9178.109375,
+    2481
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-17-hunt/packs/guesty-rental-site/proofs/phone-390.png"
+ }
+]
