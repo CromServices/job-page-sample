@@ -1,0 +1,18 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 7177,
+  "first_view_bytes": 465678,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/rental-booking/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 10788,
+  "first_view_bytes": 294908,
+  "sections": [],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/rental-booking/proofs/phone-390.png"
+ }
+]
