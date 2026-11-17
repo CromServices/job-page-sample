@@ -101,7 +101,9 @@ Build **Threadhouse**, a small online store for a fictional Australian label sel
 
 **Palette:** charcoal #2A2826 (type), sand #F4EDE3 (page), oat #E9DFD0, line #D8CBB8, rust #9A3F22 (actions, white text), clay #B7714F (the stitch accent), warm white #FFFCF7 (cards), sage #3F5A3A with #E2E9D9 (success), Stripe test purple #5B3FA0 with #EFE9FB (test-mode labels only).
 
-**Type:** wordmark and headings in Unbounded 800 with tight tracking; body and UI in Manrope (400 body, 700 UI). Body 18px desktop, 17px phone. H1 two to three lines.
+**Type:** wordmark, headings, prices and order numbers in Inter Tight 650 (tracking −0.035em, H1 −0.045em, tabular price figures); body and UI in Manrope (400 body, 650–700 UI); eyebrows uppercase with +0.16em tracking. Self-hosted latin subset. Body 18px desktop, 17px phone. H1 two to three lines. No serifs.
+
+**Fit to the font:** a fashion-editorial grid: near-square 2px corners on buttons, cards, chips, cart and inputs; charcoal rules between sections; larger, tighter H1 set like a lookbook cover.
 
 **Imagery and art direction:** soft window light on natural linen and cotton in clay, sand, oat and charcoal; close enough to see the weave; flat-lays on sand linen for catalogue tiles; a hanger, a fold and a hem close-up for the product page; a rust running stitch as the recurring detail. No models, no real brands. Logo: a charcoal rounded square with a white house outline and a dashed rust stitch across it, about 64px desktop and 48px phone, beside the "Threadhouse" wordmark.
 
