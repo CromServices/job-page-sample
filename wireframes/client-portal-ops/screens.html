@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jobline — client portal and ops desk (sample)</title>
+<meta name="description" content="Jobline is a sample client portal and internal ops tool: jobs, tasks, resources, status and files in one signed-in place.">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Brand mark: one source. Swap the wordmark or mark here and every use updates. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="brandmark" viewBox="0 0 264 64">
+  <rect x="2" y="8" width="48" height="48" rx="12" fill="#2F5D4E"/>
+  <path d="M12 32h28" stroke="#F6F2EA" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="14" cy="32" r="5" fill="#F6F2EA"/><circle cx="26" cy="32" r="5" fill="#F6F2EA"/>
+  <circle cx="38" cy="32" r="5.5" fill="#2F5D4E" stroke="#F6F2EA" stroke-width="3"/>
+  <text x="62" y="44" font-family="Syne, system-ui, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="currentColor">Jobline</text>
+ </symbol>
+</svg>
+
+<header class="site">
+ <div class="wrap">
+  <a class="logo" href="#signin" aria-label="Jobline home"><svg viewBox="0 0 264 64" role="img" aria-label="Jobline"><use href="#brandmark"/></svg></a>
+  <nav class="top" aria-label="Screens">
+   <a href="#signin">Sign in</a><a href="#dashboard">Dashboard</a><a href="#job">Job</a><a href="#email">Email</a><a href="#admin">Admin</a>
+  </nav>
+  <span class="pill sample">Sample content</span>
+ </div>
+</header>
+
+<main>
+<!-- 1 SIGN IN -->
+<section id="signin" class="hero" data-feeling="trusted" aria-labelledby="h-signin">
+ <div class="hero-copy">
+  <div class="eyebrow">Client portal and ops desk</div>
+  <h1 id="h-signin">Every job, file and update in one quiet place.</h1>
+  <p class="lede">Staff and clients work from the same desk. Sign in with a link from your inbox and land on the work that is yours, nothing else.</p>
+  <div class="states" aria-label="Sign-in flow">
+   <div class="state"><span class="step">Step 1</span><b>Ask for a link</b>Type your work email. No password to set or forget.</div>
+   <div class="state"><span class="step">Step 2</span><b>Open your inbox</b>One tap on the link signs you in on this device.</div>
+   <div class="state"><span class="step">Step 3</span><b>Land on your desk</b>Admin, staff or client: the dashboard opens for your role.</div>
+  </div>
+ </div>
+ <div class="hero-photo">
+  <picture><source media="(min-width:761px)" srcset="images/desk-1024.webp"><img src="images/desk-800.webp" alt="A tidy studio desk with a laptop, tied job folders and a eucalyptus sprig in soft window light" width="800" height="450"></picture>
+  <form class="card signin" id="signinForm" novalidate>
+   <h2>Sign in to Jobline</h2>
+   <label for="em">Work email</label>
+   <input id="em" type="email" autocomplete="email" value="jordan.pike@jobline.example">
+   <div style="margin-top:14px"><button class="btn" type="submit" style="width:100%">Email me a sign-in link</button></div>
+   <p class="note">We'll email a one-time link that works for 15 minutes. No password form, ever.</p>
+   <div class="sent on" id="sent" role="status"><b>Check your inbox.</b> A link is on its way to jordan.pike@jobline.example. It opens your <b>Staff</b> dashboard.</div>
+  </form>
+ </div>
+</section>
+
+<!-- 2 DASHBOARD -->
+<section id="dashboard" class="screen" data-feeling="oriented" aria-labelledby="h-dash">
+ <div class="wrap">
+  <div class="screen-head">
+   <div><div class="num">Screen 2 · Dashboard</div><h2 id="h-dash">Your desk, filtered to your role.</h2></div>
+   <p>Jobs, tasks and resources are filtered by who is signed in. Switch the preview to see what admin, staff and client each get.</p>
+  </div>
+  <div class="app" id="app" data-role="staff">
+   <aside class="side" aria-label="App menu">
+    <div class="who"><span class="av">JP</span><div><b>Jordan Pike</b><br><span class="r-name">Staff · sample</span></div></div>
+    <a class="on" href="#dashboard">Dashboard</a><a href="#job">Jobs</a><a href="#job" class="hide-client">Tasks</a><a href="#dashboard" class="hide-client">Resources</a><a href="#job">Files</a><a class="admin-only" href="#admin">Admin</a>
+   </aside>
+   <div class="main">
+    <div class="topbar">
+     <h3>Good afternoon, <span id="hello">Jordan</span></h3>
+     <div class="seg" role="group" aria-label="Preview as role">
+      <button type="button" data-r="admin" aria-pressed="false">Admin</button>
+      <button type="button" data-r="staff" aria-pressed="true">Staff</button>
+      <button type="button" data-r="client" aria-pressed="false">Client</button>
+     </div>
+    </div>
+    <div class="next">
+     <div><div class="k">Your next job</div><h4>Harbour Lane fit-out review</h4><p>Marlow &amp; Finch · due Thu 19 Nov · 2 of 4 tasks done</p></div>
+     <a class="btn" href="#job">Open the job</a>
+    </div>
+    <div class="stats">
+     <div class="stat"><b>4</b><span>open jobs</span></div>
+     <div class="stat"><b>7</b><span>tasks this week</span></div>
+     <div class="stat"><b>2</b><span>files with client</span></div>
+    </div>
+    <div class="grid2">
+     <div class="panel">
+      <h4>Jobs <span class="pill sample">Sample</span></h4>
+      <div class="rows">
+       <div class="row"><div>Harbour Lane fit-out review<small>Marlow &amp; Finch</small></div><span class="due">Thu 19 Nov</span><span class="pill gum">Ready to review</span></div>
+       <div class="row"><div>Riverside clinic floor plan<small>Ashgrove Health</small></div><span class="due">Mon 23 Nov</span><span class="pill line">In progress</span></div>
+       <div class="row"><div>Cottesford library signage<small>Town of Cottesford</small></div><span class="due">Fri 27 Nov</span><span class="pill clay">Waiting on client</span></div>
+       <div class="row hide-client"><div>Studio intake checklist<small>Internal</small></div><span class="due">Wed 2 Dec</span><span class="pill line">Not started</span></div>
+      </div>
+     </div>
+     <div class="panel">
+      <h4>Tasks today</h4>
+      <div class="task"><span class="tick done"></span><div>Upload revised floor plan<br><small class="seen">Seen by Priya · 3:12 pm</small></div></div>
+      <div class="task"><span class="tick done"></span><div>Mark Harbour Lane ready to review</div></div>
+      <div class="task"><span class="tick"></span><div>Call Ashgrove about door widths</div></div>
+      <div class="empty"><b>Waiting on you: nothing</b>No overdue tasks. You're clear for today.</div>
+     </div>
+    </div>
+    <div class="panel hide-client" style="margin-top:20px">
+     <h4>Resources this week <span class="pill sample">Sample</span></h4>
+     <div class="grid2" style="grid-template-columns:repeat(3,1fr);gap:18px">
+      <div><b>Jordan Pike</b> · 28 of 38 h<div class="bar"><i style="width:74%"></i></div></div>
+      <div><b>Sam Okafor</b> · 34 of 38 h<div class="bar"><i style="width:89%"></i></div></div>
+      <div><b>Lena Ruiz</b> · 12 of 24 h<div class="bar"><i style="width:50%"></i></div></div>
+     </div>
+     <p style="margin:14px 0 0;font-size:16px;color:var(--muted)">Shared resources: Fit-out checklist (PDF) · Client welcome pack · Site visit template</p>
+    </div>
+   </div>
+  </div>
+  <div class="annot" aria-label="What each role sees">
+   <div class="card"><span class="pill ink">Admin</span><h4 style="margin-top:10px">Sees everything</h4><ul><li>All jobs, tasks, people and resources</li><li>Admin menu: roles, invites, connected services</li><li>Internal notes on every job</li></ul></div>
+   <div class="card"><span class="pill gum">Staff</span><h4 style="margin-top:10px">Sees their work</h4><ul><li>Jobs and tasks they're assigned to</li><li>Team resources and hours</li><li>Can update status and upload files</li></ul></div>
+   <div class="card"><span class="pill clay">Client</span><h4 style="margin-top:10px">Sees their own jobs</h4><ul><li>Only jobs for their company</li><li>Status history and shared files</li><li>No internal notes, people or hours</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<!-- 3 JOB DETAIL -->
+<section id="job" class="screen" data-feeling="sure" aria-labelledby="h-job">
+ <div class="wrap">
+  <div class="screen-head">
+   <div><div class="num">Screen 3 · Job detail</div><h2 id="h-job">What changed, when, and who has seen it.</h2></div>
+   <p>Status updates write to a plain-language history. Files attach to the job or one of its tasks. The client sees the same timeline without internal notes.</p>
+  </div>
+  <div class="card" style="padding:28px">
+   <div class="jobhead">
+    <div><div class="crumb">Jobs / Marlow &amp; Finch (sample client)</div><h3>Harbour Lane fit-out review</h3></div>
+    <span class="pill gum" id="jobStatus">Ready to review</span>
+   </div>
+   <div class="job">
+    <div>
+     <div class="panel" style="margin-bottom:20px">
+      <h4>Update status</h4>
+      <form class="update" id="upd">
+       <div><label for="st">New status</label><select id="st"><option>Not started</option><option>In progress</option><option selected>Ready to review</option><option>Approved</option><option>On hold</option></select></div>
+       <div><label for="on">Applies to</label><select id="on"><option>Whole job</option><option>Task: Revised floor plan</option><option>Task: Joinery schedule</option></select></div>
+       <div class="full"><label for="nt">Note for the client</label><textarea id="nt" rows="2">Revised floor plan is up. Door widths now match the access brief.</textarea></div>
+       <label class="check full"><input type="checkbox" checked> Email the client when I post this</label>
+       <div class="full"><button class="btn" type="submit">Post update</button></div>
+      </form>
+     </div>
+     <div class="panel">
+      <h4>History</h4>
+      <ol class="tl" id="tl">
+       <li class="now"><span class="what">Ready to review</span> · Jordan Pike<span class="t">Today 2:41 pm · whole job</span>"Revised floor plan is up. Door widths now match the access brief."<br><span class="receipt">✓ Seen by Priya Shah · 3:12 pm</span></li>
+       <li><span class="what">File added:</span> Harbour-Lane-floor-plan-v3.pdf · Jordan Pike<span class="t">Today 2:38 pm · task: Revised floor plan</span></li>
+       <li class="int"><span class="what">Internal note</span> · Sam Okafor <span class="pill line" style="font-size:12px">Staff only</span><span class="t">Yesterday 4:05 pm</span>Joinery quote still pending from supplier.</li>
+       <li><span class="what">In progress</span> · Sam Okafor<span class="t">Mon 16 Nov 9:20 am</span></li>
+       <li><span class="what">Job created</span> · Alex Moreau (admin)<span class="t">Thu 12 Nov 11:02 am</span></li>
+      </ol>
+     </div>
+    </div>
+    <div>
+     <div class="panel">
+      <h4>Files <span class="pill sample">Sample files</span></h4>
+      <div class="file"><span class="ficon pdf">PDF</span><div>Harbour-Lane-floor-plan-v3.pdf<br><small style="color:var(--muted)">2.4 MB · Jordan · task: Revised floor plan</small></div><span class="seen">Seen</span></div>
+      <div class="file"><span class="ficon">JPG</span><div>site-photo-entry.jpg<br><small style="color:var(--muted)">1.1 MB · Sam · whole job</small></div><span class="seen">Seen</span></div>
+      <div class="file"><span class="ficon">XLS</span><div>joinery-schedule.xlsx<br><small style="color:var(--muted)">88 KB · Sam · task: Joinery schedule</small></div><span class="pill line" style="font-size:13px">New</span></div>
+      <div class="drop"><b>Drop files here</b> or <button type="button" class="btn ghost small" id="upBtn">Choose a file</button><br><small style="color:var(--muted)">Attach to: whole job or a task. Up to 50 MB.</small>
+       <div class="prog" id="prog">access-brief-notes.pdf · uploading 64%<div class="bar"><i style="width:64%"></i></div></div>
+      </div>
+     </div>
+     <div class="panel" style="margin-top:20px;background:var(--paper)">
+      <h4>What Priya (client) sees</h4>
+      <p style="font-size:16px;margin:0">The same history and files, without the staff-only note. Her view shows "Ready to review" with one button: <b>Approve</b> or <b>Ask a question</b>.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 4 EMAIL -->
+<section id="email" class="screen" data-feeling="relieved" aria-labelledby="h-email">
+ <div class="wrap">
+  <div class="screen-head">
+   <div><div class="num">Screen 4 · Notification email (sample)</div><h2 id="h-email">A short note from a person, not a system ping.</h2></div>
+   <p>Sent through Resend the moment the status changes or a file is added. Each email names the job and the change, with one button back to the same place.</p>
+  </div>
+  <div class="mails">
+   <div>
+    <div class="cause"><span class="pill gum">Cause</span><span><b>Status → Ready to review</b> · Jordan Pike, 2:41 pm</span></div>
+    <article class="mail" aria-label="Sample status email">
+     <div class="hdr"><div><span>From</span>Jordan at Jobline &lt;updates@jobline.example&gt;</div><div><span>To</span>priya.shah@marlowfinch.example</div><div><span>Subject</span><b>Harbour Lane fit-out review is ready for you</b></div></div>
+     <div class="body">
+      <svg viewBox="0 0 264 64" style="height:40px;width:auto;color:var(--ink)" role="img" aria-label="Jobline"><use href="#brandmark"/></svg>
+      <h4 style="margin-top:18px">Hi Priya, it's ready to review.</h4>
+      <p>Jordan moved <b>Harbour Lane fit-out review</b> to <b>Ready to review</b> and added the revised floor plan.</p>
+      <p style="background:var(--paper);border-left:4px solid var(--gum);padding:10px 14px;border-radius:6px;font-size:16px">"Revised floor plan is up. Door widths now match the access brief."</p>
+      <a class="btn" href="#job">Open the job</a>
+      <p style="font-size:15px;color:var(--muted);margin:16px 0 0">The button signs you straight in. No password needed.</p>
+     </div>
+     <div class="foot"><span>Sent via Resend · Delivered 2:41 pm</span><span class="pill sample">Sample email</span></div>
+    </article>
+   </div>
+   <div>
+    <div class="cause"><span class="pill gum">Cause</span><span><b>File added</b> · joinery-schedule.xlsx, 4:18 pm</span></div>
+    <article class="mail" aria-label="Sample file email">
+     <div class="hdr"><div><span>From</span>Sam at Jobline &lt;updates@jobline.example&gt;</div><div><span>To</span>priya.shah@marlowfinch.example</div><div><span>Subject</span><b>New file on Harbour Lane: joinery schedule</b></div></div>
+     <div class="body">
+      <svg viewBox="0 0 264 64" style="height:40px;width:auto;color:var(--ink)" role="img" aria-label="Jobline"><use href="#brandmark"/></svg>
+      <h4 style="margin-top:18px">Hi Priya, one new file for you.</h4>
+      <p>Sam added <b>joinery-schedule.xlsx</b> to the <b>Joinery schedule</b> task on Harbour Lane fit-out review.</p>
+      <div class="file" style="border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:18px"><span class="ficon">XLS</span><div>joinery-schedule.xlsx<br><small style="color:var(--muted)">88 KB</small></div><span></span></div>
+      <a class="btn" href="#job">Open the job</a>
+     </div>
+     <div class="foot"><span>Sent via Resend · Delivered 4:18 pm</span><span class="pill sample">Sample email</span></div>
+    </article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 5 ADMIN -->
+<section id="admin" class="screen" data-feeling="together" aria-labelledby="h-admin">
+ <div class="wrap">
+  <div class="screen-head">
+   <div><div class="num">Screen 5 · Admin</div><h2 id="h-admin">People, roles and connected services.</h2></div>
+   <p>Admins invite people, set each role, and can see at a glance that Supabase and Resend are connected and working.</p>
+  </div>
+  <div class="admin">
+   <div class="card">
+    <h3>People and roles <span class="pill sample" style="vertical-align:middle">Sample people</span></h3>
+    <table>
+     <thead><tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Last sign-in</th></tr></thead>
+     <tbody>
+      <tr><td><b>Alex Moreau</b><br><small>alex@jobline.example</small></td><td><span class="pill ink">Admin</span></td><td>Today 8:14 am</td></tr>
+      <tr><td><b>Jordan Pike</b><br><small>jordan.pike@jobline.example</small></td><td><span class="pill gum">Staff</span></td><td>Today 1:56 pm</td></tr>
+      <tr><td><b>Sam Okafor</b><br><small>sam@jobline.example</small></td><td><span class="pill gum">Staff</span></td><td>Today 4:10 pm</td></tr>
+      <tr><td><b>Priya Shah</b><br><small>Marlow &amp; Finch</small></td><td><span class="pill clay">Client</span></td><td>Today 3:12 pm</td></tr>
+     </tbody>
+    </table>
+    <form class="invite" onsubmit="return false">
+     <div><label for="ie">Invite by email</label><input id="ie" type="email" value="tom@ashgrovehealth.example"></div>
+     <div><label for="ir">Role</label><select id="ir"><option>Client</option><option>Staff</option><option>Admin</option></select></div>
+     <button class="btn" type="submit">Send invite link</button>
+    </form>
+    <h4 style="margin-top:28px">Who sees what</h4>
+    <table>
+     <thead><tr><th scope="col">Area</th><th scope="col">Admin</th><th scope="col">Staff</th><th scope="col">Client</th></tr></thead>
+     <tbody>
+      <tr><td>Jobs</td><td>All</td><td>Assigned</td><td>Own company</td></tr>
+      <tr><td>Tasks and files</td><td>All</td><td>Assigned</td><td>Shared only</td></tr>
+      <tr><td>Resources and hours</td><td>All</td><td>Team</td><td>None</td></tr>
+      <tr><td>Internal notes</td><td>Yes</td><td>Yes</td><td>None</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="card">
+    <h3>Connected services</h3>
+    <div class="svc"><span class="mark" style="background:#1F6F4A">Sb</span><div><b>Supabase</b><br><span style="font-size:15px;color:var(--muted)">Auth, data and files</span><ul><li>Auth: email magic link on, passwords off</li><li>Database: jobs, tasks, resources, updates, files, profiles</li><li>Row-level rules match each role</li><li>Storage: job-files bucket, private</li></ul></div><span class="pill gum"><span class="dot"></span> Connected</span></div>
+    <div class="svc"><span class="mark" style="background:#1E2422">Rs</span><div><b>Resend</b><br><span style="font-size:15px;color:var(--muted)">Email notifications</span><ul><li>Sends on status change and on file added</li><li>Sender: updates@jobline.example</li><li>Last send: 4:18 pm, delivered</li></ul><button class="btn ghost small" type="button" style="margin-top:12px">Send a test email</button></div><span class="pill gum"><span class="dot"></span> Connected</span></div>
+    <div class="empty" style="text-align:left"><b>No failed sends this week</b>If an email bounces, it shows here with the job it belongs to.</div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer data-feeling="together">
+ <div class="wrap">
+  <svg viewBox="0 0 264 64" style="height:48px;width:auto;color:#F6F2EA" role="img" aria-label="Jobline"><use href="#brandmark"/></svg>
+  <p style="margin:0;max-width:40em">Jobline is a sample product. Every person, company, job and file shown here is fictional. Demo by <a href="https://cromservices.com.au">Crom Services</a>.</p>
+ </div>
+</footer>
+
+<script>
+const app=document.getElementById('app'),names={admin:['Alex','Admin · sample'],staff:['Jordan','Staff · sample'],client:['Priya','Client · sample']};
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{const r=b.dataset.r;app.dataset.role=r;document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('hello').textContent=names[r][0];document.querySelector('.r-name').textContent=names[r][1];document.querySelector('.who .av').textContent={admin:'AM',staff:'JP',client:'PS'}[r]});
+document.getElementById('signinForm').onsubmit=e=>{e.preventDefault();const s=document.getElementById('sent');s.classList.add('on');s.querySelector('b').textContent='Check your inbox.'};
+document.getElementById('upd').onsubmit=e=>{e.preventDefault();const v=document.getElementById('st').value,li=document.createElement('li');li.className='now';li.innerHTML='<span class="what"></span> · Jordan Pike<span class="t">Just now · client emailed</span>';li.querySelector('.what').textContent=v;const tl=document.getElementById('tl');tl.querySelector('.now')?.classList.remove('now');tl.prepend(li);document.getElementById('jobStatus').textContent=v};
+document.getElementById('upBtn').onclick=()=>{const p=document.getElementById('prog');p.innerHTML='access-brief-notes.pdf · uploaded, client emailed<div class="bar"><i style="width:100%"></i></div>'};
+</script>
+</body>
+</html>
