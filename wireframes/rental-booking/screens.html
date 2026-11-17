@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coastal Stays — Saltwood Bay holiday homes (sample)</title>
+<meta name="description" content="Coastal Stays is a sample holiday rental site: three stays in fictional Saltwood Bay, WA, with live dates and booking requests.">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="images/hero-800.webp" media="(max-width:760px)">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Brand mark: one source. Swap the wordmark or mark here and every use updates. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="brandmark" viewBox="0 0 300 64">
+  <circle cx="28" cy="32" r="24" fill="#3E5F4A"/>
+  <circle cx="28" cy="30" r="8" fill="#F3DED2"/>
+  <path d="M8 38c6-3 10-3 14 0s8 3 12 0 8-3 14 0" stroke="#FBF9F5" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M10 45c6-3 10-3 14 0s8 3 12 0 8-3 12 0" stroke="#FBF9F5" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".8"/>
+  <text x="64" y="43" font-family="Space Grotesk, system-ui, sans-serif" font-weight="700" font-size="34" letter-spacing="-.6" fill="currentColor">Coastal Stays</text>
+ </symbol>
+</svg>
+
+<header class="site">
+ <div class="wrap">
+  <a class="logo" href="#home" aria-label="Coastal Stays home"><svg viewBox="0 0 300 64" role="img" aria-label="Coastal Stays"><use href="#brandmark"/></svg></a>
+  <nav class="top" aria-label="Screens"><a href="#home">Stays</a><a href="#stay">Dune House</a><a href="#request">Request</a><a href="#owner">Owner sign-in</a><a href="#admin">Owner admin</a></nav>
+  <span class="pill sample">Sample content</span>
+ </div>
+</header>
+
+<main>
+<!-- 1 HOME -->
+<section id="home" data-feeling="still" aria-labelledby="h-home">
+ <div class="hero">
+  <picture><source media="(min-width:761px)" srcset="images/hero-1024.webp"><img src="images/hero-800.webp" alt="A weathered timber holiday house on the dunes at first light, the sea pale behind it" width="800" height="450" fetchpriority="high"></picture>
+  <div class="wrap">
+   <div class="eyebrow">Saltwood Bay, WA · sample place</div>
+   <h1 id="h-home">Wake up where the dunes meet the sea.</h1>
+   <p class="lede">Three quiet homes on a stretch of south-west coast. See which nights are free, then send the owner a request.</p>
+   <form class="search" onsubmit="return false" aria-label="Find a stay">
+    <div><label for="ci">Check in</label><input id="ci" value="Fri 11 Dec"></div>
+    <div><label for="co">Check out</label><input id="co" value="Mon 14 Dec"></div>
+    <div><label for="gu">Guests</label><select id="gu"><option>2 guests</option><option>4 guests</option><option>6 guests</option></select></div>
+    <a class="btn go" href="#stays">See free stays</a>
+   </form>
+  </div>
+ </div>
+ <div class="wrap" id="stays" style="padding-top:72px;padding-bottom:24px">
+  <div class="screen-head"><div><div class="num">Screen 1 · Home</div><h2>All stays</h2></div><p>Three sample homes. Rates shown are sample figures for the dates above.</p></div>
+  <div class="stays">
+   <article class="stay"><img src="images/hero-800.webp" alt="Dune House: silver timber cabin with a deck facing the sea" loading="lazy" width="800" height="450"><div class="b"><span class="pill kelp" style="align-self:flex-start">✓ Free 11–14 Dec</span><h3>Dune House</h3><div class="meta">Sleeps 4 · 2 bedrooms · on the dunes</div><div class="price"><span><b>$340</b> / night <small class="pill sample">Sample</small></span><a class="btn small" href="#stay">View stay</a></div></div></article>
+   <article class="stay"><img src="images/cottage-800.webp" alt="Limestone Hut: a small stone cottage with a surfboard and outdoor shower" loading="lazy" width="800" height="600"><div class="b"><span class="pill kelp" style="align-self:flex-start">✓ Free 11–14 Dec</span><h3>Limestone Hut</h3><div class="meta">Sleeps 2 · 1 bedroom · 3 min walk to the beach</div><div class="price"><span><b>$240</b> / night <small class="pill sample">Sample</small></span><a class="btn small ghost" href="#stay">View stay</a></div></div></article>
+   <article class="stay"><img src="images/cabin-800.webp" alt="Karri Cabin: a black timber cabin on stilts among tall trees above the sea" loading="lazy" width="800" height="600"><div class="b"><span class="pill line" style="align-self:flex-start">Booked 11–14 Dec · free from 15 Dec</span><h3>Karri Cabin</h3><div class="meta">Sleeps 6 · 3 bedrooms · forest edge, sea views</div><div class="price"><span><b>$410</b> / night <small class="pill sample">Sample</small></span><a class="btn small ghost" href="#stay">View stay</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<!-- 2 PROPERTY -->
+<section id="stay" class="screen" data-feeling="drawn" aria-labelledby="h-stay">
+ <div class="wrap">
+  <div class="screen-head"><div><div class="num">Screen 2 · Property page</div><h2 id="h-stay">Dune House</h2><div class="meta">Saltwood Bay, WA (sample place) · Sleeps 4 · 2 bedrooms · 1 bathroom</div></div><span class="pill sample">Sample stay</span></div>
+  <div class="gallery">
+   <img class="g1" src="images/hero-1024.webp" alt="Dune House deck at dawn with two linen chairs" loading="lazy">
+   <img src="images/living-800.webp" alt="Living room with a linen sofa, jute rug and a wide window onto the dunes" loading="lazy">
+   <img src="images/bedroom-800.webp" alt="Bedroom with linen bedding and a timber bedhead, dunes outside the window" loading="lazy">
+  </div>
+  <div class="prop">
+   <div>
+    <h3>A quiet timber house on the dunes</h3>
+    <p>Dune House sits in coastal heath above the bay, a short sandy path from the water. Mornings start on the deck as the light comes up pink over the sea. Inside it's linen, whitewashed boards and a wide window that frames the dunes from the sofa.</p>
+    <p>Two bedrooms, one bathroom, a full kitchen and a wood heater for winter. Best for a couple or a small family who want the sound of the sea and not much else.</p>
+    <h3 style="margin-top:28px">Amenities</h3>
+    <ul class="amen"><li>Ocean-view deck</li><li>Full kitchen</li><li>Wood heater</li><li>Wi-Fi</li><li>Washing machine</li><li>Outdoor shower</li><li>Linen and towels</li><li>Off-street parking</li></ul>
+    <h3>Availability</h3>
+    <div class="cal" aria-label="December 2026 availability">
+     <div class="cal-h"><b>December 2026</b><span class="pill line">Tap a check-in, then a check-out</span></div>
+     <div class="cal-g" id="calGuest"><span class="dow">Mon</span><span class="dow">Tue</span><span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span><span class="dow">Sun</span><span class="d" aria-hidden="true"></span><button type="button" class="" aria-label="1 December, free">1</button><button type="button" class="" aria-label="2 December, free">2</button><button type="button" class="" aria-label="3 December, free">3</button><span class="d bk" aria-label="4 December, booked">4</span><span class="d bk" aria-label="5 December, booked">5</span><span class="d bk" aria-label="6 December, booked">6</span><span class="d bk" aria-label="7 December, booked">7</span><button type="button" class="" aria-label="8 December, free">8</button><button type="button" class="" aria-label="9 December, free">9</button><button type="button" class="" aria-label="10 December, free">10</button><button type="button" class="s1" aria-label="11 December, free">11</button><button type="button" class="sel" aria-label="12 December, free">12</button><button type="button" class="sel" aria-label="13 December, free">13</button><button type="button" class="s2" aria-label="14 December, free">14</button><button type="button" class="" aria-label="15 December, free">15</button><button type="button" class="" aria-label="16 December, free">16</button><button type="button" class="" aria-label="17 December, free">17</button><span class="d bk" aria-label="18 December, booked">18</span><span class="d bk" aria-label="19 December, booked">19</span><span class="d bk" aria-label="20 December, booked">20</span><span class="d bk" aria-label="21 December, booked">21</span><span class="d bk" aria-label="22 December, booked">22</span><button type="button" class="" aria-label="23 December, free">23</button><button type="button" class="" aria-label="24 December, free">24</button><button type="button" class="" aria-label="25 December, free">25</button><span class="d bk" aria-label="26 December, booked">26</span><span class="d bk" aria-label="27 December, booked">27</span><span class="d bk" aria-label="28 December, booked">28</span><span class="d bk" aria-label="29 December, booked">29</span><span class="d bk" aria-label="30 December, booked">30</span><span class="d bk" aria-label="31 December, booked">31</span></div>
+     <div class="legend"><span><i style="background:repeating-linear-gradient(135deg,#EFEAE1 0 4px,#E6E0D5 4px 8px)"></i>Booked (closed)</span><span><i style="background:var(--kelp)"></i>Your dates</span><span><i style="background:#fff;border:1px solid var(--line)"></i>Free</span></div>
+    </div>
+   </div>
+   <aside class="card book" aria-label="Booking request">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span><b style="font-size:24px">$340</b> / night</span><span class="pill sample">Sample rates</span></div>
+    <div class="dates" style="margin-top:14px"><div><small>Check in</small>Fri 11 Dec</div><div><small>Check out</small>Mon 14 Dec</div></div>
+    <select aria-label="Guests"><option>2 guests</option><option>3 guests</option><option>4 guests</option></select>
+    <div class="free" role="status">✓ Those nights are free</div>
+    <table class="sum"><tr><td>$340 × 3 nights</td><td>$1,020</td></tr><tr><td>Cleaning</td><td>$90</td></tr><tr class="t"><td>Stay total</td><td>$1,110</td></tr></table>
+    <a class="btn block" href="#request">Send booking request</a>
+    <p style="font-size:15px;color:var(--muted);margin:12px 0 0">No payment now. The owner confirms by email. Figures are sample content.</p>
+   </aside>
+  </div>
+ </div>
+ <div class="mbar" aria-label="Your dates"><span><b>11–14 Dec</b> · 3 nights<br>$1,110 total <small>(sample)</small></span><a class="btn small" href="#request">Request</a></div>
+</section>
+
+<!-- 3 REQUEST + CONFIRMATION + EMAIL -->
+<section id="request" class="screen" data-feeling="received" aria-labelledby="h-req">
+ <div class="wrap">
+  <div class="screen-head"><div><div class="num">Screen 3 · Booking request</div><h2 id="h-req">Send it, and see it land.</h2></div><p>The guest fills a short request. The confirmation repeats the stay and the dates, and the owner gets the same request by email through Resend.</p></div>
+  <div class="req">
+   <form class="card" onsubmit="return false" aria-label="Booking request form">
+    <h3>Request Dune House</h3>
+    <div class="dates"><div><small>Check in</small>Fri 11 Dec</div><div><small>Check out</small>Mon 14 Dec</div></div>
+    <div class="form2">
+     <div><label for="rn">Your name</label><input id="rn" value="Ellie Hart"></div>
+     <div><label for="rg">Guests</label><select id="rg"><option>2 adults</option><option>2 adults, 1 child</option></select></div>
+     <div class="full"><label for="re">Email</label><input id="re" type="email" value="ellie.hart@example.com"></div>
+     <div class="full"><label for="rm">Message for the owner</label><textarea id="rm" rows="3">Hi Mia, we'd love three quiet nights for our anniversary. We'll arrive around 4 pm on the Friday.</textarea></div>
+     <div class="full"><button class="btn block" type="submit">Send booking request</button></div>
+    </div>
+   </form>
+   <div>
+    <div class="confirm" role="status">
+     <span class="held">● Nights held for 24 hours</span>
+     <h3 style="margin-top:14px">Request sent, Ellie.</h3>
+     <div class="row"><img src="images/hero-800.webp" alt="" loading="lazy"><div><b>Dune House</b><br>Fri 11 – Mon 14 Dec · 3 nights · 2 adults</div></div>
+     <ul><li>Mia, the owner, has been emailed your request.</li><li>Those nights are held for you while she replies, so nobody else can take them.</li><li>Her answer comes to ellie.hart@example.com.</li></ul>
+     <p style="margin:0;font-size:16px;color:#E3EEE5">Stay total $1,110 (sample). Nothing is charged until Mia confirms.</p>
+    </div>
+    <article class="mail" aria-label="Sample owner email">
+     <div class="hdr"><div><span>From</span>Coastal Stays &lt;requests@coastalstays.example&gt;</div><div><span>To</span>mia@coastalstays.example</div><div><span>Subject</span><b>New request: Dune House, 11–14 Dec</b></div></div>
+     <div class="body">
+      <svg viewBox="0 0 300 64" style="height:36px;width:auto;color:var(--ink)" role="img" aria-label="Coastal Stays"><use href="#brandmark"/></svg>
+      <h4 style="margin-top:14px">Ellie Hart would like Dune House.</h4>
+      <table class="kv"><tr><td>Dates</td><td>Fri 11 – Mon 14 Dec (3 nights)</td></tr><tr><td>Guests</td><td>2 adults</td></tr><tr><td>Stay total</td><td>$1,110 (sample)</td></tr><tr><td>Message</td><td>"We'd love three quiet nights for our anniversary."</td></tr></table>
+      <a class="btn" href="#admin">Open in your calendar</a>
+      <p style="font-size:15px;color:var(--muted);margin:14px 0 0">The nights are held on your calendar for 24 hours.</p>
+     </div>
+     <div class="foot"><span>Sent via Resend · Delivered 9:42 am</span><span class="pill sample">Sample email</span></div>
+    </article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 4 OWNER SIGN IN -->
+<section id="owner" class="screen" data-feeling="held" aria-labelledby="h-owner">
+ <div class="wrap">
+  <div class="screen-head"><div><div class="num">Screen 4 · Owner sign-in</div><h2 id="h-owner">One link, straight to your calendar.</h2></div><p>The owner signs in by email magic link. No password to keep.</p></div>
+  <div class="osign">
+   <img src="images/living-800.webp" alt="Dune House living room looking out to the dunes" loading="lazy">
+   <form class="f" onsubmit="return false">
+    <span class="pill sample">Owner area</span>
+    <h3 style="margin-top:14px">Sign in to manage your stays</h3>
+    <label for="oe">Owner email</label><input id="oe" type="email" value="mia@coastalstays.example">
+    <button class="btn block" type="submit" style="margin-top:14px">Email me a sign-in link</button>
+    <div class="sent" role="status"><b>Check your inbox.</b> A one-time link is on its way to mia@coastalstays.example. It opens your calendar with 1 new request.</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<!-- 5 OWNER ADMIN -->
+<section id="admin" class="screen" data-feeling="held" aria-labelledby="h-admin">
+ <div class="wrap">
+  <div class="screen-head"><div><div class="num">Screen 5 · Owner admin</div><h2 id="h-admin">The request, already on the calendar.</h2></div><p>Requests inbox, the calendar with Ellie's nights held, and the listings the owner manages.</p></div>
+  <div class="admin">
+   <aside class="side" aria-label="Owner menu"><a class="on" href="#admin">Calendar</a><a href="#admin">Requests <span class="badge">1</span></a><a href="#admin">Listings</a><a href="#admin">Settings</a></aside>
+   <div class="amain">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px"><h3 style="margin:0">Morning, Mia</h3><select style="width:auto" aria-label="Listing"><option>Dune House</option><option>Limestone Hut</option><option>Karri Cabin</option></select></div>
+    <div class="agrid">
+     <div class="panel">
+      <h4>December 2026 · Dune House <span class="pill sample">Sample</span></h4>
+      <div class="cal-g"><span class="dow">Mon</span><span class="dow">Tue</span><span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span><span class="dow">Sun</span><span class="d" aria-hidden="true"></span><span class="d ">1</span><span class="d ">2</span><span class="d ">3</span><span class="d bk" aria-label="4 December, booked">4</span><span class="d bk" aria-label="5 December, booked">5</span><span class="d bk" aria-label="6 December, booked">6</span><span class="d bk" aria-label="7 December, booked">7</span><span class="d ">8</span><span class="d ">9</span><span class="d ">10</span><span class="d hold h1" aria-label="11 December, held for Ellie Hart">11</span><span class="d hold" aria-label="12 December, held for Ellie Hart">12</span><span class="d hold h2" aria-label="13 December, held for Ellie Hart">13</span><span class="d ">14</span><span class="d ">15</span><span class="d ">16</span><span class="d ">17</span><span class="d bk" aria-label="18 December, booked">18</span><span class="d bk" aria-label="19 December, booked">19</span><span class="d bk" aria-label="20 December, booked">20</span><span class="d bk" aria-label="21 December, booked">21</span><span class="d bk" aria-label="22 December, booked">22</span><span class="d ">23</span><span class="d ">24</span><span class="d ">25</span><span class="d bk" aria-label="26 December, booked">26</span><span class="d bk" aria-label="27 December, booked">27</span><span class="d bk" aria-label="28 December, booked">28</span><span class="d bk" aria-label="29 December, booked">29</span><span class="d bk" aria-label="30 December, booked">30</span><span class="d bk" aria-label="31 December, booked">31</span></div>
+      <div class="legend"><span><i style="background:var(--dawn)"></i>Held: Ellie Hart (request, 23 h left)</span><span><i style="background:repeating-linear-gradient(135deg,#EFEAE1 0 4px,#E6E0D5 4px 8px)"></i>Booked</span></div>
+     </div>
+     <div class="panel inbox">
+      <h4>Requests <span class="pill dawn">1 new</span></h4>
+      <div class="it new"><span class="av">EH</span><div><b>Ellie Hart</b> · Dune House<br>Fri 11 – Mon 14 Dec · 2 adults · $1,110 (sample)<br><small style="color:var(--muted)">"We'd love three quiet nights for our anniversary."</small><div class="acts"><button class="btn small" type="button">Accept</button><button class="btn small ghost" type="button">Decline</button></div></div></div>
+      <div class="it"><span class="av" style="background:#5B6B7A">TN</span><div><b>Tom Nguyen</b> · Karri Cabin<br>Sat 9 – Tue 12 Jan · <span class="pill kelp">Accepted</span></div></div>
+      <div class="it"><span class="av" style="background:#8A6F55">RB</span><div><b>Rosa Bell</b> · Limestone Hut<br>Fri 4 – Sun 6 Dec · <span class="pill line">Declined: dates taken</span></div></div>
+     </div>
+    </div>
+    <div class="panel" style="margin-top:20px">
+     <h4>Listings <a class="btn small ghost" href="#admin">Add a stay</a></h4>
+     <div class="lst"><img src="images/hero-800.webp" alt="" loading="lazy"><div><b>Dune House</b><br><small style="color:var(--muted)">Sleeps 4 · $340/night sample · 8 photos</small></div><span class="pill kelp">Live</span></div>
+     <div class="lst"><img src="images/cottage-800.webp" alt="" loading="lazy"><div><b>Limestone Hut</b><br><small style="color:var(--muted)">Sleeps 2 · $240/night sample · 6 photos</small></div><span class="pill kelp">Live</span></div>
+     <div class="lst"><img src="images/cabin-800.webp" alt="" loading="lazy"><div><b>Karri Cabin</b><br><small style="color:var(--muted)">Sleeps 6 · $410/night sample · 9 photos</small></div><span class="pill kelp">Live</span></div>
+     <div class="empty"><b>No drafts</b>New stays you start will wait here until you publish them.</div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer data-feeling="held">
+ <div class="wrap">
+  <svg viewBox="0 0 300 64" style="height:48px;width:auto;color:#FBF9F5" role="img" aria-label="Coastal Stays"><use href="#brandmark"/></svg>
+  <p style="margin:0;max-width:40em">Coastal Stays is a sample site. Saltwood Bay, the homes, the people and the rates are fictional. Demo by <a href="https://cromservices.com.au">Crom Services</a>.</p>
+ </div>
+</footer>
+<script>
+document.querySelectorAll('#calGuest button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#calGuest button').forEach(x=>x.classList.remove('s1','s2','sel'));b.classList.add('s1')});
+</script>
+</body>
+</html>
