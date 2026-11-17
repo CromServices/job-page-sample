@@ -1,10 +1,10 @@
-@font-face{font-family:Manrope;src:url(fonts/manrope.woff2) format("woff2");font-weight:200 800;font-display:swap}
-@font-face{font-family:Syne;src:url(fonts/syne-800.woff2) format("woff2");font-weight:800;font-display:swap}
-:root{--paper:#F6F2EA;--card:#FFFDF8;--ink:#1E2422;--muted:#4C5652;--line:#DCD4C6;--gum:#2F5D4E;--gum-d:#244A3E;--gum-soft:#E2ECE5;--clay:#8E4429;--clay-soft:#F5E4DA;--sun:#F3E5C3;--r:14px}
+@font-face{font-family:Geist;src:url(fonts/geist.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(fonts/geist-mono.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--paper:#F4F4F1;--card:#FFFFFF;--ink:#1E2422;--muted:#4C5652;--line:#DEDDD6;--gum:#2F5D4E;--gum-d:#244A3E;--gum-soft:#E2ECE5;--clay:#8E4429;--clay-soft:#F5E4DA;--sun:#F3E5C3;--r:10px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 Manrope,system-ui,sans-serif}
-h1,h2,h3,h4{font-family:Syne,system-ui,sans-serif;font-weight:800;line-height:1.12;margin:0 0 .5em;letter-spacing:-.03em}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 Geist,system-ui,sans-serif}
+h1,h2,h3,h4{font-family:Geist,system-ui,sans-serif;font-weight:800;line-height:1.12;margin:0 0 .5em;letter-spacing:-.03em}
 h1{font-size:clamp(30px,3.4vw,46px);letter-spacing:-.04em;text-wrap:balance}
 h2{font-size:clamp(30px,3vw,42px)}
 h3{font-size:22px}
@@ -14,7 +14,7 @@ a{color:var(--gum)}
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 /* header */
-header.site{position:sticky;top:0;z-index:20;background:rgba(246,242,234,.96);border-bottom:1px solid var(--line)}
+header.site{position:sticky;top:0;z-index:20;background:rgba(244,244,241,.9);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;gap:28px;height:88px}
 .logo{display:flex;align-items:center;text-decoration:none;color:var(--ink)}
 .logo svg{height:64px;width:auto;display:block}
@@ -27,7 +27,7 @@ nav.top a:hover{color:var(--gum)}
 .pill.clay{background:var(--clay-soft);color:var(--clay)}
 .pill.ink{background:var(--ink);color:#fff}
 .pill.line{background:#fff;border:1px solid var(--line);color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 22px;border-radius:12px;border:2px solid var(--gum);background:var(--gum);color:#fff;font:700 17px/1.2 Manrope,sans-serif;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 22px;border-radius:12px;border:2px solid var(--gum);background:var(--gum);color:#fff;font:700 17px/1.2 Geist,sans-serif;text-decoration:none;cursor:pointer;white-space:nowrap}
 .btn:hover{background:var(--gum-d);border-color:var(--gum-d)}
 .btn.ghost{background:transparent;color:var(--gum)}
 .btn.small{min-height:44px;padding:8px 16px;font-size:16px}
@@ -39,7 +39,7 @@ nav.top a:hover{color:var(--gum)}
 .num{font-size:15px;font-weight:800;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
 label{display:block;font-weight:700;font-size:16px;margin-bottom:6px}
-input,select,textarea{width:100%;font:500 17px/1.4 Manrope,sans-serif;color:var(--ink);background:#fff;border:1.5px solid #9C9486;border-radius:10px;padding:12px 14px;min-height:50px}
+input,select,textarea{width:100%;font:500 17px/1.4 Geist,sans-serif;color:var(--ink);background:#fff;border:1.5px solid #9C9486;border-radius:10px;padding:12px 14px;min-height:50px}
 input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible{outline:3px solid #C9A23A;outline-offset:2px}
 /* hero / sign in */
 .hero{position:relative;display:grid;grid-template-columns:1.05fr 1fr;min-height:640px;border-bottom:1px solid var(--line)}
@@ -70,7 +70,7 @@ input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible{outli
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
 .topbar h3{margin:0;font-size:26px}
 .seg{display:inline-flex;border:1.5px solid var(--line);border-radius:12px;padding:4px;background:var(--paper)}
-.seg button{border:0;background:transparent;font:700 15px Manrope,sans-serif;color:var(--muted);padding:8px 14px;border-radius:9px;cursor:pointer;min-height:40px}
+.seg button{border:0;background:transparent;font:700 15px Geist,sans-serif;color:var(--muted);padding:8px 14px;border-radius:9px;cursor:pointer;min-height:40px}
 .seg button[aria-pressed=true]{background:var(--ink);color:#fff}
 .next{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:var(--gum);color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:24px}
 .next .k{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#CFE3D8}
@@ -195,3 +195,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
 td small{word-break:break-all}
 @media (max-width:760px){.card{padding:18px}.main .grid2[style]{grid-template-columns:1fr!important}}
 @media (max-width:760px){.svc{grid-template-columns:44px 1fr}.svc>.pill{grid-column:2;justify-self:start;grid-row:1}.svc>div{grid-column:2}.mark{width:44px;height:44px;font-size:17px}}
+
+/* Geist refit: Swiss-precise grid, 650 headings, tight tracking, mono for meta */
+body{letter-spacing:-.006em;font-feature-settings:"ss01"}
+h1,h2,h3,h4{font-weight:650;letter-spacing:-.035em;line-height:1.06}
+h1{font-weight:700;letter-spacing:-.05em;line-height:1.02}
+h3,h4{letter-spacing:-.02em;line-height:1.2}
+header.site{backdrop-filter:saturate(1.4) blur(10px)}
+.btn{border-radius:8px;font-weight:600;letter-spacing:-.01em}
+.card,.state{border-radius:var(--r)}
+.app{border-radius:12px}
+.seg{border-radius:9px}.seg button{border-radius:6px;font-weight:600}
+input,select,textarea{border-radius:8px;border-color:#A6A49B}
+.eyebrow,.num,.state .step,.pill,.tl .t,th{font-family:"Geist Mono",ui-monospace,monospace;font-weight:500;letter-spacing:.04em}
+.eyebrow{font-size:14px;color:var(--gum-d)}
+.eyebrow::before{content:"";display:inline-block;width:8px;height:8px;background:var(--gum);margin-right:10px;vertical-align:1px}
+.pill{border-radius:6px;font-size:13px;text-transform:uppercase}
+.num{font-size:14px}
+.tl .t{font-size:13px;font-variant-numeric:tabular-nums}
+nav.top a{font-weight:500;letter-spacing:-.01em}
+.side a{font-weight:500}
