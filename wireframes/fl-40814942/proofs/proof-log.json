@@ -1,0 +1,120 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 11171,
+  "first_view_bytes": 116892,
+  "sections": [
+   [
+    "home",
+    0,
+    2300
+   ],
+   [
+    "mega",
+    2299.96875,
+    551
+   ],
+   [
+    "listing",
+    2851.140625,
+    1123
+   ],
+   [
+    "product",
+    3974.46875,
+    1580
+   ],
+   [
+    "quote",
+    5554.203125,
+    864
+   ],
+   [
+    "checkout",
+    6418.5,
+    1218
+   ],
+   [
+    "admin-quotes",
+    7636.890625,
+    707
+   ],
+   [
+    "admin-sync",
+    8344.078125,
+    879
+   ],
+   [
+    "admin-markup",
+    9223.453125,
+    1051
+   ],
+   [
+    "plan",
+    10274.671875,
+    896
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-17-hunt/packs/amrod-gifting-store/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 18857,
+  "first_view_bytes": 111782,
+  "sections": [
+   [
+    "home",
+    0,
+    3921
+   ],
+   [
+    "mega",
+    3920.546875,
+    1013
+   ],
+   [
+    "listing",
+    4933.296875,
+    2772
+   ],
+   [
+    "product",
+    7705.15625,
+    2449
+   ],
+   [
+    "quote",
+    10154.578125,
+    1335
+   ],
+   [
+    "checkout",
+    11490,
+    2173
+   ],
+   [
+    "admin-quotes",
+    13662.953125,
+    803
+   ],
+   [
+    "admin-sync",
+    14465.703125,
+    1115
+   ],
+   [
+    "admin-markup",
+    15581.15625,
+    1697
+   ],
+   [
+    "plan",
+    17278.21875,
+    1579
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-17-hunt/packs/amrod-gifting-store/proofs/phone-390.png"
+ }
+]
