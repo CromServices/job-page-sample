@@ -6,7 +6,7 @@ Key design ideas drawn from the brief:
 
 1. **Sourced, not made up.** "answers from a knowledge base the business can edit": every reply names its article, and opening that article marks the exact lines used.
 2. **A person, without a wall.** "hands a conversation to a person when it should": the assistant says when it is not sure, and "Talk to a person" sits in the same reply. The team gets the whole thread by email.
-3. **A calm desk, not a toy.** "keeps a conversation log for the team": warm clay and sand, letter-like messages with names, plenty of air, a team desk that opens on the same messages the visitor saw.
+3. **A calm desk, not a toy.** "keeps a conversation log for the team": a calm dark console, named command-line messages, plenty of air, a team desk that opens on the same messages the visitor saw.
 
 ## The build
 
@@ -48,7 +48,7 @@ Quoted from post.md (no attachments exist):
 
 ## Client design direction
 
-None supplied (attachments/MANIFEST.md). Crom's own direction from scope.md: unhurried and useful; warm clay, soft sand, ink type, muted terracotta actions; the chat feels like a person at the desk; a realistic garden photograph starts under the nav. Followed as written.
+None supplied (attachments/MANIFEST.md). Crom's own direction from scope.md: unhurried and useful; warm clay, soft sand, ink type, muted terracotta actions; the chat feels like a person at the desk; a realistic garden photograph starts under the nav. Followed for voice and journey; on 17 Nov Nate redirected the look to terminal style ("Make the hub one a terminal style. Fit the design to the font.").
 
 ## Feeling from the scope
 
@@ -65,7 +65,7 @@ Client wants customers to feel: answers that come "from a knowledge base the bus
 #### Arrive — unhurried
 - Feeling word: unhurried
 - Inner voice: “Late sun on a potting bench, and a chat already open. Nobody's rushing me.”
-- Design levers: garden photograph flush under the nav, two-to-three-line headline, widget open with one honest greeting and three starter questions, warm sand and clay palette, generous type.
+- Design levers: console hero flush under the nav with a status line, two-to-three-line headline, widget open with one honest greeting and three starter questions, dark console palette with a lime prompt accent, generous mono type.
 
 #### Explore — assured
 - Feeling word: assured
@@ -97,13 +97,15 @@ Never feel: trapped in a loop with a bot, handed an answer with no source, asked
 
 Build **HelpDesk Hub Help**, the help centre for HelpDesk Hub, a fictional Australian home-and-garden retailer (pots, plants, soil, tools). Label all products, articles, names and conversations as sample content. Planned domain: help.cromservices.com.au.
 
-**Voice:** unhurried and useful. Short sentences, Australian spelling, plain words. The assistant speaks like a person at the desk: names its source, says "I'm not sure" when it is, never guesses.
+**Voice:** terminal-plain and useful. Short, declarative lines, Australian spelling, plain words; status lines in caps (SYSTEM READY / ARTICLES LOADED). The assistant speaks like a person at the desk: names its source, says "I'm not sure" when it is, never guesses.
 
-**Palette:** ink #2B2622 (type), sand #F6EFE4 (page), soft sand #ECE0CD, line #D9C9B2, terracotta #9C4A2A (actions, white text), light clay #C9774F (accents), sage #4F5D44 with #E4E8DA (person / success states), warm white #FFFDF9 (cards).
+**Palette (console dark):** console black #080E0D (page), panel #101A16 and #0C1510 (widgets, cards), raised panel #19281F (window bars), line #344B3F, text #E8EEE9, muted #ADBDB3, phosphor lime #B6F36A (prompts, actions with #0B1607 text, cursor, citations), cyan #72CAD1 (visitor prompt, focus ring), amber #F5D38E on #2A2416 (warning tags), success fill #1A3022. All pairs WCAG AA.
 
-**Type:** wordmark and headings in Bricolage Grotesque 800 with tight tracking; body and UI in Manrope (400 body, 700 UI). Body 18px desktop, 17px phone. H1 two to three lines.
+**Type:** wordmark, headings, chat, buttons, nav, tags and status lines in JetBrains Mono (600 headings, 500 UI, 400 chat; tracking −0.045em on headings); long-form body and article text in Geist 400 for readability. Self-hosted latin subsets. Body 18px desktop, 17px phone. H1 two to three lines. No serifs.
 
-**Imagery and art direction:** realistic warm late-afternoon photography of an Australian garden: timber potting bench, terracotta pots, a young potted lemon tree, native grevillea, sandstone paving. No people, no stock-office imagery. Article thumbnails are close crops from the same world. Logo: a terracotta rounded square with a white speech bubble holding a sage leaf, about 64px on desktop and 48px on phone, beside the "HelpDesk Hub" wordmark.
+**Art direction (terminal):** dark console page on a faint 32px grid, `>_` prompt mark, `>`/`$` prompt carets before every speaker and eyebrow, command-line chat with flat panels and a 2px lime rule on assistant replies, blinking block cursor in the input (stilled for reduced motion), 2–3px corners, hard offset shadow on the chat window. Article thumbnails stay as desaturated product photography; the hero is type-led with no photo.
+
+**Imagery and art direction:** type-led console hero with no photo; article thumbnails are desaturated close crops of the garden products (terracotta pots, a potted lemon tree, tools). No people, no stock-office imagery. Logo: a console-black square with a lime outline and a `>_` prompt mark, about 64px on desktop and 48px on phone, beside the "HelpDesk Hub" wordmark.
 
 **Pages and sections:**
 1. Help home: sample bar; header (logo, Help centre, Delivery, Returns, Team sign-in, Ask a question button); hero photograph flush under the nav with headline, search and topic chips; chat widget open (greeting, three starters, input); grid of sample articles.
@@ -120,4 +122,4 @@ Build **HelpDesk Hub Help**, the help centre for HelpDesk Hub, a fictional Austr
 
 ## Rationale
 
-The brief's whole promise is trust in two directions: visitors trust the answer because it shows its source, and the team trusts the assistant because it hands over with the history attached. So the wireframe makes the source visible (citation card plus marked lines), makes the handoff a relief (one honest line, the person button in the same reply, a held state and a full-context Resend email), and gives the team a desk that opens on the same messages. The garden photography and warm palette keep a support tool feeling like a shop with someone at the counter.
+The brief's whole promise is trust in two directions: visitors trust the answer because it shows its source, and the team trusts the assistant because it hands over with the history attached. So the wireframe makes the source visible (citation card plus marked lines), makes the handoff a relief (one honest line, the person button in the same reply, a held state and a full-context Resend email), and gives the team a desk that opens on the same messages. The terminal look makes the system legible (status lines, prompts, sources), while the plain human voice keeps it feeling like a shop with someone at the counter.
