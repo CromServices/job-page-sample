@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stock Furniture · product page fixes</title>
+<meta name="description" content="A preview of two quick-win fixes on the live Stock Furniture Rio Corner page: Add to Cart above the fold on phone, and the delivered, installed price before Add to Cart.">
+<link rel="preload" href="fonts/jost-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="chrome">
+  <a class="brand" href="#content">
+    <img src="images/logo.png" width="194" height="48" alt="Stock Furniture Lebanon">
+  </a>
+  <nav aria-label="Sections in this preview">
+    <a href="#audit">Audit</a>
+    <a href="#product">Product page</a>
+    <a href="#cart">Cart</a>
+    <a href="#plan">First experiments</a>
+  </nav>
+</header>
+
+<main id="content">
+
+<section class="page intro preview-only" id="intro" data-feeling="oriented">
+  <div class="wrap">
+    <p class="kicker">www.stock-furniture.com · Rio Corner</p>
+    <h1>Sure of the total, before Add to Cart.</h1>
+    <p class="lede">A preview of two quick-win fixes on your own Shopify product page, in your logo, colours and type. Not a redesign. We looked at the live Rio Corner page on stock-furniture.com first, as you asked: contact you after the audit, and tell you what we can work on.</p>
+    <ul class="ticks">
+      <li>Add to Cart sits on the first phone screen (390×844), not just under it.</li>
+      <li>The delivered, installed price is shown before Add to Cart. Pick an area in Lebanon, tick installation, and the total appears — the standout in this preview.</li>
+      <li>Delivery and installation figures are labelled Sample content until you confirm your delivery table. The sofa price, $1,190.00, is your live price.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page preview-only" id="audit" data-feeling="curious">
+  <div class="wrap">
+    <p class="kicker">Outside-in audit · then Shopify, GA4 and heat maps with access</p>
+    <h2>Where the 30,000 visits go</h2>
+    <p class="ask">You said the store attracts roughly 30,000 visitors each month but only converts about 0.5% of them into buyers, and you are not certain which step — product pages, cart, or checkout — is losing the most customers. Those figures are yours. About 150 completed orders a month follows from them. The first job is to pinpoint that step with Shopify, GA4 and heat maps.</p>
+    <div class="cards">
+      <div class="card"><div class="num">30,000</div><div class="lbl">Visits a month, as you reported</div></div>
+      <div class="card"><div class="num">0.5%</div><div class="lbl">Purchase conversion, as you reported</div></div>
+      <div class="card"><div class="num">~150</div><div class="lbl">Orders a month, from those two figures</div></div>
+    </div>
+    <h3>Funnel — fill from GA4</h3>
+    <p>Once we have access, we fill these steps from Shopify and GA4 (view_item → add_to_cart → begin_checkout → purchase) and run heat maps on your top product pages. The bars are empty on purpose: we will not invent drop-off rates.</p>
+    <div class="funnel" role="img" aria-label="Funnel steps to be filled from GA4: product page, cart, checkout, purchase.">
+      <div class="step"><strong>Product page</strong><div class="bar" aria-hidden="true"><span></span></div>fill from GA4</div>
+      <div class="step"><strong>Cart</strong><div class="bar" aria-hidden="true"><span></span></div>fill from GA4</div>
+      <div class="step"><strong>Checkout</strong><div class="bar" aria-hidden="true"><span></span></div>fill from GA4</div>
+      <div class="step"><strong>Purchase</strong><div class="bar" aria-hidden="true"><span></span></div>fill from GA4</div>
+    </div>
+    <p class="note">Success metric, as you asked: a measurable lift in completed transactions, validated with before-and-after data on add_to_cart, begin_checkout and purchase.</p>
+
+    <h3>Quick wins already visible on the live page</h3>
+    <ul class="wins">
+      <li>On Rio Corner, Add to Cart starts at about 851px on a 390×844 phone — just under the first screen.</li>
+      <li>“Shipping calculated at checkout” and “Installation is quoted separately” leave the full cost open until later.</li>
+      <li>The homepage H1 is empty.</li>
+      <li>A homepage view makes about 300 requests.</li>
+    </ul>
+
+    <h3>A/B test roadmap</h3>
+    <table class="road">
+      <thead>
+        <tr><th>Order</th><th>Test</th><th>Hypothesis</th><th>Metric</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Product page: Add to Cart above the fold, and a delivered + installed total before the button</td><td>Buyers who see the full cost and a visible buy button will add to cart more often</td><td>add_to_cart, then purchase</td></tr>
+        <tr><td>2</td><td>Cart: delivery by area, installation as an add-on</td><td>Showing the remaining costs in the cart reduces drop-off into checkout</td><td>begin_checkout, purchase</td></tr>
+        <tr><td>3</td><td>Homepage H1 (today empty) and a lighter first load</td><td>A clear opening line and a faster first view help more people reach a product</td><td>product views, then purchase</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page preview-only" id="product" data-feeling="sure">
+  <div class="wrap">
+    <p class="kicker">Fix on your Rio Corner page</p>
+    <h2>Your product page, with the total in view</h2>
+    <p class="ask">The left column is your live Rio Corner page, captured on 17 Nov 2026. On a phone, Add to Cart sits just under the first screen, and shipping and installation stay open. The rebuilt page below keeps your layout, logo, purple price, Jost type and copy, and brings Add to Cart above the fold. The standout is the box under the price: pick your area, tick installation, and the delivered, installed total appears before Add to Cart.</p>
+    <div class="compare">
+      <figure>
+        <div class="phone-frame">
+          <img class="before-shot" src="images/before-phone.jpg" width="390" height="1000" alt="Live Rio Corner page on a 390-pixel phone: the product photo, price and options fill the first screen, and Add to Cart sits just below the fold." loading="lazy">
+          <div class="fold-mark" aria-hidden="true"><span>First screen ends</span></div>
+        </div>
+        <figcaption>Now, on your live page. Add to Cart is just under the 390×844 fold.</figcaption>
+      </figure>
+      <figure>
+        <div class="desk-frame">
+          <img class="before-shot" src="images/before-desktop.jpg" width="1440" height="1600" alt="Live Rio Corner page on desktop, with the sale price, shipping calculated at checkout, and Add to Cart in the right-hand column." loading="lazy">
+        </div>
+        <figcaption>Now, on desktop. The price is clear; shipping and installation are still open.</figcaption>
+      </figure>
+    </div>
+    <p class="note">After the fix: scroll to the rebuilt page. On a 390-wide phone, Add to Cart and the total sit on the first screen.</p>
+  </div>
+</section>
+
+<section class="page" id="product-after" data-feeling="ready">
+  <div class="wrap preview-only">
+    <p class="kicker">After · your page, rebuilt</p>
+    <h2>Know your total before you add to cart</h2>
+    <p class="ask">This is the standout. Choose an area in Lebanon and, if you want it, tick installation. The running total sits under your $1,190.00 price, then Add to Cart. Delivery and installation amounts are Sample content, not your live fees — your shipping policy discusses charges with the customer, and we will replace these figures with your table.</p>
+  </div>
+
+  <div class="store" id="store-after">
+    <div class="ann">Delivery across Lebanon · <a href="#cart">View delivery details</a></div>
+    <header class="store-head">
+      <a class="phone" href="tel:+96171961969">71 961 969</a>
+      <a class="logo" href="#intro"><img src="images/logo.png" width="243" height="64" alt="Stock Furniture Lebanon"></a>
+      <div class="tools"><span class="desktop-only">US (USD $)</span> <span aria-hidden="true">Search</span> <span>Cart</span></div>
+    </header>
+    <nav class="store-nav" aria-label="Shop">
+      <a href="#product-after">All Products</a>
+      <a href="#product-after">Categories</a>
+      <a href="#product-after">Blog</a>
+    </nav>
+    <p class="crumb">Home / Rio Corner</p>
+    <div class="pdp">
+      <div class="pdp-gallery">
+        <img class="main" src="images/rio-corner.jpg" width="1000" height="667" alt="Rio Corner dark grey sectional sofa with a chaise, photographed in a light room">
+        <div class="thumbs">
+          <img src="images/rio-corner.jpg" width="56" height="38" alt="" loading="lazy">
+          <img src="images/rio-2.jpg" width="56" height="38" alt="" loading="lazy">
+          <img src="images/rio-3.jpg" width="56" height="38" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="pdp-buy">
+        <h2 class="pname">Rio Corner</h2>
+        <div class="price-row">
+          <span class="now">$1,190.00</span>
+          <span class="was">$2,980.00</span>
+        </div>
+
+        <div class="total-box" data-total-box>
+          <h3>Know your total before you add to cart</h3>
+          <p class="hint">Pick your area. Tick installation if you want it. The total updates before you add to cart.</p>
+          <label class="field">Delivery area
+            <select data-area>
+              <option value="25">Beirut</option>
+              <option value="35">Mount Lebanon</option>
+              <option value="45">North</option>
+              <option value="45">South</option>
+              <option value="50">Bekaa</option>
+            </select>
+          </label>
+          <label class="check"><input type="checkbox" data-install> Include installation</label>
+          <table class="lines">
+            <tr><td>Rio Corner</td><td>$1,190.00</td></tr>
+            <tr><td>Delivery <span class="sample">Sample content</span></td><td data-ship>$25.00</td></tr>
+            <tr data-install-row hidden><td>Installation <span class="sample">Sample content</span></td><td>$80.00</td></tr>
+            <tr><td class="grand">Delivered total <span class="sample">Sample content</span></td><td class="grand" data-grand>$1,215.00</td></tr>
+          </table>
+        </div>
+
+        <div class="pdp-opts">
+          <div class="opt-inline"><span>Color</span> <span class="swatch">Grey</span></div>
+          <div class="opt-inline"><label for="qty">Qty</label>
+            <select id="qty" class="qty" name="quantity">
+              <option selected>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="sides">
+            <button type="button" aria-pressed="true">Left Side</button>
+            <button type="button" aria-pressed="false">Right Side</button>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-atc" type="button">Add to Cart</button>
+          <button class="btn btn-buy" type="button">Buy it now</button>
+        </div>
+        <p class="ship-note">Delivery timing and charges depend on your order and location. Questions? Call <a href="tel:+96171961969">71 961 969</a>.</p>
+        <ul class="specs">
+          <li>Corner</li>
+          <li>Size 275 × 195 cm</li>
+          <li>Box</li>
+          <li>Bed</li>
+          <li>5 mechanisms</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sticky-buy" data-sticky>
+      <div class="meta"><b>Rio Corner</b><span data-sticky-total>$1,215.00 <i class="sample">Sample content</i></span></div>
+      <button class="btn btn-atc" type="button">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section class="page preview-only" id="cart" data-feeling="settled">
+  <div class="wrap">
+    <p class="kicker">Cart step · Shopify theme tweak</p>
+    <h2>The same total, still in view</h2>
+    <p class="ask">If the product page does its job, the cart should not reopen the cost. Delivery is chosen by area, installation is a line on the order, and the trust row uses your own shipping policy: delivery throughout Lebanon, usually within 24 hours to 10 days after the goods are ready.</p>
+    <div class="cart store">
+      <div class="cart-line">
+        <img src="images/rio-corner.jpg" width="88" height="60" alt="" loading="lazy">
+        <div>
+          <strong>Rio Corner</strong>
+          <div>Grey · Left Side</div>
+        </div>
+        <div>$1,190.00</div>
+      </div>
+      <div class="total-box" data-total-box>
+        <h3>Delivery and installation</h3>
+        <label class="field">Delivery area
+          <select data-area>
+            <option value="25">Beirut</option>
+            <option value="35">Mount Lebanon</option>
+            <option value="45">North</option>
+            <option value="45">South</option>
+            <option value="50">Bekaa</option>
+          </select>
+        </label>
+        <label class="check"><input type="checkbox" data-install> Add installation</label>
+        <table class="lines">
+          <tr><td>Rio Corner</td><td>$1,190.00</td></tr>
+          <tr><td>Delivery <span class="sample">Sample content</span></td><td data-ship>$25.00</td></tr>
+          <tr data-install-row hidden><td>Installation <span class="sample">Sample content</span></td><td>$80.00</td></tr>
+          <tr><td class="grand">Order total <span class="sample">Sample content</span></td><td class="grand" data-grand>$1,215.00</td></tr>
+        </table>
+      </div>
+      <div class="trust">
+        <p>We deliver throughout Lebanon, usually within 24 hours to 10 days after your products are ready.</p>
+        <p>Delivery is normally to your doorstep when the items fit in the lift. Installation is charged separately based on the items ordered.</p>
+      </div>
+      <button class="btn btn-atc" type="button">Checkout</button>
+    </div>
+  </div>
+</section>
+
+<section class="page preview-only" id="plan" data-feeling="curious">
+  <div class="wrap">
+    <p class="kicker">What we would prioritise first</p>
+    <h2>Three experiments, in order</h2>
+    <p class="ask">You asked how we would tackle this and which tools or experiments we would prioritise first. After the outside-in audit of stock-furniture.com, this is the opening sequence — implemented as Shopify theme tweaks, then measured in GA4.</p>
+    <ol class="plan">
+      <li><strong>Rio Corner and the other top product pages.</strong> Add to Cart above the fold on phone, and the delivered, installed total before the button. Metric: add_to_cart, then purchase.</li>
+      <li><strong>The cart.</strong> Delivery by area and installation as an add-on, so the cost does not reopen at checkout. Metric: begin_checkout, then purchase.</li>
+      <li><strong>The homepage opening and weight.</strong> Fill the empty H1, then reduce the first-load request count. Metric: product views, then purchase.</li>
+    </ol>
+    <p class="note">Heat maps on the top ten product pages, and the full GA4 funnel, start as soon as we have access. Nothing here invents a lift; the test is whether completed transactions move, before and after.</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  if (/(?:[?&]view=after(?:&|$))/.test(location.search)) {
+    document.body.classList.add('view-after');
+  }
+  var PRICE = 1190, INSTALL = 80;
+  function money(n){ return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  function bind(box){
+    var area = box.querySelector('[data-area]');
+    var inst = box.querySelector('[data-install]');
+    var ship = box.querySelector('[data-ship]');
+    var row = box.querySelector('[data-install-row]');
+    var grand = box.querySelector('[data-grand]');
+    function upd(){
+      var d = Number(area.value) || 0;
+      var on = inst && inst.checked;
+      ship.textContent = money(d);
+      if (row) row.hidden = !on;
+      var t = PRICE + d + (on ? INSTALL : 0);
+      grand.textContent = money(t);
+      document.querySelectorAll('[data-sticky-total]').forEach(function(el){
+        el.innerHTML = money(t) + ' <i class="sample">Sample content</i>';
+      });
+    }
+    area.addEventListener('change', upd);
+    if (inst) inst.addEventListener('change', upd);
+    upd();
+  }
+  document.querySelectorAll('[data-total-box]').forEach(bind);
+  document.querySelectorAll('.sides button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.parentElement.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed', b===btn ? 'true' : 'false'); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
