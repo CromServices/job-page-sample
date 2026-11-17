@@ -2,38 +2,38 @@
  {
   "name": "desktop-1440",
   "width": "1440",
-  "css_height": 6797,
-  "first_view_bytes": 366079,
+  "css_height": 6760,
+  "first_view_bytes": 365522,
   "sections": [
    [
     "catalogue",
     0,
-    1854
+    1831
    ],
    [
     "product",
-    1853.625,
+    1831.265625,
     1134
    ],
    [
     "cart",
-    2987.6875,
-    689
+    2965.65625,
+    688
    ],
    [
     "checkout",
-    3676.75,
-    1057
+    3653.671875,
+    1056
    ],
    [
     "confirmation",
-    4733.796875,
-    917
+    4709.671875,
+    905
    ],
    [
     "admin",
-    5651.09375,
-    984
+    5614.6875,
+    983
    ]
   ],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/online-store/proofs/desktop-1440.png"
@@ -41,38 +41,38 @@
  {
   "name": "phone-390",
   "width": "390",
-  "css_height": 10285,
-  "first_view_bytes": 254033,
+  "css_height": 10079,
+  "first_view_bytes": 253476,
   "sections": [
    [
     "catalogue",
     0,
-    2375
+    2327
    ],
    [
     "product",
-    2374.90625,
-    1659
+    2327.421875,
+    1628
    ],
    [
     "cart",
-    4033.953125,
-    1094
+    3955.265625,
+    1050
    ],
    [
     "checkout",
-    5128.390625,
-    1431
+    5005.65625,
+    1400
    ],
    [
     "confirmation",
-    6559.453125,
-    1681
+    6405.640625,
+    1656
    ],
    [
     "admin",
-    8240.390625,
-    1837
+    8061.984375,
+    1809
    ]
   ],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/online-store/proofs/phone-390.png"
