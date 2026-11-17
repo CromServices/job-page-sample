@@ -1,0 +1,68 @@
+{
+ "desktop": {
+  "wall_load_s": 5.02,
+  "perf_ms": {
+   "ttfb": 52.100000001490116,
+   "dcl": 2509.89999999851,
+   "load": 5015.89999999851,
+   "transfer": 46414
+  },
+  "requests": 301,
+  "imgs": {
+   "total": 36,
+   "blank": 0
+  },
+  "third_party_scripts": [
+   "cdn.shopify.com",
+   "connect.facebook.net",
+   "www.googletagmanager.com"
+  ],
+  "script_count": 21,
+  "meta": {
+   "title": "Furniture Online | Stock Furniture Lebanon",
+   "desc": "Shop furniture in Lebanon: sofas, beds, dining sets, chairs, cabinets and office furniture. Explore products online with Stock Furniture Lebanon.",
+   "h1": [
+    ""
+   ]
+  },
+  "first_product": "https://www.stock-furniture.com/products/rio-corner"
+ },
+ "mobile": {
+  "wall_load_s": 3.33,
+  "perf_ms": {
+   "ttfb": 41,
+   "dcl": 1835.1000000014901,
+   "load": 3330.5,
+   "transfer": 46413
+  },
+  "requests": 293,
+  "imgs": {
+   "total": 36,
+   "blank": 0
+  },
+  "third_party_scripts": [
+   "cdn.shopify.com",
+   "connect.facebook.net",
+   "www.googletagmanager.com"
+  ],
+  "script_count": 22,
+  "meta": {
+   "title": "Furniture Online | Stock Furniture Lebanon",
+   "desc": "Shop furniture in Lebanon: sofas, beds, dining sets, chairs, cabinets and office furniture. Explore products online with Stock Furniture Lebanon.",
+   "h1": [
+    ""
+   ]
+  },
+  "first_product": "https://www.stock-furniture.com/products/rio-corner"
+ },
+ "product_load_s": 2.99,
+ "product": {
+  "url": "https://www.stock-furniture.com/products/rio-corner?_su_rec=xbYWjtqpZ-fkuIkTOyTk5BDx_lvKsoo9KpclRovnRJPpV6H5Xq2vxpIXme1eyDB-xxHoFBGdXdJ0WgzP9gEeioRt8Enusf56wRDzYVfn4OCUfV861dB_m-OtJeUukF2vtzAims9S539RmIJcifqJeQUnknb5D8J5xm4NA0UcOL9FpG022R85Dwc6iXkDZfr4MeCY0RLuILeguJtp6TpRdEtyuIZO-6x2wDLf8LsxH3hPQYDu9kvPkzPcjd_GfbwxIh91RWMzucYXDKoE&_su_rec_id=4a75d14c-00ee-4a66-95dc-a899a98179a4-1794898601",
+  "title": "Rio Corner \u2013 Stock Furniture Lebanon",
+  "atc": true,
+  "atc_top": 851,
+  "price": "$1,190.00 \nRegular price\n$2,980.00",
+  "reviews": true,
+  "whatsapp": false
+ }
+}
