@@ -1,11 +1,11 @@
-@font-face{font-family:Unbounded;src:url(fonts/unbounded-800.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:Manrope;src:url(fonts/manrope.woff2) format("woff2");font-weight:200 800;font-display:swap}
 :root{--ink:#2a2826;--ink2:#5c544c;--sand:#f4ede3;--oat:#e9dfd0;--line:#d8cbb8;--rust:#9a3f22;--clay:#b7714f;--white:#fffcf7;--ok:#3f5a3a;--okbg:#e2e9d9;--test:#5b3fa0;--testbg:#efe9fb}
 *{box-sizing:border-box}
 body{margin:0;font-family:Manrope,system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--sand)}
 img{display:block;max-width:100%;height:auto}
 a{color:var(--rust)}
-h1,h2,h3,h4{font-family:Unbounded,system-ui,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.03em;margin:0 0 .4em}
+h1,h2,h3,h4{font-family:"Inter Tight",system-ui,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.03em;margin:0 0 .4em}
 h1{font-size:clamp(1.85rem,3vw,2.5rem);letter-spacing:-.04em;max-width:none;text-wrap:balance}
 h2{font-size:clamp(1.7rem,2.6vw,2.4rem)}
 h3{font-size:1.15rem}
@@ -17,7 +17,7 @@ header.site{background:var(--white);border-bottom:1px solid var(--line);position
 .hrow{display:flex;align-items:center;gap:28px;min-height:92px}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
 .brand svg{width:64px;height:64px;flex:none}
-.brand b{font-family:Unbounded,sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:-.04em}
+.brand b{font-family:"Inter Tight",sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:-.04em}
 nav.main{display:flex;gap:26px;font-weight:600;font-size:1rem}
 nav.main a{color:var(--ink);text-decoration:none}
 nav.main a[aria-current]{color:var(--rust);text-decoration:underline;text-underline-offset:6px}
@@ -58,7 +58,7 @@ section.page:first-of-type{padding-top:0}
 .prod .pr{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.95rem;color:var(--ink2)}
 .prod .pr b{color:var(--ink);font-size:1rem}
 .prod small{font-size:.78rem;color:var(--ink2)}
-.groupl{margin:40px 0 0;font-family:Unbounded,sans-serif;font-weight:800;font-size:1.2rem;display:flex;align-items:center;gap:14px}
+.groupl{margin:40px 0 0;font-family:"Inter Tight",sans-serif;font-weight:800;font-size:1.2rem;display:flex;align-items:center;gap:14px}
 .groupl::after{content:"";flex:1;border-top:2px dashed var(--line)}
 /* product */
 .pgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;margin-top:32px;align-items:start}
@@ -70,7 +70,7 @@ section.page:first-of-type{padding-top:0}
 .loupe img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
 .loupecap{position:absolute;right:250px;bottom:92px;background:var(--white);border-radius:8px;padding:10px 14px;font-size:.88rem;max-width:230px;box-shadow:0 10px 24px -12px rgba(0,0,0,.4)}
 .loupecap b{display:block;font-size:.95rem}
-.pinfo .price{font-family:Unbounded,sans-serif;font-size:2rem;font-weight:800;margin:4px 0}
+.pinfo .price{font-family:"Inter Tight",sans-serif;font-size:2rem;font-weight:800;margin:4px 0}
 .pinfo .price small{font-family:Manrope,sans-serif;font-size:.85rem;font-weight:600;color:var(--ink2);margin-left:8px}
 .opt{margin:22px 0 0}
 .opt .lab{font-weight:700;font-size:.95rem;margin-bottom:8px;display:flex;justify-content:space-between}
@@ -129,13 +129,13 @@ section.page:first-of-type{padding-top:0}
 /* confirm */
 .cfgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px;align-items:start}
 .thanks{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:32px}
-.ordno{font-family:Unbounded,sans-serif;font-size:1.4rem;font-weight:800}
+.ordno{font-family:"Inter Tight",sans-serif;font-size:1.4rem;font-weight:800}
 .mail{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 24px 50px -30px rgba(42,40,38,.45)}
 .mhead{padding:16px 22px;border-bottom:1px solid var(--line);font-size:.92rem;background:#faf6ef}
 .mhead dl{margin:0}.mhead div{display:grid;grid-template-columns:72px 1fr;gap:8px;padding:2px 0}
 .mhead dt{color:var(--ink2);font-weight:700}.mhead dd{margin:0;overflow-wrap:anywhere}
 .mbody{padding:26px}
-.mbody .hello{font-family:Unbounded,sans-serif;font-size:1.35rem;font-weight:800}
+.mbody .hello{font-family:"Inter Tight",sans-serif;font-size:1.35rem;font-weight:800}
 .mfoot{padding:12px 24px;border-top:1px solid var(--line);font-size:.82rem;color:var(--ink2);background:#faf6ef}
 /* admin */
 .admin{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:32px;box-shadow:0 30px 60px -36px rgba(42,40,38,.4)}
@@ -204,3 +204,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
  .ped,.stripe .sum,.stripe .pay,.thanks,.card{padding:20px}
  .buy{flex-wrap:wrap}.buy .btn{flex:1}
 }
+
+/* Fashion editorial, cut on a precise typographic grid. */
+h1,h2,h3,h4,.brand b,.groupl,.ordno,.mbody .hello{font-family:"Inter Tight",sans-serif;font-weight:650;letter-spacing:-.035em;line-height:1.08}
+h1{font-size:clamp(38px,4.4vw,64px);font-weight:650;letter-spacing:-.045em;max-width:14ch;text-wrap:balance}
+.brand b{font-size:1.7rem;font-weight:650;letter-spacing:-.045em}
+.eyebrow{letter-spacing:.16em;font-size:13px;font-weight:700}
+.btn{border-radius:2px;font-weight:650;letter-spacing:.02em;white-space:normal;text-align:center}
+.pinfo .price{font-family:"Inter Tight",sans-serif;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pinfo .price small{letter-spacing:0}
+.pcard,.card,.mail,.inp,.qty{border-radius:2px}
+.pcard h3{font-size:1.35rem;letter-spacing:-.02em}
+nav.main a{font-size:.9rem;letter-spacing:.035em}
+section.page{border-bottom:1px solid var(--ink)}
+@media(max-width:900px){h1{font-size:36px;max-width:14ch}.brand b{font-size:1.3rem}.btn{padding-inline:18px}}
+.cartlink,.filters a,.testpill{border-radius:2px}.tag{border-radius:2px;letter-spacing:.1em}.filters a{font-weight:600;letter-spacing:.02em}
