@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HelpDesk Hub Help — ask, get a sourced answer, or reach a person (sample demo)</title>
-<meta name="description" content="Sample help centre for HelpDesk Hub, a fictional Australian home-and-garden retailer. The AI support assistant answers from the team's own articles and hands over to a person when it should.">
-<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/bricolage-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="images/garden-bench-m.webp" media="(max-width:900px)">
+<meta name="description" content="Sample help centre for HelpDesk Hub, a fictional Australian home-and-garden retailer. The support assistant answers from the team's own articles and hands over to a person when it should.">
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#help">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#9c4a2a"/><path d="M14 18a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H30l-10 9v-9a6 6 0 0 1-6-6z" fill="#fffdf9"/><path d="M24 34c0-9 7-15 17-15 0 10-6 16-15 16" fill="#4f5d44"/><path d="M24 35c4-5 8-8 13-11" stroke="#fffdf9" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 64 64"><rect x="1" y="1" width="62" height="62" rx="3" fill="#111F15" stroke="#B6F36A" stroke-width="2"/><path d="M14 19l14 13-14 13M34 45h17" stroke="#B6F36A" stroke-width="4" fill="none"/></symbol></defs></svg>
 
 <section class="page" id="help" data-feeling="unhurried" aria-label="Help home with the assistant open">
 <div class="samplebar">Sample demo · HelpDesk Hub is a fictional retailer · every product, article, name and conversation is sample content</div>
@@ -24,11 +23,10 @@
  </div>
 </header>
 <div class="hero">
- <picture><source media="(max-width:900px)" srcset="images/garden-bench-m.webp"><img src="images/garden-bench.webp" width="1600" height="900" alt="A timber potting bench on a sandstone verandah with terracotta pots and a potted lemon tree in late sun" fetchpriority="high"></picture>
- <div class="wrap">
+  <div class="wrap">
   <div>
    <p class="eyebrow">HelpDesk Hub help centre</p>
-   <h1>Ask about your garden or your order. Get a straight answer.</h1>
+   <div class="terminal-status">SYSTEM READY / ARTICLES LOADED</div><h1>Straight answers.<br>Sources attached.</h1>
    <p class="lede">Answers come from the articles our team writes and keeps up to date. When they don't cover it, a person takes over.</p>
    <form class="search" role="search" action="#answered"><label for="q">Search help articles</label><input id="q" type="search" placeholder="Try: delivery to Fremantle" aria-label="Search help articles" autocomplete="off"><button class="btn btn-p btn-sm" type="submit">Search</button></form>
    <div class="chips" aria-label="Popular topics"><a href="#answered">Delivery times</a><a href="#handoff">Returns on plants</a><a href="#arts">Citrus care</a><a href="#arts">Tracking an order</a></div>
