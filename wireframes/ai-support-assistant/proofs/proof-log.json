@@ -2,43 +2,43 @@
  {
   "name": "desktop-1440",
   "width": "1440",
-  "css_height": 7330,
-  "first_view_bytes": 249163,
+  "css_height": 7276,
+  "first_view_bytes": 287351,
   "sections": [
    [
     "help",
     0,
-    1468
+    1423
    ],
    [
     "answered",
-    1468.09375,
-    963
+    1423.34375,
+    962
    ],
    [
     "handoff",
-    2431.109375,
-    1211
+    2385.234375,
+    1209
    ],
    [
     "signin",
-    3641.6875,
-    811
+    3594.6875,
+    809
    ],
    [
     "log",
-    4452.84375,
-    941
+    4404,
+    940
    ],
    [
     "take",
-    5394.15625,
-    899
+    5344.1875,
+    898
    ],
    [
     "editor",
-    6293.5625,
-    918
+    6241.84375,
+    915
    ]
   ],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/ai-support-assistant/proofs/desktop-1440.png"
@@ -46,43 +46,43 @@
  {
   "name": "phone-390",
   "width": "390",
-  "css_height": 12793,
-  "first_view_bytes": 158787,
+  "css_height": 12708,
+  "first_view_bytes": 196975,
   "sections": [
    [
     "help",
     0,
-    2778
+    2771
    ],
    [
     "answered",
-    2777.921875,
-    1664
+    2770.890625,
+    1663
    ],
    [
     "handoff",
-    4442.234375,
-    2259
+    4433.65625,
+    2225
    ],
    [
     "signin",
-    6701.078125,
-    1322
+    6658.34375,
+    1319
    ],
    [
     "log",
-    8023.4375,
-    1643
+    7977,
+    1640
    ],
    [
     "take",
-    9666.078125,
-    1478
+    9617.359375,
+    1445
    ],
    [
     "editor",
-    11144.15625,
-    1440
+    11062.703125,
+    1437
    ]
   ],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/ai-support-assistant/proofs/phone-390.png"
