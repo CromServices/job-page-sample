@@ -1,0 +1,90 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 7330,
+  "first_view_bytes": 249163,
+  "sections": [
+   [
+    "help",
+    0,
+    1468
+   ],
+   [
+    "answered",
+    1468.09375,
+    963
+   ],
+   [
+    "handoff",
+    2431.109375,
+    1211
+   ],
+   [
+    "signin",
+    3641.6875,
+    811
+   ],
+   [
+    "log",
+    4452.84375,
+    941
+   ],
+   [
+    "take",
+    5394.15625,
+    899
+   ],
+   [
+    "editor",
+    6293.5625,
+    918
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/ai-support-assistant/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 12793,
+  "first_view_bytes": 158787,
+  "sections": [
+   [
+    "help",
+    0,
+    2778
+   ],
+   [
+    "answered",
+    2777.921875,
+    1664
+   ],
+   [
+    "handoff",
+    4442.234375,
+    2259
+   ],
+   [
+    "signin",
+    6701.078125,
+    1322
+   ],
+   [
+    "log",
+    8023.4375,
+    1643
+   ],
+   [
+    "take",
+    9666.078125,
+    1478
+   ],
+   [
+    "editor",
+    11144.15625,
+    1440
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/ai-support-assistant/proofs/phone-390.png"
+ }
+]
