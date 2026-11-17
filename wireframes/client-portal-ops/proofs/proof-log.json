@@ -2,16 +2,42 @@
  {
   "name": "desktop-1440",
   "width": "1440",
-  "css_height": 6474,
-  "first_view_bytes": 107815,
-  "sections": [],
+  "css_height": 6254,
+  "first_view_bytes": 114089,
+  "sections": [
+   [
+    "signin",
+    89,
+    665
+   ],
+   [
+    "dashboard",
+    754.359375,
+    1643
+   ],
+   [
+    "job",
+    2396.90625,
+    1458
+   ],
+   [
+    "email",
+    3854.890625,
+    1013
+   ],
+   [
+    "admin",
+    4868.359375,
+    1223
+   ]
+  ],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/client-portal-ops/proofs/desktop-1440.png"
  },
  {
   "name": "phone-390",
   "width": "390",
-  "css_height": 12182,
-  "first_view_bytes": 98285,
+  "css_height": 11654,
+  "first_view_bytes": 104559,
   "sections": [],
   "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/client-portal-ops/proofs/phone-390.png"
  }
