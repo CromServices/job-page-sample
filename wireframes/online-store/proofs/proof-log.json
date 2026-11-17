@@ -1,0 +1,80 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 6797,
+  "first_view_bytes": 366079,
+  "sections": [
+   [
+    "catalogue",
+    0,
+    1854
+   ],
+   [
+    "product",
+    1853.625,
+    1134
+   ],
+   [
+    "cart",
+    2987.6875,
+    689
+   ],
+   [
+    "checkout",
+    3676.75,
+    1057
+   ],
+   [
+    "confirmation",
+    4733.796875,
+    917
+   ],
+   [
+    "admin",
+    5651.09375,
+    984
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/online-store/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 10285,
+  "first_view_bytes": 254033,
+  "sections": [
+   [
+    "catalogue",
+    0,
+    2375
+   ],
+   [
+    "product",
+    2374.90625,
+    1659
+   ],
+   [
+    "cart",
+    4033.953125,
+    1094
+   ],
+   [
+    "checkout",
+    5128.390625,
+    1431
+   ],
+   [
+    "confirmation",
+    6559.453125,
+    1681
+   ],
+   [
+    "admin",
+    8240.390625,
+    1837
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/lovable-demos-2026-11-17/packs/online-store/proofs/phone-390.png"
+ }
+]
