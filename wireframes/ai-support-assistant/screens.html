@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HelpDesk Hub Help — ask, get a sourced answer, or reach a person (sample demo)</title>
+<meta name="description" content="Sample help centre for HelpDesk Hub, a fictional Australian home-and-garden retailer. The AI support assistant answers from the team's own articles and hands over to a person when it should.">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="images/garden-bench-m.webp" media="(max-width:900px)">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#help">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#9c4a2a"/><path d="M14 18a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H30l-10 9v-9a6 6 0 0 1-6-6z" fill="#fffdf9"/><path d="M24 34c0-9 7-15 17-15 0 10-6 16-15 16" fill="#4f5d44"/><path d="M24 35c4-5 8-8 13-11" stroke="#fffdf9" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol></defs></svg>
+
+<section class="page" id="help" data-feeling="unhurried" aria-label="Help home with the assistant open">
+<div class="samplebar">Sample demo · HelpDesk Hub is a fictional retailer · every product, article, name and conversation is sample content</div>
+<header class="site">
+ <div class="wrap hrow">
+  <a class="brand" href="#help"><svg role="img" aria-label="HelpDesk Hub logo"><use href="#mark"/></svg><span><b>HelpDesk Hub</b><span>Home &amp; garden · Help centre</span></span></a>
+  <nav class="main" aria-label="Main"><a href="#help" aria-current="page">Help centre</a><a href="#answered">Delivery</a><a href="#handoff">Returns</a><a href="#signin">Team sign-in</a></nav>
+  <a class="btn btn-p btn-sm hdr-cta" href="#answered">Ask a question</a>
+ </div>
+</header>
+<div class="hero">
+ <picture><source media="(max-width:900px)" srcset="images/garden-bench-m.webp"><img src="images/garden-bench.webp" width="1600" height="900" alt="A timber potting bench on a sandstone verandah with terracotta pots and a potted lemon tree in late sun" fetchpriority="high"></picture>
+ <div class="wrap">
+  <div>
+   <p class="eyebrow">HelpDesk Hub help centre</p>
+   <h1>Ask about your garden or your order. Get a straight answer.</h1>
+   <p class="lede">Answers come from the articles our team writes and keeps up to date. When they don't cover it, a person takes over.</p>
+   <form class="search" role="search" action="#answered"><label for="q">Search help articles</label><input id="q" type="search" placeholder="Try: delivery to Fremantle" aria-label="Search help articles" autocomplete="off"><button class="btn btn-p btn-sm" type="submit">Search</button></form>
+   <div class="chips" aria-label="Popular topics"><a href="#answered">Delivery times</a><a href="#handoff">Returns on plants</a><a href="#arts">Citrus care</a><a href="#arts">Tracking an order</a></div>
+  </div>
+  <div class="widget" role="region" aria-label="Chat with HelpDesk Hub, first view">
+   <div class="whead"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16c0-7 5-11 13-11 0 8-5 12-12 12" fill="#fffdf9"/></svg></span><span><b>HelpDesk Hub assistant</b><small>Answers from our help articles</small></span><a class="person" href="#handoff">Talk to a person</a></div>
+   <div class="wbody">
+    <div class="msg"><div class="who">Assistant</div><div class="txt">Hi. Ask about an order, a product, or a delivery. I'll answer from our help articles and show you which one. If they don't cover it, I'll pass you to the team.</div></div>
+    <div class="chips"><button type="button">Where is my order?</button><button type="button">When will pots arrive in Perth?</button><button type="button">Can I return a plant?</button></div>
+   </div>
+   <div class="wfoot"><span class="in">Type your question…</span><button class="send" type="button" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></button></div>
+  </div>
+ </div>
+</div>
+<div class="arts wrap" id="arts">
+ <p class="eyebrow">Popular this week · sample articles</p>
+ <h2>Our team's articles. The assistant answers from these and nothing else.</h2>
+ <div class="agrid">
+  <a class="acard" href="#answered"><img src="images/thumb-pots.webp" width="420" height="270" alt="Stacked terracotta pots on a timber bench" loading="lazy"><div><span class="tag">Sample article · Delivery</span><h3>Delivery times by state</h3><p>How long pots, soil and plants take to reach each state, and what slows them down.</p></div></a>
+  <a class="acard" href="#handoff"><img src="images/thumb-lemon.webp" width="420" height="451" alt="A young lemon tree in a terracotta pot" loading="lazy"><div><span class="tag">Sample article · Returns</span><h3>Returns on live plants</h3><p>What to do if a plant arrives unwell, and the window for sending one back.</p></div></a>
+  <a class="acard" href="#editor"><img src="images/thumb-tools.webp" width="420" height="200" alt="A trowel and canvas gloves on a potting bench" loading="lazy"><div><span class="tag">Sample article · Care</span><h3>Caring for citrus in pots</h3><p>Water, feed, sun and the first three weeks after a citrus tree moves house.</p></div></a>
+ </div>
+ <ul class="alist"><li><a href="#arts">Tracking an order</a></li><li><a href="#arts">Terracotta or glazed pots?</a></li><li><a href="#arts">Gift cards and store credit</a></li></ul>
+</div>
+</section>
+
+<section class="page" id="answered" data-feeling="assured" aria-label="Answered state with an article cited">
+<div class="wrap">
+ <p class="eyebrow">Visitor · answered from an article</p>
+ <h2>An answer you can check.</h2>
+ <p class="lede">Every reply names the article it came from. Open it, and the lines the assistant used are marked.</p>
+ <div class="split w">
+  <div class="widget" role="region" aria-label="Chat, answered state">
+   <div class="whead"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16c0-7 5-11 13-11 0 8-5 12-12 12" fill="#fffdf9"/></svg></span><span><b>HelpDesk Hub assistant</b><small>Answers from our help articles</small></span><a class="person" href="#handoff">Talk to a person</a></div>
+   <div class="wbody">
+    <div class="msg me"><div class="who">Jo</div><div class="txt">How long do terracotta pots take to get to Fremantle?</div></div>
+    <div class="msg"><div class="who">Assistant</div><div class="txt">Fremantle is Perth metro, so pots usually arrive in <b>3 to 5 business days</b> after they're packed. Large pots over 40 cm go by freight and can take 2 days longer.
+     <a class="src" href="#art-delivery"><img src="images/thumb-pots.webp" alt="" width="52" height="52" loading="lazy"><span><small>From the article</small><b>Delivery times by state</b></span></a>
+     <div class="helpful"><button class="btn btn-g btn-sm" type="button">That helps</button><a class="btn btn-g btn-sm" href="#handoff">Talk to a person</a></div></div></div>
+   </div>
+   <div class="wfoot"><span class="in">Ask a follow-up…</span><button class="send" type="button" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></button></div>
+  </div>
+  <article class="article" id="art-delivery">
+   <span class="tag">Sample article · Delivery</span>
+   <h3>Delivery times by state</h3>
+   <div class="meta"><span>Updated by Sam, HelpDesk Hub team</span><span>2 min read</span></div>
+   <p>We pack orders on weekdays. These times start from the day your order is packed, not the day you order.</p>
+   <p><b>Western Australia.</b> <mark>Perth metro, including Fremantle and Joondalup: 3 to 5 business days.</mark> Regional WA: 5 to 9 business days.</p>
+   <p><b>Large pots.</b> <mark>Pots over 40 cm travel by freight and can take 2 extra days.</mark> We'll text you when the freight company has them.</p>
+   <p><b>Live plants.</b> We only send plants Monday to Wednesday, so they don't sit in a depot over the weekend.</p>
+   <p class="note">Marked lines are the ones the assistant used in its answer.</p>
+  </article>
+ </div>
+</div>
+</section>
+
+<section class="page" id="handoff" data-feeling="relieved" aria-label="Not sure, handoff to a person, and the Resend email to the team">
+<div class="wrap">
+ <p class="eyebrow">Visitor · handed to a person</p>
+ <h2>When it isn't sure, it says so, and a person takes over.</h2>
+ <p class="lede">No guessing and no loop. One honest line, the closest article, and the way to a person in the same reply. The team gets the whole conversation by email.</p>
+ <div class="split w">
+  <div class="widget" role="region" aria-label="Chat, handoff state">
+   <div class="whead"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16c0-7 5-11 13-11 0 8-5 12-12 12" fill="#fffdf9"/></svg></span><span><b>HelpDesk Hub assistant</b><small>Passing you to the team</small></span></div>
+   <div class="wbody">
+    <div class="msg me"><div class="who">Jo</div><div class="txt">My Meyer lemon dropped half its leaves. It's been three weeks. Can I send it back?</div></div>
+    <div class="msg"><div class="who">Assistant</div><div class="txt">I'm not sure, and I don't want to guess. Our returns article covers plants for 14 days after delivery, and yours is past that.
+     <a class="src" href="#editor"><img src="images/thumb-lemon.webp" alt="" width="52" height="52" loading="lazy"><span><small>Closest article</small><b>Returns on live plants</b></span></a>
+     <div class="helpful"><a class="btn btn-p btn-sm" href="#take">Talk to a person</a><a class="btn btn-g btn-sm" href="#editor">Read the article</a></div></div></div>
+    <div class="msg me"><div class="who">Jo</div><div class="txt">Yes please, a person.</div></div>
+    <div class="held" role="status"><b>A person will take it from here.</b>We've sent the team this conversation, so you won't need to repeat yourself. They'll reply here and by email to jo@example.com.</div>
+   </div>
+   <div class="wfoot"><span class="in">Add anything for the team…</span><button class="send" type="button" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></button></div>
+  </div>
+  <div class="mail" role="region" aria-label="Sample handoff email to the team, sent via Resend">
+   <div class="mhead"><dl>
+    <div><dt>From</dt><dd>HelpDesk Hub Help &lt;handoff@help.cromservices.com.au&gt;</dd></div>
+    <div><dt>To</dt><dd>team@helpdeskhub.example</dd></div>
+    <div><dt>Subject</dt><dd><b>Jo needs a person: lemon tree return, 3 weeks after delivery</b></dd></div>
+   </dl></div>
+   <div class="mbody">
+    <span class="tag c">Handoff · conversation #1042</span>
+    <h4 style="margin-top:12px">Jo asked for a person. You're picking up mid-conversation.</h4>
+    <p style="font-size:.98rem">The assistant wasn't sure: plant returns past 14 days aren't in the help articles. Here are the last messages.</p>
+    <div class="quote">
+     <p><b>Jo</b>My Meyer lemon dropped half its leaves. It's been three weeks. Can I send it back?</p>
+     <p><b>Assistant</b>I'm not sure, and I don't want to guess. Our returns article covers plants for 14 days after delivery…</p>
+     <p><b>Jo</b>Yes please, a person.</p>
+    </div>
+    <p style="font-size:.95rem"><b>Closest article shown:</b> Returns on live plants<br><b>Order:</b> HH-20417 · Meyer lemon, 200 mm pot (sample)</p>
+    <a class="btn btn-p" href="#take">Open conversation #1042</a>
+   </div>
+   <div class="mfoot">Sample email · sent via Resend when a visitor asks for a person</div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="signin" data-feeling="oriented" aria-label="Team sign-in by email magic link">
+<div class="wrap">
+ <p class="eyebrow">Team · sign in</p>
+ <h2>No passwords. A link in your inbox.</h2>
+ <div class="signin">
+  <form class="card" action="#log">
+   <svg width="56" height="56" aria-hidden="true"><use href="#mark"/></svg>
+   <h3 style="margin-top:16px;font-size:1.5rem">Sign in to the HelpDesk Hub team desk</h3>
+   <p style="color:var(--ink2)">Edit help articles, review conversations and take handoffs.</p>
+   <label for="em">Work email</label>
+   <input class="field" id="em" type="email" value="sam@helpdeskhub.example" autocomplete="email">
+   <button class="btn btn-p" type="submit">Email me a sign-in link</button>
+   <div class="sent" role="status"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4f5d44"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span><b>Check your inbox.</b><br>We sent a link to sam@helpdeskhub.example. It works once and expires in 15 minutes.</span></div>
+  </form>
+  <div class="mail" role="region" aria-label="Sample sign-in email">
+   <div class="mhead"><dl><div><dt>From</dt><dd>HelpDesk Hub Help &lt;signin@help.cromservices.com.au&gt;</dd></div><div><dt>Subject</dt><dd><b>Your sign-in link for the team desk</b></dd></div></dl></div>
+   <div class="mbody"><h4>Hi Sam,</h4><p style="font-size:.98rem">Tap the button to sign in. If you didn't ask for this, you can ignore it.</p><a class="btn btn-p" href="#log">Sign in to the team desk</a><p style="font-size:.88rem;color:var(--ink2);margin-top:16px">Link expires in 15 minutes.</p></div>
+   <div class="mfoot">Sample email</div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="log" data-feeling="oriented" aria-label="Conversation log">
+<div class="wrap">
+ <p class="eyebrow">Team · conversation log</p>
+ <h2>Every conversation, ready to reopen.</h2>
+ <div class="admin">
+  <div class="abar"><svg aria-hidden="true"><use href="#mark"/></svg><b>Team desk</b><nav aria-label="Team desk"><a href="#log" aria-current="page">Conversations</a><a href="#take">Handoffs (1)</a><a href="#editor">Help articles</a></nav><span class="me">Sam · signed in</span></div>
+  <div class="acols">
+   <div class="alog">
+    <div class="filters"><a href="#log" aria-current="true">All 38</a><a href="#log">Answered 31</a><a href="#log">Handed off 6</a><a href="#take">Open 1</a></div>
+    <a class="row on" href="#log"><span class="t">Jo · lemon tree return <time>2:14 pm</time></span><p>Asked for a person after the assistant wasn't sure.</p><span class="tag c">Handed off · open</span></a>
+    <a class="row" href="#log"><span class="t">Priya · delivery to Albany <time>1:52 pm</time></span><p>Answered from "Delivery times by state".</p><span class="tag s">Answered</span></a>
+    <a class="row" href="#log"><span class="t">Tom · gift card balance <time>12:30 pm</time></span><p>Answered from "Gift cards and store credit".</p><span class="tag s">Answered</span></a>
+    <a class="row" href="#log"><span class="t">Ana · cracked glazed pot <time>11:05 am</time></span><p>Handed off. Resolved by Lee with a replacement.</p><span class="tag">Handed off · closed</span></a>
+   </div>
+   <div class="thread">
+    <div class="thead"><div><h3>Jo · lemon tree return</h3><small>Conversation #1042 · started 2:11 pm · order HH-20417 (sample)</small></div><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag c">Waiting for a person</span><a class="btn btn-s btn-sm" href="#take">Take this handoff</a></div></div>
+    <div class="tmsgs">
+     <div class="msg me"><div class="who">Jo · 2:11 pm</div><div class="txt">My Meyer lemon dropped half its leaves. It's been three weeks. Can I send it back?</div></div>
+     <div class="msg"><div class="who">Assistant · 2:11 pm · cited "Returns on live plants"</div><div class="txt">I'm not sure, and I don't want to guess. Our returns article covers plants for 14 days after delivery, and yours is past that.</div></div>
+     <div class="msg me"><div class="who">Jo · 2:13 pm</div><div class="txt">Yes please, a person.</div></div>
+     <p class="sys">Handed off 2:14 pm · team emailed via Resend</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="take" data-feeling="settled" aria-label="Take a handoff and reply">
+<div class="wrap">
+ <p class="eyebrow">Team · take a handoff</p>
+ <h2>Pick it up mid-conversation.</h2>
+ <p class="lede">Sam claims the thread, reads what Jo already said, and replies. Jo sees it in the chat and by email.</p>
+ <div class="split">
+  <div class="admin" style="margin-top:0">
+   <div class="abar"><svg aria-hidden="true"><use href="#mark"/></svg><b>Handoffs</b><span class="me">Sam</span></div>
+   <div class="thread">
+    <div class="thead"><div><h3>Jo · lemon tree return</h3><small>#1042 · claimed by Sam at 2:19 pm</small></div><span class="tag s">Yours</span></div>
+    <div class="tmsgs">
+     <div class="msg me"><div class="who">Jo</div><div class="txt">Yes please, a person.</div></div>
+     <p class="sys">Sam joined the conversation</p>
+    </div>
+    <div class="composer"><div class="ta">Hi Jo, Sam here. Leaf drop after a move is common with citrus and it usually recovers. Can you send a photo of the leaves? If it hasn't picked up in two weeks, we'll replace it.</div><div class="cb"><span>Replying in chat and by email</span><button class="btn btn-p btn-sm" type="button">Send reply</button></div></div>
+   </div>
+  </div>
+  <div class="widget" role="region" aria-label="Visitor sees the person's reply">
+   <div class="whead"><span class="dot" style="background:#4f5d44"><b style="font-size:.95rem">S</b></span><span><b>Sam from HelpDesk Hub</b><small>A person has your conversation</small></span></div>
+   <div class="wbody">
+    <div class="msg me"><div class="who">Jo</div><div class="txt">Yes please, a person.</div></div>
+    <div class="msg human"><div class="who">Sam · HelpDesk Hub team</div><div class="txt">Hi Jo, Sam here. Leaf drop after a move is common with citrus and it usually recovers. Can you send a photo of the leaves? If it hasn't picked up in two weeks, we'll replace it.</div></div>
+   </div>
+   <div class="wfoot"><span class="in">Reply to Sam…</span><button class="send" type="button" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></button></div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="editor" data-feeling="settled" aria-label="Help article editor">
+<div class="wrap">
+ <p class="eyebrow">Team · edit a help article</p>
+ <h2>Teach it once. It answers that way next time.</h2>
+ <p class="lede">Sam adds what Jo's question showed was missing. Once saved, the assistant answers from the new version.</p>
+ <div class="admin">
+  <div class="abar"><svg aria-hidden="true"><use href="#mark"/></svg><b>Team desk</b><nav aria-label="Team desk, editor"><a href="#log">Conversations</a><a href="#take">Handoffs (0)</a><a href="#editor" aria-current="page">Help articles</a></nav><span class="me">Sam · signed in</span></div>
+  <div class="ecols">
+   <div class="editor">
+    <span class="tag">Sample article · Returns</span>
+    <label for="et" style="position:absolute;left:-999px">Article title</label>
+    <input class="etitle" id="et" value="Returns on live plants">
+    <div class="etool" aria-hidden="true"><span>B</span><span>I</span><span>H2</span><span>List</span><span>Link</span></div>
+    <div class="ebody">
+     <p>Plants are living things and sometimes the trip is hard on them. If a plant arrives damaged or unwell, message us within <b>14 days</b> of delivery with a photo and we'll replace or refund it.</p>
+     <p><ins><b>Leaf drop after 14 days.</b> Citrus and other evergreens often drop leaves in their first month while they settle. Send us a photo. If the plant hasn't recovered two weeks later, we'll replace it.</ins></p>
+     <p>We can't accept returns of plants that have been repotted into the ground.</p>
+    </div>
+   </div>
+   <aside class="eside">
+    <h4 style="margin-top:0">Status</h4>
+    <div class="toggle"><i></i>Published</div>
+    <div class="toggle"><i></i>The assistant can answer from this</div>
+    <h4>Asked about this week</h4>
+    <ul><li>3 conversations cited this article</li><li>1 handed off: #1042</li></ul>
+    <h4>History</h4>
+    <ul><li>Today 2:31 pm · Sam added leaf drop</li><li>2 Nov · Lee, first version</li></ul>
+    <button class="btn btn-p" type="button" style="margin-top:18px;width:100%">Save and publish</button>
+    <div class="saved" role="status"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4 10-10" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>Saved. The assistant now answers from this version.</div>
+   </aside>
+  </div>
+ </div>
+</div>
+</section>
+
+<footer><div class="wrap"><span>HelpDesk Hub is a fictional retailer. All products, articles, people and conversations shown are sample content.</span><span>A Crom Services demo · help.cromservices.com.au</span></div></footer>
+</body>
+</html>
