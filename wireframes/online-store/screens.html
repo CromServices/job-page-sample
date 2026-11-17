@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Threadhouse — linen and cotton clothing and home textiles (sample store)</title>
+<meta name="description" content="Sample online store for Threadhouse, a fictional Australian clothing and home-textiles label. Catalogue, product page, cart, Stripe checkout in test mode, order email and admin.">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/unbounded-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="images/cloth-stack-m.webp" media="(max-width:900px)">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#catalogue">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="#2a2826"/><path d="M14 30L32 15l18 15v19H14z" fill="none" stroke="#f4ede3" stroke-width="3" stroke-linejoin="round"/><path d="M19 41h26" stroke="#c9774f" stroke-width="3" stroke-dasharray="4 3.2" stroke-linecap="round"/><path d="M32 22v14" stroke="#f4ede3" stroke-width="3" stroke-linecap="round"/><path d="M25 29h14" stroke="#f4ede3" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" fill="none"/></symbol></defs></svg>
+
+<section class="page" id="catalogue" data-feeling="calm" aria-label="Catalogue">
+<div class="samplebar">Sample store · Threadhouse is fictional · sample prices and orders · Stripe test mode</div>
+<header class="site">
+ <div class="wrap hrow">
+  <a class="brand" href="#catalogue"><svg role="img" aria-label="Threadhouse logo"><use href="#mark"/></svg><b>Threadhouse</b></a>
+  <nav class="main" aria-label="Main"><a href="#catalogue" aria-current="page">Clothing</a><a href="#home-textiles">Home</a><a href="#product">Linen shirt</a></nav>
+  <div class="hutil"><a class="hm" href="#admin">Sign in</a><a class="cartlink" href="#cart">Cart <span>2</span></a></div>
+ </div>
+</header>
+<div class="hero">
+ <picture><source media="(max-width:900px)" srcset="images/cloth-stack-m.webp"><img src="images/cloth-stack.webp" width="1600" height="900" alt="Folded linen in charcoal, sand, oat and clay with a rust running stitch along one hem" fetchpriority="high"></picture>
+ <div class="wrap"><div class="copy">
+  <p class="eyebrow">Linen and cotton · made in small runs</p>
+  <h1>Cloth you'll want to touch before you buy it.</h1>
+  <div class="stitch"></div>
+  <p class="lede">A small room of clothing and home textiles in clay, sand and charcoal. Close photographs, honest fabric notes, sizes that are actually in stock.</p>
+  <a class="btn btn-p" href="#grid">Shop the catalogue</a>
+ </div></div>
+</div>
+<div class="wrap cat" id="grid">
+ <div class="cathead">
+  <div><p class="eyebrow">The catalogue · sample prices in AUD</p><h2>Eight pieces this season.</h2></div>
+  <div class="filters" aria-label="Filter"><a href="#grid" aria-current="true">All 8</a><a href="#grid">Clothing 4</a><a href="#home-textiles">Home 4</a><a href="#grid">Linen</a><a href="#grid">Cotton</a></div>
+ </div>
+ <p class="groupl">Clothing</p>
+ <div class="grid">
+  <a class="prod" href="#product"><img src="images/shirt-oat-s.webp" width="420" height="420" alt="Oat washed linen shirt laid flat" loading="lazy"><h3>Field Shirt</h3><div class="pr"><span>Washed linen · Oat</span><b>$149</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/trouser-rust-s.webp" width="420" height="420" alt="Rust linen trousers with turned-up cuffs" loading="lazy"><h3>Easy Trouser</h3><div class="pr"><span>Linen · Rust</span><b>$139</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/tee-charcoal-s.webp" width="420" height="420" alt="Charcoal cotton crew-neck tee laid flat" loading="lazy"><h3>Everyday Tee</h3><div class="pr"><span>Cotton · Charcoal</span><b>$59</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/skirt-clay-s.webp" width="420" height="420" alt="Clay linen wrap skirt with a tie" loading="lazy"><h3>Wrap Skirt</h3><div class="pr"><span>Linen · Clay</span><b>$119</b></div><small>Sample price</small></a>
+ </div>
+ <p class="groupl" id="home-textiles">Home textiles</p>
+ <div class="grid">
+  <a class="prod" href="#product"><img src="images/teatowel-sand-s.webp" width="420" height="420" alt="Folded linen tea towels with a rust stripe" loading="lazy"><h3>Stripe Tea Towels, set of 2</h3><div class="pr"><span>Linen · Sand</span><b>$36</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/cushion-charcoal-s.webp" width="420" height="420" alt="Charcoal linen cushion covers" loading="lazy"><h3>Cushion Cover</h3><div class="pr"><span>Linen · Charcoal</span><b>$59</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/runner-oat-s.webp" width="420" height="420" alt="Oat linen table runner, loosely rolled" loading="lazy"><h3>Table Runner</h3><div class="pr"><span>Linen · Oat</span><b>$69</b></div><small>Sample price</small></a>
+  <a class="prod" href="#product"><img src="images/throw-clay-s.webp" width="420" height="420" alt="Clay woven cotton throw with fringe" loading="lazy"><h3>Fringed Throw</h3><div class="pr"><span>Cotton · Clay</span><b>$169</b></div><small>Sample price</small></a>
+ </div>
+</div>
+</section>
+
+<section class="page" id="product" data-feeling="close" aria-label="Product page">
+<div class="wrap">
+ <p class="eyebrow">Product page</p>
+ <div class="pgrid">
+  <div class="gallery">
+   <div class="main"><img src="images/shirt-hang.webp" width="600" height="600" alt="Field Shirt in oat linen on a timber hanger" loading="lazy">
+    <div class="loupecap"><b>Up close</b>Washed linen, slubby and soft. Corozo nut buttons.</div>
+    <div class="loupe"><img src="images/shirt-button.webp" width="600" height="600" alt="Close-up of the linen weave and a corozo button" loading="lazy"></div></div>
+   <img src="images/shirt-fold.webp" width="600" height="600" alt="Field Shirt folded beside dried eucalyptus" loading="lazy">
+   <img src="images/shirt-hem.webp" width="600" height="600" alt="Curved hem with a small rust running stitch" loading="lazy">
+  </div>
+  <div class="pinfo">
+   <span class="tag">Clothing · Sample product</span>
+   <h2 style="margin-top:12px">Field Shirt, washed linen</h2>
+   <p class="price">A$149 <small>Sample price · incl. GST</small></p>
+   <p style="color:var(--ink2)">A relaxed, everyday shirt in washed linen. It softens with every wash. Finished with a rust running stitch at the hem, the Threadhouse mark.</p>
+   <div class="opt"><div class="lab"><span>Colour: Oat</span></div><div class="sw" aria-label="Colour"><span class="on" style="background:#d9cfbd" title="Oat"></span><span style="background:#2f2d2b" title="Charcoal"></span><span style="background:#a85a3a" title="Rust"></span></div></div>
+   <div class="opt"><div class="lab"><span>Size: M</span><a href="#product">Size guide</a></div><div class="sizes" aria-label="Size"><span>XS</span><span>S</span><span class="on">M</span><span>L</span><span class="off" title="Sold out">XL</span></div></div>
+   <div class="buy"><div class="qty" aria-label="Quantity"><button type="button" aria-label="Decrease quantity">−</button><span>1</span><button type="button" aria-label="Increase quantity">+</button></div><a class="btn btn-p" href="#cart" style="flex:1">Add to cart · A$149</a></div>
+   <div class="added" role="status"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3f5a3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span>Added: Field Shirt, Oat, M. <a href="#cart">View cart</a></span></div>
+   <div class="facts"><dl>
+    <div><dt>Cloth</dt><dd>100% washed linen, mid-weight</dd></div>
+    <div><dt>Fit</dt><dd>Relaxed. Size down for a closer fit.</dd></div>
+    <div><dt>Care</dt><dd>Cool wash, line dry, warm iron if you like</dd></div>
+    <div><dt>Delivery</dt><dd>Australia-wide. Rates shown at checkout.</dd></div>
+   </dl></div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="cart" data-feeling="sure" aria-label="Cart">
+<div class="wrap">
+ <p class="eyebrow">Cart</p>
+ <h2>Your cart</h2>
+ <div class="cgrid">
+  <div>
+   <div class="line"><img src="images/shirt-oat-s.webp" width="120" height="120" alt="Field Shirt in oat" loading="lazy"><div><h3>Field Shirt, washed linen</h3><p class="v">Oat · M · A$149 each (sample)</p><div class="ctl"><div class="qty" aria-label="Quantity, Field Shirt"><button type="button" aria-label="Decrease">−</button><span>1</span><button type="button" aria-label="Increase">+</button></div><button class="rm" type="button">Remove</button></div></div><div class="amt">A$149.00</div></div>
+   <div class="line"><img src="images/teatowel-sand-s.webp" width="120" height="120" alt="Stripe tea towels in sand" loading="lazy"><div><h3>Stripe Tea Towels, set of 2</h3><p class="v">Sand · A$36 each (sample)</p><div class="ctl"><div class="qty" aria-label="Quantity, tea towels"><button type="button" aria-label="Decrease">−</button><span>2</span><button type="button" aria-label="Increase">+</button></div><button class="rm" type="button">Remove</button></div></div><div class="amt">A$72.00</div></div>
+   <div class="removed" role="status"><span>Removed: Everyday Tee, Charcoal, L.</span><button class="btn btn-g btn-sm" type="button">Undo</button></div>
+  </div>
+  <aside class="summary" aria-label="Order summary">
+   <h3>Order summary</h3>
+   <div class="r"><span>Subtotal (3 items)</span><span>A$221.00</span></div>
+   <div class="r"><span>Delivery, standard</span><span>A$12.00</span></div>
+   <div class="r t"><span>Total</span><span>A$233.00</span></div>
+   <small>Includes A$21.18 GST. Sample prices.</small>
+   <a class="btn btn-p btn-w" href="#checkout" style="margin-top:18px"><svg width="16" height="16" aria-hidden="true"><use href="#lock"/></svg>Checkout with Stripe</a>
+   <p style="font-size:.88rem;color:var(--ink2);margin:12px 0 0;text-align:center"><span class="testpill">Test mode</span> No real charge in this demo</p>
+  </aside>
+ </div>
+</div>
+</section>
+
+<section class="page" id="checkout" data-feeling="safe" aria-label="Stripe checkout in test mode">
+<div class="wrap">
+ <p class="eyebrow">Checkout · Stripe test mode</p>
+ <h2>Pay with Stripe. Clearly a test.</h2>
+ <div class="testbar" role="note" style="margin:24px 0"><span class="testpill">Test mode</span><span><b>No real charge.</b> This store runs Stripe in test mode. Use card 4242 4242 4242 4242, any future date and any CVC.</span></div>
+ <div class="stripe">
+  <div class="sh"><span style="display:flex;align-items:center;gap:10px;font-weight:700"><svg width="32" height="32" aria-hidden="true"><use href="#mark"/></svg>Threadhouse</span><span class="testpill">Test mode</span></div>
+  <div class="sb">
+   <div class="sum">
+    <p style="color:#4b4760;margin:0">Pay Threadhouse</p>
+    <p style="font-family:Unbounded,sans-serif;font-size:2.2rem;font-weight:800;margin:0 0 16px">A$233.00</p>
+    <div class="mini"><img src="images/shirt-oat-s.webp" width="56" height="56" alt="" loading="lazy"><span>Field Shirt · Oat · M<br><small>Qty 1</small></span><b>A$149.00</b></div>
+    <div class="mini"><img src="images/teatowel-sand-s.webp" width="56" height="56" alt="" loading="lazy"><span>Stripe Tea Towels · Sand<br><small>Qty 2</small></span><b>A$72.00</b></div>
+    <div class="mini"><span>Delivery, standard</span><b>A$12.00</b></div>
+   </div>
+   <form class="pay" action="#confirmation">
+    <span class="fl">Email</span><div class="in">mia@example.com</div>
+    <span class="fl">Card information</span><div class="in cardno">4242 4242 4242 4242</div><div class="in row2"><span>12 / 28</span><span>123</span></div>
+    <p class="hint">Stripe test card. Nothing is charged.</p>
+    <span class="fl">Name on card</span><div class="in">Mia Hart</div>
+    <span class="fl">Delivery address</span><div class="in">14 Wattle St, Fremantle WA 6160</div>
+    <a class="paybtn" href="#confirmation">Pay A$233.00 (test)</a>
+    <p class="pw">Secure checkout by Stripe · test mode</p>
+   </form>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="confirmation" data-feeling="safe" aria-label="Order confirmation and order email">
+<div class="wrap">
+ <p class="eyebrow">Order confirmed</p>
+ <h2>Thank you, Mia. It's being folded.</h2>
+ <div class="cfgrid">
+  <div class="thanks">
+   <span class="testpill">Test order · no real charge</span>
+   <p class="ordno" style="margin-top:16px">Order TH-1027</p>
+   <p style="color:var(--ink2)">We've sent a confirmation to mia@example.com with the same order number.</p>
+   <div class="mini"><img src="images/shirt-oat-s.webp" width="56" height="56" alt="" loading="lazy"><span>Field Shirt · Oat · M · ×1</span><b>A$149.00</b></div>
+   <div class="mini"><img src="images/teatowel-sand-s.webp" width="56" height="56" alt="" loading="lazy"><span>Stripe Tea Towels · Sand · ×2</span><b>A$72.00</b></div>
+   <div class="summary" style="margin-top:14px;padding:18px"><div class="r"><span>Delivery to Fremantle WA</span><span>A$12.00</span></div><div class="r t"><span>Total (test)</span><span>A$233.00</span></div></div>
+   <a class="btn btn-g" href="#catalogue" style="margin-top:20px">Keep browsing</a>
+  </div>
+  <div class="mail" role="region" aria-label="Sample order email">
+   <div class="mhead"><dl>
+    <div><dt>From</dt><dd>Threadhouse &lt;orders@shop.cromservices.com.au&gt;</dd></div>
+    <div><dt>To</dt><dd>mia@example.com</dd></div>
+    <div><dt>Subject</dt><dd><b>Your Threadhouse order TH-1027 · test mode, no charge</b></dd></div>
+   </dl></div>
+   <div class="mbody">
+    <span class="testpill">Test mode · no real charge</span>
+    <p class="hello" style="margin-top:14px">Thanks, Mia.</p>
+    <p style="font-size:.98rem">Your order TH-1027 is with us. We fold each piece by hand and send it within two working days.</p>
+    <div class="mini"><img src="images/shirt-hem.webp" width="56" height="56" alt="" loading="lazy"><span>Field Shirt · Oat · M</span><b>A$149.00</b></div>
+    <div class="mini"><img src="images/teatowel-sand-s.webp" width="56" height="56" alt="" loading="lazy"><span>Stripe Tea Towels ×2</span><b>A$72.00</b></div>
+    <p style="font-size:.95rem;border-top:1px solid var(--line);padding-top:12px"><b>Total A$233.00</b> · paid with test card ending 4242</p>
+    <div class="stitch"></div>
+    <p style="font-size:.95rem;color:var(--ink2);margin:0">Look for the rust stitch at the hem. That's us.</p>
+   </div>
+   <div class="mfoot">Sample order email · sent by Resend after Stripe confirms payment</div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="page" id="admin" data-feeling="capable" aria-label="Admin sign-in and product editor">
+<div class="wrap">
+ <p class="eyebrow">Admin · products</p>
+ <h2>Change a product without a developer.</h2>
+ <div class="signin">
+  <form class="card" action="#admin">
+   <svg width="48" height="48" aria-hidden="true"><use href="#mark"/></svg>
+   <h3 style="margin-top:14px;font-size:1.4rem">Sign in to Threadhouse admin</h3>
+   <label class="fld" for="ae">Email</label>
+   <input class="inp" id="ae" type="email" value="owner@threadhouse.example" autocomplete="email">
+   <button class="btn btn-p btn-w" type="submit" style="margin-top:14px">Email me a sign-in link</button>
+   <div class="sent" role="status"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none"><circle cx="12" cy="12" r="11" fill="#3f5a3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span><b>Check your inbox.</b> The link works once and expires in 15 minutes.</span></div>
+  </form>
+  <div class="admin" style="margin-top:0">
+   <div class="abar"><svg aria-hidden="true"><use href="#mark"/></svg><b>Admin</b><nav aria-label="Admin"><a href="#admin" aria-current="page">Products</a><a href="#confirmation">Orders</a></nav><span class="me">owner · signed in</span></div>
+   <div class="agrid">
+    <div class="plist">
+     <div class="plh"><b>Products (8)</b><button class="btn btn-k btn-sm" type="button">+ Add product</button></div>
+     <div class="pr2 on"><img src="images/shirt-oat-s.webp" width="52" height="52" alt="" loading="lazy"><span><b>Field Shirt</b><small>A$149 · 3 colours</small></span><span class="tag ok">Live</span></div>
+     <div class="pr2"><img src="images/trouser-rust-s.webp" width="52" height="52" alt="" loading="lazy"><span><b>Easy Trouser</b><small>A$139 · 1 colour</small></span><span class="tag ok">Live</span></div>
+     <div class="pr2 dim"><img src="images/skirt-clay-s.webp" width="52" height="52" alt="" loading="lazy"><span><b>Wrap Skirt</b><small>A$119 · restocking</small></span><span class="tag hid">Hidden</span></div>
+     <div class="pr2"><img src="images/throw-clay-s.webp" width="52" height="52" alt="" loading="lazy"><span><b>Fringed Throw</b><small>A$169 · 1 colour</small></span><span class="tag ok">Live</span></div>
+    </div>
+    <form class="ped" action="#admin">
+     <span class="tag">Editing · sample product</span>
+     <label class="fld" for="pn">Name</label><input class="inp" id="pn" value="Field Shirt, washed linen">
+     <div class="f2"><div><label class="fld" for="pp">Price (AUD)</label><input class="inp" id="pp" value="149.00"></div><div><label class="fld" for="pc">Category</label><input class="inp" id="pc" value="Clothing"></div></div>
+     <span class="fld">Photos</span><div class="thumbs"><img src="images/shirt-hang.webp" width="64" height="64" alt="" loading="lazy"><img src="images/shirt-button.webp" width="64" height="64" alt="" loading="lazy"><img src="images/shirt-fold.webp" width="64" height="64" alt="" loading="lazy"><span class="addph">Add photo</span></div>
+     <span class="fld">Sizes</span><div class="vrow"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL · 0 left</span></div>
+     <div class="toggle"><i></i>Visible in the shop</div>
+     <button class="btn btn-p" type="button" style="margin-top:18px">Save product</button>
+     <div class="saved" role="status"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4 10-10" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>Saved. Changes are live in the shop.</div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<footer><div class="wrap"><span>Threadhouse is a fictional label. Garments, prices, people and orders shown are sample content. Payments run in Stripe test mode.</span><span>A Crom Services demo · shop.cromservices.com.au</span></div></footer>
+</body>
+</html>
