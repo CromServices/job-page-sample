@@ -1,14 +1,15 @@
 @font-face{font-family:Manrope;src:url(fonts/manrope.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-800.woff2) format("woff2");font-weight:800;font-display:swap}
 :root{--ink:#2b2622;--ink2:#5a4f47;--sand:#f6efe4;--sand2:#ece0cd;--line:#d9c9b2;--clay:#9c4a2a;--clay2:#c9774f;--sage:#4f5d44;--sage-bg:#e4e8da;--white:#fffdf9;--r:14px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Manrope,system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--sand)}
 img{display:block;max-width:100%;height:auto}
 a{color:var(--clay)}
-h1,h2,h3,h4{font-family:Manrope,system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em;margin:0 0 .4em}
-h1{font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;max-width:19ch;text-wrap:balance}
-h2{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:800}
-h3{font-size:1.2rem;font-weight:700}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.03em;margin:0 0 .4em}
+h1{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.04em;max-width:19ch;text-wrap:balance}
+h2{font-size:clamp(1.7rem,2.6vw,2.4rem)}
+h3{font-size:1.2rem}
 p{margin:0 0 1em}
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px;z-index:9}
@@ -17,7 +18,7 @@ header.site{background:var(--white);border-bottom:1px solid var(--line);position
 .hrow{display:flex;align-items:center;gap:28px;min-height:92px}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
 .brand svg{width:64px;height:64px;flex:none}
-.brand b{display:block;font-size:1.35rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.brand b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
 .brand span{display:block;font-size:.85rem;color:var(--ink2);font-weight:600}
 nav.main{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:1rem}
 nav.main a{color:var(--ink);text-decoration:none}
