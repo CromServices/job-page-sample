@@ -1,103 +1,108 @@
-# Bid wireframe: improve the existing Lovable site mmpglobaladvisory.com in place (PeoplePerHour 4531030)
+# Bid wireframe: M & M (P) International Lovable redesign (PeoplePerHour 4531030)
 
-Quick bid wireframe, 15 Nov 2026, for Director. This is an improve-in-place concept, not a rebuild. It keeps the client’s real logo file (`international-doorway-logo`, resized only), their palette (taken from the live site’s CSS variables), their own words and their Greenwich photograph with its CC BY-SA credit. The live homepage was read on 15 Nov 2026, 16:47 AWST. Built from the portfolio: nearest citable row is **little-chip-dental** (Little Chip Dental, a Lovable build, https://little-chip-dental.lovable.app/, citable: yes, confirmed by Nate via Director 15 Nov 2026). Its layout patterns are the reference. Do not publish.
+Quick pre-bid wireframe, 18 Nov 2026, for Director. The client already has a live site and a design direction. This pack builds that direction out — doorway logo, Roboto, navy/green/gold — rather than inventing a new look. Dry-run publish only.
 
 ## The build
 
-The client wants someone "to take over and professionally improve my existing website: https://mmpglobaladvisory.com." "I prefer to improve the existing website rather than rebuild it unnecessarily." "The website was built using Lovable, React and TanStack Start."
+Quoted from the client’s PeoplePerHour post:
 
-Existing features to keep and check, quoted from the client post: "enquiry forms, downloadable guides, client accounts, an owner dashboard and payment functionality."
-
-Work required, quoted from the post:
-
-- "Review the entire website and recommend a clearer, more professional design."
-- "Improve navigation, mobile layouts, image selection, text alignment and consistency; remove unnecessary repetition."
+- "I’m looking for an experienced web designer and developer to take over and professionally improve my existing website: https://mmpglobaladvisory.com."
+- "My business, M & M (P) International, provides practical property, relocation and business advisory support in South East London for overseas clients. We are an advisory service, not an estate agency."
+- "I need someone who can improve the design while preserving and checking these existing features."
 - "Shorten lengthy pages while retaining important service information and clear enquiry forms."
-- "Configure my own Google Maps key so the South East London landmarks map works on my domain."
-- "Implement legal disclaimer and privacy-policy changes once my solicitor provides approved wording; legal advice itself is not part of this role."
-- "Check enquiries, email notifications, client access and existing payment functionality, identifying any unfinished setup."
-- "Preserve page addresses and improve local search foundations for South East London property advice and relocation support."
-- "Test and publish the agreed changes, and provide a simple maintenance handover."
+- "I prefer to improve the existing website rather than rebuild it unnecessarily."
 
-Constraints, quoted: "Please explain any proposed change of platform before including it in your quote." "All domain and service accounts must remain under my ownership."
+Quoted from the attached revised scope (13 November 2026). Personal contact details in that file are not repeated here.
 
-They will evaluate "Examples of relevant websites you have designed and developed," "experience taking over Lovable, React or TanStack Start projects," "Your price for an initial review, followed by a fixed-price proposal with clear milestones and timescales," and "What is included, any ongoing costs and your post-launch support."
+- "I need a polished, credible website that helps overseas clients understand our South East London advisory services and submit genuine enquiries."
+- "Keep the doorway logo, Roboto and existing navy/green/gold identity. Navy body text on light backgrounds; gold primary enquiry actions."
+- "Present homepage, Services and one service-detail page in desktop and mobile layouts for approval before a full rollout."
+
+## Coverage checklist
+
+| Requirement | Location |
+|-------------|------------------|
+| Improve the existing live site, not an unnecessary rebuild | Whole pack, starting from the live identity at https://mmpglobaladvisory.com — same IA, logo, Roboto, navy/green/gold |
+| Clearer, more professional design | Homepage (`#home`), Services (`#services`), and Property Advisory service-detail (`#property`), each in desktop and mobile |
+| Improve navigation | Header on every public screen: Home, About, Services, Areas, Free Guide, and a gold Make an enquiry action (phone: menu + the same items) |
+| Improve mobile layouts | Phone frames of homepage, Services, and the property service-detail page (`proofs/phone-390.png`) |
+| Improve image selection; remove repetition; licensed photos with credits | Homepage hero uses the live Greenwich photograph only once. Property, relocation and business paths use Woolwich, Abbey Wood and Plumstead photographs from the live site, each credited as the live site does. Founder portrait retained on `#home-contact`. No stock-as-work, no invented offices |
+| Improve text alignment and consistency | Shared Roboto type, spacing, and buttons across Home, Services, property detail and Contact |
+| Shorten lengthy pages, especially Services, without losing important service information | `#services`: three paths, one fees band with all four VAT-inclusive fees, inclusions in expandable sections, boundaries stated once (the live page repeats them). Longer property explanation sits in expandable sections on `#property` |
+| Clear enquiry forms and one clear enquiry journey | Header/hero gold enquiry action, Services and property-detail CTAs, and the three-step Contact form on `#contact` |
+| Keep fees and service boundaries visible | `#services-fees` and `#property`: Local Property Check £175/visit, Overseas Property Care £225/month, Family Relocation Support £950/assignment, UK Business Landing Support £1,500/assignment, all VAT-inclusive, with inclusions, exclusions and the boundaries/rights band |
+| Keep doorway logo, Roboto, navy/green/gold | Header and components; logo about 64px tall on desktop and 48px on phone; navy body on light grounds; gold primary enquiry actions |
+| Tagline and advisory positioning: “Here when you can’t be.”; not an estate agency | Homepage hero (`#home-start`) |
+| Local areas and landmarks | `#home-areas` retains the eight existing area pages; `#setup` shows the landmarks map as click-to-load with a neighbourhood-only fallback |
+| Configure the owner’s Google Maps key on the real domain | `#setup` map panel: click-to-load, attribution, external Maps fallback, no private home address; key and the 404 landmarks route marked to-check |
+| Preserve page addresses and local search foundations | Footer and nav keep the live IA (Home, About, Services, Areas, Guides, legal pages, account sign-in). No invented URL changes. `/why-mmp` → `/about` noted on `#setup` |
+| Legal disclaimer and privacy changes only after solicitor-approved wording | Footer legal note and `#setup` legal item: published wording remains until solicitor-approved text arrives; no legal advice |
+| Check enquiries, notifications, client access, payments; identify unfinished setup | `#setup` setup-check panel, plus the Contact success state which still reports that email acknowledgements are not enabled yet. Existing enquiry, account, dashboard and payment surfaces are noted, not redesigned |
+| Guides and three branded PDFs | `#home-guide` and the Contact brochure note. “Read online” does not repeat PDF chrome |
+| Test, publish, handover | Out of scope for this first wireframe pass (delivery after award) |
+| Never invent offices, team, testimonials, authorisation, success figures or returns | All public screens. The Dubai/Woolwich situation on `#property` stays labelled as an illustrative example, not a case study |
+| Do not show a private home address | `#home-areas` and the `#setup` map: neighbourhood orientation only |
+| www / host routing issue noted at live check | `#setup`: apex returned 200 and www timed out at 16:46 Australia/Perth on 18 Nov 2026 — recorded as a host issue, not a design screen |
 
 ## Feeling from the scope
 
-Quoted from the post: "professionally improve" the site with "a clearer, more professional design", "clear enquiry forms" and less "unnecessary repetition." Their own site already names the feeling in its tagline: "Here when you can’t be." The audience is overseas clients planning a move, a property or a business from far away.
+> a polished, credible website that helps overseas clients understand our South East London advisory services and submit genuine enquiries.
 
-## Concept
+> Here when you can’t be.
 
-Same house, better lit. The site keeps its logo, navy, teal, gold and mint, its Greenwich photograph and its words. What changes is order and calm: the tagline becomes the H1; navigation drops to five items plus account sign-in; each section carries one message; the three services keep their own three-line promises and bullets; the four checks are shortened; the areas get a working landmarks map; the real fee card shows the scope-first approach; the three-step enquiry form stays; the free guide and client sign-in share one band. A final panel shows what changes and what stays.
+> An advisory service, not an estate agency.
+
+> Explore the opportunity. Check the detail.
+
+The feeling is calm, careful and local: practical advice for people who are not on the ground, with fees and boundaries in the open, and no sales-site swagger.
 
 ## Emotion of the scope
 
-Client wants customers to feel: they are dealing with "a clearer, more professional design", with "clear enquiry forms" and no "unnecessary repetition", from "practical property, relocation and business advisory support in South East London for overseas clients." (Quoted from the client post.)
+Client wants customers to feel they have "a polished, credible website that helps overseas clients understand our South East London advisory services and submit genuine enquiries", that someone is "Here when you can’t be", and that this is "An advisory service, not an estate agency" — with room to "Explore the opportunity. Check the detail."
 
-**Relief: someone trustworthy is already on the ground for me.**
-
-Not a task. The exhale of an overseas client who finally has one calm, local person to ask.
+**Here when you can’t be.**
 
 ### Feeling journey
 
-#### Arrive — relief
-- Feeling word: relief
-- Inner voice: “Greenwich under grey London sky, and the words: here when you can’t be. Exactly what I needed.”
-- Design levers: their Greenwich photograph full-bleed, flush under the nav; navy scrim for 4.5:1 white type; their tagline as a two-line Manrope H1; one gold enquiry button and one ghost guide button; "not an estate agent" kept, quietly.
+#### Arrive — oriented
+- Feeling word: oriented
+- Inner voice: “The place is real. Someone is already there.”
+- Design levers: hero flush under the nav; the live Greenwich photograph; the tagline as a 2-line H1; one gold Make an enquiry action (in the header on desktop, in the hero on a phone); no second competing button.
 
-#### Explore — understood
-- Feeling word: understood
-- Inner voice: “Property, relocation, business. Three lines each, no repetition, no sales talk.”
-- Design levers: three service cards with their own short promises and bullets; the four checks cut to one sentence each; mint band for the careful-advice message; consistent left alignment.
+#### Explore — careful
+- Feeling word: careful
+- Inner voice: “Property, relocation, business — each path is distinct, and the fees are in the open.”
+- Design levers: three support paths with three different live-site photographs and credits; “Explore the opportunity. Check the detail.” kept as a careful four-step band; Services shortened but every fee and inclusion still visible.
 
-#### Decide — trust
-- Feeling word: trust
-- Inner voice: “Woolwich, Abbey Wood, Greenwich on a map I can read. A real fee, with VAT, in writing first.”
-- Design levers: landmarks map with all eight areas; area chips; the real £175 Local Property Check card; "scope agreed before work begins" said plainly.
+#### Decide — sure
+- Feeling word: sure
+- Inner voice: “This is advice, not a sales pitch. The limits are written down.”
+- Design levers: VAT-inclusive fees on Services and the property detail page; inclusions and exclusions in expandable sections; boundaries and rights stated once; the illustrative situation labelled as an example, not a result.
 
-#### Act — ease
-- Feeling word: ease
-- Inner voice: “Four choices, one tap, and it stays private.”
-- Design levers: their three-step enquiry form kept, with a progress bar and large options; an "Enquire about …" button on each service card that opens the form with that service already chosen (the Little Chip Dental "Book with …" pattern); contact hours, WhatsApp and LinkedIn beside it; 50px unclipped buttons.
+#### Act — ready
+- Feeling word: ready
+- Inner voice: “A short, private enquiry. Nothing is owed until the scope is agreed.”
+- Design levers: one three-step Contact form from the live journey; 52px gold Send enquiry; no payment to enquire; success shows a saved reference and the honest note that email acknowledgements are not enabled yet.
 
-#### After — supported
-- Feeling word: supported
-- Inner voice: “The guide is in my inbox, and my account is there when the work starts.”
-- Design levers: free guide and client sign-in in one navy band; the improvement panel showing that page addresses, forms, accounts and payments all stay; their full company details in the footer.
+#### After — held
+- Feeling word: held
+- Inner voice: “The unfinished work is named, not dressed up as done.”
+- Design levers: Mayank’s real portrait as the point of contact; the setup-check panel with to-check labels for enquiries, notifications, accounts, payments, the Maps key, legal wording and the www host; click-to-load map with a neighbourhood-only fallback.
 
-Never feel:
+Never feel: sold a return, lost on a long Services page, unsure of the fee, as if this were an estate agency, as if a private address had been published, or as if unfinished setup had been marked complete.
 
-- Sold to, as if by an estate agent
-- Lost in long, repeated pages
-- Unsure what the service costs or covers
-- That the site is unfinished
-- Worried about privacy when enquiring
+## Standout moment
 
-## Scope coverage
+The first screen makes the positioning unmistakable: “Here when you can’t be,” the South East London Greenwich photograph, and a single gold enquiry action, then three clear support paths — property, relocation and business — each with its own photograph, and no second competing button. Credibility first, then the enquiry.
 
-| Requirement | Where it appears | Shown |
-|---|---|---|
-| Review the whole site and recommend a clearer, more professional design | `screens.html` whole homepage concept and improvements panel | yes |
-| Improve navigation | `screens.html` nav (five items, account sign-in, one enquiry button) | yes |
-| Improve mobile layouts | `proofs/phone-390.png` | yes |
-| Image selection, text alignment and consistency | `screens.html` one photograph per section, left-aligned sections | yes |
-| Remove unnecessary repetition; shorten lengthy pages | `screens.html` shortened services and four checks | yes |
-| Keep important service information and clear enquiry forms | `screens.html` services, fee card and three-step enquiry form | yes |
-| Own Google Maps key so the landmarks map works on the domain | `screens.html` areas map; improvements panel | yes |
-| Legal disclaimer and privacy changes once the solicitor approves wording | `screens.html` improvements panel; footer links | yes |
-| Check enquiries, email notifications, client access and payments | `screens.html` improvements panel; client sign-in band | yes |
-| Preserve existing features: enquiry forms, downloadable guides, client accounts, owner dashboard, payments | `screens.html` enquiry form with per-service deep links, free guide band, account sign-in, footer client and owner sign-in, improvements panel | yes |
-| Preserve page addresses and improve local search foundations | `screens.html` improvements panel; title and meta description | yes |
-| Test, publish the agreed changes, simple maintenance handover | `screens.html` improvements panel; `wireframe.md` | yes |
-| Explain any platform change; accounts stay in client ownership | `screens.html` improvements panel (stays on Lovable, React and TanStack Start) | yes |
-| Initial review price, fixed-price milestones, ongoing costs, post-launch support | Bid text (Director); milestones in `wireframe.md` | yes |
+## Key design ideas
 
-## Portfolio cite
+Drawn from the client’s own site and brief:
 
-- **little-chip-dental** — Little Chip Dental (Lovable) — https://little-chip-dental.lovable.app/ — citable: yes. A Lovable site we built, with public sign-in, staff sign-in and an online booking flow. Patterns used here: a service-specific call to action that opens the form pre-selected, and a separate staff sign-in link in the footer. Cite it for "experience taking over Lovable, React or TanStack Start projects" only as a Lovable build; do not claim it was a takeover.
-- **advocate-4-u** (https://advocate4u.lovable.app, citable: yes) is a second Lovable row Director may cite; it was not used as a pattern here.
+1. **Their identity, built out.** Doorway logo, Roboto, navy body text on light grounds, gold enquiry actions. The live sitemap stays; this is an improve-in-place, not a new brand.
+2. **Shorter Services, nothing important dropped.** All four VAT-inclusive fees, inclusions, exclusions and the legal boundaries remain visible. Longer detail moves into the property page or an expandable section. Repeated imagery and a second gold button come out.
+3. **Honest unfinished setup.** Enquiries, notifications, client accounts, payments, the Maps key, solicitor-approved legal wording and the www host are listed on the setup-check panel as to-check or waiting, not invented as complete.
 
 ## Rationale
 
-The client wants improvement, not replacement, and is wary of platform changes. The wireframe proves we looked at their real site: same logo, same colours, same words, same photograph, same three-step form. It shows only what gets clearer. Nothing on the page is invented; the fee card and company details are copied from their live site.
+The client already has a design. The wireframe starts from the 18 Nov 2026 live homepage and the 13 Nov 2026 scope, then tightens layout, image choice and the enquiry journey. No new display font. No invented offices, team, testimonials, figures or addresses. Director publishes; this pack is dry-run only.

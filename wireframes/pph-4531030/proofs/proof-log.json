@@ -1,0 +1,104 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 14440,
+  "first_view_bytes": 225439,
+  "sections": [
+   [
+    "home",
+    52,
+    4077
+   ],
+   [
+    "services",
+    4129.171875,
+    3102
+   ],
+   [
+    "property",
+    7230.78125,
+    2901
+   ],
+   [
+    "contact",
+    10131.75,
+    1763
+   ],
+   [
+    "setup",
+    11894.640625,
+    2545
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4531030/pack/proofs/desktop-1440.png"
+ },
+ {
+  "name": "tablet-768",
+  "width": "768",
+  "css_height": 23846,
+  "first_view_bytes": 176773,
+  "sections": [
+   [
+    "home",
+    52,
+    6884
+   ],
+   [
+    "services",
+    6935.984375,
+    5938
+   ],
+   [
+    "property",
+    12873.796875,
+    4441
+   ],
+   [
+    "contact",
+    17314.40625,
+    2947
+   ],
+   [
+    "setup",
+    20261.46875,
+    3585
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4531030/pack/proofs/tablet-768.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 27550,
+  "first_view_bytes": 183473,
+  "sections": [
+   [
+    "home",
+    88,
+    7487
+   ],
+   [
+    "services",
+    7575,
+    6491
+   ],
+   [
+    "property",
+    14065.84375,
+    5173
+   ],
+   [
+    "contact",
+    19238.875,
+    3284
+   ],
+   [
+    "setup",
+    22523.34375,
+    5026
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4531030/pack/proofs/phone-390.png"
+ }
+]
