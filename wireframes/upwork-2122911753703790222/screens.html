@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halden Studio — sample website foundation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#home-start">Skip to content</a>
+  <nav class="switcher" aria-label="Wireframe screens">
+    <strong>Screens</strong>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#journal">Journal</a>
+    <a href="#post">Journal post</a>
+    <a href="#contact">Contact</a>
+    <a href="#cms">CMS / hand-off</a>
+  </nav>
+
+  <section class="page" id="home">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="hero" data-feeling="oriented" id="home-start">
+      <div class="hero-copy">
+        <p class="kicker">Sample content · Interior architecture</p>
+        <h1>Rooms that feel<br>settled from<br>the first visit.</h1>
+        <p class="lede">An independent interior architecture practice. Quiet rooms, a tight material family, and a journal of notes from the studio. All words and pictures here are sample content.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#services">View services</a>
+          <a class="btn btn-ghost" href="#journal">Read the journal</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <picture>
+          <source media="(max-width: 700px)" srcset="images/hero-800.webp" type="image/webp">
+          <img src="images/hero-1600.webp" width="1600" height="2000" alt="Sunlit plaster room with a steel-framed window and a low timber bench">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="sec" data-feeling="calm" id="home-services">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Three ways the studio works.</h2>
+          <p>Sample services the owner can edit later in Wix Studio, without code.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <div class="pic"><img src="images/service-plan-800.webp" width="800" height="600" alt="Architectural plan of a room with a long window, drawn on a plaster-coloured sheet" loading="lazy"></div>
+            <h3>Interior architecture</h3>
+            <p>Rooms planned as a whole, from the first sketch to the finished envelope. Sample content.</p>
+          </article>
+          <article class="card">
+            <div class="pic"><img src="images/materials-800.webp" width="900" height="675" alt="Material board of plaster, linen, timber and stone" loading="lazy"></div>
+            <h3>Material direction</h3>
+            <p>Plaster, timber, metal and cloth chosen as a tight family. Sample content.</p>
+          </article>
+          <article class="card">
+            <div class="pic"><img src="images/service-site-800.webp" width="800" height="600" alt="A large window opening in a plaster wall during a site visit" loading="lazy"></div>
+            <h3>Site accompaniment</h3>
+            <p>Clear drawings and a calm presence while the work is built. Sample content.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec journal-latest" data-feeling="calm" id="home-journal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Latest from the journal</h2>
+          <p><span class="wired"><i></i> Wired to the journal</span> When a new post is published, this slot updates from the same fields.</p>
+        </div>
+        <article class="feature">
+          <div class="pic">
+            <img id="home-journal-img" src="images/journal-window.webp" width="1400" height="1050" alt="A long steel-framed window across a plaster wall, lighting a timber floor" loading="lazy">
+          </div>
+          <div>
+            <div class="meta-row">
+              <span id="home-journal-tag">Studio notes</span>
+              <time id="home-journal-date" datetime="2026-11-04">4 Nov 2026</time>
+              <span>Sample content</span>
+            </div>
+            <h3 id="home-journal-title">Light, plaster, and a long window</h3>
+            <p id="home-journal-excerpt">A notes-from-the-studio entry on how a single opening can settle a room.</p>
+            <p style="margin-top:22px"><a class="btn" href="#post">Read the entry</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page" id="about">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about" aria-current="page">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="sec" data-feeling="calm" style="padding-top:56px">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="kicker">About · Sample content</p>
+          <h1>A small studio for rooms that feel finished.</h1>
+          <p>Halden Studio is sample content for an independent interior architecture practice. The short overview below stands in until the owner’s own story arrives.</p>
+          <p>The work is quiet and exact: a clear plan, a tight material family, and rooms that feel settled from the first visit. This page is part of the foundation and can be edited in Wix Studio without a developer.</p>
+        </div>
+        <figure class="figure">
+          <img src="images/about-desk.webp" width="1400" height="1050" alt="Studio desk with a hand-drawn room plan, a steel rule and a timber worktop" loading="lazy">
+          <figcaption class="caption">Sample content. A studio desk with a plan on the board.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page" id="services">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services" aria-current="page">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="page-intro wrap" data-feeling="confident">
+      <p class="kicker">Services · Sample content</p>
+      <h1>Three ways the<br>studio works.</h1>
+      <p>Three sample services. Titles and words can be changed in Wix Studio later, without code. No prices are listed.</p>
+    </section>
+    <section class="sec" data-feeling="confident" style="padding-top:40px">
+      <div class="wrap cards-3">
+        <article class="card">
+          <div class="pic"><img src="images/service-plan.webp" width="1200" height="900" alt="Measured room plan with a long window marked on the upper wall" loading="lazy"></div>
+          <h3>Interior architecture</h3>
+          <p>A whole-room plan, from the first sketch to the finished envelope. Sample content.</p>
+          <a class="more" href="#contact">Ask about a room</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/materials.webp" width="1400" height="1050" alt="Four material swatches: plaster, linen, timber and stone" loading="lazy"></div>
+          <h3>Material direction</h3>
+          <p>Plaster, timber, metal and cloth chosen so the room holds together. Sample content.</p>
+          <a class="more" href="#contact">Ask about a palette</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/service-site.webp" width="1200" height="900" alt="Bright window opening in a plaster wall on site" loading="lazy"></div>
+          <h3>Site accompaniment</h3>
+          <p>Drawings that stay clear on site, and a calm presence while they are built. Sample content.</p>
+          <a class="more" href="#contact">Start a conversation</a>
+        </article>
+      </div>
+    </section>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page" id="journal">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal" aria-current="page">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="page-intro wrap" data-feeling="calm">
+      <p class="kicker">Journal · Sample content</p>
+      <h1>Notes from the studio.</h1>
+      <p>A blog-ready journal. One sample post is fully worked so the template can be read. New posts are added in Wix Studio and also appear in the latest slot on Home.</p>
+    </section>
+    <section class="sec" data-feeling="calm" style="padding-top:36px">
+      <div class="wrap post-list">
+        <a class="post-row" href="#post">
+          <div class="pic"><img src="images/journal-window-800.webp" width="900" height="675" alt="A long steel-framed window in a plaster room" loading="lazy"></div>
+          <div>
+            <div class="meta-row"><span>Studio notes</span><time datetime="2026-11-04">4 Nov 2026</time><span>Sample content</span></div>
+            <h3>Light, plaster, and a long window</h3>
+            <p>A notes-from-the-studio entry on how a single opening can settle a room.</p>
+          </div>
+        </a>
+        <a class="post-row" href="#post">
+          <div class="pic"><img src="images/journal-palette-800.webp" width="800" height="600" alt="A quieter room with a side window and a low green cabinet" loading="lazy"></div>
+          <div>
+            <div class="meta-row"><span>Palette</span><time datetime="2026-10-18">18 Oct 2026</time><span>Sample content</span></div>
+            <h3>A quiet palette for a south room</h3>
+            <p>How a cooler wall and a warmer floor can share the same afternoon light.</p>
+          </div>
+        </a>
+        <a class="post-row" href="#post">
+          <div class="pic"><img src="images/journal-site-800.webp" width="800" height="600" alt="A wide opening in a plaster wall, seen from inside the room" loading="lazy"></div>
+          <div>
+            <div class="meta-row"><span>On site</span><time datetime="2026-10-02">2 Oct 2026</time><span>Sample content</span></div>
+            <h3>What we take to site</h3>
+            <p>The drawings, samples and notes that travel with a room while it is being built.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page" id="post">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal" aria-current="page">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <figure class="post-hero" data-feeling="confident">
+      <img id="post-img" src="images/journal-window.webp" width="1400" height="1050" alt="A long steel-framed window across a plaster wall, lighting a timber floor" loading="lazy">
+    </figure>
+    <article class="post-body" data-feeling="confident">
+      <div class="meta-row">
+        <span id="post-tag">Studio notes</span>
+        <time id="post-date" datetime="2026-11-04">4 Nov 2026</time>
+        <span>Sample content</span>
+      </div>
+      <h1 id="post-title">Light, plaster, and a long window</h1>
+      <div class="body">
+        <p id="post-excerpt-line">A notes-from-the-studio entry on how a single opening can settle a room.</p>
+        <p>A long window can do more than light a room. It sets the pace of the day, the colour of the plaster, and where a person wants to sit.</p>
+        <p id="post-body-text">This entry is sample content, written so the journal template can be read end to end. When the owner publishes a real post from the same fields in Wix Studio, this layout is what a visitor will see, and the same title and excerpt already appear in the latest-from-the-journal slot on Home.</p>
+        <p><a class="btn btn-ghost" href="#journal">Back to the journal</a></p>
+      </div>
+    </article>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page" id="contact">
+    <header class="site">
+      <a class="logo" href="#home" aria-label="Halden Studio, sample content">
+        <span class="word">HALDEN</span>
+        <span class="mark">Studio</span>
+        <span class="sample-flag">Sample content</span>
+      </a>
+      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact" aria-current="page">Contact</a>
+      </nav>
+    </header>
+    <section class="sec" data-feeling="ready" style="padding-top:56px">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker">Contact · Sample content</p>
+          <h1>A short note is enough.</h1>
+          <p>Name, email and a message. This is a sample form so the layout can be used from the first day. A simple footer sits under every page.</p>
+          <p class="form-note" style="margin-top:18px">Sample contact: studio@halden.example</p>
+        </div>
+        <form class="form" id="contact-form" action="#contact" method="post">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <p class="form-note">Sample fields only. Nothing is sent from this page.</p>
+          <button class="btn" type="submit">Send the note</button>
+          <p class="form-ok" id="form-ok" role="status">Thanks. This is a sample form, so the note stays on the page.</p>
+        </form>
+      </div>
+    </section>
+    <footer class="site">
+      <div>
+        <div class="word">HALDEN</div>
+        <p>Halden Studio is sample content for a from-scratch website foundation. It is not a real practice.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </section>
+
+  <section class="page studio" id="cms" data-feeling="kept">
+    <div class="studio-bar">
+      <div class="studio-brand">
+        <strong>Wix Studio</strong>
+        <em>Halden Studio · sample site</em>
+      </div>
+      <div class="studio-actions">
+        <button class="btn btn-ghost" type="button" id="btn-preview" style="background:transparent;color:#f1eee8;border-color:#c8c2b6">Preview</button>
+        <button class="btn btn-accent" type="button" id="btn-publish">Publish</button>
+      </div>
+    </div>
+    <div class="studio-shell">
+      <nav class="studio-nav" aria-label="Site pages in the editor">
+        <h2>Pages</h2>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+        <h2>Blog</h2>
+        <button class="linkish" type="button" aria-pressed="true">Add a journal post</button>
+        <a href="#post">Light, plaster, and a long window</a>
+      </nav>
+      <div class="studio-canvas">
+        <p class="kicker" style="color:#c8c2b6;margin-bottom:12px">Home preview · latest from the journal</p>
+        <div class="canvas-frame">
+          <div class="mini-nav">HALDEN <span>SAMPLE CONTENT</span></div>
+          <article class="live-card">
+            <p class="wired"><i></i> Same fields as the editor</p>
+            <img id="cms-preview-img" src="images/journal-window-800.webp" width="900" height="675" alt="Preview of the journal cover: a long window in a plaster room" loading="lazy">
+            <div class="meta-row">
+              <span id="cms-preview-tag">Studio notes</span>
+              <time id="cms-preview-date" datetime="2026-11-04">4 Nov 2026</time>
+            </div>
+            <h3 id="cms-preview-title">Light, plaster, and a long window</h3>
+            <p id="cms-preview-excerpt">A notes-from-the-studio entry on how a single opening can settle a room.</p>
+          </article>
+        </div>
+      </div>
+      <aside class="studio-edit">
+        <h2>Journal post fields</h2>
+        <p class="hint">These are the same fields that feed the Home “latest from the journal” slot and the post template. Edit here, then publish. No code.</p>
+        <form id="cms-form" class="form" action="#cms" method="post">
+          <div class="field">
+            <label for="f-title">Title</label>
+            <input id="f-title" name="title" type="text" value="Light, plaster, and a long window">
+          </div>
+          <div class="field">
+            <label for="f-tag">Tag</label>
+            <input id="f-tag" name="tag" type="text" value="Studio notes">
+          </div>
+          <div class="field">
+            <label for="f-date">Date</label>
+            <input id="f-date" name="date" type="text" value="4 Nov 2026">
+          </div>
+          <div class="field">
+            <label for="f-excerpt">Excerpt</label>
+            <textarea id="f-excerpt" name="excerpt" rows="3">A notes-from-the-studio entry on how a single opening can settle a room.</textarea>
+          </div>
+          <div class="field">
+            <label for="f-body">Body</label>
+            <textarea id="f-body" name="body" rows="5">This entry is sample content, written so the journal template can be read end to end. When the owner publishes a real post from the same fields in Wix Studio, this layout is what a visitor will see, and the same title and excerpt already appear in the latest-from-the-journal slot on Home.</textarea>
+          </div>
+          <div class="field">
+            <label for="f-cover">Cover image</label>
+            <select id="f-cover" name="cover">
+              <option value="images/journal-window.webp" selected>Long window (current)</option>
+              <option value="images/journal-palette.webp">South room palette</option>
+              <option value="images/journal-site.webp">On site opening</option>
+            </select>
+          </div>
+          <button class="btn btn-accent" type="submit" id="btn-post-publish">Publish to the journal</button>
+          <p class="publish-state" id="publish-state" role="status"></p>
+        </form>
+      </aside>
+      <section class="howto" data-feeling="kept">
+        <h2>Hand-off: edit a page, publish, add a blog post</h2>
+        <ol>
+          <li>Open any page in Wix Studio (Home, About, Services, Journal or Contact). Change the words or pictures, then press Publish. The live site updates. No code.</li>
+          <li>To add a journal post, open Blog and choose New post. Fill the fields on this screen: title, tag, date, excerpt, body and cover.</li>
+          <li>Press Publish to the journal. The post template uses those fields, and the “latest from the journal” slot on Home updates from the same collection.</li>
+        </ol>
+      </section>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    document.querySelectorAll("header.site").forEach(function (header) {
+      var btn = header.querySelector(".menu");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var open = header.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      });
+    });
+
+    var form = document.getElementById("contact-form");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var ok = document.getElementById("form-ok");
+        if (ok) ok.classList.add("show");
+      });
+    }
+
+    var map = [
+      ["f-title", ["home-journal-title", "post-title", "cms-preview-title"]],
+      ["f-excerpt", ["home-journal-excerpt", "post-excerpt-line", "cms-preview-excerpt"]],
+      ["f-tag", ["home-journal-tag", "post-tag", "cms-preview-tag"]],
+      ["f-date", ["home-journal-date", "post-date", "cms-preview-date"]],
+      ["f-body", ["post-body-text"]]
+    ];
+
+    function setText(id, value) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = value;
+    }
+    function coverSrc(src) {
+      var small = src.replace(".webp", "-800.webp");
+      ["home-journal-img", "post-img", "cms-preview-img"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.src = (id === "cms-preview-img" || id === "home-journal-img") && src.indexOf("journal-window.webp") >= 0
+          ? (id === "cms-preview-img" ? "images/journal-window-800.webp" : src)
+          : (id === "cms-preview-img" ? small : src);
+      });
+    }
+    function sync() {
+      map.forEach(function (pair) {
+        var src = document.getElementById(pair[0]);
+        if (!src) return;
+        pair[1].forEach(function (id) { setText(id, src.value); });
+      });
+      var cover = document.getElementById("f-cover");
+      if (cover) coverSrc(cover.value);
+    }
+    map.forEach(function (pair) {
+      var src = document.getElementById(pair[0]);
+      if (src) src.addEventListener("input", sync);
+    });
+    var cover = document.getElementById("f-cover");
+    if (cover) cover.addEventListener("change", sync);
+
+    function markPublished(msg) {
+      var st = document.getElementById("publish-state");
+      if (st) st.textContent = msg;
+    }
+    var pub = document.getElementById("btn-publish");
+    if (pub) pub.addEventListener("click", function () {
+      sync();
+      markPublished("Published. The Home journal slot and the post template now use these fields.");
+    });
+    var cmsForm = document.getElementById("cms-form");
+    if (cmsForm) cmsForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      sync();
+      markPublished("Published to the journal. The Home slot already shows this post.");
+    });
+  })();
+  </script>
+</body>
+</html>
