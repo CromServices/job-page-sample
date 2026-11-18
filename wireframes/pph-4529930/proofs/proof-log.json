@@ -1,0 +1,59 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 5423,
+  "first_view_bytes": 539775,
+  "sections": [
+   [
+    "home",
+    52,
+    2776
+   ],
+   [
+    "styles",
+    2827.703125,
+    2595
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4529930/pack/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 6200,
+  "first_view_bytes": 291183,
+  "sections": [
+   [
+    "home",
+    52,
+    2249
+   ],
+   [
+    "styles",
+    2301.234375,
+    3899
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4529930/pack/proofs/phone-390.png"
+ },
+ {
+  "name": "tablet-768",
+  "width": "768",
+  "css_height": 5524,
+  "first_view_bytes": 539775,
+  "sections": [
+   [
+    "home",
+    52,
+    2448
+   ],
+   [
+    "styles",
+    2499.609375,
+    3025
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/pph-4529930/pack/proofs/tablet-768.png"
+ }
+]
