@@ -1,0 +1,134 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 10168,
+  "first_view_bytes": 143814,
+  "sections": [
+   [
+    "home",
+    52,
+    2601
+   ],
+   [
+    "about",
+    2653.390625,
+    859
+   ],
+   [
+    "services",
+    3512.46875,
+    1211
+   ],
+   [
+    "journal",
+    4723.109375,
+    1540
+   ],
+   [
+    "post",
+    6263.53125,
+    1525
+   ],
+   [
+    "contact",
+    7788.40625,
+    918
+   ],
+   [
+    "cms",
+    8706.546875,
+    1461
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-build-website-from-scratch/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 14412,
+  "first_view_bytes": 97772,
+  "sections": [
+   [
+    "home",
+    88,
+    3587
+   ],
+   [
+    "about",
+    3675.46875,
+    1225
+   ],
+   [
+    "services",
+    4900.703125,
+    2018
+   ],
+   [
+    "journal",
+    6919.15625,
+    2166
+   ],
+   [
+    "post",
+    9085.375,
+    1341
+   ],
+   [
+    "contact",
+    10426.328125,
+    1273
+   ],
+   [
+    "cms",
+    11699.1875,
+    2713
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-build-website-from-scratch/proofs/phone-390.png"
+ },
+ {
+  "name": "tablet-768",
+  "width": "768",
+  "css_height": 16614,
+  "first_view_bytes": 115492,
+  "sections": [
+   [
+    "home",
+    52,
+    4453
+   ],
+   [
+    "about",
+    4504.828125,
+    1309
+   ],
+   [
+    "services",
+    5813.59375,
+    2793
+   ],
+   [
+    "journal",
+    8606.375,
+    2849
+   ],
+   [
+    "post",
+    11455.578125,
+    1391
+   ],
+   [
+    "contact",
+    12846.96875,
+    1127
+   ],
+   [
+    "cms",
+    13973.546875,
+    2640
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-build-website-from-scratch/proofs/tablet-768.png"
+ }
+]
