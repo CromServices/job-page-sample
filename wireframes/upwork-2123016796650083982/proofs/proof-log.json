@@ -1,0 +1,179 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 14174,
+  "first_view_bytes": 280750,
+  "sections": [
+   [
+    "home",
+    52,
+    3698
+   ],
+   [
+    "suburb",
+    3749.765625,
+    1786
+   ],
+   [
+    "service",
+    5535.625,
+    1602
+   ],
+   [
+    "areas",
+    7137.9375,
+    1629
+   ],
+   [
+    "quote",
+    8766.671875,
+    1068
+   ],
+   [
+    "admin-inbox",
+    9834.796875,
+    1003
+   ],
+   [
+    "admin-jobs",
+    10838.25,
+    795
+   ],
+   [
+    "admin-calendar",
+    11633.25,
+    795
+   ],
+   [
+    "admin-edit",
+    12428.25,
+    795
+   ],
+   [
+    "admin-seo",
+    13223.25,
+    951
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-2123016796650083982/pack/proofs/desktop-1440.png"
+ },
+ {
+  "name": "tablet-768",
+  "width": "768",
+  "css_height": 22766,
+  "first_view_bytes": 260270,
+  "sections": [
+   [
+    "home",
+    48,
+    5537
+   ],
+   [
+    "suburb",
+    5584.84375,
+    3564
+   ],
+   [
+    "service",
+    9149.171875,
+    1598
+   ],
+   [
+    "areas",
+    10746.6875,
+    2348
+   ],
+   [
+    "quote",
+    13094.9375,
+    1494
+   ],
+   [
+    "admin-inbox",
+    14589.375,
+    1629
+   ],
+   [
+    "admin-jobs",
+    16218.421875,
+    1738
+   ],
+   [
+    "admin-calendar",
+    17956.265625,
+    1288
+   ],
+   [
+    "admin-edit",
+    19244.046875,
+    2186
+   ],
+   [
+    "admin-seo",
+    21430.5,
+    1336
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-2123016796650083982/pack/proofs/tablet-768.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 22851,
+  "first_view_bytes": 245224,
+  "sections": [
+   [
+    "home",
+    48,
+    5100
+   ],
+   [
+    "suburb",
+    5148.359375,
+    2774
+   ],
+   [
+    "service",
+    7922.65625,
+    1729
+   ],
+   [
+    "areas",
+    9651.375,
+    2442
+   ],
+   [
+    "quote",
+    12092.9375,
+    1499
+   ],
+   [
+    "admin-inbox",
+    13592.078125,
+    1873
+   ],
+   [
+    "admin-jobs",
+    15465.328125,
+    1951
+   ],
+   [
+    "admin-calendar",
+    17416.171875,
+    1446
+   ],
+   [
+    "admin-edit",
+    18862.1875,
+    1885
+   ],
+   [
+    "admin-seo",
+    20747,
+    2104
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-18-hunt/upwork-2123016796650083982/pack/proofs/phone-390.png"
+ }
+]
