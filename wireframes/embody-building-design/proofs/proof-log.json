@@ -1,0 +1,171 @@
+[
+ {
+  "screen": "home",
+  "width": 768,
+  "css_height": 3854.0625,
+  "file": "tablet-768.png",
+  "overflow_scrollWidth": 768
+ },
+ {
+  "screen": "portfolio",
+  "width": 768,
+  "css_height": 2953.640625,
+  "file": "portfolio-768.jpg",
+  "overflow_scrollWidth": 768
+ },
+ {
+  "screen": "ridge-house",
+  "width": 768,
+  "css_height": 5087.375,
+  "file": "ridge-house-768.jpg",
+  "overflow_scrollWidth": 768
+ },
+ {
+  "screen": "contact",
+  "width": 768,
+  "css_height": 1728.875,
+  "file": "contact-768.jpg",
+  "overflow_scrollWidth": 768
+ },
+ {
+  "screen": "home",
+  "width": 390,
+  "css_height": 3812.921875,
+  "file": "phone-390.png",
+  "overflow_scrollWidth": 390
+ },
+ {
+  "screen": "portfolio",
+  "width": 390,
+  "css_height": 2788.609375,
+  "file": "portfolio-390.jpg",
+  "overflow_scrollWidth": 390
+ },
+ {
+  "screen": "ridge-house",
+  "width": 390,
+  "css_height": 4705.046875,
+  "file": "ridge-house-390.jpg",
+  "overflow_scrollWidth": 390
+ },
+ {
+  "screen": "contact",
+  "width": 390,
+  "css_height": 1933.59375,
+  "file": "contact-390.jpg",
+  "overflow_scrollWidth": 390
+ },
+ {
+  "phone_first_view_bytes": 281759,
+  "requests": [
+   [
+    "styles.css",
+    12474
+   ],
+   [
+    "screens.html",
+    44677
+   ],
+   [
+    "ridge-exterior-800.webp",
+    58034
+   ],
+   [
+    "space-grotesk.woff2",
+    18648
+   ],
+   [
+    "mango-exterior-800.webp",
+    60196
+   ],
+   [
+    "dune-exterior-800.webp",
+    44368
+   ],
+   [
+    "paddock-exterior-800.webp",
+    43362
+   ]
+  ]
+ },
+ {
+  "screen": "about",
+  "width": 1440,
+  "file": "about-1440.jpg",
+  "png_size": [
+   2880,
+   3841
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "cms",
+  "width": 1440,
+  "file": "cms-1440.jpg",
+  "png_size": [
+   2880,
+   3735
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "contact",
+  "width": 1440,
+  "file": "contact-1440.jpg",
+  "png_size": [
+   2880,
+   3912
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "desktop",
+  "width": 1440,
+  "file": "desktop-1440.png",
+  "png_size": [
+   2880,
+   8564
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "mango-tree-house",
+  "width": 1440,
+  "file": "mango-tree-house-1440.jpg",
+  "png_size": [
+   2880,
+   10919
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "portfolio",
+  "width": 1440,
+  "file": "portfolio-1440.jpg",
+  "png_size": [
+   2880,
+   6866
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "ridge-house",
+  "width": 1440,
+  "file": "ridge-house-1440.jpg",
+  "png_size": [
+   2880,
+   12876
+  ],
+  "overflow_scrollWidth": 1440
+ },
+ {
+  "screen": "services",
+  "width": 1440,
+  "file": "services-1440.jpg",
+  "png_size": [
+   2880,
+   8402
+  ],
+  "overflow_scrollWidth": 1440
+ }
+]
