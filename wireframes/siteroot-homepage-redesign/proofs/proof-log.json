@@ -1,0 +1,194 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 6660,
+  "first_view_bytes": 130570,
+  "sections": [
+   [
+    "top",
+    81,
+    583
+   ],
+   [
+    "works",
+    663.8125,
+    896
+   ],
+   [
+    "examples",
+    1560.125,
+    245
+   ],
+   [
+    "",
+    1804.90625,
+    570
+   ],
+   [
+    "",
+    2374.703125,
+    570
+   ],
+   [
+    "",
+    2944.484375,
+    570
+   ],
+   [
+    "",
+    3514.28125,
+    570
+   ],
+   [
+    "",
+    4084.0625,
+    570
+   ],
+   [
+    "audience",
+    4653.859375,
+    459
+   ],
+   [
+    "pricing",
+    5112.984375,
+    939
+   ],
+   [
+    "signup",
+    6052.125,
+    500
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/siteroot-homepage-redesign/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 6660,
+  "first_view_bytes": 130570,
+  "sections": [
+   [
+    "top",
+    81,
+    583
+   ],
+   [
+    "works",
+    663.8125,
+    896
+   ],
+   [
+    "examples",
+    1560.125,
+    245
+   ],
+   [
+    "",
+    1804.90625,
+    570
+   ],
+   [
+    "",
+    2374.703125,
+    570
+   ],
+   [
+    "",
+    2944.484375,
+    570
+   ],
+   [
+    "",
+    3514.28125,
+    570
+   ],
+   [
+    "",
+    4084.0625,
+    570
+   ],
+   [
+    "audience",
+    4653.859375,
+    459
+   ],
+   [
+    "pricing",
+    5112.984375,
+    939
+   ],
+   [
+    "signup",
+    6052.125,
+    500
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/siteroot-homepage-redesign/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 6767,
+  "first_view_bytes": 84494,
+  "sections": [
+   [
+    "top",
+    65,
+    752
+   ],
+   [
+    "works",
+    817.46875,
+    1074
+   ],
+   [
+    "examples",
+    1891.65625,
+    295
+   ],
+   [
+    "",
+    2186.3125,
+    384
+   ],
+   [
+    "",
+    2570.359375,
+    384
+   ],
+   [
+    "",
+    2954.40625,
+    384
+   ],
+   [
+    "",
+    3338.453125,
+    384
+   ],
+   [
+    "",
+    3722.5,
+    384
+   ],
+   [
+    "audience",
+    4106.546875,
+    549
+   ],
+   [
+    "pricing",
+    4655.546875,
+    1487
+   ],
+   [
+    "signup",
+    6142.609375,
+    465
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/siteroot-homepage-redesign/proofs/phone-390.png"
+ }
+]
