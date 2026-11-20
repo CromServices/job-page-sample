@@ -1,0 +1,134 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 5698,
+  "first_view_bytes": 95348,
+  "sections": [
+   [
+    "top",
+    109.75,
+    560
+   ],
+   [
+    "tshirt",
+    669.75,
+    900
+   ],
+   [
+    "bracelet",
+    1569.75,
+    900
+   ],
+   [
+    "necklace",
+    2469.75,
+    900
+   ],
+   [
+    "perfume",
+    3369.75,
+    900
+   ],
+   [
+    "box",
+    4269.75,
+    1064
+   ],
+   [
+    "give",
+    5333.84375,
+    256
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/framer-gift-box-landing/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 5698,
+  "first_view_bytes": 95348,
+  "sections": [
+   [
+    "top",
+    109.75,
+    560
+   ],
+   [
+    "tshirt",
+    669.75,
+    900
+   ],
+   [
+    "bracelet",
+    1569.75,
+    900
+   ],
+   [
+    "necklace",
+    2469.75,
+    900
+   ],
+   [
+    "perfume",
+    3369.75,
+    900
+   ],
+   [
+    "box",
+    4269.75,
+    1064
+   ],
+   [
+    "give",
+    5333.84375,
+    256
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/framer-gift-box-landing/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 4256,
+  "first_view_bytes": 95348,
+  "sections": [
+   [
+    "top",
+    175,
+    660
+   ],
+   [
+    "tshirt",
+    835.296875,
+    624
+   ],
+   [
+    "bracelet",
+    1458.796875,
+    624
+   ],
+   [
+    "necklace",
+    2082.296875,
+    624
+   ],
+   [
+    "perfume",
+    2705.796875,
+    624
+   ],
+   [
+    "box",
+    3329.296875,
+    558
+   ],
+   [
+    "give",
+    3887.625,
+    261
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/framer-gift-box-landing/proofs/phone-390.png"
+ }
+]
