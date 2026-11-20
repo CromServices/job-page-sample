@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The gift box collection</title>
+<meta name="description" content="A gift box collection, revealed one piece at a time: the T-shirt, the bracelet, the necklace and the perfume, gathered into one gift box.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/box-closed-720.webp" as="image">
+<style>
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/space-grotesk.woff2") format("woff2-variations"), url("fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+:root {
+  --ink: #2A1740;
+  --soft-ink: #4A3460;
+  --raspberry: #C8283F;
+  --raspberry-deep: #A61E33;
+  --white: #FFFFFF;
+  --blush: #FCD0C6;
+  --peach: #F8D8BF;
+  --pink: #FBD6D2;
+  --lemon: #FBEAA3;
+  --apricot: #F9C595;
+  --coral: #F7C3B8;
+  --fs-1: 15px; --fs-2: 16px; --fs-3: 18px; --fs-4: 22px; --fs-5: 32px; --fs-6: 48px; --fs-7: 72px;
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px; --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px;
+  --wrap: 1200px;
+  --p: 1;
+  --o: 1;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: var(--fs-3); line-height: 1.6; color: var(--ink); background: var(--blush); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, p, figure { margin: 0; }
+h1, h2 { font-weight: 700; letter-spacing: -0.04em; line-height: 1.02; }
+h1 { font-size: var(--fs-7); max-width: 9.5em; }
+h2 { font-size: var(--fs-6); max-width: 10em; }
+a { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.skip { position: absolute; left: 16px; top: 16px; z-index: 50; background: var(--white); padding: 8px 16px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+[data-wf="note"] { font-size: var(--fs-1); line-height: 1.45; background: #FFF6F1; color: #3B2A4F; padding: var(--s-2) var(--s-3); text-align: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 14px 32px; border-radius: 999px; background: var(--raspberry); color: var(--white); font-weight: 700; font-size: var(--fs-3); text-decoration: none; text-align: center; line-height: 1.2; max-width: 100%; transition: background .2s, transform .2s; }
+.btn:hover { background: var(--raspberry-deep); transform: translateY(-2px); }
+/* header */
+header.site { background: var(--blush); }
+.head { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 72px; }
+.head .name { font-weight: 700; font-size: var(--fs-3); letter-spacing: -0.01em; text-decoration: none; }
+.head .shop { font-weight: 600; font-size: var(--fs-2); min-height: 44px; display: inline-flex; align-items: center; }
+/* hero */
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-6); align-items: center; padding: var(--s-5) 0 var(--s-8); }
+.hero .wrap > :not(figure) { grid-column: 1; }
+.hero .cue { align-self: start; }
+.hero figure { grid-column: 2; grid-row: 1 / span 3; }
+.hero p { font-size: var(--fs-4); margin: var(--s-4) 0 var(--s-5); max-width: 22em; color: var(--soft-ink); }
+.hero .cue { font-size: var(--fs-2); font-weight: 600; display: inline-flex; gap: 10px; align-items: center; }
+.hero .cue span { display: inline-block; width: 2px; height: 28px; background: var(--ink); animation: cue 1.8s ease-in-out infinite; transform-origin: top; }
+@keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(0); transform-origin: bottom; } }
+.soft { -webkit-mask-image: radial-gradient(closest-side, #000 72%, transparent 100%); mask-image: radial-gradient(closest-side, #000 72%, transparent 100%); }
+.hero figure img { width: 100%; }
+/* reveals */
+.reveal { min-height: 100vh; display: flex; align-items: center; padding: var(--s-7) 0; }
+.reveal .wrap { display: grid; grid-template-columns: 1fr 1.1fr; column-gap: var(--s-7); align-items: center; }
+.reveal .wrap > :not(figure) { grid-column: 1; }
+.reveal h2, .hero h1 { align-self: end; }
+.reveal p { align-self: start; }
+.reveal figure { grid-column: 2; grid-row: 1 / span 2; }
+.reveal.flip .wrap { grid-template-columns: 1.1fr 1fr; }
+.reveal.flip .wrap > :not(figure) { grid-column: 2; }
+.reveal.flip figure { grid-column: 1; }
+.reveal p { font-size: var(--fs-4); margin-top: var(--s-4); max-width: 20em; color: var(--soft-ink); }
+.reveal h2, .reveal p { transform: translateY(calc((1 - var(--p)) * 40px)); }
+.reveal figure { opacity: var(--p); transform: translateY(calc((1 - var(--p)) * 120px)) scale(calc(0.86 + 0.14 * var(--p))); }
+.r-tshirt { background: var(--peach); } .r-bracelet { background: var(--pink); } .r-necklace { background: var(--lemon); } .r-perfume { background: var(--apricot); }
+/* gift box */
+.box { background: var(--coral); padding: var(--s-8) 0; min-height: 100vh; }
+.box h2 { margin: 0 0 var(--s-3); }
+.box .intro { font-size: var(--fs-4); color: var(--soft-ink); max-width: 24em; }
+.stage { position: relative; width: min(900px, 100%); aspect-ratio: 4 / 3; margin: var(--s-6) auto 0; }
+.stage > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); }
+.stage .closed { opacity: calc(1 - var(--o)); transform: translateY(calc(var(--o) * -18%)) rotate(calc(var(--o) * -4deg)) scale(calc(1 + var(--o) * 0.06)); }
+.stage .open { opacity: var(--o); transform: scale(calc(0.9 + var(--o) * 0.1)); }
+.piece { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; left: 39%; top: 36%; box-shadow: 0 18px 40px rgba(42,23,64,.18); opacity: calc((1 - var(--o)) * 3); transform: translate(calc(var(--dx) * (1 - var(--o))), calc(var(--dy) * (1 - var(--o)))) scale(calc(1 - var(--o) * 0.7)); }
+.piece img { width: 100%; height: 100%; object-fit: cover; }
+.piece.a { --dx: -160%; --dy: -120%; } .piece.b { --dx: 160%; --dy: -120%; } .piece.c { --dx: -160%; --dy: 120%; } .piece.d { --dx: 160%; --dy: 120%; }
+/* cta */
+.cta { background: var(--raspberry); color: var(--white); padding: var(--s-8) 0; }
+.cta .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5); }
+.cta h2 { color: var(--white); }
+.cta .btn { background: var(--white); color: var(--ink); font-size: var(--fs-4); min-height: 64px; padding: 16px 40px; }
+.cta .btn:hover { background: var(--blush); }
+footer { background: var(--ink); color: var(--white); padding: var(--s-5) 0; font-size: var(--fs-2); }
+footer a { color: var(--white); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s-3); }
+footer a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 900px) {
+  .hero .wrap, .reveal .wrap, .reveal.flip .wrap { grid-template-columns: 1fr; }
+  .hero .wrap > *, .reveal .wrap > *, .reveal.flip .wrap > * { grid-column: 1 !important; grid-row: auto !important; }
+  .hero figure { order: -1; margin-bottom: var(--s-3); }
+  .reveal figure { order: -1; margin-bottom: var(--s-4); max-width: 520px; }
+}
+@media (max-width: 600px) {
+  :root { --fs-3: 17px; --fs-4: 19px; --fs-5: 26px; --fs-6: 36px; --fs-7: 44px; }
+  .wrap { width: calc(100% - 40px); }
+  .hero .wrap { padding: var(--s-2) 0 var(--s-7); }
+  .reveal { min-height: 0; padding: var(--s-7) 0; }
+  .box, .cta { padding: var(--s-7) 0; }
+  .box { min-height: 0; }
+  .cta .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --p: 1 !important; --o: 1 !important; }
+  .reveal h2, .reveal p, .reveal figure, .stage > img, .piece { --p: 1 !important; --o: 1 !important; }
+  .hero .cue span { animation: none; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p data-wf="note">Sample content. Stand-in photos and titles until your own product images, information, brand and copy arrive. The button will open the gift box in your Shopify store.</p>
+<header class="site">
+  <div class="wrap head">
+    <a class="name" href="#top">The gift box collection</a>
+    <a class="shop" href="#give">Shop the gift box</a>
+  </div>
+</header>
+<main id="main">
+<section class="page hero" id="top" data-feeling="curious">
+  <div class="wrap">
+    <h1>A gift box, revealed one piece at a time.</h1>
+    <p>Four things go in. Scroll to meet each one, then watch the box come together.</p>
+    <a class="cue" href="#tshirt"><span aria-hidden="true"></span>Scroll to open</a>
+    <figure><img class="soft" src="images/box-closed-720.webp" srcset="images/box-closed-720.webp 720w, images/box-closed.webp 1152w" sizes="(max-width: 900px) 100vw, 560px" width="1152" height="864" alt="A closed coral gift box tied with a white satin ribbon" fetchpriority="high"></figure>
+  </div>
+</section>
+
+<section class="page reveal r-tshirt" id="tshirt" data-feeling="intrigued" data-reveal>
+  <div class="wrap">
+    <h2>First, the T-shirt.</h2>
+    <p>Folded and laid in at the bottom of the box.</p>
+    <figure><img class="soft" src="images/tshirt-720.webp" srcset="images/tshirt-720.webp 720w, images/tshirt.webp 1024w" sizes="(max-width: 900px) 100vw, 600px" width="1024" height="1024" loading="lazy" alt="A folded white crew-neck T-shirt"></figure>
+  </div>
+</section>
+
+<section class="page reveal flip r-bracelet" id="bracelet" data-feeling="intrigued" data-reveal>
+  <div class="wrap">
+    <h2>Then, the bracelet.</h2>
+    <p>A fine gold chain, set beside the T-shirt.</p>
+    <figure><img class="soft" src="images/bracelet-720.webp" srcset="images/bracelet-720.webp 720w, images/bracelet.webp 1024w" sizes="(max-width: 900px) 100vw, 600px" width="1024" height="1024" loading="lazy" alt="A delicate gold chain bracelet with a small gold bar"></figure>
+  </div>
+</section>
+
+<section class="page reveal r-necklace" id="necklace" data-feeling="intrigued" data-reveal>
+  <div class="wrap">
+    <h2>Then, the necklace.</h2>
+    <p>One small pendant on a fine gold chain.</p>
+    <figure><img class="soft" src="images/necklace-720.webp" srcset="images/necklace-720.webp 720w, images/necklace.webp 1024w" sizes="(max-width: 900px) 100vw, 600px" width="1024" height="1024" loading="lazy" alt="A fine gold necklace with a small round pendant"></figure>
+  </div>
+</section>
+
+<section class="page reveal flip r-perfume" id="perfume" data-feeling="intrigued" data-reveal>
+  <div class="wrap">
+    <h2>Last, the perfume.</h2>
+    <p>The final piece, just before the lid goes on.</p>
+    <figure><img class="soft" src="images/perfume-720.webp" srcset="images/perfume-720.webp 720w, images/perfume.webp 1024w" sizes="(max-width: 900px) 100vw, 600px" width="1024" height="1024" loading="lazy" alt="A clear glass perfume bottle with pale pink perfume and a gold cap"></figure>
+  </div>
+</section>
+
+<section class="page box" id="box" data-feeling="delighted" data-open>
+  <div class="wrap">
+    <h2>All four, in one gift box.</h2>
+    <p class="intro">Keep scrolling and the lid lifts.</p>
+    <div class="stage">
+      <img class="open" src="images/box-open-720.webp" srcset="images/box-open-720.webp 720w, images/box-open.webp 1152w" sizes="(max-width: 900px) 100vw, 900px" width="1152" height="864" loading="lazy" alt="The coral gift box open, holding the T-shirt, bracelet, necklace and perfume on white tissue">
+      <img class="closed" src="images/box-closed.webp" width="1152" height="864" loading="lazy" alt="" aria-hidden="true">
+      <span class="piece a" aria-hidden="true"><img src="images/tshirt-720.webp" width="720" height="720" loading="lazy" alt=""></span>
+      <span class="piece b" aria-hidden="true"><img src="images/bracelet-720.webp" width="720" height="720" loading="lazy" alt=""></span>
+      <span class="piece c" aria-hidden="true"><img src="images/necklace-720.webp" width="720" height="720" loading="lazy" alt=""></span>
+      <span class="piece d" aria-hidden="true"><img src="images/perfume-720.webp" width="720" height="720" loading="lazy" alt=""></span>
+    </div>
+  </div>
+</section>
+
+<section class="page cta" id="give" data-feeling="ready">
+  <div class="wrap">
+    <h2>Give the gift box.</h2>
+    <a class="btn" href="#give">Shop the gift box</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>The gift box collection</span>
+    <a href="#top">Back to the top</a>
+  </div>
+</footer>
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var reveals = [].slice.call(document.querySelectorAll('[data-reveal]'));
+  var box = document.querySelector('[data-open]');
+  var stage = box && box.querySelector('.stage');
+  var seen = new Map();
+  function clamp(v) { return Math.max(0, Math.min(1, v)); }
+  function latch(el, name, v) {
+    var best = Math.max(seen.get(el) || 0, v);
+    seen.set(el, best);
+    el.style.setProperty(name, best.toFixed(3));
+  }
+  function tick() {
+    var vh = window.innerHeight;
+    reveals.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      latch(el, '--p', clamp((vh - r.top) / (vh * 0.7)));
+    });
+    if (box) {
+      var st = stage.getBoundingClientRect();
+      var mid = st.top + st.height / 2;
+      latch(box, '--o', clamp((vh - mid) / (vh * 0.5)));
+    }
+  }
+  reveals.forEach(function (el) { el.style.setProperty('--p', '0'); });
+  if (box) box.style.setProperty('--o', '0');
+  var queued = false;
+  window.addEventListener('scroll', function () {
+    if (queued) return; queued = true;
+    requestAnimationFrame(function () { queued = false; tick(); });
+  }, { passive: true });
+  window.addEventListener('resize', tick);
+  tick();
+})();
+</script>
+</body>
+</html>
