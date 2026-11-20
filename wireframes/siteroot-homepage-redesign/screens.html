@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SiteRoot — A website for your business, live in 15 minutes</title>
+<meta name="description" content="SiteRoot is an AI website builder for Australian small businesses. Get a professional site you can manage yourself. Build it free, no card needed.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/hero-biglord-mortgage-720.webp" as="image">
+<style>
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/space-grotesk.woff2") format("woff2-variations"), url("fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+:root {
+  --ink: #1A2B22;
+  --soft: #3A4D43;
+  --green: #04A870;
+  --green-btn: #0B6B4A;
+  --green-deep: #08563C;
+  --lime: #A6DD5B;
+  --cream: #F7F6F0;
+  --mint: #E8F3EC;
+  --white: #FFFFFF;
+  --line: #D5E0D8;
+  --logo-h: 64px;
+  --fs-1: 15px; --fs-2: 16px; --fs-3: 18px; --fs-4: 22px; --fs-5: 28px; --fs-6: 40px; --fs-7: 64px;
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px; --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px;
+  --wrap: 1200px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: var(--fs-3); line-height: 1.6; color: var(--ink); background: var(--cream); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ul, figure, dl, dd { margin: 0; padding: 0; }
+ul { list-style: none; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; }
+h1 { font-size: var(--fs-7); max-width: 12em; }
+h2 { font-size: var(--fs-6); max-width: 16em; }
+h3 { font-size: var(--fs-5); letter-spacing: -0.02em; }
+a { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--green-btn); outline-offset: 3px; }
+.skip { position: absolute; left: 16px; top: 16px; z-index: 60; background: var(--white); padding: 8px 16px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+[data-wf="note"] { font-size: var(--fs-1); line-height: 1.45; background: #E4EDE6; color: #1A2B22; padding: var(--s-2) var(--s-3); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 28px; border-radius: 14px; background: var(--green-btn); color: var(--white); font-weight: 700; font-size: var(--fs-3); text-decoration: none; border: 2px solid var(--green-btn); line-height: 1.2; text-align: center; max-width: 100%; white-space: nowrap; }
+.btn:hover { background: var(--green-deep); border-color: var(--green-deep); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+/* header */
+header.site { background: var(--cream); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+.head { display: flex; align-items: center; gap: var(--s-4); min-height: calc(var(--logo-h) + 16px); padding: 8px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; min-height: var(--logo-h); }
+.brand img { width: var(--logo-h); height: var(--logo-h); border-radius: 20%; }
+.brand .name { display: flex; flex-direction: column; justify-content: center; line-height: 1.05; }
+.brand strong { font-size: var(--fs-4); letter-spacing: -0.03em; }
+.brand span { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--green-btn); text-transform: uppercase; }
+.head nav ul { display: flex; gap: var(--s-4); align-items: center; }
+.head nav a { text-decoration: none; font-weight: 500; font-size: var(--fs-2); min-height: 44px; display: inline-flex; align-items: center; }
+.head .btn { min-height: 48px; padding: 10px 20px; font-size: var(--fs-2); }
+details.menu { display: none; }
+/* hero */
+.hero { background: var(--mint); }
+.hero .wrap { display: grid; grid-template-columns: 0.9fr 1.2fr; column-gap: var(--s-6); align-items: center; padding: var(--s-5) 0 var(--s-7); }
+.hero .wrap > :not(figure) { grid-column: 1; }
+.hero figure { grid-column: 2; grid-row: 1 / span 4; }
+.hero h1 { margin-bottom: var(--s-3); }
+.hero .lede { font-size: var(--fs-4); color: var(--soft); max-width: 22em; margin-bottom: var(--s-5); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: center; }
+.hero .fine { font-size: var(--fs-2); color: var(--soft); margin-top: var(--s-3); max-width: 26em; }
+.frame { background: var(--white); border-radius: 16px; box-shadow: 0 24px 60px rgba(26,43,34,.12); overflow: hidden; }
+.chrome { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #EEF3EF; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--soft); }
+.chrome i { width: 8px; height: 8px; border-radius: 50%; background: #C9D4CC; display: inline-block; }
+.chrome b { font-weight: 500; margin-left: 8px; }
+.frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.caption { font-size: var(--fs-2); color: var(--soft); margin-top: var(--s-2); }
+/* works */
+.works { background: var(--cream); padding: var(--s-8) 0; }
+.works .lead { max-width: 32em; margin: var(--s-3) 0 var(--s-6); font-size: var(--fs-4); color: var(--soft); }
+.steps { border-top: 2px solid var(--ink); }
+.steps > div { display: grid; grid-template-columns: 8em 1fr; gap: var(--s-5); padding: var(--s-5) 0; border-bottom: 2px solid var(--ink); align-items: start; }
+.steps h3 { font-size: var(--fs-4); }
+.steps p { color: var(--soft); margin-top: 6px; max-width: 36em; }
+/* examples */
+.examples { background: var(--white); padding: var(--s-8) 0 var(--s-5); }
+.examples .intro { max-width: 30em; margin: var(--s-3) 0 0; color: var(--soft); }
+.band { padding: var(--s-6) 0; }
+.band .wrap { display: grid; grid-template-columns: 1.2fr 0.8fr; column-gap: var(--s-6); align-items: center; }
+.band .wrap > :not(figure) { grid-column: 2; }
+.band figure { grid-column: 1; grid-row: 1 / span 2; }
+.band:nth-of-type(even) .wrap { grid-template-columns: 0.8fr 1.2fr; }
+.band:nth-of-type(even) .wrap > :not(figure) { grid-column: 1; }
+.band:nth-of-type(even) figure { grid-column: 2; }
+.band .who { font-size: var(--fs-2); color: var(--green-btn); font-weight: 600; margin-top: var(--s-2); }
+.b-mint { background: var(--mint); } .b-cream { background: var(--cream); }
+/* audience */
+.audience { background: var(--mint); padding: var(--s-8) 0; }
+.audience .wrap { max-width: 820px; }
+.audience p { font-size: var(--fs-4); margin-top: var(--s-4); max-width: 34em; color: var(--soft); }
+.trades { margin-top: var(--s-5); font-size: var(--fs-3); font-weight: 600; }
+/* pricing */
+.pricing { background: var(--cream); padding: var(--s-8) 0; }
+.pricing .wrap { display: grid; grid-template-columns: 1fr 1.1fr; column-gap: var(--s-7); align-items: start; }
+.pricing .price { font-size: var(--fs-5); font-weight: 700; letter-spacing: -0.02em; margin: var(--s-3) 0 var(--s-4); }
+.pricing .inc { border-top: 2px solid var(--ink); }
+.pricing .inc div { padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+.pricing dt { font-weight: 700; }
+.pricing dd { color: var(--soft); }
+/* end cta */
+.end { background: var(--green-btn); color: var(--white); padding: var(--s-8) 0; }
+.end h2 { color: var(--white); }
+.end p { margin: var(--s-4) 0 var(--s-5); max-width: 28em; font-size: var(--fs-4); }
+.end .btn { background: var(--white); color: var(--ink); border-color: var(--white); }
+.end .btn:hover { background: var(--lime); border-color: var(--lime); }
+footer { background: var(--ink); color: var(--white); padding: var(--s-5) 0; }
+footer a { color: var(--white); min-height: 44px; display: inline-flex; align-items: center; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
+footer .brand-foot { display: flex; align-items: center; gap: 10px; margin-right: auto; font-weight: 700; }
+footer .brand-foot img { width: 40px; height: 40px; border-radius: 20%; }
+@media (max-width: 960px) {
+  .hero .wrap, .band .wrap, .band:nth-of-type(even) .wrap, .pricing .wrap { grid-template-columns: 1fr; }
+  .hero .wrap > *, .band .wrap > *, .band:nth-of-type(even) .wrap > * { grid-column: 1 !important; grid-row: auto !important; }
+  .hero figure { order: -1; margin-bottom: var(--s-4); }
+  .head nav { display: none; }
+  details.menu { display: block; position: relative; }
+  details.menu summary { list-style: none; min-height: 48px; min-width: 48px; display: inline-flex; align-items: center; padding: 0 14px; border: 2px solid var(--ink); border-radius: 12px; font-weight: 700; cursor: pointer; }
+  details.menu summary::-webkit-details-marker { display: none; }
+  details.menu ul { position: absolute; right: 0; top: 56px; background: var(--white); border: 1px solid var(--line); padding: 8px 16px; min-width: 200px; z-index: 5; }
+  details.menu a { display: flex; min-height: 44px; align-items: center; text-decoration: none; }
+  .steps > div { grid-template-columns: 1fr; gap: var(--s-2); }
+}
+@media (max-width: 600px) {
+  :root { --logo-h: 48px; --fs-3: 17px; --fs-4: 19px; --fs-5: 24px; --fs-6: 32px; --fs-7: 40px; }
+  .wrap { width: calc(100% - 40px); }
+  .brand .name { display: none; }
+  .hero .wrap { padding: var(--s-3) 0 var(--s-6); }
+  .hero .actions .btn { width: 100%; }
+  .works, .examples, .audience, .pricing, .end { padding: var(--s-7) 0; }
+  .band { padding: var(--s-5) 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap head">
+    <a class="brand" href="#top" aria-label="SiteRoot, home">
+      <img src="images/logo.svg" width="64" height="64" alt="">
+      <span class="name"><strong>SiteRoot</strong><span>Grow from here.</span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#signup">Sign in</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#signup">Build my site free</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <ul>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#signup">Build my site free</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+<section class="page hero" id="top" data-feeling="seen">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Biglord Mortgage</b></div>
+        <img src="images/hero-biglord-mortgage-720.webp" srcset="images/hero-biglord-mortgage-720.webp 720w, images/hero-biglord-mortgage.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" alt="The Biglord Mortgage website, built with SiteRoot" fetchpriority="high">
+      </div>
+      <figcaption class="caption">A Melbourne mortgage broker’s site, built with SiteRoot.</figcaption>
+    </figure>
+    <h1>A website like this, live in 15 minutes.</h1>
+    <p class="lede">SiteRoot builds a professional site for Australian small businesses. You change it yourself, just by asking.</p>
+    <div class="actions">
+      <a class="btn" href="#signup">Build my site free</a>
+    </div>
+    <p class="fine">Build it free, no card needed. Then A$15/month + GST (A$16.50). Cancel anytime.</p>
+  </div>
+</section>
+
+<section class="page works" id="works" data-feeling="curious">
+  <div class="wrap">
+    <h2>From a short conversation to a site you can run yourself.</h2>
+    <p class="lead">You tell us what you do. SiteRoot writes and designs the pages, gets them ready for Google and AI search, and leaves you in charge.</p>
+    <div class="steps">
+      <div><h3>Tell us what you do</h3><p>A few minutes about your trade, your suburb, and who you want to reach. Plumbers, electricians, brokers, consultants, clinics — the site is written for that work.</p></div>
+      <div><h3>Get a finished website</h3><p>In about 15 minutes you have live pages: your services, your contact path, and a site that can be found when someone searches.</p></div>
+      <div><h3>Change it by asking</h3><p>Click any text to edit it, or just ask. “Add a photo here.” “Change the opening hours.” You preview it, then it goes live. You can manage the site yourself.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page examples" id="examples" data-feeling="curious">
+  <div class="wrap">
+    <h2>Sites already built with SiteRoot</h2>
+    <p class="intro">These are real SiteRoot sites, for businesses like the ones we build for every day.</p>
+  </div>
+</section>
+
+<section class="page band b-mint" data-feeling="curious">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Monstera</b></div>
+        <img src="images/hero-monstera-720.webp" srcset="images/hero-monstera-720.webp 720w, images/hero-monstera.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" loading="lazy" alt="The Monstera website, built with SiteRoot">
+      </div>
+    </figure>
+    <h3>Monstera</h3>
+    <p class="who">IT consultants, Melbourne</p>
+  </div>
+</section>
+
+<section class="page band b-cream" data-feeling="curious">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Dough and Drip</b></div>
+        <img src="images/hero-dough-and-drip-720.webp" srcset="images/hero-dough-and-drip-720.webp 720w, images/hero-dough-and-drip.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" loading="lazy" alt="The Dough and Drip website, built with SiteRoot">
+      </div>
+    </figure>
+    <h3>Dough and Drip</h3>
+    <p class="who">Cafe, Melbourne</p>
+  </div>
+</section>
+
+<section class="page band b-mint" data-feeling="curious">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Lifeline Health</b></div>
+        <img src="images/hero-lifeline-health-720.webp" srcset="images/hero-lifeline-health-720.webp 720w, images/hero-lifeline-health.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" loading="lazy" alt="The Lifeline Health website, built with SiteRoot">
+      </div>
+    </figure>
+    <h3>Lifeline Health</h3>
+    <p class="who">Clinic, Coburg</p>
+  </div>
+</section>
+
+<section class="page band b-cream" data-feeling="curious">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Weslander Uff</b></div>
+        <img src="images/hero-weslander-uff-720.webp" srcset="images/hero-weslander-uff-720.webp 720w, images/hero-weslander-uff.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" loading="lazy" alt="The Weslander Uff website, built with SiteRoot">
+      </div>
+    </figure>
+    <h3>Weslander Uff</h3>
+    <p class="who">Personal training, Melbourne</p>
+  </div>
+</section>
+
+<section class="page band b-mint" data-feeling="curious">
+  <div class="wrap">
+    <figure>
+      <div class="frame">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>Plan My Trip</b></div>
+        <img src="images/hero-planmytrip-720.webp" srcset="images/hero-planmytrip-720.webp 720w, images/hero-planmytrip.webp 1200w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="750" loading="lazy" alt="The Plan My Trip website, built with SiteRoot">
+      </div>
+    </figure>
+    <h3>Plan My Trip</h3>
+    <p class="who">Travel planning, Melbourne</p>
+  </div>
+</section>
+
+<section class="page audience" id="audience" data-feeling="confident">
+  <div class="wrap">
+    <h2>Most jobs start with a search.</h2>
+    <p>Someone needs a plumber, a broker, a consultant or a clinic. They take out their phone, and whichever site turns up first gets the call. SiteRoot is built so that site can be yours — professional enough to trust, and easy enough to run without a web team.</p>
+    <p class="trades">Plumbers · Electricians · IT consultants · Clinics · Brokers</p>
+  </div>
+</section>
+
+<section class="page pricing" id="pricing" data-feeling="ready">
+  <div class="wrap">
+    <div>
+      <h2>14 days free, then A$16.50 a month.</h2>
+      <p class="price">That’s A$15 + GST. One plan, no setup fees.</p>
+      <p>Your card is asked for during the 14 days. You are not charged inside the free trial, and your website stays live to the end of the trial, or of the period you have paid for. Cancel anytime. One free trial per customer.</p>
+      <p style="margin-top:24px"><a class="btn" href="#signup">Start free</a></p>
+    </div>
+    <dl class="inc">
+      <div><dt>AI-built website</dt><dd>Your whole site written and put together from a short conversation about your business.</dd></div>
+      <div><dt>SiteRoot Studio editing</dt><dd>Click any text on the page and type. It is the same site your customers see.</dd></div>
+      <div><dt>AI-assisted editing</dt><dd>Ask for a change in your own words and check it in your preview before it goes live.</dd></div>
+      <div><dt>SEO foundations</dt><dd>Page titles, descriptions and the behind-the-scenes details search engines read, set on every page.</dd></div>
+      <div><dt>Hosting, SSL and a custom domain</dt><dd>We host the site, keep the certificate current, and walk you through connecting a domain. The domain itself is bought from a registrar and is not part of the A$16.50.</dd></div>
+      <div><dt>Blog, contact forms, page management and logo generation</dt><dd>Everything in the one plan. Includes 3 full rebuilds and 25 changes during the free trial, then 3 rebuilds and 50 changes a month.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="page end" id="signup" data-feeling="in-control">
+  <div class="wrap">
+    <h2>A site you can launch in minutes, and change whenever the business does.</h2>
+    <p>We build your site fast, get it live, and make it easy to change whenever something about your business does.</p>
+    <a class="btn" href="#signup">Build my site free</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand-foot"><img src="images/logo.svg" width="40" height="40" alt="" loading="lazy"> SiteRoot</div>
+    <a href="https://siteroot.com.au">siteroot.com.au</a>
+    <span>© 2026 SiteRoot</span>
+  </div>
+</footer>
+</body>
+</html>
