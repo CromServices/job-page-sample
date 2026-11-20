@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookie Dough Kitchen | Frozen cookie dough for cafés, Magnetic Island</title>
+<meta name="description" content="Premium, portioned frozen New York-style cookie dough for cafés, restaurants and hospitality. Bake fresh from frozen. Wholesale enquiries welcome. Magnetic Island, North Queensland.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/hero-cookie-800.webp" as="image">
+<style>
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/space-grotesk.woff2") format("woff2-variations"), url("fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+:root {
+  --ink: #16213E;
+  --muted: #3A4663;
+  --green: #17603D;
+  --green-ink: #0F4A2E;
+  --white: #FFFFFF;
+  --cream: #FFF5DD;
+  --mint: #D3F1DD;
+  --pink: #FAD6E1;
+  --blue: #D3E6F8;
+  --lemon: #FFF09A;
+  --hot: #E8487A;
+  --line: #D9DEE8;
+  --logo-h: 64px;
+  --fs-1: 15px; --fs-2: 16px; --fs-3: 18px; --fs-4: 22px; --fs-5: 30px; --fs-6: 40px; --fs-7: 56px;
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px; --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px;
+  --wrap: 1200px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: var(--fs-3); line-height: 1.6; color: var(--ink); background: var(--white); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ul, figure, fieldset, legend, dl, dd { margin: 0; padding: 0; }
+ul { list-style: none; }
+fieldset { border: 0; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+h1 { font-size: var(--fs-7); max-width: 12em; }
+h2 { font-size: var(--fs-6); max-width: 16em; }
+h3 { font-size: var(--fs-5); letter-spacing: -0.02em; }
+a { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--hot); outline-offset: 3px; }
+.wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+.skip { position: absolute; left: 16px; top: 16px; z-index: 50; background: var(--white); padding: 8px 16px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+[data-wf="note"] { font-size: var(--fs-1); line-height: 1.45; background: #EEF1F6; color: #273048; padding: var(--s-2) var(--s-3); }
+.wf-top { text-align: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 26px; font-weight: 700; font-size: var(--fs-3); text-decoration: none; border: 2px solid var(--green); background: var(--green); color: var(--white); white-space: normal; text-align: center; line-height: 1.2; max-width: 100%; }
+.btn:hover { background: var(--green-ink); border-color: var(--green-ink); }
+.btn.quiet { background: transparent; color: var(--ink); border-color: var(--ink); }
+/* header */
+header.site { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); padding: 10px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; font-size: var(--fs-3); letter-spacing: -0.01em; }
+.brand img { width: var(--logo-h); height: var(--logo-h); border-radius: 50%; box-shadow: 0 0 0 1px #E6DCC4; }
+nav.site-nav ul { display: flex; gap: var(--s-4); align-items: center; }
+nav.site-nav a { text-decoration: none; font-weight: 500; font-size: var(--fs-2); min-height: 44px; display: inline-flex; align-items: center; }
+nav.site-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.head .btn { min-height: 48px; padding: 10px 20px; font-size: var(--fs-2); }
+details.menu { display: none; }
+/* hero */
+.hero { background: var(--mint); }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; column-gap: var(--s-6); align-items: start; align-content: center; padding: var(--s-6) 0 var(--s-7); }
+.hero .wrap > :not(figure) { grid-column: 1; }
+.hero figure { grid-column: 2; grid-row: 1 / span 4; align-self: center; }
+.hero h1 { margin-bottom: var(--s-3); }
+.hero .line { font-size: var(--fs-4); font-weight: 600; color: var(--green-ink); margin-bottom: var(--s-4); }
+.hero .intro p + p { margin-top: var(--s-2); }
+.hero .intro { max-width: 34em; margin-bottom: var(--s-5); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.hero figure img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 28px; }
+/* standout */
+.promise { background: var(--white); padding: var(--s-8) 0; }
+.promise .wrap { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-6); align-items: start; align-content: center; }
+.promise .wrap > :not(figure) { grid-column: 1; }
+.promise figure { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+.promise-line { align-self: end; }
+.promise-line { font-size: clamp(40px, 5vw, 72px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.02; }
+.promise-line span { display: block; }
+.promise-line .x { position: relative; width: fit-content; color: var(--muted); }
+.promise-line .x::after { content: ""; position: absolute; left: -4px; right: -4px; top: 54%; height: 0.12em; background: var(--hot); transform-origin: left; transform: scaleX(0); animation: strike .6s ease-out forwards; }
+.promise-line .x:nth-child(2)::after { animation-delay: .5s; }
+.promise-line .yes { color: var(--green); margin-top: 8px; }
+@keyframes strike { to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .promise-line .x::after { animation: none; transform: scaleX(1); } }
+.promise figure img { border-radius: 28px; width: 100%; }
+.promise .carton-facts { margin-top: var(--s-4); font-size: var(--fs-4); line-height: 1.45; max-width: 26em; }
+.promise .carton-facts strong { color: var(--green-ink); }
+/* flavours */
+.flavours > .wrap { padding: var(--s-8) 0 var(--s-5); }
+.flavours > .wrap p { max-width: 36em; margin-top: var(--s-3); }
+.band .wrap { display: grid; grid-template-columns: 420px 1fr; gap: var(--s-6); align-items: center; padding: var(--s-6) 0; }
+.band:nth-of-type(odd) .wrap { grid-template-columns: 1fr 420px; }
+.band:nth-of-type(odd) figure { order: 2; }
+.band img { border-radius: 20px; width: 100%; }
+.band .name { font-size: var(--fs-6); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.band .what { font-size: var(--fs-4); font-weight: 600; margin: 6px 0 var(--s-3); color: var(--muted); }
+.band .feel { font-size: var(--fs-3); max-width: 30em; }
+.c-cream { background: var(--cream); } .c-mint { background: var(--mint); } .c-pink { background: var(--pink); } .c-blue { background: var(--blue); } .c-lemon { background: var(--lemon); }
+.c-lemon .wrap { display: block; padding: var(--s-7) 0; }
+.c-lemon .name { font-size: clamp(44px, 6vw, 88px); }
+/* wholesale */
+.wholesale { background: var(--white); padding: var(--s-8) 0; }
+.wholesale .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--s-7); align-items: start; }
+.wholesale .lead { font-size: var(--fs-4); margin: var(--s-4) 0; max-width: 30em; }
+.points { columns: 2; column-gap: var(--s-6); margin-bottom: var(--s-5); }
+.points li { break-inside: avoid; padding: 12px 0; border-top: 2px solid var(--ink); font-weight: 600; }
+.wholesale .aside img { width: 100%; max-width: 360px; border-radius: 16px; margin-left: auto; }
+.wholesale .aside p { font-size: var(--fs-2); color: var(--muted); margin-top: var(--s-2); max-width: 360px; margin-left: auto; }
+.price-note { margin-top: var(--s-3); color: var(--muted); }
+/* products */
+.products { background: var(--blue); padding: var(--s-8) 0; }
+.products .wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--s-7); }
+.range { border-top: 2px solid var(--ink); }
+.range div { padding: var(--s-4) 0; border-bottom: 2px solid var(--ink); }
+.range dt { font-size: var(--fs-4); font-weight: 700; letter-spacing: -0.02em; }
+.range dd { margin-top: 4px; }
+.products figure img { border-radius: 20px; margin-top: var(--s-5); }
+/* about */
+.about { background: var(--pink); padding: var(--s-8) 0; }
+.about .wrap { max-width: 820px; }
+.about p { font-size: var(--fs-4); line-height: 1.5; margin-top: var(--s-4); }
+/* contact */
+.contact { background: var(--white); padding: var(--s-8) 0; }
+.contact .wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--s-7); align-items: start; }
+.contact .side p { margin-top: var(--s-3); max-width: 26em; }
+.reach { margin-top: var(--s-5); }
+.reach li { padding: 10px 0; border-top: 1px solid var(--line); }
+form .row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--s-4); }
+.field label { font-weight: 600; font-size: var(--fs-2); }
+.field input, .field select, .field textarea { font: inherit; font-size: var(--fs-3); color: var(--ink); background: var(--white); border: 2px solid #5B6782; border-radius: 10px; padding: 12px 14px; min-height: 52px; width: 100%; }
+.field textarea { min-height: 140px; resize: vertical; }
+.form-foot { font-size: var(--fs-2); color: var(--muted); margin-top: var(--s-3); }
+/* footer */
+footer { background: var(--ink); color: var(--white); padding: var(--s-7) 0 var(--s-5); }
+footer a { color: var(--white); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-5); align-items: center; }
+footer .sign { display: flex; align-items: center; gap: var(--s-4); }
+footer .sign img { width: 72px; height: 72px; border-radius: 50%; }
+footer .sign p { font-size: var(--fs-5); font-weight: 700; letter-spacing: -0.02em; }
+footer ul { display: flex; flex-wrap: wrap; gap: var(--s-4); }
+footer ul a { min-height: 44px; display: inline-flex; align-items: center; }
+footer small { display: block; width: 100%; color: #C9D1E4; font-size: var(--fs-1); }
+/* privacy */
+.privacy-view { background: var(--cream); padding: var(--s-8) 0; border-top: 12px solid var(--ink); }
+.privacy-view .wrap { max-width: 820px; }
+.privacy-view h3 { font-size: var(--fs-4); margin-top: var(--s-5); }
+.privacy-view p { margin-top: var(--s-2); }
+@media (max-width: 960px) {
+  .hero .wrap, .promise .wrap, .wholesale .wrap, .products .wrap, .contact .wrap, .band .wrap, .band:nth-of-type(odd) .wrap { grid-template-columns: 1fr; }
+  .band:nth-of-type(odd) figure { order: 0; }
+  .hero .wrap > *, .promise .wrap > * { grid-column: 1 !important; grid-row: auto !important; }
+  .promise figure { margin-top: var(--s-5); }
+  nav.site-nav { display: none; }
+}
+@media (max-width: 600px) {
+  :root { --logo-h: 48px; --fs-3: 17px; --fs-4: 19px; --fs-5: 24px; --fs-6: 30px; --fs-7: 36px; }
+  .wrap { width: calc(100% - 40px); }
+  .head .btn { display: none; }
+  details.menu { display: block; }
+  details.menu summary { list-style: none; min-height: 48px; min-width: 48px; display: inline-flex; align-items: center; padding: 0 14px; border: 2px solid var(--ink); border-radius: 10px; font-weight: 700; cursor: pointer; }
+  details.menu summary::-webkit-details-marker { display: none; }
+  details.menu ul { position: absolute; right: 0; left: 0; top: 100%; background: var(--white); border-bottom: 1px solid var(--line); padding: 8px 20px 16px; }
+  details.menu a { display: flex; min-height: 48px; align-items: center; text-decoration: none; font-weight: 600; }
+  .hero .wrap { padding: var(--s-4) 0 var(--s-6); gap: var(--s-4); }
+  .hero figure { order: -1; margin-bottom: var(--s-4); }
+  .hero .line { margin-bottom: var(--s-3); }
+  .actions .btn { width: 100%; }
+  .promise, .wholesale, .products, .about, .contact, .privacy-view { padding: var(--s-7) 0; }
+  .flavours > .wrap { padding: var(--s-7) 0 var(--s-4); }
+  .points { columns: 1; }
+  form .row { grid-template-columns: 1fr; gap: 0; }
+  .band .wrap { gap: var(--s-4); padding: var(--s-5) 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="wf-top" data-wf="note">Wireframe for Cookie Dough Kitchen (unlisted). Flavour, carton and logo images are from your own packaging photos. Waiting on you: an Island Bliss photo, your business email, and your Facebook and Instagram links.</p>
+
+<header class="site">
+  <div class="wrap head">
+    <a class="brand" href="#top" aria-label="Cookie Dough Kitchen, home"><img src="images/logo.webp" width="146" height="146" alt="Cookie Dough Kitchen, Magnetic Island palm-tree logo"></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#flavours">Flavours</a></li>
+        <li><a href="#wholesale">Wholesale</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#contact">Wholesale Enquiries</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <ul>
+        <li><a href="#flavours">Flavours</a></li>
+        <li><a href="#wholesale">Wholesale</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Wholesale Enquiries</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+<section class="page hero" id="top" data-feeling="hungry">
+  <div class="wrap">
+      <h1>New York-style cookies, baked fresh from frozen.</h1>
+      <p class="line">Life’s better with cookies.</p>
+      <div class="intro">
+        <p>Welcome to Cookie Dough Kitchen, where delicious New York-style cookies are made easy!</p>
+        <p>We create premium, portioned frozen cookie dough, ready for cafés and hospitality businesses to bake fresh whenever they need.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#contact">Wholesale Enquiries</a>
+        <a class="btn quiet" href="#flavours">See the five flavours</a>
+      </div>
+    <figure>
+      <img src="images/hero-cookie-800.webp" srcset="images/hero-cookie-800.webp 800w, images/hero-cookie.webp 1152w" sizes="(max-width: 960px) 100vw, 560px" width="1152" height="864" alt="A thick New York-style chocolate chunk cookie broken open, soft and gooey in the middle" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<section class="page promise" id="promise" data-feeling="hungry">
+  <div class="wrap">
+      <p class="promise-line">
+        <span class="x">No mixing.</span>
+        <span class="x">No mess.</span>
+        <span class="yes">Just delicious freshly baked cookies.</span>
+      </p>
+      <p class="carton-facts">Every carton holds <strong>48 frozen portions</strong>, in <strong>8 sealed packs of 6</strong>. Straight from the freezer to a <strong>185°C</strong> oven, and on the counter in <strong>12–14 minutes</strong>.</p>
+    <figure>
+      <img src="images/frozen-dough.webp" width="1000" height="750" loading="lazy" alt="Frozen portions of chocolate chunk cookie dough on a baking tray, beside a sealed pack of six">
+    </figure>
+  </div>
+</section>
+
+<section class="page flavours" id="flavours" data-feeling="delighted">
+  <div class="wrap">
+    <h2>Our five signature flavours</h2>
+    <p>Each one comes in its own colour, so your team can find it in the freezer and your customers can spot it on the counter.</p>
+  </div>
+  <section class="band c-cream" data-feeling="delighted">
+    <div class="wrap">
+      <figure><img src="images/usual-suspect.webp" width="462" height="392" loading="lazy" alt="Classic Chocolate Chunk cookie in a cream Cookie Dough Kitchen pouch"></figure>
+      <div><h3 class="name">The Usual Suspect</h3><p class="what">Classic Chocolate Chunk</p><p class="feel">A timeless favourite with a fun, confident personality.</p></div>
+    </div>
+  </section>
+  <section class="band c-mint" data-feeling="delighted">
+    <div class="wrap">
+      <figure><img src="images/triple-trouble.webp" width="467" height="392" loading="lazy" alt="Triple Chocolate cookie in a mint green Cookie Dough Kitchen pouch"></figure>
+      <div><h3 class="name">Triple Trouble</h3><p class="what">Triple Chocolate</p><p class="feel">Rich, indulgent and a little cheeky.</p></div>
+    </div>
+  </section>
+  <section class="band c-pink" data-feeling="delighted">
+    <div class="wrap">
+      <figure><img src="images/pretty-in-pink.webp" width="462" height="417" loading="lazy" alt="White chocolate and macadamia cookie in a pink Cookie Dough Kitchen pouch"></figure>
+      <div><h3 class="name">Pretty in Pink</h3><p class="what">Strawberry, White Chocolate &amp; Macadamia</p><p class="feel">Playful, pretty and indulgent.</p></div>
+    </div>
+  </section>
+  <section class="band c-blue" data-feeling="delighted">
+    <div class="wrap">
+      <figure><img src="images/confetti-chaos.webp" width="467" height="417" loading="lazy" alt="Confetti white chocolate cookie in a light blue Cookie Dough Kitchen pouch"></figure>
+      <div><h3 class="name">Confetti Chaos</h3><p class="what">Confetti White Chocolate</p><p class="feel">Bright, cheerful and full of fun.</p></div>
+    </div>
+  </section>
+  <section class="band c-lemon" data-feeling="delighted">
+    <div class="wrap">
+      <h3 class="name">Island Bliss</h3><p class="what">Mango, Coconut &amp; Macadamia</p><p class="feel">A tropical flavour inspired by our Magnetic Island home.</p>
+      <p data-wf="note" style="margin-top:16px;max-width:30em">Island Bliss photo to come from you. Until then this flavour shows in its soft lemon colour with no photo.</p>
+    </div>
+  </section>
+</section>
+
+<section class="page wholesale" id="wholesale" data-feeling="confident">
+  <div class="wrap">
+    <div>
+      <h2>Why cafés and kitchens stock our dough</h2>
+      <p class="lead">You get premium New York-style cookies on the counter without the preparation, labour or mess of making dough from scratch. Bake six or sixty, whenever you need them.</p>
+      <ul class="points">
+        <li>Premium New York-style cookies</li>
+        <li>Pre-portioned frozen cookie dough</li>
+        <li>Bake fresh as required</li>
+        <li>Consistent portion sizes</li>
+        <li>Less preparation and kitchen labour</li>
+        <li>Reduced wastage through portion-controlled baking</li>
+        <li>Convenient frozen storage</li>
+        <li>Ideal for cafés, restaurants and hospitality businesses</li>
+      </ul>
+      <a class="btn" href="#contact">Become a Wholesale Customer</a>
+      <p class="price-note">Tell us a little about your business and we’ll send you our wholesale information.</p>
+    </div>
+    <div class="aside">
+      <img src="images/carton-panel.webp" width="326" height="674" loading="lazy" alt="Cookie Dough Kitchen wholesale carton label: 48 cookies per carton, 8 packs of 6 individually sealed, bake from frozen at 185°C for 12 to 14 minutes">
+      <p>The label on every wholesale carton, with baking instructions your team can follow on day one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page products" id="products" data-feeling="delighted">
+  <div class="wrap">
+    <div>
+      <h2>Our products</h2>
+      <figure><img src="images/pouch-range.webp" width="900" height="584" loading="lazy" alt="Four Cookie Dough Kitchen packs in cream, mint, pink and light blue"></figure>
+    </div>
+    <dl class="range">
+      <div><dt>Wholesale Frozen Cookie Dough</dt><dd>Portioned frozen cookie dough supplied in cartons for businesses to bake fresh.</dd></div>
+      <div><dt>Individually Wrapped Baked Cookies</dt><dd>Ready-to-enjoy cookies suitable for accommodation providers, cafés and other businesses.</dd></div>
+      <div><dt>Retail Frozen Cookie Dough Pouches</dt><dd>Convenient frozen cookie dough packs for customers to bake at home.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="page about" id="about" data-feeling="reassured">
+  <div class="wrap">
+    <h2>Made on Magnetic Island</h2>
+    <p>We are a small Australian business based on beautiful Magnetic Island, North Queensland.</p>
+    <p>Our passion is creating delicious, premium cookies that are easy for businesses to serve and customers to enjoy. Thank you for supporting local.</p>
+  </div>
+</section>
+
+<section class="page contact" id="contact" data-feeling="easy">
+  <div class="wrap">
+    <div class="side">
+      <h2>Wholesale enquiries</h2>
+      <p>Running a café, restaurant, or accommodation? Send us a few details and we’ll get back to you with wholesale information.</p>
+      <ul class="reach">
+        <li>Email: <a href="#contact">hello@ (your business email)</a></li>
+        <li><a href="#contact">Facebook</a> · <a href="#contact">Instagram</a></li>
+      </ul>
+      <p data-wf="note">Email address and social links to come from you.</p>
+    </div>
+    <form action="#" method="post" aria-label="Wholesale enquiry">
+      <div class="row">
+        <div class="field"><label for="biz">Business name</label><input id="biz" name="business" autocomplete="organization" required></div>
+        <div class="field"><label for="person">Contact person’s name</label><input id="person" name="name" autocomplete="name" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="loc">Business location</label><input id="loc" name="location" autocomplete="address-level2"></div>
+        <div class="field"><label for="type">Type of business</label>
+          <select id="type" name="type"><option value="">Choose one</option><option>Café</option><option>Restaurant</option><option>Accommodation</option><option>Retail</option><option>Other hospitality</option></select></div>
+      </div>
+      <div class="field"><label for="msg">Message or enquiry</label><textarea id="msg" name="message"></textarea></div>
+      <button class="btn" type="submit">Request Wholesale Information</button>
+      <p class="form-foot">We only use your details to reply to your enquiry. See our <a href="#privacy">privacy policy</a>.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="sign"><img src="images/logo.webp" width="146" height="146" loading="lazy" alt=""><p>Life’s better with cookies.</p></div>
+    <ul>
+      <li><a href="#contact">Wholesale Enquiries</a></li>
+      <li><a href="#contact">Facebook</a></li>
+      <li><a href="#contact">Instagram</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+    </ul>
+    <small>© Cookie Dough Kitchen, Magnetic Island, North Queensland, Australia.</small>
+  </div>
+</footer>
+
+<section class="page privacy-view" id="privacy" data-feeling="reassured">
+  <div class="wrap">
+    <h2>Privacy policy</h2>
+    <p data-wf="note" style="margin-top:16px">Starter wording to show the page. Your final privacy and legal text goes here.</p>
+    <h3>What we collect</h3>
+    <p>When you send a wholesale enquiry we receive your business name, contact name, email address, phone number, business location, type of business and your message.</p>
+    <h3>How we use it</h3>
+    <p>We use these details only to answer your enquiry and to supply you if you become a wholesale customer. We don’t sell or share them.</p>
+    <h3>Talk to us</h3>
+    <p>To see, correct or remove your details, email us and we’ll take care of it.</p>
+  </div>
+</section>
+</body>
+</html>
