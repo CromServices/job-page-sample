@@ -1,0 +1,149 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 8843,
+  "first_view_bytes": 278973,
+  "sections": [
+   [
+    "home",
+    37.75,
+    1652
+   ],
+   [
+    "product",
+    1689.40625,
+    1069
+   ],
+   [
+    "shop",
+    2758.25,
+    962
+   ],
+   [
+    "cart",
+    3720.4375,
+    740
+   ],
+   [
+    "checkout",
+    4460.03125,
+    1135
+   ],
+   [
+    "blog",
+    5595.34375,
+    1183
+   ],
+   [
+    "post",
+    6778.09375,
+    1282
+   ],
+   [
+    "contact",
+    8060.0625,
+    783
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/basmati-rice-brand-site/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 8843,
+  "first_view_bytes": 278973,
+  "sections": [
+   [
+    "home",
+    37.75,
+    1652
+   ],
+   [
+    "product",
+    1689.40625,
+    1069
+   ],
+   [
+    "shop",
+    2758.25,
+    962
+   ],
+   [
+    "cart",
+    3720.4375,
+    740
+   ],
+   [
+    "checkout",
+    4460.03125,
+    1135
+   ],
+   [
+    "blog",
+    5595.34375,
+    1183
+   ],
+   [
+    "post",
+    6778.09375,
+    1282
+   ],
+   [
+    "contact",
+    8060.0625,
+    783
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/basmati-rice-brand-site/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 10021,
+  "first_view_bytes": 278973,
+  "sections": [
+   [
+    "home",
+    103,
+    1738
+   ],
+   [
+    "product",
+    1840.984375,
+    1419
+   ],
+   [
+    "shop",
+    3259.90625,
+    1011
+   ],
+   [
+    "cart",
+    4270.6875,
+    693
+   ],
+   [
+    "checkout",
+    4963.25,
+    1485
+   ],
+   [
+    "blog",
+    6448.28125,
+    1395
+   ],
+   [
+    "post",
+    7843.125,
+    1064
+   ],
+   [
+    "contact",
+    8907.578125,
+    1113
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-20/basmati-rice-brand-site/proofs/phone-390.png"
+ }
+]
