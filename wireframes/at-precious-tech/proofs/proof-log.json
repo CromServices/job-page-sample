@@ -1,0 +1,50 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 10946,
+  "first_view_bytes": 155883,
+  "sections": [
+   [
+    "home-en",
+    128.296875,
+    5106
+   ],
+   [
+    "home-tr",
+    5234.171875,
+    4812
+   ],
+   [
+    "handoff",
+    10045.890625,
+    900
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/wireframe-2026-11-20/at-precious-tech/proofs/desktop-1440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 11755,
+  "first_view_bytes": 87323,
+  "sections": [
+   [
+    "home-en",
+    200.59375,
+    5429
+   ],
+   [
+    "home-tr",
+    5629.65625,
+    5226
+   ],
+   [
+    "handoff",
+    10855.1875,
+    900
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/wireframe-2026-11-20/at-precious-tech/proofs/phone-390.png"
+ }
+]
