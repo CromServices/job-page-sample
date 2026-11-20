@@ -1,0 +1,149 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 7607,
+  "first_view_bytes": 260520,
+  "sections": [
+   [
+    "top",
+    144.5,
+    579
+   ],
+   [
+    "promise",
+    723.65625,
+    687
+   ],
+   [
+    "flavours",
+    1410.515625,
+    2473
+   ],
+   [
+    "wholesale",
+    3883.328125,
+    1021
+   ],
+   [
+    "products",
+    4904.390625,
+    606
+   ],
+   [
+    "about",
+    5509.9375,
+    416
+   ],
+   [
+    "contact",
+    5925.9375,
+    818
+   ],
+   [
+    "privacy",
+    6968.296875,
+    638
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/wireframe-2026-11-20/cookie-dough-kitchen/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 7587,
+  "first_view_bytes": 285378,
+  "sections": [
+   [
+    "top",
+    122.75,
+    579
+   ],
+   [
+    "promise",
+    701.90625,
+    687
+   ],
+   [
+    "flavours",
+    1388.765625,
+    2474
+   ],
+   [
+    "wholesale",
+    3863.25,
+    1021
+   ],
+   [
+    "products",
+    4884.3125,
+    606
+   ],
+   [
+    "about",
+    5489.859375,
+    416
+   ],
+   [
+    "contact",
+    5905.859375,
+    818
+   ],
+   [
+    "privacy",
+    6948.21875,
+    638
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/wireframe-2026-11-20/cookie-dough-kitchen/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 10510,
+  "first_view_bytes": 180172,
+  "sections": [
+   [
+    "top",
+    193.75,
+    986
+   ],
+   [
+    "promise",
+    1179.734375,
+    796
+   ],
+   [
+    "flavours",
+    1975.953125,
+    2639
+   ],
+   [
+    "wholesale",
+    4614.78125,
+    1901
+   ],
+   [
+    "products",
+    6515.375,
+    929
+   ],
+   [
+    "about",
+    7444.578125,
+    409
+   ],
+   [
+    "contact",
+    7853.078125,
+    1530
+   ],
+   [
+    "privacy",
+    9779.765625,
+    730
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/wireframe-2026-11-20/cookie-dough-kitchen/proofs/phone-390.png"
+ }
+]
