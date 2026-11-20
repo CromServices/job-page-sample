@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AT Precious Tech Solutions</title>
+  <meta name="description" content="Websites, AI tools, chatbots and business automation, in English and Turkish, handed over for you to own.">
+  <link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/cafe-owner-800.webp" as="image">
+  <style>
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/space-grotesk.woff2") format("woff2-variations"), url("fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --navy: #0B1C33;
+  --white: #FFFFFF;
+  --paper: #F5F7FB;
+  --gold: #F0C93B;
+  --ink: #0B1C33;
+  --muted: #3D4F66;
+  --line: #D5D8E0;
+  --focus: 3px solid #F0C93B;
+  --logo-h: 64px;
+  --fs-1: 14px;
+  --fs-2: 16px;
+  --fs-3: 17px;
+  --fs-4: 18px;
+  --fs-5: 22px;
+  --fs-6: 28px;
+  --fs-7: 40px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+  --s-6: 48px;
+  --s-7: 64px;
+  --s-8: 80px;
+  --s-9: 96px;
+  --s-10: 128px;
+  --wrap: 1120px;
+  --gutter: 24px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: var(--fs-4);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--white);
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--navy); }
+h1, h2, h3, p, figure, blockquote, ol, ul, fieldset, legend { margin: 0; padding: 0; }
+fieldset, legend { border: 0; }
+ul, ol { list-style: none; }
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-align: left;
+  color: inherit;
+}
+h1 { font-size: var(--fs-7); max-width: 16em; }
+h2 { font-size: var(--fs-6); max-width: 18em; }
+h3 { font-size: var(--fs-5); letter-spacing: -0.02em; font-weight: 600; }
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+:focus-visible { outline: var(--focus); outline-offset: 3px; }
+.skip {
+  position: absolute; left: var(--s-3); top: var(--s-3); z-index: 90;
+  background: var(--white); color: var(--ink); padding: var(--s-2) var(--s-3);
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+nav.switcher {
+  display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-3); align-items: center;
+  padding: var(--s-3) var(--s-4); background: var(--ink); color: var(--white);
+  font-size: var(--fs-1);
+}
+nav.switcher strong { font-weight: 600; margin-right: var(--s-2); }
+nav.switcher a {
+  color: var(--white); text-decoration: underline; text-underline-offset: 3px;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+[data-wf="note"] {
+  font-size: var(--fs-1);
+  line-height: 1.45;
+  background: #EEF0F4;
+  color: #2A3040;
+  padding: var(--s-2) var(--s-3);
+  margin: 0;
+}
+.banner[data-wf="note"] { padding: var(--s-3) var(--s-4); }
+.note-inline[data-wf="note"] {
+  width: min(var(--wrap), calc(100% - var(--s-6)));
+  margin: var(--s-3) auto;
+}
+.screen-note[data-wf="note"] {
+  width: min(var(--wrap), calc(100% - var(--s-6)));
+  margin: var(--s-3) auto 0;
+}
+section.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--s-3) solid var(--navy);
+  background: var(--white);
+  position: relative;
+}
+.wrap { width: min(var(--wrap), calc(100% - (var(--gutter) * 2))); margin: 0 auto; }
+.wrap-wide { width: min(1280px, calc(100% - (var(--gutter) * 2))); margin: 0 auto; }
+header.site {
+  position: relative;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+header.site .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  min-height: calc(var(--logo-h) + var(--s-4));
+  padding: var(--s-2) 0;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: var(--logo-h);
+  font-size: var(--fs-6);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-decoration: none;
+  color: var(--navy);
+  flex: 0 1 auto;
+}
+.logo span { display: block; }
+.head-right {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.lang {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 88px;
+  flex: 0 0 88px;
+}
+.lang-btn {
+  background: none;
+  border: 0;
+  color: var(--navy);
+  min-height: 44px;
+  padding: 0 var(--s-2);
+  font-weight: 600;
+  font-size: var(--fs-1);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.lang-underline {
+  position: absolute;
+  left: 0;
+  bottom: var(--s-2);
+  width: 50%;
+  height: 2px;
+  background: var(--gold);
+  transition: transform 0.35s ease;
+  pointer-events: none;
+}
+.page[data-lang="tr"] .lang-underline { transform: translateX(100%); }
+
+.wa-head {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--s-3);
+  font-weight: 600;
+  font-size: var(--fs-1);
+  text-decoration: none;
+  color: var(--white);
+  background: var(--navy);
+  border: 2px solid var(--navy);
+  white-space: nowrap;
+}
+.page-handoff .wa-head {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--navy);
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 var(--s-2);
+  font-weight: 600;
+  font-size: var(--fs-1);
+  cursor: pointer;
+}
+nav.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--s-4);
+  align-items: center;
+}
+nav.site-nav a {
+  color: var(--navy);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: var(--fs-2);
+}
+nav.site-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+nav.site-nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--gold); }
+
+.hero {
+  padding: var(--s-5) 0 var(--s-7);
+  background: var(--white);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--s-6);
+  align-items: start;
+}
+.hero-copy { padding-top: 0; }
+.hero-copy .lead {
+  margin-top: var(--s-4);
+  max-width: 34em;
+  color: var(--muted);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+.btn, .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--s-2) var(--s-4);
+  text-decoration: none;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+  white-space: normal;
+  max-width: 100%;
+}
+.btn { background: var(--navy); color: var(--white); }
+.btn-ghost { background: var(--white); color: var(--navy); }
+.btn-gold { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.exchange {
+  margin-top: var(--s-6);
+  padding-left: var(--s-4);
+  border-left: 2px solid var(--gold);
+  max-width: 34em;
+}
+.ex-who {
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: var(--s-3);
+}
+.ex-who:first-child { margin-top: 0; }
+.exchange p + .ex-who { margin-top: var(--s-4); }
+
+.ledger {
+  background: var(--navy);
+  color: var(--white);
+  padding: var(--s-8) 0;
+}
+.ledger h2 { margin-bottom: var(--s-6); }
+.ledger li {
+  border-top: 1px solid var(--gold);
+  padding: var(--s-5) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+.ledger li:last-child { border-bottom: 1px solid var(--gold); }
+.ledger h3 { color: var(--gold); }
+.ledger p { color: var(--white); max-width: 36em; }
+
+.about {
+  background: var(--white);
+  padding: var(--s-8) 0;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-6);
+  align-items: start;
+}
+.about .prose { max-width: 34em; }
+.about .prose h2 { margin-bottom: var(--s-4); }
+.about .prose p + p { margin-top: var(--s-4); color: var(--muted); }
+.about-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.about-laptop {
+  margin-top: var(--s-6);
+}
+.about-laptop img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.about-laptop p {
+  margin-top: var(--s-3);
+  color: var(--muted);
+  max-width: 36em;
+}
+
+.portfolio {
+  background: var(--navy);
+  color: var(--white);
+  padding: var(--s-8) 0;
+}
+.portfolio h2 { margin-bottom: var(--s-4); }
+.feature-story { max-width: 38em; }
+.feature-story p + p { margin-top: var(--s-3); }
+.feature-name {
+  font-size: var(--fs-5);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--s-3);
+  color: var(--gold);
+}
+.feature-screen {
+  margin-top: var(--s-5);
+}
+.feature-screen img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.plist {
+  margin-top: var(--s-7);
+  border-top: 1px solid var(--gold);
+}
+.plist li {
+  border-bottom: 1px solid var(--gold);
+  padding: var(--s-4) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.6fr) minmax(0, 1.5fr);
+  gap: var(--s-4);
+  align-items: start;
+}
+.pname { font-weight: 600; }
+.psector { color: var(--gold); }
+
+.contact {
+  background: var(--white);
+  padding: var(--s-8) 0;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-6);
+  align-items: start;
+}
+.contact .intro h2 { margin-bottom: var(--s-4); }
+.contact .intro p { max-width: 32em; color: var(--muted); }
+.wa-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--s-5);
+  min-height: 44px;
+  padding: var(--s-2) var(--s-4);
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--navy);
+}
+form.enquiry { display: grid; gap: var(--s-3); }
+form.enquiry label { display: grid; gap: var(--s-1); font-weight: 600; font-size: var(--fs-2); }
+form.enquiry input,
+form.enquiry select,
+form.enquiry textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--navy);
+  background: var(--white);
+  color: var(--ink);
+}
+form.enquiry textarea { min-height: 128px; resize: vertical; padding: var(--s-3); }
+form.enquiry .btn { justify-self: start; margin-top: var(--s-2); }
+.form-ok {
+  margin-top: var(--s-3);
+  color: var(--muted);
+}
+.form-ok[hidden] { display: none; }
+
+footer.site {
+  background: var(--navy);
+  color: var(--white);
+  padding: var(--s-5) 0;
+  margin-top: auto;
+}
+footer.site p { font-size: var(--fs-2); }
+
+
+/* Hand-off */
+section.page.page-handoff,
+.page-handoff .handoff { background: var(--navy); color: var(--white); }
+.page-handoff header.site {
+  background: var(--navy);
+  border-bottom: 1px solid transparent;
+  border-bottom-color: rgba(240, 201, 59, 0.35);
+}
+.page-handoff .logo,
+.page-handoff .lang-btn,
+.page-handoff .menu,
+.page-handoff nav.site-nav a { color: var(--white); }
+.handoff {
+  padding: var(--s-8) 0 var(--s-10);
+  flex: 1;
+}
+.handoff h1 { max-width: 16em; }
+.handoff .lead {
+  margin-top: var(--s-5);
+  max-width: 28em;
+  font-size: var(--fs-5);
+  line-height: 1.4;
+}
+.handoff-rule {
+  display: block;
+  width: var(--s-8);
+  height: 2px;
+  background: var(--gold);
+  margin: var(--s-6) 0;
+  border: 0;
+}
+
+@media (max-width: 860px) {
+  :root { --logo-h: 48px; --gutter: 16px; }
+  body { font-size: var(--fs-3); }
+  h1 { font-size: var(--fs-6); }
+  .logo { font-size: var(--fs-5); }
+  header.site .head { align-items: center; flex-wrap: wrap; }
+  .menu { display: inline-flex; }
+  .head-right { position: relative; }
+  nav.site-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--s-2));
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--white);
+    border: 1px solid var(--line);
+    min-width: 220px;
+    padding: var(--s-2);
+    z-index: 30;
+  }
+  nav.site-nav.is-open { display: flex; }
+  nav.site-nav a { padding: 0 var(--s-3); }
+  .page-handoff nav.site-nav { background: var(--navy); border-color: var(--gold); }
+  .hero-grid,
+  .about-grid,
+  .contact-grid,
+  .ledger li,
+  .plist li {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+  .hero { padding: var(--s-4) 0 var(--s-6); }
+  .ledger, .about, .portfolio, .contact, .handoff { padding: var(--s-6) 0; }
+}
+@media (min-width: 861px) {
+  .menu { display: none !important; }
+  nav.site-nav { display: flex !important; position: static; background: none; border: 0; padding: 0; min-width: 0; flex-direction: row; }
+}
+@media (min-width: 3440px) {
+  :root { --wrap: 1200px; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#home-start">Skip to content</a>
+  <nav class="switcher" data-wf="note" aria-label="Screens">
+    <strong>Screens</strong>
+    <a href="#home-en">Home (English)</a>
+    <a href="#home-tr">Home (Turkish)</a>
+    <a href="#handoff">Hand-off</a>
+  </nav>
+  <p class="banner" data-wf="note">Sample content. Portfolio project names are not real businesses.</p>
+
+  <section class="page" id="home-en" data-feeling="understood" data-lang="en" lang="en">
+    <p class="screen-note" data-wf="note">Screen 1 · Home (English)</p>
+    <p class="note-inline" data-wf="note">WhatsApp button uses a wa.me link. Number from the client.</p>
+    <p class="note-inline" data-wf="note">The final Turkish copy is approved by the client.</p>
+    <header class="site">
+      <div class="wrap head">
+        <a class="logo" href="#home-en" aria-label="AT Precious Tech Solutions">
+          <span>AT Precious Tech</span>
+          <span>Solutions</span>
+        </a>
+        <div class="head-right">
+          <div class="lang" role="group" aria-label="Language" data-en-aria="Language" data-tr-aria="Dil">
+            <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-set-lang="tr" aria-pressed="false">TR</button>
+            <span class="lang-underline" aria-hidden="true"></span>
+          </div>
+          <a class="wa-head" href="https://wa.me/0000000000" data-en="WhatsApp" data-tr="WhatsApp" data-en-aria="Message on WhatsApp" data-tr-aria="WhatsApp'tan yazın" aria-label="Message on WhatsApp">WhatsApp</a>
+          <button class="menu" type="button" aria-expanded="false" aria-controls="nav-en" data-en="Menu" data-tr="Menü">Menu</button>
+          <nav class="site-nav" id="nav-en" aria-label="Site">
+            <a href="#services-en" data-en="Services" data-tr="Hizmetler">Services</a>
+            <a href="#about-en" data-en="About Us" data-tr="Hakkımızda">About Us</a>
+            <a href="#portfolio-en" data-en="Portfolio" data-tr="Portföy">Portfolio</a>
+            <a href="#contact-en" data-en="Enquire" data-tr="İletişim">Enquire</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="home-start" data-feeling="understood">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 data-en="After hours, your customers still get a clear answer in their language." data-tr="Kapanıştan sonra da müşterileriniz kendi dilinde net bir yanıt alır.">After hours, your customers still get a clear answer in their language.</h1>
+          <p class="lead" data-en="AT Precious Tech Solutions builds websites, practical AI tools, chatbots and business automation. We explain the work in plain language, in English or Turkish, and hand you the finished site to own." data-tr="AT Precious Tech Solutions, web siteleri, pratik yapay zeka araçları, chatbotlar ve iş otomasyonu kurar. İşi İngilizce veya Türkçe, açık bir dille anlatır ve bitmiş siteyi size teslim ederiz.">AT Precious Tech Solutions builds websites, practical AI tools, chatbots and business automation. We explain the work in plain language, in English or Turkish, and hand you the finished site to own.</p>
+          <div class="actions">
+            <a class="btn" href="#contact-en" data-en="Send an enquiry" data-tr="Sorunuzu gönderin">Send an enquiry</a>
+            <a class="btn-ghost" href="https://wa.me/0000000000" data-en="Message on WhatsApp" data-tr="WhatsApp'tan yazın">Message on WhatsApp</a>
+          </div>
+          <div class="exchange" data-feeling="understood">
+            <p class="ex-who" data-en="Café owner" data-tr="Kafe sahibi">Café owner</p>
+            <p data-en="How do I take bookings after we close?" data-tr="Kapanıştan sonra nasıl rezervasyon alırım?">How do I take bookings after we close?</p>
+            <p class="ex-who">AT Precious Tech</p>
+            <p data-en="I take the request, check the times you have free, and confirm it with them." data-tr="Talebi alırım, uygun saatlerinize bakarım ve kendilerine onaylarım.">I take the request, check the times you have free, and confirm it with them.</p>
+            <p data-en="In the morning you'll see every booking in one list, in English or Turkish." data-tr="Sabah bütün rezervasyonları tek bir listede görürsünüz, Türkçe veya İngilizce.">In the morning you'll see every booking in one list, in English or Turkish.</p>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="images/cafe-owner-800.webp" srcset="images/cafe-owner-800.webp 800w, images/cafe-owner.webp 1152w" sizes="(max-width: 860px) 100vw, 50vw" width="1152" height="864" alt="A cafe owner answering a customer on the phone in a bright cafe" data-en-alt="A cafe owner answering a customer on the phone in a bright cafe" data-tr-alt="Aydınlık bir kafede, telefonla müşteriye yanıt veren bir kafe sahibi" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="ledger" id="services-en" data-feeling="oriented">
+      <div class="wrap">
+        <h2 data-en="Services" data-tr="Hizmetler">Services</h2>
+        <ul>
+          <li>
+            <h3 data-en="Website design and development" data-tr="Web sitesi tasarımı ve geliştirme">Website design and development</h3>
+            <p data-en="A clear, mobile-friendly site that presents your work and lets people enquire." data-tr="İşinizi anlatan, mobil uyumlu, net bir site; insanlar buradan size ulaşır.">A clear, mobile-friendly site that presents your work and lets people enquire.</p>
+          </li>
+          <li>
+            <h3 data-en="AI solutions" data-tr="Yapay zeka çözümleri">AI solutions</h3>
+            <p data-en="Practical tools that take the repetitive parts of the day, so you can stay with your customers." data-tr="Günün tekrarlayan işlerini üstlenen pratik araçlar, böylece siz müşterilerinizle kalabilirsiniz.">Practical tools that take the repetitive parts of the day, so you can stay with your customers.</p>
+          </li>
+          <li>
+            <h3 data-en="Chatbots" data-tr="Chatbotlar">Chatbots</h3>
+            <p data-en="Answers customers at 11pm in Turkish or English." data-tr="Müşterilerinize gece 11'de Türkçe veya İngilizce yanıt verir.">Answers customers at 11pm in Turkish or English.</p>
+          </li>
+          <li>
+            <h3 data-en="Business automation" data-tr="İş süreçleri otomasyonu">Business automation</h3>
+            <p data-en="The follow-up, the booking note, the reminder — running in the background, in order." data-tr="Takip, rezervasyon notu, hatırlatma — arka planda, sırasıyla işler.">The follow-up, the booking note, the reminder — running in the background, in order.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about" id="about-en" data-feeling="oriented">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="prose">
+            <h2 data-en="About Us" data-tr="Hakkımızda">About Us</h2>
+            <p data-en="AT Precious Tech Solutions designs websites and practical tools for small businesses that work in English and Turkish. We explain the work in plain language, build it to a professional standard, and hand you the finished site to own." data-tr="AT Precious Tech Solutions, İngilizce ve Türkçe çalışan küçük işletmeler için web siteleri ve pratik araçlar tasarlar. İşi açık bir dille anlatır, profesyonel bir standartta yapar ve bitmiş siteyi size teslim ederiz.">AT Precious Tech Solutions designs websites and practical tools for small businesses that work in English and Turkish. We explain the work in plain language, build it to a professional standard, and hand you the finished site to own.</p>
+          </div>
+          <figure class="about-photo">
+            <img src="images/founder-office.webp" width="1152" height="864" alt="A founder working at a laptop in a bright Australian office" data-en-alt="A founder working at a laptop in a bright Australian office" data-tr-alt="Aydınlık bir Avustralya ofisinde dizüstü bilgisayarda çalışan bir kurucu" loading="lazy">
+          </figure>
+        </div>
+        <figure class="about-laptop">
+          <img src="images/bilingual-laptop.webp" width="1280" height="720" alt="An open laptop showing a clean bilingual website" data-en-alt="An open laptop showing a clean bilingual website" data-tr-alt="Temiz, iki dilli bir web sitesi gösteren açık bir dizüstü bilgisayar" loading="lazy">
+          <p data-en="A website in English and Turkish, written plainly, and yours to keep." data-tr="İngilizce ve Türkçe, açık dille yazılmış ve sizin kalan bir web sitesi.">A website in English and Turkish, written plainly, and yours to keep.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio-en" data-feeling="sure">
+      <div class="wrap">
+        <h2 data-en="Portfolio" data-tr="Portföy">Portfolio</h2>
+        <div class="feature-story">
+          <p class="feature-name">Calder Moss Café</p>
+          <p data-en="Calder Moss Café needed a way for people to book a table after closing time. We designed a clear bilingual website and a simple assistant that takes the request, confirms the time, and leaves the list for the morning. The site is theirs: their domain, their hosting account, their code." data-tr="Calder Moss Café'nin, kapanıştan sonra da masa rezervasyonu almasına ihtiyacı vardı. Net, iki dilli bir site ve talebi alıp saati onaylayan, sabah için listeyi bırakan sade bir asistan tasarladık. Site onların: alan adı onların, barındırma hesabı onların, kod onların.">Calder Moss Café needed a way for people to book a table after closing time. We designed a clear bilingual website and a simple assistant that takes the request, confirms the time, and leaves the list for the morning. The site is theirs: their domain, their hosting account, their code.</p>
+        </div>
+        <figure class="feature-screen">
+          <img src="images/portfolio-screen.webp" width="1280" height="720" alt="A desktop screen showing a clean website for a cafe" data-en-alt="A desktop screen showing a clean website for a cafe" data-tr-alt="Bir kafe için temiz bir web sitesi gösteren masaüstü ekran" loading="lazy">
+        </figure>
+        <ul class="plist">
+          <li>
+            <p class="pname">Solway Bookkeeping</p>
+            <p class="psector" data-en="Bookkeeping" data-tr="Muhasebe">Bookkeeping</p>
+            <p data-en="A plain English and Turkish site where clients can send their questions." data-tr="Müşterilerin sorularını gönderebildiği, sade İngilizce ve Türkçe bir site.">A plain English and Turkish site where clients can send their questions.</p>
+          </li>
+          <li>
+            <p class="pname">Amber Field Florist</p>
+            <p class="psector" data-en="Florist" data-tr="Çiçekçi">Florist</p>
+            <p data-en="Orders and enquiries kept in one place, including after the shop is closed." data-tr="Siparişler ve sorular tek yerde, dükkân kapandıktan sonra da.">Orders and enquiries kept in one place, including after the shop is closed.</p>
+          </li>
+          <li>
+            <p class="pname">Tallow Street Bakery</p>
+            <p class="psector" data-en="Bakery" data-tr="Fırın">Bakery</p>
+            <p data-en="A calm site for the week's bread, with a simple way to ask about large orders." data-tr="Haftanın ekmeği için sakin bir site ve büyük siparişler için basit bir yazışma yolu.">A calm site for the week's bread, with a simple way to ask about large orders.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact-en" data-feeling="ready">
+      <div class="wrap contact-grid">
+        <div class="intro">
+          <h2 data-en="Send an enquiry" data-tr="Bir soru gönderin">Send an enquiry</h2>
+          <p data-en="Tell us a little about the work you need. Write in English or Turkish — we will reply in the language you use." data-tr="İhtiyacınız olan işi kısaca yazın. İngilizce veya Türkçe yazabilirsiniz; size kullandığınız dilde döneriz.">Tell us a little about the work you need. Write in English or Turkish — we will reply in the language you use.</p>
+          <a class="wa-inline" href="https://wa.me/0000000000" data-en="Message on WhatsApp" data-tr="WhatsApp'tan yazın">Message on WhatsApp</a>
+        </div>
+        <form class="enquiry" id="form-en" action="#" method="post">
+          <label>
+            <span data-en="Name" data-tr="Ad">Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span data-en="Email" data-tr="E-posta">Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span data-en="Service" data-tr="Hizmet">Service</span>
+            <select name="service" required>
+              <option value="" data-en="Choose a service" data-tr="Bir hizmet seçin">Choose a service</option>
+              <option value="website" data-en="Website design and development" data-tr="Web sitesi tasarımı ve geliştirme">Website design and development</option>
+              <option value="ai" data-en="AI solutions" data-tr="Yapay zeka çözümleri">AI solutions</option>
+              <option value="chatbots" data-en="Chatbots" data-tr="Chatbotlar">Chatbots</option>
+              <option value="automation" data-en="Business automation" data-tr="İş süreçleri otomasyonu">Business automation</option>
+            </select>
+          </label>
+          <label>
+            <span data-en="Message" data-tr="Mesaj">Message</span>
+            <textarea name="message" required></textarea>
+          </label>
+          <button class="btn" type="submit" data-en="Send enquiry" data-tr="Gönder">Send enquiry</button>
+          <p class="form-ok" hidden data-en="Thank you. We will reply by email." data-tr="Teşekkürler. Size e-posta ile döneriz."></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site" data-feeling="ready">
+      <div class="wrap">
+        <p>AT Precious Tech Solutions</p>
+      </div>
+    </footer>
+  </section>
+
+
+  <section class="page" id="home-tr" data-feeling="understood" data-lang="tr" lang="tr">
+    <p class="screen-note" data-wf="note">Screen 2 · Home (Turkish)</p>
+    <header class="site">
+      <div class="wrap head">
+        <a class="logo" href="#home-tr" aria-label="AT Precious Tech Solutions">
+          <span>AT Precious Tech</span>
+          <span>Solutions</span>
+        </a>
+        <div class="head-right">
+          <div class="lang" role="group" aria-label="Language" data-en-aria="Language" data-tr-aria="Dil">
+            <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn" data-set-lang="tr" aria-pressed="true">TR</button>
+            <span class="lang-underline" aria-hidden="true"></span>
+          </div>
+          <a class="wa-head" href="https://wa.me/0000000000" data-en="WhatsApp" data-tr="WhatsApp" data-en-aria="Message on WhatsApp" data-tr-aria="WhatsApp'tan yazın" aria-label="WhatsApp'tan yazın">WhatsApp</a>
+          <button class="menu" type="button" aria-expanded="false" aria-controls="nav-tr" data-en="Menu" data-tr="Menü">Menü</button>
+          <nav class="site-nav" id="nav-tr" aria-label="Site">
+            <a href="#services-tr" data-en="Services" data-tr="Hizmetler">Hizmetler</a>
+            <a href="#about-tr" data-en="About Us" data-tr="Hakkımızda">Hakkımızda</a>
+            <a href="#portfolio-tr" data-en="Portfolio" data-tr="Portföy">Portföy</a>
+            <a href="#contact-tr" data-en="Enquire" data-tr="İletişim">İletişim</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="home-start-tr" data-feeling="understood">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 data-en="After hours, your customers still get a clear answer in their language." data-tr="Kapanıştan sonra da müşterileriniz kendi dilinde net bir yanıt alır.">Kapanıştan sonra da müşterileriniz kendi dilinde net bir yanıt alır.</h1>
+          <p class="lead" data-en="AT Precious Tech Solutions builds websites, practical AI tools, chatbots and business automation. We explain the work in plain language, in English or Turkish, and hand you the finished site to own." data-tr="AT Precious Tech Solutions, web siteleri, pratik yapay zeka araçları, chatbotlar ve iş otomasyonu kurar. İşi İngilizce veya Türkçe, açık bir dille anlatır ve bitmiş siteyi size teslim ederiz.">AT Precious Tech Solutions, web siteleri, pratik yapay zeka araçları, chatbotlar ve iş otomasyonu kurar. İşi İngilizce veya Türkçe, açık bir dille anlatır ve bitmiş siteyi size teslim ederiz.</p>
+          <div class="actions">
+            <a class="btn" href="#contact-tr" data-en="Send an enquiry" data-tr="Sorunuzu gönderin">Sorunuzu gönderin</a>
+            <a class="btn-ghost" href="https://wa.me/0000000000" data-en="Message on WhatsApp" data-tr="WhatsApp'tan yazın">WhatsApp'tan yazın</a>
+          </div>
+          <div class="exchange" data-feeling="understood">
+            <p class="ex-who" data-en="Café owner" data-tr="Kafe sahibi">Kafe sahibi</p>
+            <p data-en="How do I take bookings after we close?" data-tr="Kapanıştan sonra nasıl rezervasyon alırım?">Kapanıştan sonra nasıl rezervasyon alırım?</p>
+            <p class="ex-who">AT Precious Tech</p>
+            <p data-en="I take the request, check the times you have free, and confirm it with them." data-tr="Talebi alırım, uygun saatlerinize bakarım ve kendilerine onaylarım.">Talebi alırım, uygun saatlerinize bakarım ve kendilerine onaylarım.</p>
+            <p data-en="In the morning you'll see every booking in one list, in English or Turkish." data-tr="Sabah bütün rezervasyonları tek bir listede görürsünüz, Türkçe veya İngilizce.">Sabah bütün rezervasyonları tek bir listede görürsünüz, Türkçe veya İngilizce.</p>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="images/cafe-owner.webp" srcset="images/cafe-owner-800.webp 800w, images/cafe-owner.webp 1152w" sizes="(max-width: 860px) 100vw, 50vw" width="1152" height="864" alt="Aydınlık bir kafede, telefonla müşteriye yanıt veren bir kafe sahibi" data-en-alt="A cafe owner answering a customer on the phone in a bright cafe" data-tr-alt="Aydınlık bir kafede, telefonla müşteriye yanıt veren bir kafe sahibi" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="ledger" id="services-tr" data-feeling="oriented">
+      <div class="wrap">
+        <h2 data-en="Services" data-tr="Hizmetler">Hizmetler</h2>
+        <ul>
+          <li>
+            <h3 data-en="Website design and development" data-tr="Web sitesi tasarımı ve geliştirme">Web sitesi tasarımı ve geliştirme</h3>
+            <p data-en="A clear, mobile-friendly site that presents your work and lets people enquire." data-tr="İşinizi anlatan, mobil uyumlu, net bir site; insanlar buradan size ulaşır.">İşinizi anlatan, mobil uyumlu, net bir site; insanlar buradan size ulaşır.</p>
+          </li>
+          <li>
+            <h3 data-en="AI solutions" data-tr="Yapay zeka çözümleri">Yapay zeka çözümleri</h3>
+            <p data-en="Practical tools that take the repetitive parts of the day, so you can stay with your customers." data-tr="Günün tekrarlayan işlerini üstlenen pratik araçlar, böylece siz müşterilerinizle kalabilirsiniz.">Günün tekrarlayan işlerini üstlenen pratik araçlar, böylece siz müşterilerinizle kalabilirsiniz.</p>
+          </li>
+          <li>
+            <h3 data-en="Chatbots" data-tr="Chatbotlar">Chatbotlar</h3>
+            <p data-en="Answers customers at 11pm in Turkish or English." data-tr="Müşterilerinize gece 11'de Türkçe veya İngilizce yanıt verir.">Müşterilerinize gece 11'de Türkçe veya İngilizce yanıt verir.</p>
+          </li>
+          <li>
+            <h3 data-en="Business automation" data-tr="İş süreçleri otomasyonu">İş süreçleri otomasyonu</h3>
+            <p data-en="The follow-up, the booking note, the reminder — running in the background, in order." data-tr="Takip, rezervasyon notu, hatırlatma — arka planda, sırasıyla işler.">Takip, rezervasyon notu, hatırlatma — arka planda, sırasıyla işler.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about" id="about-tr" data-feeling="oriented">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="prose">
+            <h2 data-en="About Us" data-tr="Hakkımızda">Hakkımızda</h2>
+            <p data-en="AT Precious Tech Solutions designs websites and practical tools for small businesses that work in English and Turkish. We explain the work in plain language, build it to a professional standard, and hand you the finished site to own." data-tr="AT Precious Tech Solutions, İngilizce ve Türkçe çalışan küçük işletmeler için web siteleri ve pratik araçlar tasarlar. İşi açık bir dille anlatır, profesyonel bir standartta yapar ve bitmiş siteyi size teslim ederiz.">AT Precious Tech Solutions, İngilizce ve Türkçe çalışan küçük işletmeler için web siteleri ve pratik araçlar tasarlar. İşi açık bir dille anlatır, profesyonel bir standartta yapar ve bitmiş siteyi size teslim ederiz.</p>
+          </div>
+          <figure class="about-photo">
+            <img src="images/founder-office.webp" width="1152" height="864" alt="Aydınlık bir Avustralya ofisinde dizüstü bilgisayarda çalışan bir kurucu" data-en-alt="A founder working at a laptop in a bright Australian office" data-tr-alt="Aydınlık bir Avustralya ofisinde dizüstü bilgisayarda çalışan bir kurucu" loading="lazy">
+          </figure>
+        </div>
+        <figure class="about-laptop">
+          <img src="images/bilingual-laptop.webp" width="1280" height="720" alt="Temiz, iki dilli bir web sitesi gösteren açık bir dizüstü bilgisayar" data-en-alt="An open laptop showing a clean bilingual website" data-tr-alt="Temiz, iki dilli bir web sitesi gösteren açık bir dizüstü bilgisayar" loading="lazy">
+          <p data-en="A website in English and Turkish, written plainly, and yours to keep." data-tr="İngilizce ve Türkçe, açık dille yazılmış ve sizin kalan bir web sitesi.">İngilizce ve Türkçe, açık dille yazılmış ve sizin kalan bir web sitesi.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio-tr" data-feeling="sure">
+      <div class="wrap">
+        <h2 data-en="Portfolio" data-tr="Portföy">Portföy</h2>
+        <div class="feature-story">
+          <p class="feature-name">Calder Moss Café</p>
+          <p data-en="Calder Moss Café needed a way for people to book a table after closing time. We designed a clear bilingual website and a simple assistant that takes the request, confirms the time, and leaves the list for the morning. The site is theirs: their domain, their hosting account, their code." data-tr="Calder Moss Café'nin, kapanıştan sonra da masa rezervasyonu almasına ihtiyacı vardı. Net, iki dilli bir site ve talebi alıp saati onaylayan, sabah için listeyi bırakan sade bir asistan tasarladık. Site onların: alan adı onların, barındırma hesabı onların, kod onların.">Calder Moss Café'nin, kapanıştan sonra da masa rezervasyonu almasına ihtiyacı vardı. Net, iki dilli bir site ve talebi alıp saati onaylayan, sabah için listeyi bırakan sade bir asistan tasarladık. Site onların: alan adı onların, barındırma hesabı onların, kod onların.</p>
+        </div>
+        <figure class="feature-screen">
+          <img src="images/portfolio-screen.webp" width="1280" height="720" alt="Bir kafe için temiz bir web sitesi gösteren masaüstü ekran" data-en-alt="A desktop screen showing a clean website for a cafe" data-tr-alt="Bir kafe için temiz bir web sitesi gösteren masaüstü ekran" loading="lazy">
+        </figure>
+        <ul class="plist">
+          <li>
+            <p class="pname">Solway Bookkeeping</p>
+            <p class="psector" data-en="Bookkeeping" data-tr="Muhasebe">Muhasebe</p>
+            <p data-en="A plain English and Turkish site where clients can send their questions." data-tr="Müşterilerin sorularını gönderebildiği, sade İngilizce ve Türkçe bir site.">Müşterilerin sorularını gönderebildiği, sade İngilizce ve Türkçe bir site.</p>
+          </li>
+          <li>
+            <p class="pname">Amber Field Florist</p>
+            <p class="psector" data-en="Florist" data-tr="Çiçekçi">Çiçekçi</p>
+            <p data-en="Orders and enquiries kept in one place, including after the shop is closed." data-tr="Siparişler ve sorular tek yerde, dükkân kapandıktan sonra da.">Siparişler ve sorular tek yerde, dükkân kapandıktan sonra da.</p>
+          </li>
+          <li>
+            <p class="pname">Tallow Street Bakery</p>
+            <p class="psector" data-en="Bakery" data-tr="Fırın">Fırın</p>
+            <p data-en="A calm site for the week's bread, with a simple way to ask about large orders." data-tr="Haftanın ekmeği için sakin bir site ve büyük siparişler için basit bir yazışma yolu.">Haftanın ekmeği için sakin bir site ve büyük siparişler için basit bir yazışma yolu.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact-tr" data-feeling="ready">
+      <div class="wrap contact-grid">
+        <div class="intro">
+          <h2 data-en="Send an enquiry" data-tr="Bir soru gönderin">Bir soru gönderin</h2>
+          <p data-en="Tell us a little about the work you need. Write in English or Turkish — we will reply in the language you use." data-tr="İhtiyacınız olan işi kısaca yazın. İngilizce veya Türkçe yazabilirsiniz; size kullandığınız dilde döneriz.">İhtiyacınız olan işi kısaca yazın. İngilizce veya Türkçe yazabilirsiniz; size kullandığınız dilde döneriz.</p>
+          <a class="wa-inline" href="https://wa.me/0000000000" data-en="Message on WhatsApp" data-tr="WhatsApp'tan yazın">WhatsApp'tan yazın</a>
+        </div>
+        <form class="enquiry" id="form-tr" action="#" method="post">
+          <label>
+            <span data-en="Name" data-tr="Ad">Ad</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span data-en="Email" data-tr="E-posta">E-posta</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span data-en="Service" data-tr="Hizmet">Hizmet</span>
+            <select name="service" required>
+              <option value="" data-en="Choose a service" data-tr="Bir hizmet seçin">Bir hizmet seçin</option>
+              <option value="website" data-en="Website design and development" data-tr="Web sitesi tasarımı ve geliştirme">Web sitesi tasarımı ve geliştirme</option>
+              <option value="ai" data-en="AI solutions" data-tr="Yapay zeka çözümleri">Yapay zeka çözümleri</option>
+              <option value="chatbots" data-en="Chatbots" data-tr="Chatbotlar">Chatbotlar</option>
+              <option value="automation" data-en="Business automation" data-tr="İş süreçleri otomasyonu">İş süreçleri otomasyonu</option>
+            </select>
+          </label>
+          <label>
+            <span data-en="Message" data-tr="Mesaj">Mesaj</span>
+            <textarea name="message" required></textarea>
+          </label>
+          <button class="btn" type="submit" data-en="Send enquiry" data-tr="Gönder">Gönder</button>
+          <p class="form-ok" hidden data-en="Thank you. We will reply by email." data-tr="Teşekkürler. Size e-posta ile döneriz."></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site" data-feeling="ready">
+      <div class="wrap">
+        <p>AT Precious Tech Solutions</p>
+      </div>
+    </footer>
+  </section>
+
+
+  <section class="page page-handoff" id="handoff" data-feeling="in-control" data-lang="en" lang="en">
+    <p class="screen-note" data-wf="note">Screen 3 · Hand-off</p>
+    <header class="site">
+      <div class="wrap head">
+        <a class="logo" href="#home-en" aria-label="AT Precious Tech Solutions">
+          <span>AT Precious Tech</span>
+          <span>Solutions</span>
+        </a>
+        <div class="head-right">
+          <div class="lang" role="group" aria-label="Language" data-en-aria="Language" data-tr-aria="Dil">
+            <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-set-lang="tr" aria-pressed="false">TR</button>
+            <span class="lang-underline" aria-hidden="true"></span>
+          </div>
+          <a class="wa-head" href="https://wa.me/0000000000" data-en="WhatsApp" data-tr="WhatsApp" data-en-aria="Message on WhatsApp" data-tr-aria="WhatsApp'tan yazın" aria-label="Message on WhatsApp">WhatsApp</a>
+          <button class="menu" type="button" aria-expanded="false" aria-controls="nav-handoff" data-en="Menu" data-tr="Menü">Menu</button>
+          <nav class="site-nav" id="nav-handoff" aria-label="Site">
+            <a href="#home-en" data-en="Home" data-tr="Ana sayfa">Home</a>
+            <a href="#handoff" aria-current="page" data-en="Ownership" data-tr="Sahiplik">Ownership</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="handoff" data-feeling="in-control">
+      <div class="wrap">
+        <h1 data-en="Your code, your hosting account, your domain." data-tr="Kod sizin, barındırma hesabı sizin, alan adınız sizin.">Your code, your hosting account, your domain.</h1>
+        <hr class="handoff-rule">
+        <p class="lead" data-en="No monthly hosting or builder fee; you renew your domain." data-tr="Aylık barındırma veya site kurucu ücreti yok; alan adınızı siz yenilersiniz.">No monthly hosting or builder fee; you renew your domain.</p>
+      </div>
+    </section>
+    <footer class="site" data-feeling="ready">
+      <div class="wrap">
+        <p>AT Precious Tech Solutions</p>
+      </div>
+    </footer>
+  </section>
+
+
+  <script>
+  (function () {
+    function applyLang(root, lang) {
+      var y = window.scrollY;
+      root.setAttribute("data-lang", lang);
+      root.setAttribute("lang", lang);
+      root.querySelectorAll("[data-en][data-tr]").forEach(function (el) {
+        var text = el.getAttribute("data-" + lang);
+        if (text !== null) el.textContent = text;
+      });
+      root.querySelectorAll("[data-en-aria]").forEach(function (el) {
+        var key = lang === "tr" ? "data-tr-aria" : "data-en-aria";
+        if (el.getAttribute(key)) el.setAttribute("aria-label", el.getAttribute(key));
+      });
+      root.querySelectorAll("[data-en-alt]").forEach(function (el) {
+        var key = lang === "tr" ? "data-tr-alt" : "data-en-alt";
+        if (el.getAttribute(key)) el.setAttribute("alt", el.getAttribute(key));
+      });
+      root.querySelectorAll(".lang-btn").forEach(function (btn) {
+        btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === lang ? "true" : "false");
+      });
+      requestAnimationFrame(function () { window.scrollTo(0, y); });
+    }
+
+    document.querySelectorAll(".page").forEach(function (page) {
+      page.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          applyLang(page, btn.getAttribute("data-set-lang"));
+        });
+      });
+      var menu = page.querySelector(".menu");
+      var nav = page.querySelector("nav.site-nav");
+      if (menu && nav) {
+        menu.addEventListener("click", function () {
+          var open = menu.getAttribute("aria-expanded") === "true";
+          menu.setAttribute("aria-expanded", open ? "false" : "true");
+          nav.classList.toggle("is-open", !open);
+        });
+        nav.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            menu.setAttribute("aria-expanded", "false");
+            nav.classList.remove("is-open");
+          });
+        });
+      }
+      var form = page.querySelector("form.enquiry");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var ok = form.querySelector(".form-ok");
+          if (ok) {
+            var lang = page.getAttribute("data-lang") || "en";
+            ok.textContent = ok.getAttribute("data-" + lang) || ok.getAttribute("data-en");
+            ok.hidden = false;
+          }
+        });
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
