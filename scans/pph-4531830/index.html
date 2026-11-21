@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speed scan: taxreturnassist.co.uk</title>
+  <meta name="description" content="A lab speed and technical scan of taxreturnassist.co.uk by Crom Services, Australia. Mobile and desktop Lighthouse figures only, no invented numbers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111111;
+      --body: #333333;
+      --muted: #6b6b6b;
+      --line: #e4e2dc;
+      --soft: #f3f2ef;
+      --paper: #ffffff;
+      --page: #f3f2ef;
+      --accent: #4caf78;
+      --fail: #9b2c2c;
+      --fail-bg: #f8e8e8;
+      --warn: #8a5a12;
+      --warn-bg: #f7ecd8;
+      --pass: #1f6a42;
+      --pass-bg: #e5f4eb;
+      --high: #9b2c2c;
+      --medium: #8a5a12;
+      --low: #3d4a66;
+      --font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f4f1ea;
+        --body: #d8d4cc;
+        --muted: #9a958c;
+        --line: #3a3630;
+        --soft: #221f1b;
+        --paper: #191714;
+        --page: #11100e;
+        --accent: #6fcea0;
+        --fail: #f0a8a8;
+        --fail-bg: #3a2222;
+        --warn: #e4c07a;
+        --warn-bg: #3a301c;
+        --pass: #8ed6ad;
+        --pass-bg: #1c3328;
+        --high: #f0a8a8;
+        --medium: #e4c07a;
+        --low: #b7c0d6;
+      }
+      .logo-ink { display: none; }
+      .logo-white { display: block; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      font-weight: 500;
+      color: var(--body);
+      background: var(--page);
+      line-height: 1.5;
+      font-size: 17px;
+    }
+    img { max-width: 100%; height: auto; border: 0; }
+    a { color: var(--ink); overflow-wrap: anywhere; word-break: break-word; }
+    td, th, p, li, .meta-line { overflow-wrap: anywhere; word-break: break-word; }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+    header.cover {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--ink);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+    }
+    .logo-ink { display: block; height: 36px; width: auto; }
+    .logo-white { display: none; height: 36px; width: auto; }
+    .kicker {
+      margin: 22px 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+    .meta-line {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    .meta-line a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+    .grade-row {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .grade-mark {
+      flex: 0 0 auto;
+      width: 92px;
+      height: 92px;
+      border-radius: 16px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .grade-mark .letter {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+    .grade-mark .score {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      opacity: 0.8;
+    }
+    .verdict { margin: 4px 0 0; font-size: 18px; color: var(--ink); }
+    .cap { margin: 10px 0 0; font-size: 15px; color: var(--muted); }
+    main {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 28px 28px;
+      margin-top: 16px;
+    }
+    section { padding: 20px 0; border-top: 1px solid var(--line); }
+    section:first-child { border-top: 0; }
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+    .issues { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .issue {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 12px;
+      align-items: start;
+      background: var(--soft);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .issue-rank { margin: 0; }
+    .issue-title { margin: 0; color: var(--ink); font-weight: 700; font-size: 17px; }
+    .issue-why { margin: 4px 0 0; font-size: 15px; }
+    .empty-issues { margin: 0; }
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 99px;
+      padding: 3px 8px;
+    }
+    .pill.pass { background: var(--pass-bg); color: var(--pass); }
+    .pill.warn, .pill.medium { background: var(--warn-bg); color: var(--warn); }
+    .pill.fail, .pill.high { background: var(--fail-bg); color: var(--fail); }
+    .pill.skip { background: var(--soft); color: var(--muted); }
+    .pill.low { background: var(--soft); color: var(--low); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th.col, td.colh { /* unused */ }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1.5px solid var(--ink);
+      padding: 6px 8px;
+      font-weight: 700;
+    }
+    tbody th, tbody td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      vertical-align: top;
+      text-align: left;
+      font-weight: 500;
+    }
+    tbody th { color: var(--ink); width: 28%; font-weight: 600; }
+    td.status { width: 88px; white-space: nowrap; }
+    .platform { margin: 16px 0 0; color: var(--muted); font-size: 15px; }
+    .close {
+      margin-top: 16px;
+      background: var(--soft);
+      border-left: 4px solid var(--ink);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+    }
+    .close p { margin: 0; color: var(--ink); }
+    .speed-lead { padding: 20px 0; border-top: 1px solid var(--line); }
+    .speed-table { font-size: 14px; }
+    .speed-table th, .speed-table td { word-break: break-word; }
+    .speed-table a { font-weight: 500; font-size: 12px; color: var(--muted); }
+    .speed-facts p { margin: 0 0 10px; font-size: 15px; }
+    .obs { display:block; font-size:11px; color:var(--muted); font-weight:500; }
+    .measure-note { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+    .measure-foot { margin-top: 8px; }
+    footer {
+      margin: 18px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer p { margin: 0 0 6px; }
+    @media (max-width: 640px) {
+      .wrap { padding: 16px 12px 36px; }
+      header.cover, main { padding-left: 16px; padding-right: 16px; }
+      h1 { font-size: 26px; }
+      .grade-row { flex-direction: column; gap: 14px; }
+      .issue { grid-template-columns: 1fr; gap: 6px; }
+      table, thead, tbody, th, td, tr { display: block; width: 100%; }
+      thead { display: none; }
+      tbody tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+      tbody th, tbody td { border: 0; padding: 2px 0; width: auto; }
+      td.status { width: auto; }
+    }
+  
+    .grade-row { flex-wrap: wrap; }
+    .score-pair { display: flex; gap: 14px; flex: 0 0 auto; }
+    .grade-mark .letter { font-size: 40px; }
+    .grade-mark { width: 108px; height: 100px; }
+    .grade-mark .form { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 2px; }
+    ol.fixes { margin: 0; padding-left: 1.2em; display: grid; gap: 14px; }
+    ol.fixes li { padding-left: 4px; }
+    ol.fixes strong { color: var(--ink); }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="cover">
+      <img class="logo-ink" src="assets/crom-logo-v26-ink.png" alt="Crom Services" width="160" height="36">
+      <img class="logo-white" src="assets/crom-logo-v26-white.png" alt="Crom Services" width="160" height="36">
+      <p class="kicker">Crom Services · Australia</p>
+      <h1>Speed scan: taxreturnassist.co.uk</h1>
+      <p class="meta-line">Scanned <time datetime="2026-11-21T16:41:00+08:00">21 Nov 2026, 16:41–16:45 AWST (Australia/Perth)</time> · <a href="https://taxreturnassist.co.uk/">https://taxreturnassist.co.uk/</a> · Homepage only</p>
+      <div class="grade-row">
+        <div class="score-pair">
+          <div class="grade-mark" aria-label="Mobile Lighthouse performance 37">
+            <span class="form">Mobile</span>
+            <span class="letter">37</span>
+            <span class="score">Lab / 100</span>
+          </div>
+          <div class="grade-mark" aria-label="Desktop Lighthouse performance 63">
+            <span class="form">Desktop</span>
+            <span class="letter">63</span>
+            <span class="score">Lab / 100</span>
+          </div>
+        </div>
+        <div>
+          <p class="verdict">The homepage is findable and its layout is already stable, but the first screen is slow. WP-Optimize is already caching and minifying, so the delay is not “no cache plugin”. It is HTTP/1.1 plus a long queue of render-blocking CSS, JavaScript and icon fonts.</p>
+          <p class="cap">Google PageSpeed Insights was not measured on this run (the public API returned HTTP 429). Figures below are from Lighthouse 13.6.0 on this machine, plus our own HTTP fetches. No numbers were invented.</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Lab Core Web Vitals</h2>
+        <p class="measure-note">Mobile: Lighthouse default mobile throttling (simulated slower 4G, 4× slower CPU). This is not a field test on a phone in the United Kingdom. Desktop: Lighthouse desktop preset (40&nbsp;ms RTT, 10&nbsp;Mbps, 1× CPU, 1350×940). Observed (unmodelled) figures from the same runs are in smaller type. INP was not measured in these lab runs.</p>
+        <table class="speed-table">
+          <thead>
+            <tr><th>Metric</th><th>Mobile lab</th><th>Desktop lab</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Performance score</th><td>37 / 100</td><td>63 / 100</td></tr>
+            <tr><th>Largest Contentful Paint (LCP)</th><td>7.6&nbsp;s<span class="obs">Observed 2.5&nbsp;s</span></td><td>4.8&nbsp;s<span class="obs">Observed 4.6&nbsp;s</span></td></tr>
+            <tr><th>First Contentful Paint (FCP)</th><td>6.2&nbsp;s<span class="obs">Observed 2.4&nbsp;s</span></td><td>2.0&nbsp;s<span class="obs">Observed 2.1&nbsp;s</span></td></tr>
+            <tr><th>Total Blocking Time (TBT)</th><td>952&nbsp;ms</td><td>40&nbsp;ms</td></tr>
+            <tr><th>Cumulative Layout Shift (CLS)</th><td>0.000</td><td>0.011</td></tr>
+            <tr><th>Speed Index</th><td>8.3&nbsp;s</td><td>3.1&nbsp;s</td></tr>
+            <tr><th>Time to Interactive</th><td>18.3&nbsp;s</td><td>4.8&nbsp;s</td></tr>
+            <tr><th>Document TTFB (Lighthouse)</th><td>310&nbsp;ms</td><td>300&nbsp;ms</td></tr>
+          </tbody>
+        </table>
+        <p class="measure-note measure-foot">LCP on mobile was a paragraph in an Elementor container (<code>div.e-con-inner &gt; … &gt; p</code>). On desktop it was the H1 “Tax Return Assist Ltd — Expert Accountants in Grays &amp; South Essex”. In both cases most of the LCP time was element render delay, not image download. CLS is already in the “good” range.</p>
+      </section>
+      <section>
+        <h2>Weight, requests and TTFB</h2>
+        <table>
+          <tbody>
+            <tr><th>Total transfer (Lighthouse)</th><td>Mobile 2,533&nbsp;KiB in 136 requests. Desktop 2,378&nbsp;KiB in 135 requests.</td></tr>
+            <tr><th>JavaScript</th><td>48 requests, 1,420,507 bytes on the mobile lab run.</td></tr>
+            <tr><th>Fonts</th><td>10 requests, 619,110 bytes on the mobile lab run.</td></tr>
+            <tr><th>CSS</th><td>54 requests, 315,920 bytes on the mobile lab run. The HTML lists 54 stylesheet tags.</td></tr>
+            <tr><th>Images</th><td>20 requests, 157,312 bytes on the mobile lab run. Not the main weight.</td></tr>
+            <tr><th>Homepage HTML</th><td>571,131 bytes uncompressed in our fetch. 79,160 bytes on the wire with gzip.</td></tr>
+            <tr><th>Our TTFB samples</th><td>Three fetches of the homepage: 216&nbsp;ms, 1,007&nbsp;ms and 1,078&nbsp;ms (median 1,007&nbsp;ms). The Lighthouse document response was faster (~300&nbsp;ms). The server time is not steady.</td></tr>
+            <tr><th>Third parties</th><td>20 requests, 422,379 bytes on the mobile lab run, including Google Tag Manager (<code>GT-5TWW5KHJ</code>) and Trustindex.</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Heaviest JavaScript and CSS</h2>
+        <p class="measure-note">Transfer sizes from the mobile Lighthouse run. Unused figures are Lighthouse estimates on that same run.</p>
+        <table>
+          <thead>
+            <tr><th>File</th><th>Transfer</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>wpo-minify-footer-advisol-fontawesome…min.js</th><td>725&nbsp;KiB</td><td>Heaviest file on the page. Theme Font Awesome packed into a footer script by WP-Optimize.</td></tr>
+            <tr><th>themes/advisol/assets/fonts/fa-solid-900.woff2</th><td>304&nbsp;KiB</td><td>One of several Font Awesome webfonts.</td></tr>
+            <tr><th>googletagmanager.com/gtag/js?id=GT-5TWW5KHJ</th><td>183&nbsp;KiB</td><td>Lighthouse estimated 77&nbsp;KiB unused (42%).</td></tr>
+            <tr><th>themes/advisol/assets/fonts/fa-brands-400.woff2</th><td>105&nbsp;KiB</td><td>Second theme Font Awesome file.</td></tr>
+            <tr><th>wpo-minify-header-font-awesome-pro…min.css</th><td>104&nbsp;KiB</td><td>Lighthouse estimated 99.8% of this CSS unused (103&nbsp;KiB wasted).</td></tr>
+            <tr><th>Homepage document</th><td>80&nbsp;KiB gzip / 571&nbsp;KiB raw</td><td>Large Elementor HTML document.</td></tr>
+            <tr><th>elementor/…/fa-solid-900.woff2</th><td>79&nbsp;KiB</td><td>A third solid Font Awesome file, from Elementor, on top of the theme copies.</td></tr>
+            <tr><th>elementor/…/swiper.min.js v8.4.5</th><td>49&nbsp;KiB</td><td>Lighthouse estimated 97% unused.</td></tr>
+            <tr><th>cdn.trustindex.io/loader.js</th><td>26&nbsp;KiB</td><td>Reviews widget. Lighthouse estimated 79% unused on first load. The reviews must stay visible.</td></tr>
+          </tbody>
+        </table>
+        <p>The Advisol theme also loads <code>jquery-3-6-0.min.js</code> as well as WordPress’s own <code>jquery.min.js</code> 3.7.1. Happy Elementor Addons loads GSAP on the homepage (about 1.0&nbsp;s of main-thread work on the mobile lab run). Bootstrap CSS from the theme was estimated 98% unused. Unused CSS overall was estimated at 229&nbsp;KiB; unused JavaScript at 186&nbsp;KiB.</p>
+      </section>
+      <section>
+        <h2>Render-blocking, HTTP and headers</h2>
+        <table>
+          <tbody>
+            <tr><th>Render-blocking</th><td>Lighthouse reported 53 render-blocking CSS and JavaScript files on mobile (estimated 4,780&nbsp;ms delay) and 52 on desktop (estimated 1,610&nbsp;ms). Forty script tags in the HTML have no <code>async</code> or <code>defer</code>, including jQuery, GSAP, DOMPurify, Font Awesome v4 shims, theme jQuery, Bootstrap, Owl Carousel and AOS. A first pass of our scan tool missed this, because Lighthouse 13 renamed the audit; the figures here are from <code>render-blocking-insight</code> in the lab JSON.</td></tr>
+            <tr><th>HTTP version</th><td>The host negotiated HTTP/1.1 only. TLS 1.3 is on, but ALPN selected <code>http/1.1</code>. Lighthouse estimated 2,640&nbsp;ms savings on mobile and 2,090&nbsp;ms on desktop if HTTP/2 or HTTP/3 were used. This matters because the page makes more than 130 requests.</td></tr>
+            <tr><th>Compression</th><td>Gzip is on. A request that offered Brotli, gzip and deflate was served gzip. The 571,131-byte HTML compressed to 79,160 bytes.</td></tr>
+            <tr><th>Caching</th><td>The HTML response is already a WP-Optimize page cache hit (<code>WPO-Cache-Status: cached</code>), but its header is <code>Cache-Control: no-cache</code>. Static CSS, minify files and the theme woff2 font send <code>Cache-Control: public, max-age=2592000</code> (30 days).</td></tr>
+            <tr><th>Server</th><td>Apache, PHP 8.1.34, header <code>X-WS-Origin: available</code>.</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Images</h2>
+        <p>Of 79 <code>img</code> tags on the homepage, 63 were SVG, 5 PNG and 1 WebP in the <code>src</code> attribute (16 WebP mentions in the HTML, including srcset). No AVIF was found. 70 of 79 images have alt text. 70 were lazy-loaded; 9 were not. Image transfer was only 157&nbsp;KiB on the mobile lab run, so converting remaining bitmaps is useful later, not the first lever.</p>
+      </section>
+      <section>
+        <h2>WordPress theme and plugins (front end)</h2>
+        <p>Visible from the public HTML and asset URLs only. We did not have admin access.</p>
+        <table>
+          <tbody>
+            <tr><th>Theme</th><td>Advisol (asset query string <code>ver=7.1.5</code>).</td></tr>
+            <tr><th>Generator tags</th><td>“WordPress 7.1.5”, “Site Kit by Google 1.192.0”, “Elementor 4.4.1” (external CSS, Google Fonts enabled, <code>font-display: swap</code>). The WordPress version string matches the theme asset version, so it may be the theme writing the generator tag.</td></tr>
+            <tr><th>Page builder</th><td>Elementor 4.4.1, plus Happy Elementor Addons 3.52.0, plus Elementor Ally (ea11y) accessibility assets.</td></tr>
+            <tr><th>Performance</th><td>WP-Optimize is already active: page cache, minify CSS and JS under <code>/wp-content/cache/wpo-minify/</code>.</td></tr>
+            <tr><th>SEO</th><td>Yoast SEO (robots.txt block and <code>sitemap_index.xml</code>).</td></tr>
+            <tr><th>Other plugins visible</th><td>Site Kit by Google, Contact Form 7, Burst Statistics, and the Trustindex Google reviews widget (local CSS plus <code>cdn.trustindex.io/loader.js</code>).</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Titles, meta, indexability, robots and sitemap</h2>
+        <table>
+          <tbody>
+            <tr><th>Title</th><td>Tax Return Assist | Expert Online Accountants &amp; Tax Services (60 characters).</td></tr>
+            <tr><th>Meta description</th><td>Trusted accountants in Grays, Essex. Tax Return Assist provides fixed-fee online accounting, Self Assessment, corporation tax, and VAT return (141 characters).</td></tr>
+            <tr><th>H1</th><td>One H1: “Tax Return Assist Ltd — Expert Accountants in Grays &amp; South Essex”.</td></tr>
+            <tr><th>Canonical</th><td>https://taxreturnassist.co.uk/</td></tr>
+            <tr><th>Indexability</th><td>Meta robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1. No noindex on the homepage.</td></tr>
+            <tr><th>HTTPS and hosts</th><td>http:// and www both 301 to https://taxreturnassist.co.uk/.</td></tr>
+            <tr><th>robots.txt</th><td>Allows crawlers. One disallow for <code>/wp-content/uploads/wpo/wpo-plugins-tables-list.json</code>. Sitemap line points at https://taxreturnassist.co.uk/sitemap_index.xml.</td></tr>
+            <tr><th>Sitemap</th><td>Yoast sitemap index lists 178 page URLs: 47 posts, 16 pages, 5 categories, 107 tags, 1 author, plus one <code>tahefobu_header</code> and one <code>tahefobu_footer</code> template URL. Worth checking whether those header and footer templates should be in the sitemap.</td></tr>
+            <tr><th>Schema</th><td>JSON-LD is present (WebPage, WebSite, Organization, BreadcrumbList and related types).</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Top 3 fixes</h2>
+        <p class="measure-note">Plain recommendations from this scan only. Not a full recipe, and not “install a caching plugin” — WP-Optimize is already doing that.</p>
+        <ol class="fixes">
+          <li><strong>Ask the host to enable HTTP/2 or HTTP/3, and get the first paint off that long render-blocking queue.</strong> The site still answers on HTTP/1.1, then has to fetch 50-plus CSS and JavaScript files before the heading and first paragraph can paint. That is why LCP is a text element waiting, not a heavy hero image. Combine or defer what is not needed for the first screen, and inline a small amount of critical CSS. Lighthouse estimated 4.8&nbsp;s of render-blocking delay on mobile and 1.6&nbsp;s on desktop, plus a further 2.1–2.6&nbsp;s if the host moved off HTTP/1.1.</li>
+          <li><strong>Load Font Awesome once, and only the icons in use.</strong> The theme, Elementor, Font Awesome Pro and Font Awesome 5 are all shipping icon CSS or webfonts. Together, fonts were about 619&nbsp;KiB on the mobile lab run, and the single heaviest file was a 725&nbsp;KiB minified Font Awesome footer script. About 99% of the Pro CSS was unused. One icon method, subset to the icons on the site, would cut a large share of the weight without changing the look.</li>
+          <li><strong>Cut first-load JavaScript without touching reviews, forms or the layout.</strong> The theme loads a second copy of jQuery. Happy Elementor Addons pulls in GSAP on the homepage. Elementor’s Swiper was almost unused. Google Tag Manager is 183&nbsp;KiB on first load. Trustindex can be deferred so the Google reviews still appear, just not on the critical path. That is the practical way to bring the 952&nbsp;ms mobile Total Blocking Time down. No paid plugin would be added without approval, and a full backup would be taken first.</li>
+        </ol>
+      </section>
+      <section class="close">
+        <p>This is a short public scan of the homepage, made from the outside. It is not a complete fix list, and it does not change the live site. Client-supplied PageSpeed attachments were not available to us when this was written.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Crom Services, Australia. Lab runs: Lighthouse 13.6.0, 21 Nov 2026. Mobile fetch 16:42 AWST; desktop preset fetch 16:45 AWST (Australia/Perth). PageSpeed Insights API: not measured (HTTP 429). This page is noindex.</p>
+    </footer>
+  </div>
+</body>
+</html>
