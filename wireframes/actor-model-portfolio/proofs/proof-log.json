@@ -1,0 +1,104 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 5854,
+  "first_view_bytes": 134800,
+  "sections": [
+   [
+    "home",
+    119,
+    789
+   ],
+   [
+    "acting",
+    908.0625,
+    2142
+   ],
+   [
+    "modeling",
+    3050.1875,
+    1717
+   ],
+   [
+    "book",
+    4767.203125,
+    383
+   ],
+   [
+    "links",
+    5150.453125,
+    522
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/actor-model-portfolio/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 5854,
+  "first_view_bytes": 134800,
+  "sections": [
+   [
+    "home",
+    119,
+    789
+   ],
+   [
+    "acting",
+    908.0625,
+    2142
+   ],
+   [
+    "modeling",
+    3050.1875,
+    1717
+   ],
+   [
+    "book",
+    4767.203125,
+    383
+   ],
+   [
+    "links",
+    5150.453125,
+    522
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/actor-model-portfolio/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 6387,
+  "first_view_bytes": 100682,
+  "sections": [
+   [
+    "home",
+    124,
+    1024
+   ],
+   [
+    "acting",
+    1148.3125,
+    1974
+   ],
+   [
+    "modeling",
+    3121.890625,
+    2134
+   ],
+   [
+    "book",
+    5255.453125,
+    499
+   ],
+   [
+    "links",
+    5754.59375,
+    452
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/actor-model-portfolio/proofs/phone-390.png"
+ }
+]
