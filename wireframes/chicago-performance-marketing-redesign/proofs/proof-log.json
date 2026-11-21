@@ -1,0 +1,149 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 12943,
+  "first_view_bytes": 214762,
+  "sections": [
+   [
+    "home",
+    0,
+    811
+   ],
+   [
+    "offer",
+    810.875,
+    1118
+   ],
+   [
+    "results",
+    1928.78125,
+    1780
+   ],
+   [
+    "talk",
+    3709.203125,
+    1122
+   ],
+   [
+    "founder",
+    5269.3125,
+    2314
+   ],
+   [
+    "booking",
+    8021.53125,
+    1026
+   ],
+   [
+    "privacy",
+    9485.265625,
+    1980
+   ],
+   [
+    "accessibility",
+    11465.484375,
+    1477
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/chicago-performance-marketing-redesign/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 12943,
+  "first_view_bytes": 214762,
+  "sections": [
+   [
+    "home",
+    0,
+    811
+   ],
+   [
+    "offer",
+    810.875,
+    1118
+   ],
+   [
+    "results",
+    1928.78125,
+    1780
+   ],
+   [
+    "talk",
+    3709.203125,
+    1122
+   ],
+   [
+    "founder",
+    5269.3125,
+    2314
+   ],
+   [
+    "booking",
+    8021.53125,
+    1026
+   ],
+   [
+    "privacy",
+    9485.265625,
+    1980
+   ],
+   [
+    "accessibility",
+    11465.484375,
+    1477
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/chicago-performance-marketing-redesign/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 19411,
+  "first_view_bytes": 214762,
+  "sections": [
+   [
+    "home",
+    0,
+    1008
+   ],
+   [
+    "offer",
+    1008.140625,
+    1796
+   ],
+   [
+    "results",
+    2804.296875,
+    2112
+   ],
+   [
+    "talk",
+    4916.578125,
+    1472
+   ],
+   [
+    "founder",
+    7203.828125,
+    4052
+   ],
+   [
+    "booking",
+    12071.53125,
+    1380
+   ],
+   [
+    "privacy",
+    14267.171875,
+    2980
+   ],
+   [
+    "accessibility",
+    17246.96875,
+    2164
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-21/chicago-performance-marketing-redesign/proofs/phone-390.png"
+ }
+]
