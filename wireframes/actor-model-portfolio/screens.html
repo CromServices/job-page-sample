@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avery Langford (sample) — Actor and Model</title>
+<meta name="description" content="Avery Langford is a sample actor and model. Headshots, a reel, a resume, a comp card, digitals and measurements in one visit.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Avery Langford (sample)","jobTitle":["Actor","Model"],"description":"Sample performer used for a portfolio wireframe."}</script>
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Archivo"; src: url("fonts/archivo.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+:root {
+  --ink: #141414; --cream: #FFF4E6; --coral: #FF5A3C; --sun: #FFC736; --white: #FFFFFF; --soft: #3A3633; --line: #D9C9B4;
+  --logo-h: 64px;
+  --fs-1: 15px; --fs-2: 16px; --fs-3: 18px; --fs-4: 22px; --fs-5: 30px; --fs-6: 56px; --fs-7: 99px;
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px; --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px;
+  --wrap: 1240px; --ease: cubic-bezier(.2,.8,.2,1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Archivo", sans-serif; font-size: var(--fs-3); line-height: 1.55; color: var(--ink); background: var(--cream); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ul, figure, dl, dd, dt { margin: 0; padding: 0; }
+ul { list-style: none; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.045em; line-height: 0.98; }
+h1 { font-size: var(--fs-7); }
+h2 { font-size: var(--fs-7); }
+h3 { font-size: var(--fs-4); letter-spacing: -0.02em; line-height: 1.15; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.dark :focus-visible { outline-color: var(--cream); }
+.book :focus-visible { outline-color: var(--ink); }
+.skip { position: absolute; left: 16px; top: 16px; z-index: 60; background: var(--white); padding: 8px 16px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+.sample { background: var(--ink); color: var(--cream); font-size: var(--fs-1); line-height: 1.4; padding: 8px max(24px, calc((100% - var(--wrap)) / 2)); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 24px; border-radius: 4px; background: var(--ink); color: var(--cream); font: inherit; font-weight: 700; font-size: var(--fs-3); text-decoration: none; border: 2px solid var(--ink); line-height: 1.2; cursor: pointer; max-width: 100%; text-align: center; }
+.btn:hover { background: var(--coral); color: var(--ink); }
+.btn.coral { background: var(--coral); color: var(--ink); border-color: var(--ink); }
+.btn.coral:hover { background: var(--sun); }
+.textbtn { background: none; border: 0; border-bottom: 2px solid currentColor; padding: 4px 0; font: inherit; font-weight: 700; font-size: var(--fs-3); cursor: pointer; color: inherit; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+/* header */
+header.site { background: var(--cream); position: sticky; top: 0; z-index: 30; border-bottom: 2px solid var(--ink); }
+.head { display: flex; align-items: center; gap: var(--s-3); min-height: calc(var(--logo-h) + 16px); padding: 8px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.brand svg { height: var(--logo-h); width: var(--logo-h); flex: 0 0 auto; }
+.brand strong { font-size: var(--fs-4); letter-spacing: -0.03em; }
+.head nav ul { display: flex; gap: var(--s-4); }
+.head nav li:nth-child(3) { margin-left: var(--s-3); padding-left: var(--s-4); border-left: 2px solid var(--ink); }
+.head nav a { text-decoration: none; font-weight: 500; font-size: var(--fs-2); min-height: 44px; display: inline-flex; align-items: center; }
+.head nav a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.head .btn { min-height: 48px; padding: 8px 20px; font-size: var(--fs-2); }
+details.menu { display: none; position: relative; }
+details.menu summary { list-style: none; min-height: 48px; display: inline-flex; align-items: center; padding: 0 16px; border: 2px solid var(--ink); border-radius: 4px; font-weight: 700; cursor: pointer; }
+details.menu summary::-webkit-details-marker { display: none; }
+details.menu ul { position: absolute; right: 0; top: 56px; background: var(--cream); border: 2px solid var(--ink); padding: 8px 16px; min-width: 220px; z-index: 5; }
+details.menu a { display: flex; min-height: 44px; align-items: center; text-decoration: none; }
+/* hero */
+.hero { background: var(--coral); }
+.band { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-6); padding: var(--s-4) 0 var(--s-4); }
+.band h1 { flex: 0 0 auto; }
+.band .intro { max-width: 30em; padding-bottom: 6px; }
+.band .intro p { font-size: var(--fs-4); line-height: 1.35; }
+.band .actions { display: flex; align-items: center; flex-wrap: wrap; gap: var(--s-4); margin-top: var(--s-3); }
+.diptych { display: flex; height: clamp(520px, 64vh, 700px); border: 2px solid var(--ink); border-bottom: 0; background: var(--ink); gap: 2px; max-width: 1760px; margin: 0 auto; }
+.hero { border-bottom: 2px solid var(--ink); }
+.panel { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; display: block; text-decoration: none; color: var(--cream); transition: flex-grow .6s var(--ease); }
+.panel:hover, .panel:focus-visible { flex-grow: 1.75; }
+.panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.panel.acting img { object-position: 50% 30%; }
+.panel.modeling img { object-position: 50% 12%; }
+.panel:hover img, .panel:focus-visible img { transform: scale(1.04); }
+.panel .tag { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--cream); padding: var(--s-3) var(--s-4); max-width: 100%; }
+.panel .tag strong { display: block; font-size: var(--fs-6); letter-spacing: -0.045em; line-height: 1; }
+.panel .tag span { display: block; font-size: var(--fs-3); margin-top: 6px; }
+/* acting */
+.dark { background: var(--ink); color: var(--cream); }
+.acting-s, .modeling-s, .book, .links { padding: var(--s-8) 0; }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-5); flex-wrap: wrap; margin-bottom: var(--s-5); }
+.sec-head p { font-size: var(--fs-4); line-height: 1.35; max-width: 26em; }
+.reel { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+.reel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s var(--ease); }
+.reel img.on { opacity: 1; }
+.reel figcaption { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--cream); padding: 10px var(--s-3); font-size: var(--fs-2); }
+.controls { display: flex; align-items: center; gap: var(--s-4); flex-wrap: wrap; padding: var(--s-3) 0; border-bottom: 2px solid var(--cream); }
+.controls .btn { min-width: 128px; background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.controls .btn:hover { background: var(--sun); border-color: var(--sun); }
+.controls input[type=range] { flex: 1 1 200px; min-width: 120px; accent-color: var(--coral); height: 44px; }
+.controls .time { font-variant-numeric: tabular-nums; font-size: var(--fs-2); min-width: 5.5em; }
+.chapters { display: flex; gap: var(--s-4); flex-wrap: wrap; }
+.chapters button { background: none; border: 0; border-bottom: 3px solid transparent; color: var(--cream); font: inherit; font-weight: 500; font-size: var(--fs-2); min-height: 44px; padding: 0 2px; cursor: pointer; }
+.chapters button[aria-pressed="true"] { border-bottom-color: var(--coral); font-weight: 700; }
+.strip { display: flex; gap: var(--s-3); margin-top: var(--s-6); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: var(--s-3); }
+.strip figure { flex: 0 0 auto; scroll-snap-align: start; }
+.strip img { height: 520px; width: auto; max-width: none; }
+.strip figcaption { font-size: var(--fs-2); margin-top: 8px; }
+.resume { margin-top: var(--s-6); border-top: 2px solid var(--cream); }
+.resume dl { display: block; }
+.resume .row { display: flex; gap: var(--s-5); padding: var(--s-3) 0; border-bottom: 1px solid #5a5551; }
+.resume dt { flex: 0 0 11em; font-weight: 700; }
+.resume dd { flex: 1; }
+.resume .dl { padding-top: var(--s-4); display: flex; align-items: center; gap: var(--s-4); flex-wrap: wrap; }
+.dark .btn { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.dark .btn:hover { background: var(--sun); border-color: var(--sun); }
+.dark .controls .btn { background: var(--coral); border-color: var(--coral); }
+/* modeling */
+.modeling-s { background: var(--sun); }
+.stage { margin-top: var(--s-5); }
+.flipbar { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-3); flex-wrap: wrap; }
+.flipbar p { font-size: var(--fs-3); }
+.compcard { perspective: 1800px; }
+.faces { display: grid; transition: transform .8s var(--ease); transform-style: preserve-3d; }
+.faces.back { transform: rotateY(180deg); }
+.face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--cream); border: 2px solid var(--ink); display: flex; min-height: 640px; transition: visibility 0s .4s; }
+.face.rear { transform: rotateY(180deg); }
+.faces:not(.back) .face.rear, .faces.back .face.front { visibility: hidden; }
+.face img { height: 640px; width: auto; max-width: none; flex: 0 0 auto; }
+.face.front { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr; }
+.face.front img { grid-column: 1; grid-row: 1 / span 2; }
+.face .ttl { padding: var(--s-5) var(--s-5) 0; }
+.face .stats { padding: 0 var(--s-5) var(--s-5); align-self: end; }
+.face .ttl h3 { font-size: var(--fs-5); }
+.face.rear { display: grid; grid-template-columns: auto auto 1fr; grid-template-rows: auto 1fr; }
+.face.rear img { grid-row: 1 / span 2; }
+.face.rear .ttl, .face.rear .stats { grid-column: 3; }
+.face.rear .ttl { padding-top: var(--s-5); } .face.rear .stats { padding-top: 0; }
+.stats .row { display: flex; justify-content: space-between; gap: var(--s-3); padding: 10px 0; border-bottom: 1px solid var(--line); }
+.stats dt { font-weight: 500; }
+.stats dd { font-weight: 700; }
+.face.rear img { border-right: 2px solid var(--ink); }
+.seg { display: flex; gap: var(--s-4); margin: var(--s-7) 0 var(--s-3); align-items: center; flex-wrap: wrap; }
+.seg h3 { font-size: var(--fs-5); margin-right: var(--s-4); }
+.seg button { background: none; border: 0; border-bottom: 3px solid transparent; font: inherit; font-weight: 500; font-size: var(--fs-3); min-height: 44px; cursor: pointer; padding: 0 2px; color: var(--ink); }
+.seg button[aria-pressed="true"] { border-bottom-color: var(--ink); font-weight: 700; }
+.gal { display: flex; gap: var(--s-3); height: 560px; }
+.gal[hidden] { display: none; }
+.gal figure { position: relative; overflow: hidden; background: var(--ink); }
+.gal figure:first-child { flex: 1.5 1 0; }
+.gal figure:last-child { flex: 1 1 0; }
+.gal img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.gal figure:hover img { transform: scale(1.04); }
+/* book */
+.book { background: var(--coral); }
+.book .inner { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-6); flex-wrap: wrap; }
+.book h2 { font-size: var(--fs-6); max-width: 15em; }
+.book p { font-size: var(--fs-4); line-height: 1.35; max-width: 28em; margin-top: var(--s-3); }
+.book p.own { max-width: none; margin: var(--s-4) auto 0; font-size: var(--fs-1); background: var(--ink); color: var(--cream); padding: 8px 16px; line-height: 1.4; }
+.book .btn { font-size: var(--fs-4); min-height: 64px; padding: 16px 32px; }
+.book .btn:hover { background: var(--cream); color: var(--ink); }
+/* links */
+.links ul { border-top: 2px solid var(--ink); margin-top: var(--s-5); }
+.links li a { display: flex; justify-content: space-between; align-items: center; gap: var(--s-4); min-height: 72px; border-bottom: 2px solid var(--ink); text-decoration: none; font-size: var(--fs-5); font-weight: 700; letter-spacing: -0.03em; padding: var(--s-3) 0; }
+.links li a:hover { background: var(--sun); }
+.links li a span { font-size: var(--fs-2); font-weight: 400; letter-spacing: 0; }
+.links h2 { font-size: var(--fs-6); max-width: 12em; }
+footer { background: var(--ink); color: var(--cream); padding: var(--s-6) 0 var(--s-6); font-size: var(--fs-2); }
+footer details { margin-top: var(--s-3); }
+footer summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 700; }
+footer [data-wf="note"] { background: #2B2B2B; color: var(--cream); padding: var(--s-3); font-size: var(--fs-1); line-height: 1.45; margin-top: var(--s-2); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media (max-width: 960px) {
+  :root { --fs-7: 72px; --fs-6: 44px; }
+  .head nav { display: none; }
+  details.menu { display: block; }
+  .band { flex-direction: column; align-items: flex-start; gap: var(--s-3); }
+  .face.front { grid-template-columns: 1fr; grid-template-rows: none; }
+  .face.front img { grid-row: auto; height: auto; width: 100%; }
+  .face.rear { grid-template-columns: auto auto; grid-template-rows: none; }
+  .face.rear img { height: 340px; width: auto; grid-row: 1; }
+  .face.rear .ttl, .face.rear .stats { grid-column: 1 / -1; }
+  .strip img { height: 420px; }
+  .gal { height: 420px; }
+  .resume .row { flex-direction: column; gap: 2px; }
+  .resume dt { flex: none; }
+}
+@media (max-width: 600px) {
+  :root { --logo-h: 48px; --fs-3: 17px; --fs-4: 19px; --fs-5: 26px; --fs-6: 34px; --fs-7: 56px; }
+  .wrap { width: calc(100% - 40px); }
+  .brand strong { display: none; }
+  .head { gap: var(--s-3); }
+  .head .btn { padding: 8px 14px; font-size: var(--fs-1); white-space: nowrap; }
+  .diptych { flex-direction: column; height: auto; }
+  .panel { flex: none; height: 300px; }
+  .panel:hover, .panel:focus-visible { flex-grow: 0; }
+  .panel .tag strong { font-size: var(--fs-5); }
+  .acting-s, .modeling-s, .book, .links { padding: var(--s-7) 0; }
+  .face.rear img { height: 260px; }
+  .face .ttl { padding: var(--s-4) var(--s-4) 0; } .face .stats { padding: 0 var(--s-4) var(--s-4); }
+  .gal { flex-direction: column; height: auto; }
+  .gal figure { height: 320px; flex: none !important; }
+  .controls .btn { min-width: 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="sample" data-wf="note">Sample content: Avery Langford is a stand-in performer and the photographs are illustrative.</p>
+<header class="site"><div class="wrap head">
+  <a class="brand" href="#home" aria-label="Avery Langford, home">
+    <svg viewBox="0 0 64 64" role="img" aria-label="AL monogram"><rect width="64" height="64" rx="8" fill="#FF5A3C"/><text x="32" y="43" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="30" letter-spacing="-2" fill="#141414">AL</text></svg>
+    <strong>Avery Langford</strong>
+  </a>
+  <nav aria-label="Main"><ul><li><a href="#acting">Acting</a></li><li><a href="#modeling">Modeling</a></li><li><a href="#links">Casting profile</a></li><li><a href="#links">Instagram</a></li><li><a href="#links">Reel page</a></li></ul></nav>
+  <details class="menu"><summary>Links</summary><ul><li><a href="#acting">Acting</a></li><li><a href="#modeling">Modeling</a></li><li><a href="#links">Casting profile</a></li><li><a href="#links">Instagram</a></li><li><a href="#links">Reel page</a></li></ul></details>
+  <a class="btn coral" href="avery-langford-sample-booking-pack.pdf" download>Booking pack</a>
+</div></header>
+<main id="main">
+
+<section class="page hero" id="home" data-feeling="struck">
+  <div class="wrap band">
+    <h1>Avery Langford</h1>
+    <div class="intro">
+      <p>Actor and model. Open the acting book for headshots, reel and resume, or the modeling book for the comp card, digitals and measurements.</p>
+      <div class="actions">
+        <a class="btn" href="avery-langford-sample-booking-pack.pdf" download>Download the booking pack</a>
+        <a class="textbtn" href="#reel" data-play>Play the reel</a>
+      </div>
+    </div>
+  </div>
+  <div class="diptych">
+    <a class="panel acting" href="#acting" aria-label="Open the acting book: headshots, reel and resume" data-cycle="images/acting-a1.webp|images/acting-a2.webp|images/acting-a3.webp">
+      <img src="images/acting-a1-720.webp" srcset="images/acting-a1-720.webp 640w, images/acting-a1.webp 1000w" sizes="(max-width: 960px) 320px, 50vw" width="640" height="853" fetchpriority="high" alt="Avery Langford, theatrical headshot (sample)">
+      <span class="tag"><strong>Acting</strong><span>Headshots, reel, resume</span></span>
+    </a>
+    <a class="panel modeling" href="#modeling" aria-label="Open the modeling book: comp card, digitals and measurements" data-cycle="images/model-m1.webp|images/editorial.webp|images/commercial.webp">
+      <img src="images/model-m1-720.webp" srcset="images/model-m1-720.webp 640w, images/model-m1.webp 1000w" sizes="(max-width: 960px) 320px, 50vw" width="640" height="853" alt="Avery Langford, comp card photograph in a coral blazer (sample)">
+      <span class="tag"><strong>Modeling</strong><span>Comp card, digitals, measurements</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="page dark acting-s" id="acting" data-feeling="absorbed">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Acting</h2>
+      <p>The reel plays on this page. Headshots are current, and the resume is one click away.</p>
+    </div>
+    <figure class="reel" id="reel" aria-label="Sample reel, stills only">
+      <img data-lazy class="on" data-src="images/reel-door-720.webp" data-srcset="images/reel-door-720.webp 640w, images/reel-door.webp 1024w" sizes="(max-width: 960px) 320px, 1240px" width="1024" height="576" alt="Avery Langford in a lit doorway at dusk, reel still (sample)">
+      <img data-lazy data-src="images/reel-street-720.webp" data-srcset="images/reel-street-720.webp 640w, images/reel-street.webp 1024w" sizes="(max-width: 960px) 320px, 1240px" width="1024" height="576" alt="Avery Langford walking a city street at golden hour, reel still (sample)">
+      <img data-lazy data-src="images/commercial-720.webp" data-srcset="images/commercial-720.webp 640w, images/commercial.webp 1024w" sizes="(max-width: 960px) 320px, 1240px" width="1024" height="768" alt="Avery Langford laughing with a coffee mug, reel still (sample)">
+      <figcaption id="cap">Drama, doorway scene</figcaption>
+    </figure>
+    <div class="controls" role="group" aria-label="Reel controls">
+      <button class="btn" id="play" type="button">Play reel</button>
+      <input id="seek" type="range" min="0" max="90" value="0" aria-label="Reel position" aria-valuetext="0 seconds of 9">
+      <span class="time" id="time" aria-hidden="true">0:00 / 0:09</span>
+      <div class="chapters"><button type="button" data-ch="0" aria-pressed="true">Drama</button><button type="button" data-ch="1" aria-pressed="false">Street</button><button type="button" data-ch="2" aria-pressed="false">Commercial</button></div>
+    </div>
+    <p data-wf="note" style="margin-top:12px;background:#2B2B2B;color:var(--cream);padding:8px 16px;font-size:var(--fs-1)">Sample reel built from stills. The client’s own reel replaces it and plays in the same place.</p>
+
+    <div class="strip" tabindex="0" role="region" aria-label="Headshots">
+      <figure><img data-lazy data-src="images/acting-a1-720.webp" data-srcset="images/acting-a1-720.webp 640w, images/acting-a1.webp 1000w" sizes="(min-width: 961px) 390px, 320px" width="640" height="853" alt="Avery Langford, theatrical headshot (sample)"><figcaption>Theatrical</figcaption></figure>
+      <figure><img data-lazy data-src="images/acting-a2-720.webp" data-srcset="images/acting-a2-720.webp 640w, images/acting-a2.webp 1000w" sizes="(min-width: 961px) 390px, 320px" width="640" height="853" alt="Avery Langford, dramatic headshot (sample)"><figcaption>Dramatic</figcaption></figure>
+      <figure><img data-lazy data-src="images/acting-a3-720.webp" data-srcset="images/acting-a3-720.webp 640w, images/acting-a3.webp 1000w" sizes="(min-width: 961px) 390px, 320px" width="640" height="853" alt="Avery Langford, commercial headshot (sample)"><figcaption>Commercial</figcaption></figure>
+    </div>
+
+    <div class="resume">
+      <dl>
+        <div class="row"><dt>Film</dt><dd>Sample credit: lead role, short film (title and director to come)</dd></div>
+        <div class="row"><dt>Television</dt><dd>Sample credit: guest role, drama series (title to come)</dd></div>
+        <div class="row"><dt>Theatre</dt><dd>Sample credit: ensemble, stage production (company to come)</dd></div>
+        <div class="row"><dt>Training and skills</dt><dd>Sample entries: on-camera class, improvisation, two accents</dd></div>
+      </dl>
+      <div class="dl"><a class="btn" href="avery-langford-sample-booking-pack.pdf" download>Download the resume (PDF)</a><span>Resume and comp card travel together in the booking pack.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="page modeling-s" id="modeling" data-feeling="certain">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Modeling</h2>
+      <p>The comp card and the numbers sit together. Turn the card over for digitals, then browse editorial and commercial work.</p>
+    </div>
+    <div class="stage compcard">
+      <div class="flipbar">
+        <button class="btn" id="flip" type="button" aria-pressed="false">Turn the card over</button>
+        <p id="flipnote" aria-live="polite">Front: comp card photograph and measurements.</p>
+      </div>
+      <div class="faces" id="faces">
+        <div class="face front" id="front">
+          <img data-lazy data-src="images/model-m1-720.webp" data-srcset="images/model-m1-720.webp 640w, images/model-m1.webp 1000w" sizes="(max-width: 600px) 320px, 480px" width="640" height="853" alt="Avery Langford, comp card photograph in a coral blazer (sample)">
+          <div class="ttl"><h3>Avery Langford</h3><p style="margin-top:6px">Model. Sample measurements.</p></div>
+            <dl class="stats">
+              <div class="row"><dt>Height</dt><dd>5 ft 10 in (178 cm)</dd></div>
+              <div class="row"><dt>Bust</dt><dd>34 in</dd></div>
+              <div class="row"><dt>Waist</dt><dd>26 in</dd></div>
+              <div class="row"><dt>Hips</dt><dd>36 in</dd></div>
+              <div class="row"><dt>Shoe</dt><dd>US 9</dd></div>
+              <div class="row"><dt>Hair and eyes</dt><dd>Dark, brown</dd></div>
+            </dl>
+        </div>
+        <div class="face rear" id="rear">
+          <img data-lazy data-src="images/digital-front-720.webp" width="640" height="1138" alt="Avery Langford, full-length front digital (sample)">
+          <img data-lazy data-src="images/digital-profile-720.webp" width="640" height="853" alt="Avery Langford, profile digital (sample)">
+          <div class="ttl"><h3>Digitals</h3><p style="margin-top:6px">Front and profile, natural light, no retouching.</p></div>
+            <dl class="stats"><div class="row"><dt>Height</dt><dd>5 ft 10 in</dd></div><div class="row"><dt>Hips</dt><dd>36 in</dd></div><div class="row"><dt>Shoe</dt><dd>US 9</dd></div></dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg" role="group" aria-label="Gallery">
+      <h3>Work</h3>
+      <button type="button" data-gal="ed" aria-pressed="true">Editorial</button>
+      <button type="button" data-gal="co" aria-pressed="false">Commercial</button>
+    </div>
+    <div class="gal" id="ed">
+      <figure><img data-lazy data-src="images/editorial-720.webp" data-srcset="images/editorial-720.webp 640w, images/editorial.webp 1024w" sizes="(max-width: 600px) 320px, 700px" width="1024" height="768" alt="Avery Langford in a yellow suit on a coral backdrop, editorial (sample)"></figure>
+      <figure><img data-lazy data-src="images/model-m1-720.webp" width="640" height="853" alt="Avery Langford in a coral blazer, editorial (sample)"></figure>
+    </div>
+    <div class="gal" id="co" hidden>
+      <figure><img data-lazy data-src="images/commercial-720.webp" data-srcset="images/commercial-720.webp 640w, images/commercial.webp 1024w" sizes="(max-width: 600px) 320px, 700px" width="1024" height="768" alt="Avery Langford laughing with a coffee mug, commercial (sample)"></figure>
+      <figure><img data-lazy data-src="images/acting-a3-720.webp" width="640" height="853" alt="Avery Langford laughing in a denim shirt, commercial (sample)"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="page book" id="book" data-feeling="ready">
+  <div class="wrap inner">
+    <div>
+      <h2>Take the booking pack with you</h2>
+      <p>Resume, comp card and measurements in one PDF, ready to forward to a producer or a client.</p>
+    </div>
+    <a class="btn" href="avery-langford-sample-booking-pack.pdf" download>Download the booking pack (PDF)</a>
+  </div>
+  <p class="wrap own" data-wf="note">Photos and the resume are owner-editable: the walkthrough at delivery covers swapping both.</p>
+</section>
+
+<section class="page links" id="links" data-feeling="assured">
+  <div class="wrap">
+    <h2>Casting profiles and social</h2>
+    <ul>
+      <li><a href="#links">Casting profile <span>Sample link</span></a></li>
+      <li><a href="#links">Instagram <span>Sample link</span></a></li>
+      <li><a href="#links">Reel page <span>Sample link</span></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Avery Langford. Actor and model. Sample site.</p>
+    <details data-wf-wrap>
+      <summary>Delivery notes</summary>
+      <div data-wf="note">Search Console: connect the custom domain and submit the sitemap. Meta title: Avery Langford (sample), Actor and Model. Meta description and Person schema use the sample name, jobTitle Actor and Model, and sameAs links to the casting and social profiles once the client supplies them. Platform (Squarespace, Wix or WordPress) is a build decision.</div>
+    </details>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* Below-fold images load as they near the screen */
+  function load(im) { if (!im.dataset.src) return; if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { load(x.target); io.unobserve(x.target); } }); }, { rootMargin: '0px 0px 150px 0px' }) : null;
+  $$('img[data-lazy]').forEach(function (im) { io ? io.observe(im) : load(im); });
+
+  /* 1. Diptych: hover or focus flips through headshots and work */
+  $$('.panel').forEach(function (p) {
+    var list = p.getAttribute('data-cycle').split('|'), img = $('img', p), orig = img.currentSrc || img.src, i = 0, t = null, set = img.getAttribute('srcset');
+    function start() {
+      if (reduce || window.innerWidth <= 960 || t) return;
+      img.removeAttribute('srcset');
+      t = setInterval(function () { i = (i + 1) % list.length; img.src = list[i]; }, 1100);
+    }
+    function stop() { clearInterval(t); t = null; i = 0; if (set) img.setAttribute('srcset', set); img.src = list[0].replace('.webp', '-720.webp'); }
+    p.addEventListener('pointerenter', start); p.addEventListener('focus', start);
+    p.addEventListener('pointerleave', stop); p.addEventListener('blur', stop);
+  });
+
+  /* 2. Reel: stills, chapters, play and scrub */
+  var frames = $$('#reel img'), caps = ['Drama, doorway scene', 'Street scene, golden hour', 'Commercial, kitchen scene'];
+  var t = 0, timer = null, T = 9, play = $('#play'), seek = $('#seek'), time = $('#time'), cap = $('#cap'), chs = $$('.chapters button');
+  function fmt(x) { return '0:0' + Math.floor(x); }
+  function show() {
+    var c = Math.min(2, Math.floor(t / 3));
+    frames.forEach(function (f, i) { f.classList.toggle('on', i === c); });
+    chs.forEach(function (b, i) { b.setAttribute('aria-pressed', i === c ? 'true' : 'false'); });
+    cap.textContent = caps[c]; seek.value = Math.round(t * 10); time.textContent = fmt(t) + ' / 0:09';
+    seek.setAttribute('aria-valuetext', Math.floor(t) + ' seconds of 9');
+  }
+  function stopReel() { clearInterval(timer); timer = null; play.textContent = reduce ? 'Next scene' : 'Play reel'; }
+  function startReel() {
+    if (reduce) { t = (Math.floor(t / 3) + 1) % 3 * 3; show(); return; }
+    if (t >= T) t = 0;
+    play.textContent = 'Pause reel';
+    timer = setInterval(function () { t += 0.1; if (t >= T) { t = T - 0.01; show(); stopReel(); t = 0; return; } show(); }, 100);
+  }
+  if (reduce) play.textContent = 'Next scene';
+  play.addEventListener('click', function () { timer ? stopReel() : startReel(); });
+  seek.addEventListener('input', function () { t = seek.value / 10; show(); });
+  chs.forEach(function (b) { b.addEventListener('click', function () { t = b.getAttribute('data-ch') * 3; show(); }); });
+  $$('[data-play]').forEach(function (a) { a.addEventListener('click', function () { setTimeout(function () { if (!timer) { reduce ? show() : startReel(); } }, 350); }); });
+
+  /* 3. Comp card: turn it over */
+  var flip = $('#flip'), faces = $('#faces'), fnote = $('#flipnote'), fr = $('#front'), rr = $('#rear');
+  rr.setAttribute('aria-hidden', 'true');
+  flip.addEventListener('click', function () {
+    var back = faces.classList.toggle('back');
+    flip.setAttribute('aria-pressed', back); flip.textContent = back ? 'Turn it back' : 'Turn the card over';
+    fnote.textContent = back ? 'Back: front and profile digitals.' : 'Front: comp card photograph and measurements.';
+    fr.setAttribute('aria-hidden', back ? 'true' : 'false'); rr.setAttribute('aria-hidden', back ? 'false' : 'true');
+  });
+
+  /* 4. Work: editorial and commercial */
+  $$('[data-gal]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $$('[data-gal]').forEach(function (o) { var on = o === b, g = $('#' + o.getAttribute('data-gal')); o.setAttribute('aria-pressed', on); g.hidden = !on; if (on) $$('img[data-lazy]', g).forEach(load); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
