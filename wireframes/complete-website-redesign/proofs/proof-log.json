@@ -1,0 +1,104 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 5617,
+  "first_view_bytes": 51779,
+  "sections": [
+   [
+    "home",
+    119,
+    824
+   ],
+   [
+    "usability",
+    942.59375,
+    1656
+   ],
+   [
+    "brand",
+    2598.375,
+    963
+   ],
+   [
+    "book",
+    3561.65625,
+    1026
+   ],
+   [
+    "after",
+    4587.71875,
+    880
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/complete-website-redesign/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 5617,
+  "first_view_bytes": 51779,
+  "sections": [
+   [
+    "home",
+    119,
+    824
+   ],
+   [
+    "usability",
+    942.59375,
+    1656
+   ],
+   [
+    "brand",
+    2598.375,
+    963
+   ],
+   [
+    "book",
+    3561.65625,
+    1026
+   ],
+   [
+    "after",
+    4587.71875,
+    880
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/complete-website-redesign/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 5738,
+  "first_view_bytes": 51779,
+  "sections": [
+   [
+    "home",
+    145,
+    817
+   ],
+   [
+    "usability",
+    962.28125,
+    1960
+   ],
+   [
+    "brand",
+    2922.03125,
+    1047
+   ],
+   [
+    "book",
+    3969.109375,
+    1004
+   ],
+   [
+    "after",
+    4973.34375,
+    615
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/complete-website-redesign/proofs/phone-390.png"
+ }
+]
