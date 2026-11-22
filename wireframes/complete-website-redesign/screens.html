@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Co (concept) — a complete redesign</title>
+<meta name="description" content="Concept redesign of a professional business website: modern, responsive and easy to use.">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Space Grotesk"; src: url("fonts/space-grotesk.woff2") format("woff2-variations"), url("fonts/space-grotesk.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+:root {
+  --ink: #141414; --cream: #FFF6EA; --white: #FFFFFF; --soft: #3A3633; --line: #D8CBB8;
+  --accent: #FF5A3C;
+  --logo-h: 64px;
+  --fs-1: 15px; --fs-2: 16px; --fs-3: 18px; --fs-4: 22px; --fs-5: 30px; --fs-6: 56px; --fs-7: 99px;
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px; --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px;
+  --wrap: 1240px; --ease: cubic-bezier(.2,.8,.2,1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: var(--fs-3); line-height: 1.55; color: var(--ink); background: var(--cream); font-variant-numeric: tabular-nums; }
+h1, h2, h3, p, ul, dl, dd, figure { margin: 0; padding: 0; }
+ul { list-style: none; }
+h1, h2 { font-weight: 700; letter-spacing: -0.04em; line-height: 1.02; }
+h1 { font-size: var(--fs-6); }
+h2 { font-size: var(--fs-6); }
+h3 { font-size: var(--fs-4); margin: 0; letter-spacing: -0.02em; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.skip { position: absolute; left: 16px; top: 16px; z-index: 60; background: var(--white); padding: 8px 16px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+.sample { margin: 0; background: var(--ink); color: var(--cream); font-size: var(--fs-1); line-height: 1.4; padding: 8px max(24px, calc((100% - var(--wrap)) / 2)); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 24px; border-radius: 4px; background: var(--ink); color: var(--cream); font: inherit; font-weight: 700; font-size: var(--fs-3); text-decoration: none; border: 2px solid var(--ink); line-height: 1.2; cursor: pointer; max-width: 100%; text-align: center; transition: background .22s var(--ease), color .22s var(--ease); }
+.btn:hover { background: var(--accent); color: var(--ink); }
+.btn.acc { background: var(--accent); color: var(--ink); }
+.btn.acc:hover { background: var(--ink); color: var(--cream); }
+/* header */
+header.site { background: var(--cream); position: sticky; top: 0; z-index: 40; border-bottom: 2px solid var(--ink); }
+.head { display: flex; align-items: center; gap: var(--s-4); min-height: calc(var(--logo-h) + 16px); padding: 8px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.brand svg { height: var(--logo-h); width: var(--logo-h); flex: 0 0 auto; }
+.brand strong { font-size: var(--fs-4); letter-spacing: -0.03em; }
+.head nav ul { display: flex; gap: var(--s-4); }
+.head nav a { text-decoration: none; font-weight: 500; font-size: var(--fs-2); min-height: 44px; display: inline-flex; align-items: center; background: linear-gradient(var(--ink), var(--ink)) 0 100% / 0 2px no-repeat; transition: background-size .22s var(--ease); }
+.head nav a:hover { background-size: 100% 2px; }
+.head .btn { min-height: 48px; padding: 8px 20px; font-size: var(--fs-2); }
+details.menu { display: none; position: relative; }
+details.menu summary { list-style: none; min-height: 48px; display: inline-flex; align-items: center; padding: 0 16px; border: 2px solid var(--ink); border-radius: 4px; font-weight: 700; cursor: pointer; }
+details.menu summary::-webkit-details-marker { display: none; }
+details.menu ul { position: absolute; right: 0; top: 56px; background: var(--cream); border: 2px solid var(--ink); padding: 8px 16px; min-width: 200px; z-index: 5; }
+details.menu a { display: flex; min-height: 44px; align-items: center; text-decoration: none; }
+/* hero */
+.grid { background-color: var(--cream); background-image: linear-gradient(rgba(20,20,20,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,20,.07) 1px, transparent 1px); background-size: 32px 32px; }
+.hero { padding: var(--s-5) 0 var(--s-6); text-align: center; border-bottom: 2px solid var(--ink); }
+.hero h1 { max-width: 17em; margin: 0 auto; }
+.hero .lede { font-size: var(--fs-4); line-height: 1.35; margin: var(--s-3) auto var(--s-4); max-width: 34em; color: var(--soft); }
+.compare { position: relative; height: 460px; border: 2px solid var(--ink); overflow: hidden; background: #D4D4D4; cursor: ew-resize; touch-action: pan-y; text-align: left; --p: 50%; user-select: none; }
+.mock { position: absolute; inset: 0; pointer-events: none; }
+.mock.after { clip-path: inset(0 0 0 var(--p)); background: var(--cream); }
+.divider { position: absolute; top: 0; bottom: 0; left: var(--p); width: 3px; margin-left: -1.5px; background: var(--ink); pointer-events: none; }
+.divider span::before, .divider span::after { content: ""; position: absolute; top: 50%; width: 10px; height: 10px; margin-top: -5px; border: solid var(--ink); border-width: 3px 0 0 3px; }
+.divider span::before { left: 9px; transform: rotate(-45deg); }
+.divider span::after { right: 9px; transform: rotate(135deg); }
+.divider span { position: absolute; top: 50%; left: 50%; width: 48px; height: 48px; margin: -24px 0 0 -24px; border-radius: 50%; background: var(--accent); border: 3px solid var(--ink); display: grid; place-items: center; font-weight: 700; font-size: var(--fs-3); }
+.tagl, .tagr { position: absolute; bottom: 0; background: var(--ink); color: var(--cream); font-size: var(--fs-1); padding: 6px 12px; pointer-events: none; z-index: 2; }
+.tagl { left: 0; } .tagr { right: 0; }
+.b { background: #D4D4D4; color: #222; font-size: 11px; line-height: 1.25; padding: 8px; }
+.b a { color: #0000B8; text-decoration: underline; }
+.b .top { background: #7A7A7A; color: #fff; padding: 4px 8px; font-size: 13px; font-weight: 700; }
+.b .nav { margin: 6px 0; padding: 4px 6px; border: 1px solid #555; background: #E8E8E8; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.b .cols { display: flex; gap: 8px; }
+.b .cols > div { flex: 1; border: 1px solid #555; padding: 6px; background: #EFEFEF; }
+.b .new { display: inline-block; background: #FFFF00; border: 1px solid #333; padding: 2px 6px; font-weight: 700; margin: 4px 0; }
+.b p { margin: 0 0 6px; }
+.a { padding: var(--s-4) var(--s-5); display: flex; flex-direction: column; height: 100%; }
+.a .bar { display: flex; align-items: center; gap: var(--s-4); padding-bottom: var(--s-3); border-bottom: 1px solid var(--ink); font-size: var(--fs-2); }
+.a .bar .logo { width: 40px; height: 40px; background: var(--accent); display: grid; place-items: center; font-weight: 700; border-radius: 4px; margin-right: auto; }
+.a .bar .cta { background: var(--ink); color: var(--cream); padding: 8px 16px; border-radius: 4px; font-weight: 700; }
+.a .body { flex: 1; display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--s-5); align-items: center; padding: var(--s-4) 0 0; }
+.a .big { font-size: var(--fs-5); font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: var(--s-3); }
+.a .field { background: var(--accent); align-self: stretch; border: 2px solid var(--ink); display: grid; place-items: center; font-size: var(--fs-7); font-weight: 700; letter-spacing: -0.05em; min-height: 160px; transition: background .22s var(--ease); }
+.cmp-ctl { display: flex; align-items: center; gap: var(--s-4); margin-top: var(--s-3); text-align: left; }
+.cmp-ctl label { font-weight: 700; flex: 0 0 auto; }
+input[type=range] { flex: 1; min-width: 120px; height: 44px; accent-color: var(--ink); background: transparent; }
+/* usability */
+.use { background: var(--white); padding: var(--s-8) 0; border-bottom: 2px solid var(--ink); }
+.use h2 { max-width: 14em; }
+.use .lead { font-size: var(--fs-4); line-height: 1.35; margin: var(--s-3) 0 var(--s-6); max-width: 30em; color: var(--soft); }
+.fig { display: flex; align-items: center; gap: var(--s-6); padding: var(--s-4) 0; border-top: 2px solid var(--ink); }
+.fig:last-of-type { border-bottom: 2px solid var(--ink); }
+.fig .num { font-size: var(--fs-7); font-weight: 700; letter-spacing: -0.05em; line-height: 1; flex: 0 0 4.2em; }
+.fig .num small { font-size: var(--fs-4); letter-spacing: 0; font-weight: 500; margin-left: 6px; }
+.fig p.t { font-size: var(--fs-4); line-height: 1.3; max-width: 26em; }
+.fig p.t strong { display: block; font-size: var(--fs-5); letter-spacing: -0.03em; margin-bottom: 2px; }
+.resp { margin-top: var(--s-8); }
+.resp h3 { font-size: var(--fs-5); }
+.resp .ctl { display: flex; align-items: center; gap: var(--s-4); margin: var(--s-3) 0 var(--s-4); flex-wrap: wrap; }
+.resp .ctl label { font-weight: 700; }
+.resp .ctl output { font-weight: 700; min-width: 5.5em; }
+.stagebox { background-color: var(--cream); background-image: linear-gradient(rgba(20,20,20,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,20,.07) 1px, transparent 1px); background-size: 32px 32px; border: 2px solid var(--ink); padding: var(--s-5) var(--s-3); }
+.rframe { width: 760px; max-width: 100%; margin: 0 auto; container-type: inline-size; background: var(--cream); border: 2px solid var(--ink); transition: width .12s linear; }
+.rframe.rf { padding: var(--s-3); }
+.rf .rbar { display: flex; align-items: center; gap: var(--s-3); border-bottom: 1px solid var(--ink); padding-bottom: var(--s-3); font-size: var(--fs-2); }
+.rf .rbar .logo { width: 40px; height: 40px; background: var(--accent); display: grid; place-items: center; font-weight: 700; border-radius: 4px; margin-right: auto; }
+.rf .links { display: flex; gap: var(--s-3); }
+.rf .menu { display: none; border: 2px solid var(--ink); padding: 4px 12px; border-radius: 4px; font-weight: 700; }
+.rf .cta { background: var(--ink); color: var(--cream); padding: 8px 16px; border-radius: 4px; font-weight: 700; white-space: nowrap; }
+.rf .rbody { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-4); align-items: center; padding-top: var(--s-4); }
+.rf .rh { font-size: var(--fs-5); font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
+.rf .rp { margin-top: 8px; font-size: var(--fs-2); }
+.rf .rblock { background: var(--accent); border: 2px solid var(--ink); min-height: 120px; display: grid; place-items: center; font-size: var(--fs-6); font-weight: 700; transition: background .22s var(--ease); }
+@container (max-width: 560px) { .rf .links { display: none; } .rf .menu { display: block; } .rf .rbody { grid-template-columns: 1fr; } .rf .rblock { min-height: 72px; } }
+@container (max-width: 420px) { .rf .cta { display: none; } .rf .rh { font-size: var(--fs-4); } }
+/* brand */
+.brandband { padding: var(--s-8) 0; border-bottom: 2px solid var(--ink); }
+.brandband .wrap { text-align: center; }
+.brandband h2 { max-width: 16em; margin: 0 auto; }
+.brandband .lead { font-size: var(--fs-4); line-height: 1.35; margin: var(--s-3) auto var(--s-5); max-width: 30em; color: var(--soft); }
+.swatches { display: flex; justify-content: center; gap: var(--s-4); flex-wrap: wrap; }
+.swatches button { display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; border: 0; font: inherit; font-weight: 500; cursor: pointer; padding: 4px; color: var(--ink); min-height: 44px; }
+.swatches i { display: block; width: 88px; height: 88px; border: 2px solid var(--ink); transition: transform .22s var(--ease); }
+.swatches button:hover i { transform: translateY(-4px); }
+.swatches button[aria-pressed="true"] { font-weight: 700; }
+.swatches button[aria-pressed="true"] i { outline: 3px solid var(--ink); outline-offset: 4px; }
+.spec { margin-top: var(--s-7); border-top: 2px solid var(--ink); text-align: left; }
+.spec .row { display: flex; align-items: center; gap: var(--s-5); padding: var(--s-4) 0; border-bottom: 1px solid var(--ink); flex-wrap: wrap; }
+.spec .row > b { flex: 0 0 9em; }
+.scale { display: flex; align-items: baseline; gap: var(--s-4); flex-wrap: wrap; font-weight: 700; letter-spacing: -0.03em; }
+.space { display: flex; align-items: flex-end; gap: var(--s-2); }
+.space i { display: block; width: 16px; background: var(--accent); border: 1px solid var(--ink); transition: background .22s var(--ease); }
+.underl { background: linear-gradient(var(--accent), var(--accent)) 0 100% / 100% 6px no-repeat; font-weight: 700; padding-bottom: 2px; }
+/* book */
+.book { background: var(--accent); padding: var(--s-8) 0; border-bottom: 2px solid var(--ink); transition: background .22s var(--ease); }
+.book h2 { text-align: center; }
+.book .sub { text-align: center; font-size: var(--fs-4); margin: var(--s-3) auto var(--s-5); max-width: 28em; line-height: 1.35; }
+.board { position: relative; background: var(--cream); border: 3px solid var(--ink); padding: var(--s-5); }
+.readout { font-size: var(--fs-7); font-weight: 700; letter-spacing: -0.05em; line-height: 1; text-align: center; padding: var(--s-4) 0 var(--s-5); }
+.readout.roll { animation: roll .22s var(--ease); }
+@keyframes roll { from { transform: translateY(30%); opacity: 0; } to { transform: none; opacity: 1; } }
+.pick { display: flex; border: 2px solid var(--ink); margin-bottom: var(--s-3); }
+.pick button { flex: 1; min-height: 64px; background: var(--cream); border: 0; border-right: 2px solid var(--ink); font: inherit; font-weight: 700; font-size: var(--fs-4); cursor: pointer; color: var(--ink); transition: background .22s var(--ease); }
+.pick button:last-child { border-right: 0; }
+.pick button:hover { background: var(--white); }
+.pick button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+.board .grp { font-weight: 700; margin: var(--s-3) 0 var(--s-2); }
+.fields { display: flex; gap: var(--s-4); margin: var(--s-4) 0; flex-wrap: wrap; }
+.fields label { flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: var(--fs-2); }
+.fields input { font: inherit; font-size: var(--fs-3); border: 2px solid var(--ink); border-radius: 4px; padding: 10px 14px; min-height: 52px; background: var(--white); color: var(--ink); }
+.board .go { width: 100%; min-height: 72px; font-size: var(--fs-4); }
+.done-panel { display: none; text-align: center; padding: var(--s-6) var(--s-3); }
+.board.done .flow { display: none; }
+.board.done .done-panel { display: block; }
+.done-panel svg { width: 96px; height: 96px; }
+.done-panel path { stroke-dasharray: 60; stroke-dashoffset: 0; animation: draw .5s var(--ease); }
+@keyframes draw { from { stroke-dashoffset: 60; } to { stroke-dashoffset: 0; } }
+.done-panel h3 { font-size: var(--fs-6); letter-spacing: -0.04em; line-height: 1; margin: var(--s-3) 0; }
+.done-panel p { font-size: var(--fs-4); margin-bottom: var(--s-4); }
+/* after */
+.after-s { background: var(--ink); color: var(--cream); padding: var(--s-8) 0 var(--s-6); }
+.after-s h2 { max-width: 14em; }
+.index { margin-top: var(--s-6); border-top: 2px solid var(--cream); }
+.index a { position: relative; display: flex; align-items: baseline; gap: var(--s-4); min-height: 96px; border-bottom: 2px solid var(--cream); font-size: var(--fs-7); font-weight: 700; letter-spacing: -0.05em; line-height: 1.1; text-decoration: none; padding: var(--s-3) 0; background: linear-gradient(var(--accent), var(--accent)) 0 0 / 0 100% no-repeat; transition: background-size .28s var(--ease), padding .28s var(--ease), color .28s var(--ease); }
+.index a b { font-size: var(--fs-4); letter-spacing: 0; color: var(--accent); min-width: 2.2em; transition: color .28s var(--ease); }
+.index a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 8px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease) calc(var(--i) * 140ms); }
+.after-s.in .index a::after { transform: scaleX(1); }
+.index a:hover, .index a:focus-visible { background-size: 100% 100%; padding-left: var(--s-4); color: var(--ink); }
+.index a:hover b, .index a:focus-visible b { color: var(--ink); }
+.after-s :focus-visible { outline-color: var(--cream); }
+.index a:focus-visible { outline-offset: -3px; }
+footer { background: var(--ink); color: var(--cream); padding: 0 0 var(--s-6); font-size: var(--fs-2); }
+footer .wrap { border-top: 1px solid #5a5551; padding-top: var(--s-4); }
+footer details { margin-top: var(--s-2); }
+footer summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 700; }
+footer [data-wf="note"] { background: #2B2B2B; color: var(--cream); padding: var(--s-3); font-size: var(--fs-1); line-height: 1.45; }
+footer :focus-visible { outline-color: var(--cream); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media (max-width: 960px) {
+  :root { --fs-6: 44px; --fs-7: 72px; }
+  .head nav { display: none; }
+  details.menu { display: block; }
+  .a .body { grid-template-columns: 1fr; }
+  .a .field { display: none; }
+}
+@media (max-width: 600px) {
+  :root { --logo-h: 48px; --fs-3: 17px; --fs-4: 19px; --fs-5: 26px; --fs-6: 34px; --fs-7: 60px; }
+  .wrap { width: calc(100% - 40px); }
+  .brand strong { display: none; }
+  .head { gap: var(--s-3); }
+  .head .btn { padding: 8px 14px; font-size: var(--fs-1); white-space: nowrap; }
+  .compare { height: 400px; }
+  .a { padding: var(--s-3); }
+  .a .bar .links2 { display: none; }
+  .a .big { font-size: var(--fs-4); }
+  .cmp-ctl { flex-direction: column; align-items: stretch; gap: 0; }
+  .use, .brandband, .book { padding: var(--s-7) 0; }
+  .fig { flex-direction: column; align-items: flex-start; gap: var(--s-2); }
+  .fig .num { flex: none; }
+  .swatches i { width: 64px; height: 64px; }
+  .swatches { gap: var(--s-3); }
+  .spec .row > b { flex: 1 0 100%; }
+  .board { padding: var(--s-3); }
+  .pick button { font-size: var(--fs-3); min-height: 56px; }
+  .pick.times { flex-wrap: wrap; }
+  .pick.times button { flex: 1 0 33.33%; border-bottom: 2px solid var(--ink); }
+  .pick.times button:nth-child(3) { border-right: 0; }
+  .pick.times button:nth-child(n+4) { border-bottom: 0; }
+  .after-s { padding: var(--s-7) 0 var(--s-5); }
+  .index a { min-height: 80px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="sample" data-wf="note">Concept: Sample Co is a stand-in brand. The client has not named theirs, so no business, sector or photographs are invented.</p>
+<header class="site"><div class="wrap head">
+  <a class="brand" href="#home" aria-label="Sample Co, home">
+    <svg viewBox="0 0 64 64" role="img" aria-label="S monogram"><rect width="64" height="64" rx="8" fill="var(--accent)"/><text x="32" y="45" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="38" fill="#141414">S</text></svg>
+    <strong>Sample Co</strong>
+  </a>
+  <nav aria-label="Main"><ul><li><a href="#home">Home</a></li><li><a href="#usability">Usability</a></li><li><a href="#brand">Brand</a></li><li><a href="#book">Book</a></li></ul></nav>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="#home">Home</a></li><li><a href="#usability">Usability</a></li><li><a href="#brand">Brand</a></li><li><a href="#book">Book</a></li></ul></details>
+  <a class="btn acc" href="#book">Book a call</a>
+</div></header>
+<main id="main">
+
+<section class="page hero grid" id="home" data-feeling="impressed">
+  <div class="wrap">
+    <h1>A complete redesign, finished and easy to use</h1>
+    <p class="lede">The same site, before and after. Drag the line, or use the slider under it, to compare.</p>
+    <div class="compare" id="cmp">
+      <div class="mock before b" aria-hidden="true">
+        <div class="top">Sample Co :: Welcome to our website!!</div>
+        <div class="nav"><a>Home</a> <a>About Us</a> <a>Our Services</a> <a>Products</a> <a>Gallery</a> <a>News</a> <a>FAQ</a> <a>Links</a> <a>Contact Us</a></div>
+        <div class="cols">
+          <div><b>Latest news</b><p>Site updated. Please read our newsletter. Archive of older news.</p><span class="new">NEW! Click here!</span><p>Opening hours are on the Contact Us page.</p></div>
+          <div><b>About our company</b><p>We are a company. Please read about our company history and our mission, then click here for more information about our services and products.</p><p>Our team page is under construction.</p></div>
+          <div><b>Visitors</b><p>You are visitor number 004213.</p><p>Sign our guestbook. Best viewed in a wide browser.</p><p><a>Download our brochure (large file)</a></p></div>
+        </div>
+        <div class="cols" style="margin-top:8px">
+          <div><b>Services</b><p>Service one. Service two. Service three. Service four. Click for the full list of services.</p></div>
+          <div><b>Links</b><p><a>Friends of Sample Co</a> <a>Partner sites</a> <a>Useful links</a> <a>More links</a></p></div>
+        </div>
+        <p style="margin:8px 0 0;border-top:1px solid #555;padding-top:4px">All rights reserved. Webmaster. Sitemap. Privacy. Disclaimer.</p>
+      </div>
+      <div class="mock after" aria-hidden="true">
+        <div class="a">
+          <div class="bar"><span class="logo">S</span><span class="links2">Home</span><span class="links2">Usability</span><span class="links2">Brand</span><span class="links2">Book</span><span class="cta">Book a call</span></div>
+          <div class="body">
+            <div><p class="big">What you came for is already on screen.</p><p>Four menu items. One clear next step.</p></div>
+            <div class="field">1</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider" aria-hidden="true"><span></span></div>
+      <span class="tagl">Before: a typical dated site (stand-in)</span><span class="tagr">After</span>
+    </div>
+    <div class="cmp-ctl">
+      <label for="cmpr">Compare before and after</label>
+      <input id="cmpr" type="range" min="0" max="100" value="50" aria-valuetext="Half before, half after">
+      <a class="btn acc" href="#book">Book a call</a>
+    </div>
+  </div>
+</section>
+
+<section class="page use" id="usability" data-feeling="at-ease">
+  <div class="wrap">
+    <h2>Easier to use, measured</h2>
+    <p class="lead">Five figures from this redesign, counted from the build and not estimated.</p>
+    <div class="fig"><p class="num"><span data-count="4">4</span></p><p class="t"><strong>Menu items</strong>Four, against nine in the typical before.</p></div>
+    <div class="fig"><p class="num"><span data-count="18">18</span><small>px</small></p><p class="t"><strong>Body text</strong>Eighteen on desktop and seventeen on a phone, against eleven before.</p></div>
+    <div class="fig"><p class="num"><span data-count="44">44</span><small>px</small></p><p class="t"><strong>Smallest tap target</strong>Every link and button is at least this tall.</p></div>
+    <div class="fig"><p class="num"><span data-count="52">52</span><small>KB</small></p><p class="t"><strong>Phone first view</strong>What a phone downloads before it scrolls.</p></div>
+    <div class="fig"><p class="num"><span data-count="1">1</span></p><p class="t"><strong>Primary action</strong>Every screen leads to one: book a call.</p></div>
+
+    <div class="resp">
+      <h3>Resize the same site</h3>
+      
+      <div class="stagebox">
+        <div class="ctl"><label for="rw">Frame width</label><input id="rw" type="range" min="320" max="1100" step="10" value="760" aria-describedby="rwo"><output id="rwo" for="rw">760 px</output></div>
+        <div class="rframe rf" id="rframe" aria-hidden="true">
+            <div class="rbar"><span class="logo">S</span><span class="links"><span>Home</span><span>Usability</span><span>Brand</span><span>Book</span></span><span class="menu">Menu</span><span class="cta">Book a call</span></div>
+            <div class="rbody">
+              <div><p class="rh">What you came for is already on screen.</p><p class="rp">The layout reflows at every width.</p></div>
+              <div class="rblock">1</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page brandband grid" id="brand" data-feeling="trusting">
+  <div class="wrap">
+    <h2>Choose the colour and the whole site follows</h2>
+    <p class="lead">Your brand’s vision, one switch away. Pick an accent and watch the page, the frame and the booking board change.</p>
+    <div class="swatches" role="group" aria-label="Accent colour">
+      <button type="button" data-accent="#FF5A3C" aria-pressed="true"><i style="background:#FF5A3C"></i>Coral</button>
+      <button type="button" data-accent="#FFA200" aria-pressed="false"><i style="background:#FFA200"></i>Amber</button>
+      <button type="button" data-accent="#FF3E7F" aria-pressed="false"><i style="background:#FF3E7F"></i>Rose</button>
+      <button type="button" data-accent="#FFD23F" aria-pressed="false"><i style="background:#FFD23F"></i>Sun</button>
+    </div>
+    <div class="spec">
+      <div class="row"><b>Type scale</b><span class="scale"><span style="font-size:15px">15</span><span style="font-size:16px">16</span><span style="font-size:18px">18</span><span style="font-size:22px">22</span><span style="font-size:30px">30</span><span style="font-size:56px">56</span></span></div>
+      <div class="row"><b>Spacing, 4 and 8</b><span class="space"><i style="height:4px"></i><i style="height:8px"></i><i style="height:16px"></i><i style="height:24px"></i><i style="height:32px"></i><i style="height:48px"></i><i style="height:64px"></i></span></div>
+      <div class="row"><b>In use</b><a class="btn acc" href="#book">Book a call</a><span class="underl">A link in the accent</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="page book" id="book" data-feeling="eager">
+  <div class="wrap">
+    <h2>Book a call</h2>
+    <p class="sub">Pick a day and a time. It takes four taps. Times shown are a sample.</p>
+    <div class="board" id="board">
+      <form class="flow" id="bookform" aria-label="Book a call">
+        <p class="readout" id="readout" aria-live="polite">Tue 10:30</p>
+        <p class="grp" id="dg">Day</p>
+        <div class="pick days" role="group" aria-labelledby="dg">
+          <button type="button" data-d="Mon" aria-pressed="false">Mon</button><button type="button" data-d="Tue" aria-pressed="true">Tue</button><button type="button" data-d="Wed" aria-pressed="false">Wed</button><button type="button" data-d="Thu" aria-pressed="false">Thu</button><button type="button" data-d="Fri" aria-pressed="false">Fri</button>
+        </div>
+        <p class="grp" id="tg">Time</p>
+        <div class="pick times" role="group" aria-labelledby="tg">
+          <button type="button" data-t="9:00" aria-pressed="false">9:00</button><button type="button" data-t="10:30" aria-pressed="true">10:30</button><button type="button" data-t="12:00" aria-pressed="false">12:00</button><button type="button" data-t="1:30" aria-pressed="false">1:30</button><button type="button" data-t="3:00" aria-pressed="false">3:00</button><button type="button" data-t="4:30" aria-pressed="false">4:30</button>
+        </div>
+        <div class="fields">
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <button class="btn go" id="go" type="submit">Book Tue 10:30</button>
+      </form>
+      <div class="done-panel" id="done" aria-live="polite">
+        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="44" fill="var(--accent)" stroke="#141414" stroke-width="4"/><path d="M26 50 L42 66 L72 32" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 tabindex="-1" id="donehead">Booked: Tue 10:30</h3>
+        <p>A confirmation goes to the email you entered (sample).</p>
+        <button class="btn" id="again" type="button">Change the time</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page after-s" id="after" data-feeling="proud">
+  <div class="wrap">
+    <h2>Four places, each one tap away</h2>
+    <nav class="index" aria-label="Site index">
+      <a href="#home" style="--i:0">Home</a>
+      <a href="#usability" style="--i:1">Usability</a>
+      <a href="#brand" style="--i:2">Brand</a>
+      <a href="#book" style="--i:3">Book a call</a>
+    </nav>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Sample Co. Concept site.</p>
+    <details>
+      <summary>Delivery notes</summary>
+      <div data-wf="note">Concept built from the post only. The brand, platform and page list are the client’s to confirm. Examples of modern, responsive work are in the bid letter, not on this page.</div>
+    </details>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* 1. Before / after divider */
+  var cmp = $('#cmp'), cr = $('#cmpr'), raf = null;
+  function setP(p) { p = Math.max(0, Math.min(100, p)); cmp.style.setProperty('--p', p + '%'); cr.value = Math.round(p); cr.setAttribute('aria-valuetext', Math.round(p) + ' percent before, ' + (100 - Math.round(p)) + ' percent after'); }
+  function stopSweep() { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+  function fromX(e) { var r = cmp.getBoundingClientRect(); setP((e.clientX - r.left) / r.width * 100); }
+  cmp.addEventListener('pointerdown', function (e) { stopSweep(); cmp.setPointerCapture(e.pointerId); fromX(e); cmp.onpointermove = fromX; });
+  cmp.addEventListener('pointerup', function () { cmp.onpointermove = null; });
+  cr.addEventListener('input', function () { stopSweep(); setP(+cr.value); });
+  if (reduce) { setP(50); } else {
+    setP(100);
+    var t0 = null;
+    setTimeout(function () { raf = requestAnimationFrame(function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / 1500), e = 1 - Math.pow(1 - k, 3); setP(100 - 50 * e); raf = k < 1 ? requestAnimationFrame(step) : null; }); }, 400);
+  }
+
+  /* 2. Figures count up once */
+  var nums = $$('[data-count]');
+  function count(el) {
+    var end = +el.getAttribute('data-count');
+    if (reduce) { el.textContent = end; return; }
+    var s = null; el.textContent = 0; setTimeout(function () { el.textContent = end; }, 1100);
+    requestAnimationFrame(function step(t) { if (!s) s = t; var k = Math.min(1, (t - s) / 900); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { count(x.target); io.unobserve(x.target); } }); }, { threshold: 0.6 });
+    nums.forEach(function (n) { io.observe(n); });
+  }
+
+  var aft = $('#after');
+  if (reduce || !('IntersectionObserver' in window)) { aft.classList.add('in'); } else {
+    new IntersectionObserver(function (en, o) { en.forEach(function (x) { if (x.isIntersecting) { aft.classList.add('in'); o.disconnect(); } }); }, { threshold: 0.2 }).observe(aft);
+  }
+
+  /* 3. Responsive frame */
+  var rw = $('#rw'), rf = $('#rframe'), rwo = $('#rwo');
+  rw.addEventListener('input', function () { rf.style.width = rw.value + 'px'; rwo.textContent = rw.value + ' px'; });
+
+  /* 4. Accent colour */
+  $$('[data-accent]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.style.setProperty('--accent', b.getAttribute('data-accent'));
+      $$('[data-accent]').forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+    });
+  });
+
+  /* 5. Booking flow */
+  var day = 'Tue', time = '10:30', ro = $('#readout'), go = $('#go'), board = $('#board');
+  function upd() {
+    var v = day + ' ' + time; ro.textContent = v; go.textContent = 'Book ' + v;
+    if (!reduce) { ro.classList.remove('roll'); void ro.offsetWidth; ro.classList.add('roll'); }
+  }
+  $$('[data-d]').forEach(function (b) { b.addEventListener('click', function () { day = b.getAttribute('data-d'); $$('[data-d]').forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); }); upd(); }); });
+  $$('[data-t]').forEach(function (b) { b.addEventListener('click', function () { time = b.getAttribute('data-t'); $$('[data-t]').forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); }); upd(); }); });
+  $('#bookform').addEventListener('submit', function (e) {
+    e.preventDefault(); $('#donehead').textContent = 'Booked: ' + day + ' ' + time; board.classList.add('done'); $('#donehead').focus();
+  });
+  $('#again').addEventListener('click', function () { board.classList.remove('done'); go.focus(); });
+})();
+</script>
+</body>
+</html>
