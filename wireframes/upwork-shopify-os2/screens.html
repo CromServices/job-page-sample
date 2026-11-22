@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Concept luxury D2C store: a wool overcoat on a custom Shopify Online Store 2.0 theme, built to stay fast.">
+<title>Concept</title>
+<link rel="canonical" href="screens.html">
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Product","name":"Wool overcoat","description":"A double-breasted wool overcoat in ivory, ink or lacquer.","color":["Ivory","Ink","Lacquer"],"offers":{"@type":"Offer","priceCurrency":"USD","price":"320","availability":"https://schema.org/InStock"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this the client's live store?","acceptedAnswer":{"@type":"Answer","text":"No. This is a concept store. The post named no business, current site or brand files."}}]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"screens.html#home"},{"@type":"ListItem","position":2,"name":"The coat","item":"screens.html#product"}]}
+]}
+</script>
+<style>
+@font-face{font-family:'Instrument Sans';src:url('fonts/instrument-sans.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122;}
+:root{
+  --ink:#161414;--paper:#FFF6EC;--lacquer:#B11212;--muted:#3F3C3A;--line:rgba(22,20,20,.18);
+  --font:'Instrument Sans',system-ui,sans-serif;
+  --t1:12px;--t2:14px;--t3:16px;--t4:18px;--t5:24px;--t6:32px;--t7:44px;--t8:88px;
+  --sp:8px;--logo:64px;--rail:64px;--header:80px;
+  --focus:0 0 0 3px var(--paper),0 0 0 5px var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--t4);line-height:1.5;font-feature-settings:'tnum' 1,'lnum' 1}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skip{position:fixed;left:8px;top:8px;transform:translateY(-120%);background:var(--ink);color:var(--paper);padding:8px 16px;z-index:100}
+.skip:focus{transform:none}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+/* Header */
+header.site{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--ink);min-height:var(--header)}
+.hbar{display:flex;align-items:center;gap:16px;padding:8px 24px 8px 16px;min-height:var(--header)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
+.mark{width:var(--logo);height:var(--logo);border:1px solid var(--ink);display:grid;place-items:center;font-weight:650;font-size:28px;letter-spacing:-.04em;line-height:1;flex:0 0 var(--logo)}
+.word{font-weight:650;font-size:18px;letter-spacing:.02em}
+.hnav{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ghost, .btn, .texty{min-height:44px;min-width:44px;padding:10px 16px;border:1px solid var(--ink);background:transparent;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;line-height:1.2;white-space:normal}
+.btn{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#bagbtn{white-space:nowrap;flex:0 0 auto}
+.btn:hover,.btn:focus-visible{background:var(--lacquer);border-color:var(--lacquer);color:var(--paper)}
+.btn.light{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.light:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.ghost:hover,.texty:hover{background:var(--ink);color:var(--paper)}
+.search{position:relative}
+.search input{min-height:44px;width:min(260px,36vw);padding:8px 12px;border:1px solid var(--ink);background:var(--paper);border-radius:0}
+#hits{position:absolute;right:0;top:calc(100% - 1px);background:var(--paper);border:1px solid var(--ink);min-width:260px;z-index:50;padding:8px 0}
+#hits[hidden]{display:none}
+#hits a{display:block;padding:10px 16px;text-decoration:none;min-height:44px}
+#hits a:hover,#hits a:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+#mega{position:absolute;top:var(--header);left:var(--rail);right:0;background:var(--paper);border-bottom:1px solid var(--ink);z-index:45;padding:32px 48px 40px}
+#mega[hidden]{display:none}
+#mega ul{list-style:none;display:flex;flex-wrap:wrap;gap:12px 48px}
+#mega a{font-size:var(--t6);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;font-weight:550;letter-spacing:-.03em}
+#mega a:hover{color:var(--lacquer)}
+/* Rail + pages */
+.rail{position:fixed;top:var(--header);left:0;bottom:0;width:var(--rail);border-right:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;background:var(--paper);z-index:30}
+.rail .vt{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:650;letter-spacing:.18em;font-size:12px;text-transform:uppercase}
+.rail nav{display:flex;flex-direction:column;gap:4px;align-items:center}
+.rail nav a{width:28px;height:28px;display:grid;place-items:center;text-decoration:none}
+.rail nav a::before{content:"";width:6px;height:6px;border:1px solid var(--ink);border-radius:0;background:transparent}
+.rail nav a:hover::before,.rail nav a[aria-current="page"]::before{background:var(--ink)}
+section.page{padding-left:var(--rail);min-height:100vh;scroll-margin-top:var(--header)}
+/* Home */
+#home{display:grid;grid-template-columns:minmax(280px,0.9fr) minmax(420px,1.4fr);min-height:calc(100vh - var(--header));align-items:stretch}
+.intro{padding:48px 40px 48px 48px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+h1{font-size:var(--t7);line-height:1.12;letter-spacing:-.035em;font-weight:550;max-width:14ch}
+.lede{color:var(--muted);max-width:36ch}
+.price{font-size:var(--t6);font-weight:550;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatch{min-height:44px;padding:6px 12px 6px 8px;border:1px solid var(--ink);background:var(--paper);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.swatch .swatch-col{width:20px;height:20px;border:1px solid var(--ink);flex:0 0 20px}
+.swatch[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.swatch[aria-pressed="true"] .swatch-col{border-color:var(--paper)}
+.swatch-col.ivory{background:#EFE6D6}
+.swatch-col.ink{background:#161414}
+.swatch-col.lacquer{background:#B11212}
+.plinth{display:flex;align-items:flex-end;justify-content:center;padding:16px 32px 0 0;min-height:calc(100vh - var(--header))}
+.plinth img{width:min(560px,100%);max-height:calc(100vh - var(--header) - 24px);object-fit:contain;object-position:center bottom}
+/* Collection */
+#collection{padding:72px 48px 64px calc(var(--rail) + 48px)}
+h2{font-size:var(--t6);line-height:1.15;letter-spacing:-.03em;font-weight:550;margin-bottom:12px}
+.sub{color:var(--muted);margin-bottom:28px;max-width:46ch}
+.facets{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:32px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0}
+fieldset{border:0;min-width:0}
+legend{font-size:var(--t2);color:var(--muted);padding:0;margin-bottom:8px}
+.facets button{min-height:44px;padding:8px 4px;margin-right:12px;border:0;border-bottom:1px solid transparent;background:none;cursor:pointer}
+.facets button[aria-pressed="true"]{border-bottom-color:var(--ink);font-weight:600}
+.rack{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px}
+.rack figure{flex:0 0 min(340px,70vw);scroll-snap-align:start;margin:0}
+.rack figcaption{padding:12px 0 0;display:flex;justify-content:space-between;gap:12px}
+.rack a{color:inherit}
+.rack img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;background:var(--paper)}
+.more{margin-top:24px}
+/* Product */
+#product{display:grid;grid-template-columns:minmax(420px,1.2fr) minmax(300px,0.8fr);gap:0;align-items:stretch}
+.stage{padding:24px 24px 48px calc(var(--rail) + 24px);display:flex;flex-direction:column;gap:16px}
+.stage .main{width:100%;max-height:calc(100vh - var(--header) - 200px);object-fit:contain;object-position:center top}
+.thumbs{display:flex;gap:12px}
+.thumbs button{border:1px solid transparent;background:var(--paper);padding:0;cursor:pointer;width:88px;min-height:44px}
+.thumbs button[aria-pressed="true"]{border-color:var(--ink)}
+.thumbs img{width:88px;height:118px;object-fit:cover}
+.buy{padding:40px 48px 48px 40px;display:flex;flex-direction:column;gap:16px;justify-content:center;border-left:1px solid var(--line)}
+.panel{border-top:1px solid var(--ink);padding-top:16px}
+.panel[hidden]{display:none}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.sizes button{min-width:48px}
+.sizes button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+table.chart{width:100%;border-collapse:collapse;margin-top:12px;font-variant-numeric:tabular-nums}
+table.chart th,table.chart td{text-align:left;padding:8px 12px 8px 0;border-bottom:1px solid var(--line)}
+table.chart tr.is-on td{font-weight:650}
+.est{color:var(--muted)}
+.sticky-atc{display:none;grid-column:1/-1}
+/* About + landing + track */
+#about,#track{padding:72px 64px 80px calc(var(--rail) + 64px)}
+#about .prose{max-width:38rem;display:flex;flex-direction:column;gap:16px}
+#landing{display:grid;grid-template-columns:minmax(280px,.7fr) minmax(400px,1.1fr);padding:0 0 0 var(--rail);min-height:100vh}
+#landing .copy{padding:64px 48px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+#landing .plinth{padding:16px 24px 0}
+/* Bag — Act */
+#bag{background:var(--lacquer);color:var(--paper);padding:48px 48px 80px calc(var(--rail) + 48px);min-height:100vh}
+#bag h2{color:var(--paper)}
+.remain{font-size:var(--t8);line-height:1.02;letter-spacing:-.045em;font-weight:550;font-variant-numeric:tabular-nums;max-width:12ch;margin:24px 0 16px}
+.bar{height:8px;background:rgba(255,246,236,.25);width:min(640px,100%)}
+.bar > span{display:block;height:8px;background:var(--paper);width:0;transition:width .4s ease}
+.lines{margin:40px 0;max-width:720px}
+.line{display:grid;grid-template-columns:72px 1fr auto auto;gap:16px;align-items:center;padding:16px 0;border-top:1px solid rgba(255,246,236,.35)}
+.line img{width:72px;height:96px;object-fit:cover}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{min-width:44px;min-height:44px;border:1px solid var(--paper);background:transparent;color:var(--paper);cursor:pointer}
+.upsell{display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-top:1px solid rgba(255,246,236,.35);border-bottom:1px solid rgba(255,246,236,.35);max-width:720px}
+.upsell img{width:72px;height:96px;object-fit:cover}
+.bag-foot{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.total{font-size:var(--t5);font-variant-numeric:tabular-nums}
+#bag .close-draw{display:none}
+#bag.as-drawer{position:fixed;inset:0;z-index:60;overflow:auto;padding-left:48px;animation:in .4s ease both}
+#bag.as-drawer .close-draw{display:inline-flex}
+@keyframes in{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+/* Track */
+.path{display:flex;flex-direction:column;gap:0;margin-top:32px;max-width:40rem}
+.path button{text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:12px 0;cursor:default;color:var(--muted);font-size:var(--t5);letter-spacing:-.03em}
+.path button[aria-current="step"]{color:var(--ink);font-size:clamp(40px,8vw,88px);line-height:1;font-weight:550;padding:16px 0 20px}
+.track-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.track-row input{min-height:44px;padding:8px 12px;border:1px solid var(--ink);background:var(--paper);width:12rem}
+footer.note{padding:24px 48px 32px calc(var(--rail) + 48px);border-top:1px solid var(--ink);color:var(--muted);font-size:var(--t2)}
+#confirm{margin-top:16px}
+#confirm[hidden]{display:none}
+/* Phone */
+@media (min-width:1800px){
+  #home,#product,#landing{max-width:1680px}
+}
+@media (max-width:700px){
+  :root{--logo:48px;--header:116px;--t4:17px;--t7:32px;--t6:26px;--t8:56px;--rail:0px}
+  body{font-size:17px}
+  .word,.rail{display:none}
+  .hbar{display:grid;grid-template-columns:auto auto 1fr auto;grid-template-rows:auto auto;padding:8px 12px;gap:8px;align-items:center}
+  .brand{grid-column:1;grid-row:1}
+  .hnav{display:contents;margin:0}
+  #shopbtn{grid-column:2;grid-row:1}
+  .search{grid-column:1/-1;grid-row:2}
+  .search input{width:100%;min-width:0}
+  #bagbtn{grid-column:4;grid-row:1;justify-self:end}
+  #bagbtn{padding:10px 12px}
+    #mega{left:0;padding:24px 16px 32px}
+  #mega a{font-size:26px}
+  #home,#product,#landing{grid-template-columns:1fr}
+  .intro,.buy,#about,#collection,#track,footer.note,#bag{padding-left:20px;padding-right:20px}
+  .intro{padding-top:28px;padding-bottom:8px}
+  .plinth{padding:0 12px;min-height:0}
+  .plinth img,#landing .plinth{max-height:none;width:100%}
+  .stage{padding:16px 16px 8px}
+  .stage .main{max-height:none}
+  .buy{border-left:0;border-top:1px solid var(--line);padding:28px 20px 96px}
+  #landing .copy{padding:32px 20px 8px}
+  .sticky-atc{display:flex;position:sticky;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--ink);padding:8px 16px;gap:12px;align-items:center;justify-content:space-between;z-index:35}
+  .sticky-atc .btn{flex:1 1 auto}
+  .remain{font-size:var(--t8)}
+  .line,.upsell{grid-template-columns:64px 1fr;gap:12px}
+  .line .price,.upsell .btn{grid-column:2}
+  #bag.as-drawer{padding:24px 20px 48px}
+  header.site{min-height:var(--header)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#home">Skip to the coat</a>
+<header class="site">
+  <div class="hbar">
+    <a class="brand" href="#home" aria-label="Concept">
+      <span class="mark" aria-hidden="true">C</span>
+      <span class="word">Concept</span>
+    </a>
+    <nav class="hnav" aria-label="Store">
+      <button class="ghost" id="shopbtn" aria-expanded="false" aria-controls="mega">Shop</button>
+      <form class="search" role="search" id="searchform">
+        <label class="vh" for="q">Search the store</label>
+        <input id="q" type="search" name="q" placeholder="Search" autocomplete="off" aria-autocomplete="list" aria-controls="hits">
+        <div id="hits" hidden role="listbox" aria-label="Suggestions"></div>
+      </form>
+      <button class="btn" id="bagbtn" type="button">Bag&nbsp;<span id="bagcount">1</span></button>
+    </nav>
+  </div>
+  <div id="mega" hidden>
+    <ul>
+      <li><a href="#home" data-close="mega">The coat</a></li>
+      <li><a href="#collection" data-close="mega">Colourways</a></li>
+      <li><a href="#product" data-close="mega">Fabric and size</a></li>
+      <li><a href="#about" data-close="mega">About this store</a></li>
+      <li><a href="#landing" data-close="mega">The lacquer colourway</a></li>
+      <li><a href="#track" data-close="mega">Track an order</a></li>
+    </ul>
+  </div>
+</header>
+<aside class="rail" aria-label="Concept">
+  <div class="vt">Concept</div>
+  <nav aria-label="Floors">
+    <a href="#home" aria-label="Home"></a>
+    <a href="#collection" aria-label="Colourways"></a>
+    <a href="#product" aria-label="The coat"></a>
+    <a href="#about" aria-label="About"></a>
+    <a href="#landing" aria-label="The lacquer colourway"></a>
+    <a href="#bag" aria-label="Bag"></a>
+    <a href="#track" aria-label="Track an order"></a>
+  </nav>
+</aside>
+
+<section class="page" id="home" data-feeling="assured">
+  <div class="intro">
+    <h1>The wool overcoat, on a store built to stay fast.</h1>
+    <p class="lede">A concept store for a from-scratch Shopify Online Store 2.0 theme. Change the colour, or search. There is no page builder and no app stack.</p>
+    <div class="swatches" role="group" aria-label="Colour">
+      <button class="swatch" type="button" data-color="ivory" aria-pressed="true"><span class="swatch-col ivory"></span> Ivory</button>
+      <button class="swatch" type="button" data-color="ink" aria-pressed="false"><span class="swatch-col ink"></span> Ink</button>
+      <button class="swatch" type="button" data-color="lacquer" aria-pressed="false"><span class="swatch-col lacquer"></span> Lacquer</button>
+    </div>
+    <div class="row">
+      <p class="price" id="homeprice">$320</p>
+      <button class="btn" type="button" data-add="current">Add to bag</button>
+    </div>
+  </div>
+  <div class="plinth">
+    <img id="hero-coat" src="images/coat-ivory-720.webp"
+      srcset="images/coat-ivory-720.webp 720w, images/coat-ivory.webp 1200w"
+      sizes="(max-width:700px) 90vw, 42vw"
+      width="864" height="1152"
+      alt="Ivory wool overcoat, double-breasted, on a warm ivory ground">
+  </div>
+</section>
+
+<section class="page" id="collection" data-feeling="unhurried">
+  <h2>Three colourways of the same coat</h2>
+  <p class="sub">Filters update the rack without a reload. The third colourway waits behind Load more.</p>
+  <div class="facets">
+    <fieldset>
+      <legend>Colour</legend>
+      <button type="button" data-facet="color" data-val="all" aria-pressed="true">All</button>
+      <button type="button" data-facet="color" data-val="ivory" aria-pressed="false">Ivory</button>
+      <button type="button" data-facet="color" data-val="ink" aria-pressed="false">Ink</button>
+      <button type="button" data-facet="color" data-val="lacquer" aria-pressed="false">Lacquer</button>
+    </fieldset>
+    <fieldset>
+      <legend>Price</legend>
+      <button type="button" data-facet="price" data-val="all" aria-pressed="true">Any</button>
+      <button type="button" data-facet="price" data-val="under" aria-pressed="false">Under $400</button>
+      <button type="button" data-facet="price" data-val="over" aria-pressed="false">Over $400</button>
+    </fieldset>
+    <fieldset>
+      <legend>Availability</legend>
+      <button type="button" data-facet="avail" data-val="all" aria-pressed="true">Any</button>
+      <button type="button" data-facet="avail" data-val="in" aria-pressed="false">In stock</button>
+      <button type="button" data-facet="avail" data-val="out" aria-pressed="false">Made to order</button>
+    </fieldset>
+    <fieldset>
+      <legend>Category</legend>
+      <button type="button" data-facet="cat" data-val="all" aria-pressed="true">Any</button>
+      <button type="button" data-facet="cat" data-val="coats" aria-pressed="false">Coats</button>
+      <button type="button" data-facet="cat" data-val="other" aria-pressed="false">Other</button>
+    </fieldset>
+  </div>
+  <div class="rack" id="rack"></div>
+  <p id="rackempty" hidden>No colourways in this filter.</p>
+  <button class="ghost more" type="button" id="loadmore">Load more</button>
+</section>
+
+<section class="page" id="product" data-feeling="certain">
+  <div class="stage">
+    <img class="main" id="pdp-main" alt="" width="864" height="1152">
+    <div class="thumbs" role="group" aria-label="Photographs">
+      <button type="button" data-shot="front" aria-pressed="true" aria-label="Front view"><img width="88" height="118" alt=""></button>
+      <button type="button" data-shot="angle" aria-pressed="false" aria-label="Three-quarter view"><img class="lazy" data-key="angle" width="88" height="118" alt=""></button>
+      <button type="button" data-shot="fabric" aria-pressed="false" aria-label="Wool close-up"><img class="lazy" data-src="images/coat-fabric-720.webp" data-srcset="images/coat-fabric-720.webp 720w, images/coat-fabric.webp 900w" width="88" height="118" alt=""></button>
+    </div>
+  </div>
+  <div class="buy">
+    <h2>Wool overcoat</h2>
+    <p class="price">$320</p>
+    <div class="swatches" role="group" aria-label="Colour on the product">
+      <button class="swatch" type="button" data-color="ivory" aria-pressed="true"><span class="swatch-col ivory"></span> Ivory</button>
+      <button class="swatch" type="button" data-color="ink" aria-pressed="false"><span class="swatch-col ink"></span> Ink</button>
+      <button class="swatch" type="button" data-color="lacquer" aria-pressed="false"><span class="swatch-col lacquer"></span> Lacquer</button>
+    </div>
+    <div>
+      <p>Size</p>
+      <div class="sizes" role="group" aria-label="Size">
+        <button class="ghost" type="button" data-size="XS" aria-pressed="false">XS</button>
+        <button class="ghost" type="button" data-size="S" aria-pressed="false">S</button>
+        <button class="ghost" type="button" data-size="M" aria-pressed="true">M</button>
+        <button class="ghost" type="button" data-size="L" aria-pressed="false">L</button>
+      </div>
+    </div>
+    <p>
+      <button class="texty" type="button" id="chartbtn" aria-expanded="false" aria-controls="chart">Size chart</button>
+      <button class="texty" type="button" id="fabricbtn" aria-expanded="false" aria-controls="fabric">Fabric guide</button>
+    </p>
+    <aside class="panel" id="chart" hidden>
+      <table class="chart">
+        <thead><tr><th>Size</th><th>Chest</th><th>Length</th><th>Sleeve</th></tr></thead>
+        <tbody>
+          <tr data-size="XS"><td>XS</td><td>104 cm</td><td>110 cm</td><td>61 cm</td></tr>
+          <tr data-size="S"><td>S</td><td>108 cm</td><td>112 cm</td><td>62 cm</td></tr>
+          <tr data-size="M"><td>M</td><td>112 cm</td><td>114 cm</td><td>63 cm</td></tr>
+          <tr data-size="L"><td>L</td><td>118 cm</td><td>116 cm</td><td>64 cm</td></tr>
+        </tbody>
+      </table>
+    </aside>
+    <aside class="panel" id="fabric" hidden>
+      <img class="lazy" data-src="images/coat-fabric-720.webp" data-srcset="images/coat-fabric-720.webp 720w, images/coat-fabric.webp 900w" width="720" height="720" alt="Close-up of the ivory wool and a dark horn button">
+      <p style="margin-top:12px">Wool outer, viscose lining. Press with a cloth. Do not tumble dry. These are metafields the merchant fills in the live theme.</p>
+    </aside>
+    <div class="panel">
+      <p>Weight 1.2 kg, a metafield on the product. Origin and care stay in metaobjects so the merchant can edit them without an app.</p>
+      <p class="est">Ships in 3–5 working days, as a concept estimate. Checkout is Shopify’s own, not a third-party app.</p>
+    </div>
+    <p><button class="btn" type="button" data-add="current">Add to bag</button></p>
+  </div>
+  <div class="sticky-atc">
+    <span class="price">$320</span>
+    <button class="btn" type="button" data-add="current">Add to bag</button>
+  </div>
+</section>
+
+<section class="page" id="about">
+  <div class="prose">
+    <h2>About this store</h2>
+    <p>This is a concept for a from-scratch Shopify Online Store 2.0 theme, hand-coded in Liquid, HTML, CSS and vanilla JavaScript. The post asked for a store that is not built in PageFly, Shogun or GemPages, and that does not lean on a stack of monthly apps.</p>
+    <p>Luxury D2C brand guidelines were named in the post and were not attached. No business name, current-store URL or logo was supplied, so this page does not invent one. The coat, the prices and the delivery window are merchandising for the concept.</p>
+    <p>Home, collection, product, about and landing are written as reusable sections a merchant could rearrange in the OS 2.0 editor, with the conversion features coded into the theme.</p>
+  </div>
+</section>
+
+<section class="page" id="landing">
+  <div class="copy">
+    <h2>The lacquer colourway</h2>
+    <p class="lede">The same coat, in the red of the theme. One page, one action, still light.</p>
+    <p class="price">$320</p>
+    <p><button class="btn" type="button" data-add="lacquer">Add to bag</button></p>
+  </div>
+  <div class="plinth">
+    <img class="lazy" data-src="images/coat-lacquer-720.webp" data-srcset="images/coat-lacquer-720.webp 720w, images/coat-lacquer.webp 1200w" sizes="(max-width:700px) 90vw, 50vw" width="864" height="1152" alt="Lacquer red wool overcoat, double-breasted, on a warm ivory ground">
+  </div>
+</section>
+
+<section class="page" id="bag" data-feeling="ready">
+  <button class="ghost close-draw" type="button" id="closedraw">Close the bag</button>
+  <h2>Your bag</h2>
+  <p class="remain" id="remain">$80 to free shipping</p>
+  <div class="bar" aria-hidden="true"><span id="barfill"></span></div>
+  <div class="lines" id="lines"></div>
+  <div class="upsell" id="upsell">
+    <img class="lazy" data-src="images/coat-ink-720.webp" width="72" height="96" alt="Ink wool overcoat">
+    <div>
+      <p>The same coat in ink</p>
+      <p>$320, a native upsell in the theme, not an app.</p>
+    </div>
+    <button class="btn light" type="button" data-add="ink">Add</button>
+  </div>
+  <div class="bag-foot">
+    <p class="total" id="total">Subtotal $320</p>
+    <button class="btn light" type="button" id="checkout">Checkout</button>
+  </div>
+  <p id="confirm" hidden>Checkout continues on Shopify in the live theme. This concept stops here.</p>
+</section>
+
+<section class="page" id="track" data-feeling="light">
+  <h2>Track an order</h2>
+  <p class="sub">A custom tracking template in the theme. Try the concept order C-1042.</p>
+  <form class="track-row" id="trackform">
+    <label for="oid">Order number</label>
+    <input id="oid" name="oid" value="C-1042" autocomplete="off">
+    <button class="btn" type="submit">Look up</button>
+  </form>
+  <div class="path" id="path" aria-live="polite">
+    <button type="button" data-step="Paid">Paid</button>
+    <button type="button" data-step="Cut">Cut</button>
+    <button type="button" aria-current="step" data-step="Packed">Packed</button>
+    <button type="button" data-step="Shipped">Shipped</button>
+  </div>
+</section>
+
+<footer class="note" data-wf="note">Concept store. The post named no business, current site or brand files, so nothing here is presented as the client’s. The coat, prices and delivery window are merchandising for this page. Custom Shopify store links and a note on how the AJAX bag is built belong in the bid letter.</footer>
+
+<script>
+(function(){
+  var C = {
+    ivory:{name:'Ivory wool overcoat',file:'coat-ivory',alt:'Ivory wool overcoat, double-breasted, on a warm ivory ground',price:320,color:'ivory',cat:'coats',avail:'in'},
+    ink:{name:'Ink wool overcoat',file:'coat-ink',alt:'Ink wool overcoat, double-breasted, on a warm ivory ground',price:320,color:'ink',cat:'coats',avail:'in'},
+    lacquer:{name:'Lacquer wool overcoat',file:'coat-lacquer',alt:'Lacquer red wool overcoat, double-breasted, on a warm ivory ground',price:320,color:'lacquer',cat:'coats',avail:'in'}
+  };
+  var ANGLE = {file:'coat-ivory-angle',alt:'Ivory wool overcoat in three-quarter view, on a warm ivory ground'};
+  var FABRIC = {src:'images/coat-fabric-720.webp',srcset:'images/coat-fabric-720.webp 720w, images/coat-fabric.webp 900w',alt:'Close-up of the ivory wool and a dark horn button'};
+  var color = 'ivory';
+  var shot = 'front';
+  var loadedMore = false;
+  var facets = {color:'all',price:'all',avail:'all',cat:'all'};
+  var cart = {ivory:1};
+  var FREE = 400;
+
+  function srcset(file){ return 'images/'+file+'-720.webp 720w, images/'+file+'.webp 1200w'; }
+  function src(file){ return 'images/'+file+'-720.webp'; }
+  function reduce(){ return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+
+  function applyCoat(img, key, eager){
+    var item = C[key];
+    img.alt = item.alt;
+    img.width = 864; img.height = 1152;
+    if(eager){
+      img.src = src(item.file);
+      img.srcset = srcset(item.file);
+    } else {
+      img.removeAttribute('src'); img.removeAttribute('srcset');
+      img.classList.add('lazy');
+      img.setAttribute('data-src', src(item.file));
+      img.setAttribute('data-srcset', srcset(item.file));
+    }
+  }
+
+  function setColor(next){
+    color = next;
+    document.querySelectorAll('.swatch[data-color]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-color')===next ? 'true':'false');
+    });
+    var hero = document.getElementById('hero-coat');
+    applyCoat(hero, next, true);
+    hero.sizes = '(max-width:700px) 90vw, 42vw';
+    shot = 'front';
+    updatePdp();
+  }
+
+  function updatePdp(){
+    var item = C[color];
+    var main = document.getElementById('pdp-main');
+    var thumbs = document.querySelectorAll('.thumbs button');
+    thumbs.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-shot')===shot?'true':'false'); });
+    if(shot==='fabric'){
+      main.alt = FABRIC.alt; main.src = FABRIC.src; main.srcset = FABRIC.srcset; main.width=720; main.height=720;
+    } else if(shot==='angle' && color==='ivory'){
+      main.alt = ANGLE.alt; main.src = src(ANGLE.file); main.srcset = srcset(ANGLE.file); main.width=864; main.height=1152;
+    } else {
+      applyCoat(main, color, true);
+    }
+    var t0 = thumbs[0].querySelector('img');
+    t0.src = src(item.file); t0.alt = item.alt;
+    var angBtn = thumbs[1];
+    var t1 = angBtn.querySelector('img');
+    if(color==='ivory'){
+      angBtn.hidden=false;
+      t1.setAttribute('data-src', src(ANGLE.file)); t1.setAttribute('data-srcset', srcset(ANGLE.file)); t1.alt = ANGLE.alt;
+      if(t1.getAttribute('src')) { t1.src = src(ANGLE.file); t1.srcset = srcset(ANGLE.file);}
+    } else {
+      angBtn.hidden=true;
+      if(shot==='angle'){ shot='front'; }
+    }
+  }
+
+  function renderRack(){
+    var keys = ['ivory','ink','lacquer'].filter(function(k){
+      var it=C[k];
+      if(facets.color!=='all' && it.color!==facets.color) return false;
+      if(facets.price==='under' && it.price>=400) return false;
+      if(facets.price==='over' && it.price<=400) return false;
+      if(facets.avail!=='all' && it.avail!==facets.avail) return false;
+      if(facets.cat!=='all' && it.cat!==facets.cat) return false;
+      return true;
+    });
+    var show = loadedMore ? keys : keys.slice(0,2);
+    var rack = document.getElementById('rack');
+    rack.innerHTML = show.map(function(k){
+      var it=C[k];
+      return '<figure data-key="'+k+'"><a href="#product" data-goto="'+k+'">'+
+        '<img class="lazy" data-src="'+src(it.file)+'" data-srcset="'+srcset(it.file)+'" width="864" height="1152" alt="'+it.alt+'">'+
+        '</a><figcaption><span>'+it.name.replace(' wool overcoat','')+'</span><span>$'+it.price+'</span></figcaption></figure>';
+    }).join('');
+    document.getElementById('rackempty').hidden = show.length>0;
+    var more = document.getElementById('loadmore');
+    more.hidden = loadedMore || keys.length<=2;
+    lazy();
+  }
+
+  function cartCount(){ var n=0; Object.keys(cart).forEach(function(k){ n+=cart[k]; }); return n; }
+  function cartTotal(){ var n=0; Object.keys(cart).forEach(function(k){ n+=cart[k]*C[k].price; }); return n; }
+
+  function renderCart(){
+    var total = cartTotal();
+    var left = Math.max(0, FREE-total);
+    document.getElementById('bagcount').textContent = cartCount();
+    document.getElementById('remain').textContent = left===0 ? 'Free shipping on this bag' : '$'+left+' to free shipping';
+    document.getElementById('barfill').style.width = Math.min(100, (total/FREE)*100)+'%';
+    document.getElementById('total').textContent = 'Subtotal $'+total;
+    var lines = document.getElementById('lines');
+    var keys = Object.keys(cart).filter(function(k){ return cart[k]>0; });
+    lines.innerHTML = keys.map(function(k){
+      var it=C[k];
+      return '<div class="line" data-k="'+k+'">'+
+        '<img class="lazy" data-src="'+src(it.file)+'" width="72" height="96" alt="'+it.alt+'">'+
+        '<div><p>'+it.name+'</p><p>$'+it.price+'</p></div>'+
+        '<div class="qty">'+
+          '<button type="button" data-qty="'+k+'" data-d="-1" aria-label="Fewer '+it.name+'">−</button>'+
+          '<span>'+cart[k]+'</span>'+
+          '<button type="button" data-qty="'+k+'" data-d="1" aria-label="More '+it.name+'">+</button>'+
+        '</div>'+
+        '<p class="price">$'+ (it.price*cart[k]) +'</p></div>';
+    }).join('') || '<p>The bag is empty.</p>';
+    document.getElementById('upsell').hidden = !!cart.ink;
+    lazy();
+  }
+
+  function add(key){
+    key = key==='current' ? color : key;
+    cart[key] = (cart[key]||0)+1;
+    renderCart();
+  }
+
+  function openBag(asDrawer){
+    var bag = document.getElementById('bag');
+    if(asDrawer){
+      bag.classList.add('as-drawer');
+      var btn = document.getElementById('closedraw');
+      btn.focus();
+    } else {
+      bag.scrollIntoView({behavior: reduce()?'auto':'smooth'});
+    }
+  }
+  function closeBag(){
+    document.getElementById('bag').classList.remove('as-drawer');
+    document.getElementById('bagbtn').focus();
+  }
+
+  function lazy(){
+    var io = lazy.io || (lazy.io = new IntersectionObserver(function(ents){
+      ents.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var img = e.target;
+        var s = img.getAttribute('data-src');
+        var ss = img.getAttribute('data-srcset');
+        if(s) img.src = s;
+        if(ss) img.srcset = ss;
+        img.removeAttribute('data-src'); img.removeAttribute('data-srcset');
+        io.unobserve(img);
+      });
+    }, {rootMargin:'0px', threshold:0.01}));
+    document.querySelectorAll('img.lazy[data-src]').forEach(function(img){ io.observe(img); });
+  }
+
+  /* events */
+  document.querySelectorAll('.swatch[data-color]').forEach(function(b){
+    b.addEventListener('click', function(){ setColor(b.getAttribute('data-color')); });
+  });
+  document.querySelectorAll('[data-add]').forEach(function(b){
+    b.addEventListener('click', function(){ add(b.getAttribute('data-add')); openBag(true); });
+  });
+  document.getElementById('bagbtn').addEventListener('click', function(){ openBag(true); });
+  document.getElementById('closedraw').addEventListener('click', closeBag);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBag(); });
+
+  document.getElementById('lines').addEventListener('click', function(e){
+    var b = e.target.closest('[data-qty]'); if(!b) return;
+    var k=b.getAttribute('data-qty'); var d=parseInt(b.getAttribute('data-d'),10);
+    cart[k]=Math.max(0,(cart[k]||0)+d); if(cart[k]===0) delete cart[k];
+    renderCart();
+  });
+  document.getElementById('checkout').addEventListener('click', function(){
+    document.getElementById('confirm').hidden = false;
+    document.getElementById('confirm').focus?.();
+  });
+
+  document.getElementById('shopbtn').addEventListener('click', function(){
+    var m=document.getElementById('mega'); var open=m.hidden;
+    m.hidden=!open; this.setAttribute('aria-expanded', open?'true':'false');
+  });
+  document.getElementById('mega').addEventListener('click', function(e){
+    if(e.target.closest('a')){ this.hidden=true; document.getElementById('shopbtn').setAttribute('aria-expanded','false'); }
+  });
+
+  var INDEX = [
+    {q:'coat', label:'Wool overcoat', href:'#product'},
+    {q:'ivory', label:'Ivory colourway', href:'#product'},
+    {q:'ink', label:'Ink colourway', href:'#product'},
+    {q:'lacquer', label:'Lacquer colourway', href:'#landing'},
+    {q:'fabric', label:'Fabric guide', href:'#product'},
+    {q:'size', label:'Size chart', href:'#product'},
+    {q:'bag', label:'Your bag', href:'#bag'},
+    {q:'order', label:'Track an order', href:'#track'},
+    {q:'track', label:'Track an order', href:'#track'}
+  ];
+  var q=document.getElementById('q'); var hits=document.getElementById('hits');
+  function showHits(){
+    var v=(q.value||'').trim().toLowerCase();
+    if(!v){ hits.hidden=true; hits.innerHTML=''; return; }
+    var list=INDEX.filter(function(i){ return i.q.indexOf(v)===0 || i.label.toLowerCase().indexOf(v)>-1; });
+    var seen={}; list=list.filter(function(i){ if(seen[i.href+i.label]) return false; seen[i.href+i.label]=1; return true; });
+    hits.innerHTML = list.length ? list.map(function(i){ return '<a role="option" href="'+i.href+'">'+i.label+'</a>'; }).join('') : '<a role="option">No matches in this concept store</a>';
+    hits.hidden=false;
+  }
+  q.addEventListener('input', showHits);
+  q.addEventListener('focus', showHits);
+  document.getElementById('searchform').addEventListener('submit', function(e){ e.preventDefault(); var a=hits.querySelector('a[href]'); if(a){ a.click(); } });
+  hits.addEventListener('click', function(){ hits.hidden=true; });
+  document.addEventListener('click', function(e){ if(!e.target.closest('.search')) hits.hidden=true; if(!e.target.closest('#mega') && !e.target.closest('#shopbtn')){ document.getElementById('mega').hidden=true; document.getElementById('shopbtn').setAttribute('aria-expanded','false'); } });
+
+  document.querySelectorAll('.facets button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var f=b.getAttribute('data-facet');
+      document.querySelectorAll('.facets button[data-facet="'+f+'"]').forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      facets[f]=b.getAttribute('data-val');
+      if(facets.color==='lacquer') loadedMore=true;
+      renderRack();
+    });
+  });
+  document.getElementById('loadmore').addEventListener('click', function(){ loadedMore=true; renderRack(); });
+  document.getElementById('rack').addEventListener('click', function(e){
+    var a=e.target.closest('[data-goto]'); if(!a) return;
+    setColor(a.getAttribute('data-goto'));
+  });
+
+  document.querySelectorAll('.thumbs button').forEach(function(b){
+    b.addEventListener('click', function(){ shot=b.getAttribute('data-shot'); updatePdp(); });
+  });
+  document.querySelectorAll('[data-size]').forEach(function(b){
+    if(!b.classList.contains('ghost')) return;
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.sizes [data-size]').forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      document.querySelectorAll('table.chart tr[data-size]').forEach(function(r){ r.classList.toggle('is-on', r.getAttribute('data-size')===b.getAttribute('data-size')); });
+    });
+  });
+  document.getElementById('chartbtn').addEventListener('click', function(){
+    var p=document.getElementById('chart'); p.hidden=!p.hidden;
+    this.setAttribute('aria-expanded', p.hidden?'false':'true');
+    document.querySelectorAll('table.chart tr[data-size]').forEach(function(r){
+      r.classList.toggle('is-on', r.getAttribute('data-size')===(document.querySelector('.sizes [aria-pressed="true"]')||{}).getAttribute('data-size'));
+    });
+  });
+  document.getElementById('fabricbtn').addEventListener('click', function(){
+    var p=document.getElementById('fabric'); p.hidden=!p.hidden;
+    this.setAttribute('aria-expanded', p.hidden?'false':'true');
+    if(!p.hidden) lazy();
+  });
+
+  document.getElementById('trackform').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v=(document.getElementById('oid').value||'').trim().toUpperCase();
+    var step = v==='C-1042' || v==='' ? 'Packed' : 'Paid';
+    document.querySelectorAll('#path button').forEach(function(b){
+      if(b.getAttribute('data-step')===step) b.setAttribute('aria-current','step'); else b.removeAttribute('aria-current');
+    });
+  });
+
+  /* current floor */
+  var floors = [].slice.call(document.querySelectorAll('.rail nav a'));
+  var secs = ['home','collection','product','about','landing','bag','track'].map(function(id){ return document.getElementById(id); });
+  function markFloor(){
+    var y=window.scrollY + 120, cur='home';
+    secs.forEach(function(s){ if(s && s.offsetTop<=y) cur=s.id; });
+    var map={home:'#home',collection:'#collection',product:'#product',about:'#about',landing:'#landing',bag:'#bag',track:'#track'};
+    floors.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')===(map[cur]||('#'+cur)) ? 'page':'false'); });
+  }
+  window.addEventListener('scroll', markFloor, {passive:true});
+
+  document.querySelector('table.chart tr[data-size="M"]').classList.add('is-on');
+  setColor('ivory');
+  renderRack();
+  renderCart();
+  lazy();
+  markFloor();
+})();
+</script>
+</body>
+</html>
