@@ -1,0 +1,134 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 6482,
+  "first_view_bytes": 108875,
+  "sections": [
+   [
+    "home",
+    81,
+    820
+   ],
+   [
+    "collection",
+    901,
+    982
+   ],
+   [
+    "product",
+    1883.125,
+    900
+   ],
+   [
+    "about",
+    2783.125,
+    900
+   ],
+   [
+    "landing",
+    3683.125,
+    900
+   ],
+   [
+    "bag",
+    4583.125,
+    900
+   ],
+   [
+    "track",
+    5483.125,
+    900
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/upwork-shopify-os2/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 6461,
+  "first_view_bytes": 108875,
+  "sections": [
+   [
+    "home",
+    81,
+    820
+   ],
+   [
+    "collection",
+    901,
+    982
+   ],
+   [
+    "product",
+    1883.125,
+    900
+   ],
+   [
+    "about",
+    2783.125,
+    900
+   ],
+   [
+    "landing",
+    3683.125,
+    900
+   ],
+   [
+    "bag",
+    4583.125,
+    900
+   ],
+   [
+    "track",
+    5483.125,
+    900
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/upwork-shopify-os2/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 7367,
+  "first_view_bytes": 108875,
+  "sections": [
+   [
+    "home",
+    117,
+    893
+   ],
+   [
+    "collection",
+    1010.484375,
+    1202
+   ],
+   [
+    "product",
+    2212.765625,
+    1372
+   ],
+   [
+    "about",
+    3584.484375,
+    900
+   ],
+   [
+    "landing",
+    4484.484375,
+    900
+   ],
+   [
+    "bag",
+    5384.484375,
+    900
+   ],
+   [
+    "track",
+    6284.484375,
+    900
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-22/upwork-shopify-os2/proofs/phone-390.png"
+ }
+]
