@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Concept: UK physiotherapy group, 14 clinics</title>
+<style>
+@font-face{font-family:Outfit;src:url(fonts/outfit.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--paper:#FFF7EE;--ink:#10201E;--teal:#0B5A54;--coral:#FF6A45;--sun:#FFC95C;--muted:#3A4A47;--line:#D9CDBD;
+--t1:14px;--t2:16px;--t3:18px;--t4:24px;--t5:32px;--t6:40px;--t7:64px;--t8:120px;
+--s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:96px;--font:Outfit,system-ui,sans-serif;--gut:max(32px,calc((100vw - 1600px)/2))}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--t3)/1.55 var(--font);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.dark :focus-visible,.hero-stage :focus-visible,#book :focus-visible{outline-color:var(--sun)}
+#book :focus-visible{outline-color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--s2) var(--s4);border:3px solid var(--ink);border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;font-size:var(--t3);line-height:1.2;text-decoration:none;cursor:pointer;white-space:normal;text-align:center;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn[hidden]{display:none}
+.btn.coral{background:var(--coral);border-color:var(--coral);color:var(--ink)}
+.btn.ghost{background:transparent;color:inherit}
+/* header */
+header.site{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:var(--s4);padding:var(--s2) var(--gut);min-height:72px}
+.mark{white-space:nowrap;font-weight:700;font-size:var(--t4);letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.mark span{color:var(--teal)}
+header.site nav{display:flex;gap:var(--s4)}
+header.site nav a{text-decoration:none;font-weight:500;font-size:var(--t2);padding:var(--s2) 0;border-bottom:2px solid transparent}
+header.site nav a:hover{border-color:var(--coral)}
+.menu{display:none}
+.menu summary{list-style:none;cursor:pointer;min-height:48px;display:inline-flex;align-items:center;font-weight:600;padding:0 var(--s3)}
+.menu summary::-webkit-details-marker{display:none}
+.menu div{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);padding:var(--s3) var(--s4);display:grid;gap:var(--s1)}
+.menu a{padding:var(--s2) 0;text-decoration:none;font-weight:500}
+/* sheets */
+section.page{position:relative}
+.sheet{margin-top:-40px;border-radius:40px 40px 0 0;position:relative}
+/* hero */
+.hero{display:flex;flex-direction:column;min-height:calc(100vh - 72px)}
+.hero-stage{position:relative;flex:1;min-height:480px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+.hero-stage::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,32,30,.82) 0,rgba(16,32,30,.66) 40%,rgba(16,32,30,0) 72%)}
+.hero-copy{position:relative;z-index:2;padding:var(--s7) var(--gut) var(--s8);max-width:calc(760px + var(--gut))}
+.hero-copy h1{font-size:var(--t7);line-height:1.02;font-weight:600;letter-spacing:-.03em}
+.hero-copy p{margin-top:var(--s3);font-size:var(--t4);line-height:1.4;max-width:30ch}
+.console{position:relative;z-index:3;margin-top:-40px;background:var(--paper);border-radius:40px 40px 0 0;padding:var(--s5) var(--gut) var(--s4);display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:var(--s6);align-items:start}
+.console label{display:block;font-weight:600;font-size:var(--t4);margin-bottom:var(--s2)}
+.find-row{display:flex;gap:var(--s2)}
+.find-row input{flex:1;min-width:0;min-height:56px;border:3px solid var(--ink);border-radius:16px;background:#fff;padding:0 var(--s3);font-size:var(--t4);font-weight:500}
+.try{margin-top:var(--s3);font-size:var(--t2);color:var(--muted)}
+.try button{background:none;border:0;border-bottom:2px solid var(--coral);padding:var(--s1) 0;margin:0 var(--s2) 0 var(--s1);font-weight:600;cursor:pointer;color:var(--ink);min-height:32px}
+#found{list-style:none;margin:0;padding:0;min-height:176px}
+#found li{display:grid;grid-template-columns:1fr auto auto;gap:var(--s4);align-items:center;padding:var(--s3) 0;border-bottom:1px solid var(--line);animation:settle .3s ease both}
+#found li:first-child{padding-top:0}
+#found b{font-size:var(--t4);font-weight:600;display:block;line-height:1.2}
+#found .meta{font-size:var(--t2);color:var(--muted)}
+#found .next{font-size:var(--t2);font-weight:500;text-align:right}
+#found .msg{display:block;border:0;padding:var(--s2) 0;font-size:var(--t4);line-height:1.35;grid-template-columns:1fr}
+@keyframes settle{from{transform:translateY(10px);opacity:.01}to{transform:none;opacity:1}}
+/* clinic */
+#clinic{background:var(--paper)}
+.clinic-top{position:relative;min-height:600px;color:#fff;display:flex;align-items:flex-start;overflow:hidden;background:var(--ink)}
+.clinic-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.clinic-top::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,32,30,.8) 0,rgba(16,32,30,.62) 45%,rgba(16,32,30,.05) 80%)}
+.clinic-top .in{position:relative;z-index:2;padding:var(--s8) var(--gut) 160px;max-width:calc(760px + var(--gut))}
+.clinic-top h2{font-size:var(--t7);line-height:1.02;font-weight:600;letter-spacing:-.03em}
+.clinic-top p{font-size:var(--t4);margin-top:var(--s3);line-height:1.4;max-width:32ch}
+.clinic-body{background:var(--paper);padding:var(--s7) var(--gut) var(--s8);display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto 1fr;gap:var(--s6) var(--s5)}
+.slots{grid-column:1 / span 7;grid-row:1}
+.slots h3,.therapist h3,.reads h3{font-size:var(--t5);line-height:1.15;font-weight:600;letter-spacing:-.02em}
+.slots .row{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s4)}
+.slot{min-height:64px;border:3px solid var(--ink);border-radius:20px;background:transparent;padding:var(--s2) var(--s4);font-weight:600;font-size:var(--t4);cursor:pointer;line-height:1.2;text-align:left}
+.slot small{display:block;font-size:var(--t2);font-weight:500;color:var(--muted)}
+.slot:hover{background:var(--sun)}
+.slots .note{margin-top:var(--s3);color:var(--muted)}
+.aside{grid-column:9 / span 4;grid-row:1 / span 2;display:grid;gap:var(--s6);align-content:start}
+.where p+p{margin-top:var(--s2)}
+.where a{font-weight:600;text-decoration-thickness:3px;text-decoration-color:var(--coral);text-underline-offset:4px}
+.therapist{grid-column:1 / span 7;grid-row:2;align-self:start;display:grid;grid-template-columns:200px 1fr;gap:var(--s5);align-items:center}
+.therapist img{width:200px;height:260px;object-fit:cover;border-radius:100px 100px 24px 24px}
+.therapist p{margin-top:var(--s2)}
+.reads{}
+.reads dl{margin:var(--s3) 0 0}
+.reads dt{font-weight:600;margin-top:var(--s3)}
+.reads dd{margin:0;color:var(--muted)}
+.reads .old{margin-top:var(--s4);padding-top:var(--s3);border-top:3px solid var(--sun)}
+/* conditions */
+#conditions{background:var(--teal);color:var(--paper);padding:var(--s8) var(--gut) var(--s8)}
+#conditions.dark{}
+.sentence{font-size:var(--t7);line-height:1.22;font-weight:600;letter-spacing:-.025em;max-width:1100px}
+.sentence select{field-sizing:content;appearance:none;-webkit-appearance:none;background:var(--teal);color:var(--sun);border:0;border-bottom:6px solid var(--sun);border-radius:0;padding:0 var(--s2);font:inherit;letter-spacing:inherit;cursor:pointer;max-width:100%;text-overflow:ellipsis}
+.sentence select:focus-visible{outline:3px solid var(--sun);outline-offset:6px}
+.answer{margin-top:var(--s7);display:grid;grid-template-columns:minmax(260px,5fr) 7fr;gap:var(--s7);align-items:center}
+.answer img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:32px}
+.answer h3{font-size:var(--t6);line-height:1.1;font-weight:600;letter-spacing:-.02em}
+.answer p{margin-top:var(--s3);max-width:56ch}
+.answer .who{margin-top:var(--s3)}
+.answer .btn{margin-top:var(--s4)}
+/* book */
+#book{overflow-x:clip;background:var(--coral);color:var(--ink);padding:var(--s8) var(--gut) var(--s8)}
+#book h2{font-size:112px;line-height:.95;font-weight:700;letter-spacing:-.03em}
+.board{margin-top:var(--s6);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s7);align-items:start}
+.pick h3{font-size:var(--t4);font-weight:600;margin-bottom:var(--s3)}
+.pick .grp+h3{margin-top:var(--s5)}
+.grp{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.choice{min-height:56px;min-width:72px;border:3px solid var(--ink);border-radius:16px;background:transparent;padding:var(--s2) var(--s3);font-size:var(--t3);font-weight:600;cursor:pointer;line-height:1.2}
+.choice small{display:block;font-weight:500;font-size:var(--t2)}
+.choice[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.choice:disabled{opacity:.7;text-decoration:line-through;cursor:not-allowed;border-style:dashed}
+.ticket{position:relative;background:var(--paper);border-radius:32px;padding:var(--s5);transform:translateY(12px);box-shadow:0 24px 0 -8px rgba(16,32,30,.18);transition:transform .35s ease}
+.ticket.set{transform:none}
+.ticket .where2{font-size:var(--t4);font-weight:600;line-height:1.2}
+.ticket .time{font-size:168px;line-height:1;font-weight:700;letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin-top:var(--s3)}
+.ticket .day{font-size:var(--t5);font-weight:600;line-height:1.15;margin-top:var(--s2)}
+.ticket .why{margin-top:var(--s4);padding-top:var(--s3);border-top:3px dashed var(--ink);color:var(--ink)}
+.ticket .why b{display:block}
+.ticket .actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.stamp{position:absolute;right:var(--s4);bottom:176px;border:6px solid var(--teal);color:var(--teal);border-radius:12px;padding:var(--s1) var(--s3);font-size:var(--t6);font-weight:800;letter-spacing:.04em;text-transform:uppercase;transform:scale(1.6);opacity:0;pointer-events:none;background:var(--paper)}
+.ticket.done .stamp{opacity:1;transform:scale(1);transition:transform .25s cubic-bezier(.2,1.6,.4,1),opacity .15s}
+#book .fine{margin-top:var(--s5);max-width:60ch}
+/* close */
+#close{background:var(--ink);color:var(--paper);overflow:hidden}
+#close .bg{position:absolute;inset:0}
+#close .bg img{width:100%;height:100%;object-fit:cover}
+#close .bg::after{content:"";position:absolute;inset:0;background:rgba(16,32,30,.82)}
+#close .in{position:relative;z-index:2;padding:var(--s8) var(--gut) var(--s6)}
+#close .lead{font-size:var(--t6);line-height:1.2;font-weight:600;letter-spacing:-.02em;max-width:26ch}
+.notes{margin-top:var(--s7);display:grid;grid-template-columns:1fr 1fr;gap:var(--s6) var(--s7);max-width:1100px;margin-left:auto}
+.notes h3{font-size:var(--t4);font-weight:600;line-height:1.2;color:var(--sun)}
+.notes p{margin-top:var(--s2)}
+footer{position:relative;z-index:2;padding:var(--s5);border-top:1px solid rgba(255,247,238,.3);margin:0 var(--gut);display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);font-size:var(--t2);padding-left:0;padding-right:0;margin-bottom:var(--s4)}
+footer p{max-width:70ch}
+footer nav{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-left:auto}
+.shift{transform:translateY(24px);transition:transform .5s ease}
+.shift.in{transform:none}
+@media (max-width:1100px){
+ .hero-copy h1,.clinic-top h2{font-size:56px}
+ #book h2{font-size:80px}
+ .sentence{font-size:48px}
+ .console{grid-template-columns:1fr;gap:var(--s4)}
+ .clinic-body{grid-template-columns:1fr;grid-template-rows:none}
+ .slots,.aside,.therapist{grid-column:1;grid-row:auto}
+ .board{grid-template-columns:1fr}
+ header.site nav{display:none}
+ .menu{display:block}
+}
+@media (max-width:700px){
+ :root{--gut:16px}
+ body{font-size:17px}
+ header.site{padding:var(--s2) var(--s3);min-height:64px;gap:var(--s1)}
+ .mark{font-size:20px}
+ .menu summary{padding:0 var(--s2)}
+ header.site .btn{padding:var(--s2) var(--s3)}
+ .hero{min-height:0}
+ .hero-stage{min-height:380px}
+ .hero-stage::before{background:linear-gradient(0deg,rgba(16,32,30,.88) 0,rgba(16,32,30,.7) 55%,rgba(16,32,30,.15) 100%)}
+ .hero-copy{padding:var(--s7) var(--s3) var(--s7)}
+ .hero-copy h1,.clinic-top h2{font-size:40px}
+ #book h2{font-size:56px}
+ .hero-copy p{font-size:20px}
+ .console{padding:var(--s4) var(--s3) var(--s3);gap:var(--s3)}
+ .console label{font-size:20px}
+ .find-row{flex-direction:column}
+ .find-row input{font-size:20px}
+ #found li{grid-template-columns:1fr auto;gap:var(--s2) var(--s3)}
+ #found .next{grid-column:1;text-align:left}
+ #found .btn{grid-row:1 / span 2;grid-column:2}
+ #found b{font-size:20px}
+ .clinic-top{min-height:480px}
+ .clinic-top .in{padding:var(--s7) var(--s3) 120px}
+ .clinic-top p{font-size:20px}
+ .clinic-body{padding:var(--s6) var(--s3) var(--s7)}
+ .slots h3,.therapist h3,.reads h3{font-size:28px}
+ .slot{font-size:20px;width:100%}
+ .therapist{grid-template-columns:1fr}
+ .therapist img{width:160px;height:208px}
+ #conditions{padding:var(--s7) var(--s3)}
+ .sentence{font-size:32px}
+ .answer{grid-template-columns:1fr;gap:var(--s4);margin-top:var(--s5)}
+ .answer h3{font-size:32px}
+ .sheet{border-radius:28px 28px 0 0;margin-top:-28px}
+ #book{padding:var(--s7) var(--s3)}
+ .ticket{padding:var(--s4)}
+ .ticket .time{font-size:96px}
+ .ticket .day{font-size:24px}
+ .stamp{font-size:28px;right:var(--s3);top:var(--s4)}
+ #close .in{padding:var(--s7) var(--s3) var(--s5)}
+ #close .lead{font-size:28px}
+ .notes{grid-template-columns:1fr;gap:var(--s4);margin-top:var(--s5)}
+ footer{margin:0 var(--s3);flex-direction:column}
+ footer nav{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.shift{transform:none}.ticket{transform:none}.stamp{transform:none}}
+</style>
+</head>
+<body>
+<header class="site">
+ <a class="mark" href="#find">Concept <span>Physio</span></a>
+ <nav aria-label="Main">
+  <a href="#clinic">Locations</a><a href="#conditions">Conditions</a><a href="#conditions">Services</a><a href="#close">Insurance</a><a href="#close">Careers</a><a href="#close">About</a><a href="#close">Contact</a>
+ </nav>
+ <details class="menu"><summary>Menu</summary><div><a href="#clinic">Locations</a><a href="#conditions">Conditions and services</a><a href="#close">Insurance</a><a href="#close">Careers</a><a href="#close">About and contact</a></div></details>
+ <a class="btn coral" href="#book">Book</a>
+</header>
+
+<main>
+<section class="page hero" id="find" data-feeling="found">
+ <div class="hero-stage">
+  <picture>
+   <source media="(max-width:700px)" srcset="images/hero-m.webp">
+   <source media="(max-width:1100px)" srcset="images/hero-960.webp">
+   <img src="images/hero-1600.webp" width="1600" height="900" alt="A physiotherapist guiding a patient's arm through a slow raise in a bright treatment room" fetchpriority="high">
+  </picture>
+  <div class="hero-copy">
+   <h1>Find the physio clinic nearest you and book today.</h1>
+   <p>Fourteen clinics across the UK, one standard of care. Tell us where you are and see who can see you first.</p>
+  </div>
+ </div>
+ <div class="console">
+  <form id="finder" novalidate>
+   <label for="where">Where are you?</label>
+   <div class="find-row">
+    <input id="where" name="where" type="text" value="LS6" autocomplete="postal-code" placeholder="Postcode or town" aria-describedby="try">
+    <button class="btn" type="submit">Show nearest clinics</button>
+   </div>
+   <p class="try" id="try">Try <button type="button" data-q="M20">M20</button><button type="button" data-q="BS8">BS8</button><button type="button" data-q="EH3">EH3</button><button type="button" data-q="Brighton">Brighton</button></p>
+  </form>
+  <ol id="found" aria-live="polite" aria-label="Nearest clinics"></ol>
+ </div>
+</section>
+
+<section class="page" id="clinic" data-feeling="sure">
+ <div class="clinic-top">
+  <picture>
+   <source media="(max-width:700px)" srcset="images/reception-720.webp">
+   <img src="images/reception-1400.webp" width="1400" height="1050" alt="The clinic reception, with a wooden desk, a plant and two teal chairs by a tall window" loading="lazy">
+  </picture>
+  <div class="in">
+   <h2 id="c-name">Concept Physio Leeds</h2>
+   <p id="c-addr">12 Chapel Street, Leeds LS6 1AA</p>
+  </div>
+ </div>
+ <div class="clinic-body sheet shift">
+  <div class="slots">
+   <h3>Next appointments at <span class="c-town">Leeds</span></h3>
+   <div class="row" id="slots"></div>
+   <p class="note">On the live site this strip is WebPT’s own booking, sitting on every clinic page.</p>
+  </div>
+  <div class="aside"><div class="where">
+   <p><b>Open</b><br>Monday to Friday 07:30 to 19:00<br>Saturday 08:00 to 13:00</p>
+   <p><a href="#clinic" id="gbp">This clinic on Google</a></p>
+   <p>Step-free access and parking details come from this clinic’s own entry.</p>
+  </div>
+  <div class="reads">
+   <h3>What search can read on this page</h3>
+   <dl>
+    <dt>Where</dt><dd>Name, address and map link for <span class="c-town">Leeds</span></dd>
+    <dt>When</dt><dd>Opening hours, kept up to date</dd>
+    <dt>What we treat</dt><dd>Services and conditions, each with its own page</dd>
+    <dt>How to book</dt><dd>One button, one booking link</dd>
+   </dl>
+   <p class="old">An old address such as <b>/clinics/leeds-central</b> now points here for good, with its title and description carried across.</p>
+  </div>
+  </div>
+  <div class="therapist">
+   <img src="images/therapist-360.webp" srcset="images/therapist-360.webp 360w, images/therapist-640.webp 640w" sizes="200px" width="200" height="260" alt="Ruth Hale, specialist physiotherapist, in a teal tunic" loading="lazy">
+   <div>
+    <h3>Ruth Hale</h3>
+    <p>Specialist physiotherapist at <span class="c-town">Leeds</span>. Treats shoulders, necks and backs. Every therapist has a page like this, linked to the clinic, the conditions and the articles they write.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="page sheet dark" id="conditions" data-feeling="trusting">
+ <p class="sentence">I’m dealing with
+  <select id="cond" aria-label="What are you dealing with?"></select>
+  and I’d like to be seen at
+  <select id="cl" aria-label="Which clinic?"></select>.</p>
+ <div class="answer" aria-live="polite">
+  <picture>
+   <source media="(max-width:700px)" srcset="images/hands-560.webp">
+   <img src="images/hands-900.webp" width="900" height="675" alt="A physiotherapist's hands supporting a patient's knee during an assessment" loading="lazy">
+  </picture>
+  <div>
+   <h3 id="a-title"></h3>
+   <p id="a-text"></p>
+   <p class="who" id="a-who"></p>
+   <p id="a-read"></p>
+   <a class="btn coral" href="#book" id="a-book"></a>
+  </div>
+ </div>
+</section>
+
+<section class="page sheet" id="book" data-feeling="ready">
+ <h2>Choose your time.</h2>
+ <div class="board">
+  <div class="pick">
+   <h3 id="dh">Day</h3>
+   <div class="grp" id="days" role="group" aria-labelledby="dh"></div>
+   <h3 id="th">Time</h3>
+   <div class="grp" id="times" role="group" aria-labelledby="th"></div>
+  </div>
+  <div class="ticket" id="ticket" aria-live="polite">
+   <div class="stamp" aria-hidden="true">Booked</div>
+   <p class="where2" id="t-where"></p>
+   <p class="time" id="t-time"></p>
+   <p class="day" id="t-day"></p>
+   <p class="why"><b id="t-why"></b><span id="t-who"></span></p>
+   <div class="actions">
+    <button class="btn" type="button" id="confirm">Confirm this appointment</button>
+    <button class="btn ghost" type="button" id="change">Change</button>
+   </div>
+  </div>
+ </div>
+ <p class="fine">On the live site this step is WebPT’s own form, inside this page. Nothing is booked here.</p>
+</section>
+
+<section class="page sheet" id="close" data-feeling="looked-after">
+ <div class="bg"><img src="images/rehab-800.webp" srcset="images/rehab-800.webp 800w, images/rehab-1600.webp 1600w" sizes="100vw" alt="" loading="lazy"></div>
+ <div class="in">
+  <p class="lead">We would build this on WordPress with Elementor Pro, so your marketing coordinator can run it without a developer.</p>
+  <div class="notes">
+   <div><h3>Why WordPress with Elementor Pro</h3><p>You are on WordPress already. Your 80 or so articles move across as they are, every old address keeps working, and the page tools are built for people who are not developers.</p></div>
+   <div><h3>How your team edits</h3><p>A clinic, a therapist or an article is one entry that you fill in. The page, the map link, the booking button and the search details build themselves from it.</p></div>
+   <div><h3>What carries across</h3><p>A permanent redirect for every old address, with its title and description. Each clinic gets its own page, schema and Google Business Profile link.</p></div>
+   <div><h3>When, and how it stays fast</h3><p>Five to six weeks. Motion is light, images are sized for the screen, and Google Analytics, Tag Manager and Search Console are set up cleanly. A short handover guide and one walkthrough call finish the job.</p></div>
+  </div>
+ </div>
+ <footer>
+  <nav aria-label="Pages"><a href="#find">Home</a><a href="#close">About</a><a href="#conditions">Services</a><a href="#conditions">Conditions we treat</a><a href="#close">Insurance</a><a href="#close">Careers</a><a href="#close">Contact</a></nav>
+ </footer>
+</section>
+</main>
+
+<script>
+(function(){
+var CL=[["Leeds","LS6 1AA",53.80,-1.55,"Tomorrow, 09:40"],["Manchester","M20 3AA",53.48,-2.24,"Today, 16:20"],["Sheffield","S10 2AA",53.38,-1.47,"Tomorrow, 08:30"],["Birmingham","B15 2AA",52.48,-1.90,"Tomorrow, 11:20"],["Bristol","BS8 1AA",51.45,-2.59,"Today, 17:10"],["Cardiff","CF10 3AA",51.48,-3.18,"Tomorrow, 12:10"],["London Bridge","SE1 2AA",51.50,-0.09,"Today, 15:30"],["London Marylebone","W1U 4AA",51.52,-0.16,"Tomorrow, 08:30"],["Brighton","BN1 3AA",50.83,-0.14,"Tomorrow, 14:00"],["Reading","RG1 4AA",51.45,-1.00,"Today, 18:00"],["Newcastle","NE1 4AA",54.98,-1.61,"Tomorrow, 09:40"],["Glasgow","G12 8AA",55.86,-4.25,"Tomorrow, 11:20"],["Edinburgh","EH3 6AA",55.95,-3.19,"Today, 14:00"],["Nottingham","NG1 5AA",52.95,-1.15,"Tomorrow, 15:30"]];
+var AR="AB,57.15,-2.10,Aberdeen;B,52.48,-1.90,Birmingham;BA,51.38,-2.36,Bath;BB,53.75,-2.48,Blackburn;BD,53.80,-1.75,Bradford;BH,50.72,-1.88,Bournemouth;BL,53.58,-2.43,Bolton;BN,50.83,-0.14,Brighton;BR,51.40,0.02,Bromley;BS,51.45,-2.59,Bristol;CB,52.20,0.12,Cambridge;CF,51.48,-3.18,Cardiff;CH,53.19,-2.89,Chester;CM,51.73,0.47,Chelmsford;CO,51.89,0.90,Colchester;CR,51.37,-0.10,Croydon;CT,51.28,1.08,Canterbury;CV,52.41,-1.51,Coventry;DD,56.46,-2.97,Dundee;DE,52.92,-1.48,Derby;DH,54.78,-1.57,Durham;DN,53.52,-1.13,Doncaster;E,51.54,-0.02,London;EC,51.52,-0.09,London;EH,55.95,-3.19,Edinburgh;EN,51.65,-0.08,Enfield;EX,50.72,-3.53,Exeter;FK,56.00,-3.78,Falkirk;FY,53.82,-3.05,Blackpool;G,55.86,-4.25,Glasgow;GL,51.86,-2.24,Gloucester;GU,51.24,-0.57,Guildford;HA,51.58,-0.34,Harrow;HD,53.65,-1.78,Huddersfield;HG,53.99,-1.54,Harrogate;HU,53.74,-0.34,Hull;IG,51.56,0.07,Ilford;IP,52.06,1.16,Ipswich;KT,51.41,-0.30,Kingston;L,53.41,-2.98,Liverpool;LE,52.63,-1.13,Leicester;LN,53.23,-0.54,Lincoln;LS,53.80,-1.55,Leeds;LU,51.88,-0.42,Luton;M,53.48,-2.24,Manchester;MK,52.04,-0.76,Milton Keynes;N,51.57,-0.11,London;NE,54.98,-1.61,Newcastle;NG,52.95,-1.15,Nottingham;NN,52.24,-0.90,Northampton;NP,51.58,-3.00,Newport;NR,52.63,1.30,Norwich;NW,51.55,-0.18,London;OL,53.54,-2.11,Oldham;OX,51.75,-1.26,Oxford;PE,52.57,-0.24,Peterborough;PL,50.37,-4.14,Plymouth;PO,50.80,-1.09,Portsmouth;PR,53.76,-2.70,Preston;RG,51.45,-1.00,Reading;RH,51.24,-0.17,Redhill;RM,51.57,0.18,Romford;S,53.38,-1.47,Sheffield;SA,51.62,-3.94,Swansea;SE,51.47,-0.07,London;SG,51.90,-0.20,Stevenage;SK,53.41,-2.15,Stockport;SL,51.51,-0.59,Slough;SM,51.36,-0.19,Sutton;SN,51.56,-1.78,Swindon;SO,50.90,-1.40,Southampton;SR,54.90,-1.38,Sunderland;ST,53.00,-2.18,Stoke;SW,51.47,-0.17,London;TN,51.13,0.30,Tunbridge Wells;TW,51.45,-0.33,Twickenham;UB,51.54,-0.48,Uxbridge;W,51.51,-0.20,London;WA,53.39,-2.59,Warrington;WC,51.52,-0.12,London;WD,51.66,-0.40,Watford;WF,53.68,-1.50,Wakefield;WN,53.54,-2.63,Wigan;WR,52.19,-2.22,Worcester;WV,52.59,-2.13,Wolverhampton;YO,53.96,-1.08,York".split(";").map(function(s){var p=s.split(",");return{c:p[0],la:+p[1],lo:+p[2],n:p[3]}});
+var CO=[
+["Back pain","Back and spine care","Back pain gets its own page on the site, linked to this service, to the clinics that treat it and to the therapists who focus on it.","Back pain: when to rest and when to move"],
+["Neck and shoulder pain","Neck and shoulder care","Neck and shoulder problems sit on one page, so someone searching for either finds the same clear answer and the nearest clinic.","Desk neck and shoulder tension: what actually helps"],
+["Knee pain","Knee and leg care","Knee pain has a page that names the service, the clinics and the therapists, in the words patients use.","Knee pain on the stairs: where to start"],
+["Hip pain","Hip and pelvis care","Hip pain links through to the right service and to the nearest clinic, so no one has to hunt.","Hip pain at night: a plain guide"],
+["Ankle and foot pain","Foot and ankle care","Ankle and foot pain gets a page of its own, tied to this clinic’s entry in the system.","Coming back from a sprained ankle"],
+["A sports injury","Sports injury rehabilitation","Sports injuries link to the service, to a clinic and to the articles written by the therapists who treat them.","Back to running after an injury"],
+["Recovery after surgery","Rehabilitation after surgery","Recovery after surgery has a page that explains what happens and links straight to booking at the clinic.","Your first weeks after a knee replacement"],
+["Pain that has lasted months","Long-term pain support","Long-term pain gets a calm, plain page that leads to the service, the therapist and the booking link.","Living with pain that will not go away"]];
+var TIMES=["08:30","09:40","11:20","12:10","14:00","15:30","17:10","18:00"];
+var S={cl:0,co:0,day:0,time:"09:40",done:false};
+var $=function(i){return document.getElementById(i)};
+function hav(a,b,c,d){var r=Math.PI/180,x=Math.sin((c-a)*r/2),y=Math.sin((d-b)*r/2);var h=x*x+Math.cos(a*r)*Math.cos(c*r)*y*y;return 3958.8*2*Math.asin(Math.sqrt(h))}
+function locate(q){q=q.trim();if(!q)return null;var m=q.match(/^([A-Za-z]{1,2})\s*\d/);if(m){var c=m[1].toUpperCase();for(var i=0;i<AR.length;i++)if(AR[i].c===c)return AR[i]}
+ var l=q.toLowerCase();for(var j=0;j<AR.length;j++)if(AR[j].n.toLowerCase()===l)return AR[j];
+ for(var k=0;k<CL.length;k++)if(CL[k][0].toLowerCase().indexOf(l)===0&&l.length>2)return{la:CL[k][2],lo:CL[k][3],n:CL[k][0]};
+ for(var n=0;n<AR.length;n++)if(l.length>2&&AR[n].n.toLowerCase().indexOf(l)===0)return AR[n];return null}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function find(q){var ol=$("found"),p=locate(q);
+ if(!p){ol.innerHTML='<li class="msg">We could not place “'+esc(q)+'”. Try a postcode such as LS6 or M20, or a town such as Bristol.</li>';return}
+ var r=CL.map(function(c,i){return{i:i,d:hav(p.la,p.lo,c[2],c[3])}}).sort(function(a,b){return a.d-b.d}).slice(0,3);
+ ol.innerHTML=r.map(function(x,n){var c=CL[x.i];return '<li style="animation-delay:'+(n*70)+'ms"><div><b>'+c[0]+'</b><span class="meta">'+(x.d<1?'under a mile':x.d.toFixed(1)+' miles')+' away, in a straight line</span></div><span class="next">Next: '+c[4]+'</span><button class="btn coral" type="button" data-pick="'+x.i+'" aria-label="Book at '+c[0]+'">Book</button></li>'}).join("");
+ S.cl=r[0].i;S.done=false;sync()}
+function days(){var o=[],d=new Date();d.setHours(12);while(o.length<7){d=new Date(d.getTime()+864e5);if(d.getDay()!==0)o.push(d)}return o}
+var DAYS=days(),DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var DL=function(i){var d=DAYS[i];return DN[d.getDay()]+" "+d.getDate()+" "+MN[d.getMonth()]};
+function taken(day,t){return ((S.cl*7+day*3+TIMES.indexOf(t)*5)%6)===0&&!(day===0&&t==="09:40")}
+function sync(){var c=CL[S.cl],k=CO[S.co];
+ document.querySelectorAll(".c-town").forEach(function(e){e.textContent=c[0]});
+ $("c-name").textContent="Concept Physio "+c[0];$("c-addr").textContent="12 Chapel Street, "+c[0]+" "+c[1];
+ $("gbp").textContent="Open "+c[0]+" on Google";
+ $("cl").value=S.cl;$("cond").value=S.co;
+ $("a-title").textContent=k[1];$("a-text").textContent="We start by listening, then look at how you move and explain what we find in plain words. You leave with a plan you have agreed. "+k[2];
+ $("a-who").textContent="Seen by Ruth Hale and the team at "+c[0]+".";
+ $("a-read").textContent="Read before you come: “"+k[3]+".”";
+ $("a-book").textContent="Book "+k[0].toLowerCase().replace(/^a /,"")+" at "+c[0];
+ $("slots").innerHTML=[[0,"09:40"],[0,"15:30"],[1,"08:30"],[2,"17:10"]].map(function(s){return '<button class="slot" type="button" data-slot="'+s[0]+'|'+s[1]+'">'+s[1]+'<small>'+DL(s[0])+'</small></button>'}).join("");
+ $("days").innerHTML=DAYS.map(function(d,i){return '<button class="choice" type="button" aria-pressed="'+(S.day===i)+'" data-day="'+i+'">'+DN[d.getDay()]+'<small>'+d.getDate()+' '+MN[d.getMonth()]+'</small></button>'}).join("");
+ if(taken(S.day,S.time)){S.time=TIMES.filter(function(t){return !taken(S.day,t)})[0]}
+ $("times").innerHTML=TIMES.map(function(t){var x=taken(S.day,t);return '<button class="choice" type="button" aria-pressed="'+(S.time===t)+'" data-time="'+t+'"'+(x?' disabled aria-label="'+t+', taken"':'')+'>'+t+'</button>'}).join("");
+ $("t-where").textContent="Concept Physio "+c[0];$("t-time").textContent=S.time;$("t-day").textContent=DL(S.day);
+ $("t-why").textContent=k[0].replace(/^a /,"").replace(/^./,function(m){return m.toUpperCase()});$("t-who").textContent="With Ruth Hale";
+ var t=$("ticket");t.classList.toggle("done",S.done);t.classList.add("set");
+ $("confirm").hidden=S.done;$("change").textContent=S.done?"Start again":"Change"}
+function go(id){var e=$(id);e.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})}
+$("finder").addEventListener("submit",function(e){e.preventDefault();find($("where").value)});
+document.querySelectorAll("[data-q]").forEach(function(b){b.addEventListener("click",function(){$("where").value=b.dataset.q;find(b.dataset.q)})});
+$("found").addEventListener("click",function(e){var b=e.target.closest("[data-pick]");if(!b)return;S.cl=+b.dataset.pick;S.done=false;sync();go("clinic")});
+$("slots").addEventListener("click",function(e){var b=e.target.closest("[data-slot]");if(!b)return;var p=b.dataset.slot.split("|");S.day=+p[0];S.time=p[1];S.done=false;sync();go("book")});
+$("days").addEventListener("click",function(e){var b=e.target.closest("[data-day]");if(!b)return;S.day=+b.dataset.day;S.done=false;sync();$("days").querySelector('[data-day="'+S.day+'"]').focus()});
+$("times").addEventListener("click",function(e){var b=e.target.closest("[data-time]");if(!b)return;S.time=b.dataset.time;S.done=false;sync();$("times").querySelector('[data-time="'+S.time+'"]').focus()});
+$("confirm").addEventListener("click",function(){S.done=true;sync();$("change").focus()});
+$("change").addEventListener("click",function(){S.done=false;sync();$("days").querySelector("button").focus()});
+$("cl").innerHTML=CL.map(function(c,i){return '<option value="'+i+'">'+c[0]+'</option>'}).join("");
+$("cond").innerHTML=CO.map(function(c,i){return '<option value="'+i+'">'+c[0].toLowerCase()+'</option>'}).join("");
+$("cl").addEventListener("change",function(){S.cl=+this.value;S.done=false;sync()});
+$("cond").addEventListener("change",function(){S.co=+this.value;S.done=false;sync()});
+$("a-book").addEventListener("click",function(e){e.preventDefault();go("book")});
+find($("where").value);
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});document.querySelectorAll(".shift").forEach(function(e){io.observe(e)})}else{document.querySelectorAll(".shift").forEach(function(e){e.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
