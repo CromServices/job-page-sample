@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Concept: the CNS Engineering Australia homepage as it is today, beside the same site with its own theme and wording made accurate.">
+<title>Concept</title>
+<style>
+@font-face{font-family:'Instrument Sans';src:url('fonts/instrument-sans.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Roboto';src:url('fonts/roboto-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Roboto';src:url('fonts/roboto-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Sora';src:url('fonts/sora-500.woff2') format('woff2');font-weight:500;font-display:swap}
+:root{
+  --ink:#161414;--paper:#FFF6EC;--amber:#F4A12A;--muted:#3F3C3A;--line:rgba(22,20,20,.2);
+  --navy:#0C4A74;--blue:#0071BC;
+  --font:'Instrument Sans',system-ui,sans-serif;
+  --t1:12px;--t2:14px;--t3:16px;--t4:18px;--t5:24px;--t6:32px;--t7:44px;--t8:96px;
+  --viewh:680px;--logo:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--t4);line-height:1.5;font-feature-settings:'tnum' 1,'lnum' 1}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skip{position:fixed;left:8px;top:8px;transform:translateY(-140%);background:var(--ink);color:var(--paper);padding:8px 16px;z-index:100}
+.skip:focus{transform:none}
+.vh{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.btn,.ghost,.seg button,.tab,.opt{min-height:44px;min-width:44px;padding:10px 18px;border:1px solid var(--ink);background:transparent;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;line-height:1.2;white-space:normal;text-align:center}
+.btn{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--amber);color:var(--ink)}
+.ghost:hover{background:var(--ink);color:var(--paper)}
+h1{font-size:var(--t7);line-height:1.12;letter-spacing:-.035em;font-weight:600;max-width:20ch}
+h2{font-size:var(--t6);line-height:1.15;letter-spacing:-.03em;font-weight:600}
+/* Compare */
+#compare{padding:0 0 56px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:end;padding:32px 48px 24px;max-width:1600px;margin:0 auto}
+.ctl{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:flex-end}
+.seg{display:flex}
+.seg button{border-right-width:0}
+.seg button:last-child{border-right-width:1px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.range{display:flex;align-items:center;gap:12px}
+.range input{width:200px;min-height:44px;accent-color:var(--ink)}
+.jumps{display:flex;gap:8px;flex-wrap:wrap}
+.win{max-width:1600px;margin:0 auto;border:1px solid var(--ink);background:#fff}
+.winbar{display:flex;justify-content:space-between;gap:16px;padding:10px 16px;border-bottom:1px solid var(--ink);background:var(--paper);font-size:var(--t2)}
+.view{position:relative;height:var(--viewh);overflow:hidden;--p:100%;background:#fff}
+.layer{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none}
+.layer::-webkit-scrollbar{display:none}
+.layer.after{clip-path:inset(0 0 0 var(--p));container-type:inline-size;container-name:site;background:#fff}
+.layer.before img{width:100%;height:auto}
+.b-m{display:none}
+.rule{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--amber);pointer-events:none;z-index:5}
+.knob{position:absolute;top:50%;left:var(--p);width:44px;height:44px;margin:-22px 0 0 -22px;background:var(--amber);border:2px solid var(--ink);z-index:6;cursor:ew-resize;touch-action:none;display:grid;place-items:center}
+.knob::before,.knob::after{content:"";width:9px;height:9px;border:solid var(--ink);border-width:0 0 3px 3px;position:absolute;top:50%;margin-top:-5px}
+.knob::before{left:8px;transform:rotate(45deg)}
+.knob::after{right:8px;transform:rotate(-135deg)}
+/* After site (their theme) */
+.layer.after{font-family:Roboto,sans-serif;color:#000;line-height:1.55}
+.s-head{background:var(--navy);display:flex;align-items:center;gap:24px;padding:12px 80px}
+.s-head img{height:var(--logo);width:auto}
+.s-nav{margin-left:auto;display:flex;gap:28px;flex-wrap:wrap;list-style:none}
+.s-nav a{font-family:Sora,sans-serif;font-weight:500;font-size:16px;color:#fff;text-decoration:none;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center}
+.s-nav a[aria-current="page"]{color:#7CC4F5}
+.s-menu{display:none;margin-left:auto;min-height:44px;padding:8px 16px;border:1px solid #fff;background:transparent;color:#fff;font-family:Sora,sans-serif;font-weight:500;cursor:pointer}
+.s-hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.s-hero .ph{position:relative;overflow:hidden;min-height:320px}
+.s-hero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s-hero .tx{background:var(--navy);color:#fff;padding:56px 56px 56px 64px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.s-hero h1{font-size:46px;font-weight:700;line-height:1.1;letter-spacing:0;max-width:16ch;color:#fff}
+.s-hero p{font-size:18px;max-width:34ch}
+.s-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.s-btn{min-height:44px;padding:12px 28px;border-radius:999px;background:#fff;color:var(--navy);font-weight:700;font-size:16px;text-decoration:none;border:2px solid #fff;display:inline-flex;align-items:center;cursor:pointer;font-family:Roboto,sans-serif}
+.s-btn:hover{background:transparent;color:#fff}
+.s-link{color:#fff;font-size:16px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+.pw{font-size:14px;color:#D6E8F5}
+.s-sec{padding:72px 80px}
+.s-sec h2{font-size:40px;font-weight:700;line-height:1.15;color:#000;margin-bottom:8px}
+.s-sec h3{font-size:34px;font-weight:700;line-height:1.15;color:#000;margin-bottom:12px}
+.s-prod{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;margin-top:48px}
+.s-prod.flip{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.s-prod.flip .img{order:2}
+.s-prod img{width:100%;border-radius:16px}
+.s-prod .img{max-width:420px;margin:0 auto}
+.s-prod p{margin-bottom:12px;max-width:52ch}
+.s-spec{font-weight:700}
+.s-more{display:inline-flex;align-items:center;min-height:44px;padding:10px 24px;border-radius:999px;background:var(--navy);color:#fff;font-weight:700;text-decoration:none;font-size:16px;margin-top:8px}
+.s-quiet{margin-top:40px;padding-top:24px;border-top:1px solid #C9D6E0;max-width:62ch}
+.s-note{display:block;font-size:14px;color:#2B4A60;margin-top:6px}
+.s-band{background:var(--blue);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;padding:0}
+.s-band .tx{padding:72px 64px 72px 80px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.s-band h2{color:#fff}
+.s-band .ph{min-height:360px;position:relative}
+.s-band .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.s-band .note{font-size:14px;color:#E6F1F9}
+.s-docs table{width:100%;border-collapse:collapse;margin-top:24px;font-variant-numeric:tabular-nums}
+.s-docs th,.s-docs td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid #C9D6E0;font-size:18px}
+.s-docs th{font-size:14px;font-weight:700;color:#2B4A60}
+.s-docs td a{color:var(--navy);font-weight:700;min-height:44px;display:inline-flex;align-items:center}
+.s-contact{background:var(--blue);color:#fff;padding:64px 80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px}
+.s-contact h2{color:#fff;text-transform:uppercase;font-size:40px;margin-bottom:20px}
+.s-contact p{font-size:18px;margin-bottom:12px}
+.s-contact .tel{font-size:32px;font-weight:700}
+.s-contact form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.s-contact label{display:block;font-size:16px;margin-bottom:4px}
+.s-contact input,.s-contact textarea{width:100%;min-height:44px;padding:10px 14px;border:0;border-radius:8px;background:#fff;color:#000;font-size:16px;font-family:Roboto,sans-serif}
+.s-contact textarea{min-height:120px;resize:vertical}
+.s-contact .full{grid-column:1/-1}
+.s-sent{grid-column:1/-1;min-height:24px}
+.s-foot{background:var(--blue);color:#fff;padding:20px 80px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.4);font-size:16px}
+.s-foot a{color:#fff;min-height:44px;display:inline-flex;align-items:center}
+@container site (max-width:760px){
+  .s-head{padding:10px 16px;gap:12px}
+  .s-nav{display:none;position:absolute;left:0;right:0;top:64px;flex-direction:column;gap:0;background:var(--navy);padding:8px 16px 16px;z-index:8}
+  .s-nav.open{display:flex}
+  .s-menu{display:inline-flex}
+  .s-hero{grid-template-columns:1fr}
+  .s-hero .ph{min-height:200px;order:2}
+  .s-hero .tx{padding:32px 20px;order:1}
+  .s-hero h1{font-size:32px}
+  .s-sec{padding:48px 20px}
+  .s-sec h2,.s-contact h2{font-size:30px}
+  .s-sec h3{font-size:26px}
+  .s-prod,.s-prod.flip{grid-template-columns:1fr;gap:24px;margin-top:32px}
+  .s-prod.flip .img{order:0}
+  .s-band{grid-template-columns:1fr}
+  .s-band .tx{padding:40px 20px}
+  .s-band .ph{min-height:240px}
+  .s-docs th:nth-child(2),.s-docs td:nth-child(2){display:none}
+  .s-docs th,.s-docs td{font-size:16px}
+  .s-contact{grid-template-columns:1fr;padding:40px 20px;gap:32px}
+  .s-contact form{grid-template-columns:1fr}
+  .s-foot{padding:16px 20px}
+}
+/* Triage */
+#triage{padding:72px 48px 56px;max-width:1600px;margin:0 auto;display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:48px}
+.tabs{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--ink)}
+.tab{justify-content:flex-start;text-align:left;border:0;border-bottom:1px solid var(--ink);padding:18px 8px;font-size:var(--t5);letter-spacing:-.02em;font-weight:500}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);padding-left:20px}
+.panel{display:none}
+.panel.on{display:block}
+.panel h2{margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:24px;max-width:56ch}
+.rows{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:8px 40px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row b{font-weight:600;font-size:var(--t5);letter-spacing:-.02em;line-height:1.25}
+/* Keep */
+#keep{padding:56px 48px 72px;max-width:1600px;margin:0 auto}
+#keep h2{margin-bottom:8px}
+.theme{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:stretch;margin:32px 0 48px}
+.logo-box{background:var(--navy);display:grid;place-items:center;padding:20px 32px;min-width:220px}
+.logo-box img{height:64px;width:auto}
+.sw{min-width:160px;padding:16px 20px;display:flex;flex-direction:column;justify-content:flex-end;min-height:104px;border:1px solid var(--ink)}
+.sw.n{background:var(--navy);color:#fff}
+.sw.b{background:var(--blue);color:#fff}
+.sw.w{background:#fff;color:#000}
+.sw b{font-size:var(--t5);font-weight:600;font-variant-numeric:tabular-nums}
+.type{padding:16px 20px;border:1px solid var(--ink);display:flex;flex-direction:column;justify-content:flex-end;min-width:200px}
+.type .r{font-family:Roboto,sans-serif;font-size:var(--t6);font-weight:700;line-height:1.1}
+.type .s{font-family:Sora,sans-serif;font-weight:500;font-size:var(--t4);text-transform:uppercase}
+.order{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.order div{flex:1 1 180px;padding:20px 16px 20px 0;font-size:clamp(28px,3.2vw,44px);letter-spacing:-.03em;font-weight:600;line-height:1.1;position:relative}
+.order div::after{content:"";position:absolute;right:16px;top:50%;width:24px;height:2px;background:var(--amber)}
+.order div:last-child::after{display:none}
+.order span{display:block;font-size:var(--t3);font-weight:400;letter-spacing:0;color:var(--muted);margin-top:6px}
+/* Approve (Act) */
+#approve{background:var(--navy);color:var(--paper);padding:72px 48px 88px;min-height:100vh}
+.ap{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.count{font-size:var(--t8);line-height:1;letter-spacing:-.05em;font-weight:600;font-variant-numeric:tabular-nums;margin:16px 0 8px}
+#approve h2{color:var(--paper)}
+#approve p{max-width:40ch;color:#E6F1F9}
+.opts{border-top:1px solid rgba(255,246,236,.5)}
+.orow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,246,236,.3)}
+.orow span.t{font-size:var(--t4)}
+.opt-g{display:flex}
+.opt{color:var(--paper);border-color:var(--paper);min-width:96px}
+.opt-g .opt:first-child{border-right-width:0}
+.opt[aria-pressed="true"]{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.confirm{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.confirm .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.confirm .btn:hover{background:var(--amber);border-color:var(--amber)}
+#done{margin-top:20px;font-size:var(--t5);letter-spacing:-.02em;max-width:34ch;opacity:0;transition:opacity .6s ease;min-height:3em}
+#done.on{opacity:1}
+#approve.ok .count{color:var(--amber)}
+/* After the page */
+#close{background:var(--amber);padding:96px max(48px,calc((100% - 1600px)/2 + 48px)) 80px}
+#close p.big{font-size:clamp(32px,4.6vw,64px);line-height:1.08;letter-spacing:-.04em;font-weight:600;max-width:22ch;margin-bottom:32px}
+#close p.sm{color:var(--ink);max-width:46ch;margin-bottom:32px}
+#close .seg{display:inline-flex}
+@media (max-width:760px){
+  :root{--viewh:600px;--logo:48px;--t4:17px;--t7:32px;--t6:26px;--t8:64px}
+  .head{grid-template-columns:1fr;padding:24px 16px 16px}
+  .ctl{justify-content:flex-start}
+  .range input{width:min(100%,260px)}
+  .win{border-left:0;border-right:0}
+  .b-d{display:none}.b-m{display:block}
+  .winbar{flex-direction:column;gap:2px}
+  #triage{grid-template-columns:1fr;padding:48px 16px 40px;gap:24px}
+  .tabs{flex-direction:column}
+  .tab{font-size:var(--t4)}
+  .row{grid-template-columns:1fr}
+  .row b{font-size:var(--t4)}
+  #keep{padding:40px 16px 48px}
+  .logo-box,.sw,.type{min-width:calc(50% - 12px);flex:1 1 140px}
+  .order div::after{display:none}
+  #approve{padding:48px 16px 64px;min-height:0}
+  .ap{grid-template-columns:1fr;gap:32px}
+  .orow{grid-template-columns:1fr}
+  #close{padding:56px 16px 56px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#compare">Skip to the comparison</a>
+
+<section class="page" id="compare" data-feeling="recognised">
+  <div class="head">
+    <h1>Your site as it is today, and the same site, fixed.</h1>
+    <div class="ctl">
+      <div class="seg" role="group" aria-label="Show">
+        <button type="button" data-mode="before" aria-pressed="false">Before</button>
+        <button type="button" data-mode="compare" aria-pressed="true">Compare</button>
+        <button type="button" data-mode="after" aria-pressed="false">After</button>
+      </div>
+      <div class="range">
+        <label for="cmp">Divider</label>
+        <input id="cmp" type="range" min="0" max="100" value="50" aria-valuetext="Current site on the left, proposed site on the right">
+      </div>
+      <div class="jumps" role="group" aria-label="Jump both pages to">
+        <button class="ghost" type="button" data-jump="tech">Technology</button>
+        <button class="ghost" type="button" data-jump="docs">Documents</button>
+        <button class="ghost" type="button" data-jump="enq">Enquiry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="win">
+    <div class="winbar"><span>Before: civilnsupplies.com, captured 23 Nov 2026</span><span>After: the same site, proposed wording</span></div>
+    <div class="view" id="view">
+      <div class="layer before" id="before" tabindex="0" role="region" aria-label="Current homepage, scrollable">
+        <div class="b-d">
+          <img data-src="images/before-d1.webp" width="1440" height="900" alt="Current homepage top: navy menu bar, Brisbane skyline and the line Welcome To CNS Engineering Australia">
+          <img data-src="images/before-d2.webp" width="1440" height="1000" alt="Current homepage: Our Company, Manufacturing and standards, then Utility construction">
+          <img data-src="images/before-d3.webp" width="1440" height="1000" alt="Current homepage: utility construction list and the Hydra-Cut introduction">
+          <img data-src="images/before-d4.webp" width="1440" height="877" alt="Current homepage bottom: Get in touch, enquiry form and footer with Privacy Policy">
+        </div>
+        <div class="b-m">
+          <img data-src="images/before-m1.webp" width="780" height="1400" alt="Current phone homepage top: menu bar, skyline and Welcome line">
+          <img data-src="images/before-m2.webp" width="780" height="1400" alt="Current phone homepage: Our Company and Manufacturing">
+          <img data-src="images/before-m3.webp" width="780" height="1400" alt="Current phone homepage: standards list and Utility construction">
+          <img data-src="images/before-m4.webp" width="780" height="1400" alt="Current phone homepage: Utility construction and Hydra-Cut">
+          <img data-src="images/before-m5.webp" width="780" height="1400" alt="Current phone homepage: Hydra-Cut details">
+          <img data-src="images/before-m6.webp" width="780" height="1400" alt="Current phone homepage: contact details and enquiry form">
+          <img data-src="images/before-m7.webp" width="780" height="752" alt="Current phone homepage footer with Privacy Policy">
+        </div>
+      </div>
+
+      <div class="layer after" id="after" tabindex="0" role="region" aria-label="Proposed homepage, scrollable">
+        <div class="s-head" style="position:relative">
+          <img src="images/logo.webp" width="306" height="104" alt="CNS Engineering Australia">
+          <button class="s-menu" type="button" id="smenu" aria-expanded="false" aria-controls="snav">Menu</button>
+          <ul class="s-nav" id="snav" aria-label="Site menu">
+            <li><a href="#s-top" aria-current="page">Home</a></li>
+            <li><a href="#s-top">Manufacturing</a></li>
+            <li><a href="#s-top">S-Gate Valve</a></li>
+            <li><a href="#s-top">Hydra-Cut</a></li>
+            <li><a href="#s-top">Services</a></li>
+            <li><a href="#s-top">Innovations</a></li>
+            <li><a href="#s-top">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="s-hero" id="s-top">
+          <div class="ph"><img src="images/sky-1200.webp" srcset="images/sky-720.webp 720w, images/sky-1200.webp 1200w" sizes="(max-width:760px) 358px, 700px" width="1200" height="800" alt="Brisbane skyline at sunset along the river"></div>
+          <div class="tx">
+            <h1>Install a gate valve or a hydrant without interrupting supply.</h1>
+            <p>S-Gate Valve and Hydra-Cut: designed by our in-house engineers and tested to Australian Standards.</p>
+            <div class="s-btns"><a class="s-btn" href="#s-enq" data-in="enq">Contact us</a><a class="s-link" href="#s-tech" data-in="tech">See the technology</a></div>
+            <p class="pw">Proposed wording, built from the S-Gate Valve, Hydra-Cut and Services pages.</p>
+          </div>
+        </div>
+
+        <div class="s-sec" id="s-tech">
+          <h2>Our technology</h2>
+          <div class="s-prod">
+            <div class="img"><img class="lz" data-src="images/sgate-800.webp" data-srcset="images/sgate-560.webp 560w, images/sgate-800.webp 800w" sizes="(max-width:760px) 330px, 400px" width="700" height="1000" alt="S-Gate Valve in cutaway, blue ductile iron body"></div>
+            <div>
+              <h3>S-Gate Valve</h3>
+              <p>A gate valve that can be installed without disrupting supply. Designed and tested in accordance with Australian Standards, in high-grade ductile iron.</p>
+              <p class="s-spec">DN80 – DN600. Gen II appraised by Water Services Association Australia to PN16.</p>
+              <a class="s-more" href="#s-docs" data-in="docs">Certificate and data</a>
+            </div>
+          </div>
+          <div class="s-prod flip">
+            <div class="img"><img class="lz" data-src="images/hydracut-800.webp" data-srcset="images/hydracut-560.webp 560w, images/hydracut-800.webp 800w" sizes="(max-width:760px) 330px, 480px" width="800" height="930" alt="Hydra-Cut hydrant fitting in cyan with bolted clamps"></div>
+            <div>
+              <h3>Hydra-Cut</h3>
+              <p>Installs a hydrant under pressure using hot tapping technology. Live hydrants can be installed without interrupting the water supply to customers.</p>
+              <p class="s-spec">DN100mm – DN600mm. PN16 rated. Suitable on both PE and metallic pipes.</p>
+              <a class="s-more" href="#s-docs" data-in="docs">Product information</a>
+            </div>
+          </div>
+          <div class="s-quiet">
+            <h3>Novus Gripper</h3>
+            <p>DN50 to DN300, PN16, in epoxy-coated ductile iron. Currently undergoing WSAA approvals.</p>
+            <span class="s-note">Shown only if CNS says yes.</span>
+          </div>
+        </div>
+
+        <div class="s-band">
+          <div class="tx">
+            <h2>Manufacturing</h2>
+            <p>Specialising in manufacturing of various water fittings. Our manufacturing plant complies with ISO 9001:2015.</p>
+            <p>Our fittings comply with AS/NZS 2638.8, gate valves for water works purposes, and AS4020, testing of products for use in contact with drinking water. The homepage also names AS 1481 – 2013 for repair and offtake clamps.</p>
+            <span class="note">CNS to confirm that standard number: the S-Gate Valve page says AS4181 – 2013.</span>
+          </div>
+          <div class="ph"><img class="lz" data-src="images/manufacturing-900.webp" data-srcset="images/manufacturing-640.webp 640w, images/manufacturing-900.webp 900w" sizes="(max-width:760px) 358px, 700px" width="900" height="691" alt="Cast water fittings hanging in the factory"></div>
+        </div>
+
+        <div class="s-sec" id="s-util">
+          <h2>Utility construction</h2>
+          <p style="max-width:62ch">CNS Engineering Australia offers utility construction involving water and sewer assets across Australia, including valve replacement, water connection, sewer connection, plumbing works and pipe laying.</p>
+        </div>
+
+        <div class="s-sec s-docs" id="s-docs">
+          <h2>Documents</h2>
+          <table>
+            <thead><tr><th scope="col">Document</th><th scope="col">Product</th><th scope="col">Size</th></tr></thead>
+            <tbody>
+              <tr><td><a href="#s-docs">WSAA certificate (PDF)</a></td><td>S-Gate Valve</td><td>0.2 MB</td></tr>
+              <tr><td><a href="#s-docs">Data information (PDF)</a></td><td>S-Gate Valve</td><td>5.0 MB</td></tr>
+              <tr><td><a href="#s-docs">Brochure (PDF)</a></td><td>S-Gate Valve</td><td>9.5 MB</td></tr>
+              <tr><td><a href="#s-docs">Product information (PDF)</a></td><td>Hydra-Cut</td><td>5.0 MB</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s-contact" id="s-enq">
+          <div>
+            <h2>Get in touch</h2>
+            <p class="tel">1300 258 977</p>
+            <p>292 Waterford Rd, Wacol, 4076</p>
+            <p>Call, or tell us what you are installing.</p>
+          </div>
+          <form id="sform" novalidate>
+            <div><label for="sn">Your name</label><input id="sn" name="n" autocomplete="name"></div>
+            <div><label for="se">Your email</label><input id="se" name="e" type="email" autocomplete="email"></div>
+            <div class="full"><label for="sm">Your message</label><textarea id="sm" name="m"></textarea></div>
+            <div class="full"><button class="s-btn" type="submit">Send enquiry</button></div>
+            <p class="s-sent" id="ssent" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="s-foot">
+          <span>© 2026 By Dahsian Pty Ltd T/A CNS Engineering Australia</span>
+          <a href="#s-foot-priv">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="rule" aria-hidden="true"></div>
+      <div class="knob" id="knob" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="triage" data-feeling="clear">
+  <div class="tabs" role="tablist" aria-label="Triage" aria-orientation="vertical">
+    <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1" type="button">What we found</button>
+    <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1" type="button">What we fix first, and why</button>
+    <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="p3" tabindex="-1" type="button">What we flag for later</button>
+  </div>
+  <div>
+    <div class="panel on" role="tabpanel" id="p1" aria-labelledby="t1">
+      <h2>Seven things on the public pages</h2>
+      <p class="sub">Checked on civilnsupplies.com on 23 Nov 2026. Nothing was changed.</p>
+      <div class="rows">
+        <div class="row"><b>The Privacy Policy link goes nowhere.</b><span>In the footer of every page it points back to the same page, and there is no privacy page at the usual address.</span></div>
+        <div class="row"><b>The homepage does not say what CNS makes.</b><span>It opens with “Welcome To CNS Engineering Australia” over a city photo. S-Gate Valve is only in the menu, and Hydra-Cut sits third, below Manufacturing and Utility construction.</span></div>
+        <div class="row"><b>The documents are hard to tell apart.</b><span>Four PDFs sit on two pages, and one link reads “Click for CNS Engineering Australia”. The files are 0.2, 5.0, 5.0 and 9.5 MB.</span></div>
+        <div class="row"><b>The media library holds extra copies.</b><span>The same three S-Gate Valve files appear twice, and one file is called “Untitled document”.</span></div>
+        <div class="row"><b>Some pages are live but easy to miss.</b><span>Novus Gripper is published but not in the menu. Innovations lists three products as “currently trialling”.</span></div>
+        <div class="row"><b>One standard is named two ways.</b><span>The homepage says AS 1481 – 2013 for repair and offtake clamps. The S-Gate Valve and Services pages say AS4181 – 2013.</span></div>
+        <div class="row"><b>The enquiry form is the same on every page.</b><span>We have not sent a test message. We try it end to end once we have access.</span></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <h2>Five fixes, in this order</h2>
+      <p class="sub">A full backup comes before the first change. You get the list before anything is hidden.</p>
+      <div class="rows">
+        <div class="row"><b>The privacy link.</b><span>It is on every page, and a customer can see it does nothing.</span></div>
+        <div class="row"><b>The homepage line and the products.</b><span>It is the first thing a buyer reads, and the words already exist on your S-Gate Valve and Hydra-Cut pages.</span></div>
+        <div class="row"><b>The documents.</b><span>Clear names, grouped by product, with the file size shown, so nobody downloads 9.5 MB by surprise.</span></div>
+        <div class="row"><b>The enquiry block.</b><span>Your phone number beside the form, a button that says what it does, then a real test message.</span></div>
+        <div class="row"><b>The phone check.</b><span>After every change we look at the page on a phone.</span></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <h2>Six things for you to decide</h2>
+      <p class="sub">We raise these. We do not decide them, and we do not change a technical claim.</p>
+      <div class="rows">
+        <div class="row"><b>The standard number.</b><span>AS 1481 or AS4181 for repair and offtake clamps: your engineers confirm.</span></div>
+        <div class="row"><b>The Innovations page.</b><span>Keep, update or hide the three products listed as trials: you decide.</span></div>
+        <div class="row"><b>Novus Gripper.</b><span>Show it in the menu now, or wait until the WSAA approvals are finished: you decide.</span></div>
+        <div class="row"><b>The large PDFs.</b><span>Smaller versions would open faster on a phone. That needs your files or your yes.</span></div>
+        <div class="row"><b>Extra files in the media library.</b><span>Removed only after a backup, and only with your yes.</span></div>
+        <div class="row"><b>Anything technical we meet.</b><span>A theme, plugin or hosting issue is raised with you before any extra work, as the brief says.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="keep" data-feeling="reassured">
+  <h2>What stays exactly yours</h2>
+  <p class="sub">The values below are read from your live site. The After view uses them unchanged.</p>
+  <div class="theme">
+    <div class="logo-box"><img class="lz" data-src="images/logo.webp" width="306" height="104" alt="CNS Engineering Australia logo"></div>
+    <div class="sw n"><b>0C4A74</b><span>Menu bar blue</span></div>
+    <div class="sw b"><b>0071BC</b><span>Section blue</span></div>
+    <div class="sw w"><b>FFFFFF</b><span>Page white</span></div>
+    <div class="type"><span class="r">Roboto</span><span class="s">Sora menu</span></div>
+  </div>
+  <div class="order" aria-label="Order of work">
+    <div>Backup<span>Files and database, before anything changes</span></div>
+    <div>List<span>Everything we will touch, sent to you</span></div>
+    <div>Your yes<span>Line by line, below</span></div>
+    <div>Changes<span>In your theme, with your wording</span></div>
+    <div>Checks<span>Form, privacy link and phone</span></div>
+  </div>
+</section>
+
+<section class="page" id="approve" data-feeling="in-control">
+  <div class="ap">
+    <div>
+      <h2>Your yes, line by line</h2>
+      <p class="count" id="count" aria-live="polite">5 of 8</p>
+      <p>approved. Held lines stay exactly as they are today. Change any of them before you confirm.</p>
+      <div class="confirm">
+        <button class="btn" type="button" id="confirm">Confirm the list</button>
+      </div>
+      <p id="done" role="status"></p>
+    </div>
+    <div class="opts" id="opts">
+      <div class="orow"><span class="t">Homepage line and positioning, in proposed wording</span><div class="opt-g" role="group" aria-label="Homepage line"><button class="opt" type="button" aria-pressed="true">Approve</button><button class="opt" type="button" aria-pressed="false">Hold</button></div></div>
+      <div class="orow"><span class="t">S-Gate Valve and Hydra-Cut shown under the hero</span><div class="opt-g" role="group" aria-label="Products under the hero"><button class="opt" type="button" aria-pressed="true">Approve</button><button class="opt" type="button" aria-pressed="false">Hold</button></div></div>
+      <div class="orow"><span class="t">Privacy link points to a real privacy page</span><div class="opt-g" role="group" aria-label="Privacy link"><button class="opt" type="button" aria-pressed="true">Approve</button><button class="opt" type="button" aria-pressed="false">Hold</button></div></div>
+      <div class="orow"><span class="t">Documents renamed and grouped by product</span><div class="opt-g" role="group" aria-label="Documents"><button class="opt" type="button" aria-pressed="true">Approve</button><button class="opt" type="button" aria-pressed="false">Hold</button></div></div>
+      <div class="orow"><span class="t">Enquiry block with the phone number and a clear send button</span><div class="opt-g" role="group" aria-label="Enquiry block"><button class="opt" type="button" aria-pressed="true">Approve</button><button class="opt" type="button" aria-pressed="false">Hold</button></div></div>
+      <div class="orow"><span class="t">Hide the Innovations page from the menu</span><div class="opt-g" role="group" aria-label="Innovations page"><button class="opt" type="button" aria-pressed="false">Approve</button><button class="opt" type="button" aria-pressed="true">Hold</button></div></div>
+      <div class="orow"><span class="t">Show Novus Gripper in the menu</span><div class="opt-g" role="group" aria-label="Novus Gripper"><button class="opt" type="button" aria-pressed="false">Approve</button><button class="opt" type="button" aria-pressed="true">Hold</button></div></div>
+      <div class="orow"><span class="t">Remove extra and untitled files from the media library</span><div class="opt-g" role="group" aria-label="Media library files"><button class="opt" type="button" aria-pressed="false">Approve</button><button class="opt" type="button" aria-pressed="true">Hold</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="close" data-feeling="credible">
+  <p class="big">The site you would be happy to send a customer to.</p>
+  <p class="sm">A short written record follows every change, with anything we flagged. Look at the two pages once more.</p>
+  <div class="seg" role="group" aria-label="Back to the comparison">
+    <button type="button" data-top="before">See the Before</button>
+    <button type="button" data-top="after">See the After</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  var view=document.getElementById('view'), before=document.getElementById('before'), after=document.getElementById('after');
+  var cmp=document.getElementById('cmp'), knob=document.getElementById('knob');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phone=function(){return window.matchMedia('(max-width:760px)').matches;};
+  var P=100, lock=false, raf=0;
+  function setP(v){
+    P=Math.max(0,Math.min(100,v));
+    view.style.setProperty('--p',P+'%');
+    cmp.value=Math.round(P);
+    var pct=Math.round(P);
+    cmp.setAttribute('aria-valuetext', pct>=99?'Showing the current site':pct<=1?'Showing the proposed site':'Current site on the left '+pct+' percent, proposed site on the right');
+    if(P>=99) after.setAttribute('inert',''); else after.removeAttribute('inert');
+    document.querySelectorAll('[data-mode]').forEach(function(b){
+      var m=b.getAttribute('data-mode');
+      var on = (m==='before'&&P>=99)||(m==='after'&&P<=1)||(m==='compare'&&P>1&&P<99);
+      b.setAttribute('aria-pressed',on?'true':'false');
+    });
+  }
+  function animateTo(to,ms){
+    cancelAnimationFrame(raf);
+    if(reduce){setP(to);return;}
+    var from=P,t0=null;
+    function step(t){ if(!t0)t0=t; var k=Math.min(1,(t-t0)/ms); var e=1-Math.pow(1-k,3); setP(from+(to-from)*e); if(k<1)raf=requestAnimationFrame(step); }
+    raf=requestAnimationFrame(step);
+  }
+  document.querySelectorAll('[data-mode]').forEach(function(b){
+    b.addEventListener('click',function(){ var m=b.getAttribute('data-mode'); animateTo(m==='before'?100:m==='after'?0:50,500); });
+  });
+  cmp.addEventListener('input',function(){ cancelAnimationFrame(raf); setP(parseFloat(cmp.value)); });
+  var drag=false;
+  function fromX(x){ var r=view.getBoundingClientRect(); setP((x-r.left)/r.width*100); }
+  knob.addEventListener('pointerdown',function(e){ drag=true; cancelAnimationFrame(raf); knob.setPointerCapture(e.pointerId); e.preventDefault(); });
+  knob.addEventListener('pointermove',function(e){ if(drag) fromX(e.clientX); });
+  knob.addEventListener('pointerup',function(){ drag=false; });
+  knob.addEventListener('pointercancel',function(){ drag=false; });
+
+  function ratio(el){ var m=el.scrollHeight-el.clientHeight; return m>0?el.scrollTop/m:0; }
+  function put(el,r){ el.scrollTop=r*(el.scrollHeight-el.clientHeight); }
+  before.addEventListener('scroll',function(){ if(lock)return; lock=true; put(after,ratio(before)); requestAnimationFrame(function(){lock=false;}); },{passive:true});
+  after.addEventListener('scroll',function(){ if(lock)return; lock=true; put(before,ratio(after)); requestAnimationFrame(function(){lock=false;}); },{passive:true});
+
+  var BEFORE={d:{tech:2353,docs:2353,enq:3153},m:{tech:2390,docs:2390,enq:3696}};
+  function jump(key){
+    var ids={tech:'s-tech',docs:'s-docs',enq:'s-enq'};
+    var el=document.getElementById(ids[key]);
+    if(P>25) animateTo(25,400);
+    lock=true;
+    after.scrollTop=el.offsetTop;
+    var tab=(phone()?BEFORE.m:BEFORE.d)[key];
+    var w=before.clientWidth, base=phone()?780:1440;
+    before.scrollTop=tab*(w/(base/(phone()?2:1)));
+    requestAnimationFrame(function(){lock=false;});
+  }
+  document.querySelectorAll('[data-jump]').forEach(function(b){ b.addEventListener('click',function(){ jump(b.getAttribute('data-jump')); }); });
+  document.querySelectorAll('[data-in]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); jump(a.getAttribute('data-in')); }); });
+  document.querySelectorAll('.s-nav a,.s-foot a,.s-docs a').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
+  document.getElementById('smenu').addEventListener('click',function(){
+    var n=document.getElementById('snav'); var o=n.classList.toggle('open'); this.setAttribute('aria-expanded',o?'true':'false');
+  });
+  document.getElementById('sform').addEventListener('submit',function(e){
+    e.preventDefault(); document.getElementById('ssent').textContent='Message ready to send. This preview does not send anything.';
+  });
+
+  /* triage tabs */
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function pick(i,focus){
+    tabs.forEach(function(t,j){
+      var on=i===j; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1;
+      var p=document.getElementById(t.getAttribute('aria-controls')); p.hidden=!on; p.classList.toggle('on',on);
+    });
+    if(focus) tabs[i].focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){pick(i,false);});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();pick((i+1)%tabs.length,true);}
+      if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();pick((i+tabs.length-1)%tabs.length,true);}
+      if(e.key==='Home'){e.preventDefault();pick(0,true);}
+      if(e.key==='End'){e.preventDefault();pick(tabs.length-1,true);}
+    });
+  });
+
+  /* approval board */
+  var rows=[].slice.call(document.querySelectorAll('.orow'));
+  var count=document.getElementById('count'), done=document.getElementById('done');
+  function tally(){
+    var n=0; rows.forEach(function(r){ var b=r.querySelector('.opt'); if(b.getAttribute('aria-pressed')==='true') n++; });
+    count.textContent=n+' of '+rows.length; done.classList.remove('on'); done.textContent=''; document.getElementById('approve').classList.remove('ok'); return n;
+  }
+  rows.forEach(function(r){
+    var bs=r.querySelectorAll('.opt');
+    bs.forEach(function(b,i){ b.addEventListener('click',function(){
+      bs[0].setAttribute('aria-pressed',i===0?'true':'false'); bs[1].setAttribute('aria-pressed',i===1?'true':'false'); tally();
+    }); });
+  });
+  document.getElementById('confirm').addEventListener('click',function(){
+    var n=tally();
+    done.textContent=n+' approved, '+(rows.length-n)+' held. Nothing is hidden or removed until you say, and a full backup comes first.';
+    document.getElementById('approve').classList.add('ok');
+    requestAnimationFrame(function(){ done.classList.add('on'); });
+  });
+  document.querySelectorAll('[data-top]').forEach(function(b){ b.addEventListener('click',function(){
+    document.getElementById('compare').scrollIntoView({behavior:reduce?'auto':'smooth'});
+    animateTo(b.getAttribute('data-top')==='before'?100:0,600);
+  }); });
+
+  /* lazy images */
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){
+    if(!e.isIntersecting) return; var i=e.target;
+    var ss=i.getAttribute('data-srcset'); if(ss) i.srcset=ss;
+    var s=i.getAttribute('data-src'); if(s) i.src=s;
+    i.removeAttribute('data-src'); i.removeAttribute('data-srcset'); io.unobserve(i);
+  }); },{rootMargin:'0px'});
+  document.querySelectorAll('img[data-src]').forEach(function(i){ io.observe(i); });
+
+  setP(100);
+  if(reduce){ setP(50); } else { setTimeout(function(){ animateTo(50,1000); },250); }
+})();
+</script>
+</body>
+</html>

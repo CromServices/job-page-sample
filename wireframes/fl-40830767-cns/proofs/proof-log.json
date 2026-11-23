@@ -1,0 +1,104 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 3821,
+  "first_view_bytes": 232291,
+  "sections": [
+   [
+    "compare",
+    0,
+    984
+   ],
+   [
+    "triage",
+    983.796875,
+    919
+   ],
+   [
+    "keep",
+    1902.59375,
+    542
+   ],
+   [
+    "approve",
+    2444.96875,
+    900
+   ],
+   [
+    "close",
+    3344.96875,
+    476
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-23/fl-40830767-cns/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 3748,
+  "first_view_bytes": 232291,
+  "sections": [
+   [
+    "compare",
+    0,
+    935
+   ],
+   [
+    "triage",
+    934.53125,
+    895
+   ],
+   [
+    "keep",
+    1829.328125,
+    542
+   ],
+   [
+    "approve",
+    2371.703125,
+    900
+   ],
+   [
+    "close",
+    3271.703125,
+    476
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-23/fl-40830767-cns/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 5479,
+  "first_view_bytes": 177671,
+  "sections": [
+   [
+    "compare",
+    0,
+    1067
+   ],
+   [
+    "triage",
+    1066.65625,
+    1428
+   ],
+   [
+    "keep",
+    2494.859375,
+    1059
+   ],
+   [
+    "approve",
+    3553.796875,
+    1525
+   ],
+   [
+    "close",
+    5079.1875,
+    400
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-23/fl-40830767-cns/proofs/phone-390.png"
+ }
+]
