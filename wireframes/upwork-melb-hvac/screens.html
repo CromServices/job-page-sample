@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Concept: Melbourne heating &amp; cooling</title>
+<style>
+@font-face{font-family:Figtree;src:url(fonts/figtree.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{
+ --paper:#F3EDE4;--ink:#1C1B19;--eave:#1F3332;--heat:#9A3A16;--muted:#4A4742;--line:#D4CBBE;--cream:#FFF8F0;
+ --t1:14px;--t2:16px;--t3:18px;--t4:24px;--t5:36px;--t6:56px;--t7:88px;
+ --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:96px;
+ --font:Figtree,system-ui,sans-serif;--gut:clamp(24px,4.5vw,96px)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--t3)/1.55 var(--font);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,figure,ul{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--heat);outline-offset:3px}
+.eave :focus-visible,#quote :focus-visible,#checker :focus-visible{outline-color:#F3EDE4}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--s2) var(--s4);border:2px solid var(--ink);border-radius:8px;background:var(--ink);color:var(--paper);font-weight:600;font-size:var(--t3);line-height:1.2;text-decoration:none;cursor:pointer;text-align:center;white-space:normal;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.heat{background:var(--heat);border-color:var(--heat);color:#FFF8F0}
+.btn.ghost{background:transparent;color:inherit}
+.btn.light{background:#FFF8F0;color:var(--ink);border-color:#FFF8F0}
+.btn[hidden],#checker[hidden],#scrim[hidden],#checker [hidden],.yn[hidden],.q[hidden],#c-result[hidden]{display:none!important}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%)}
+.phone-only,.phone-back{display:none!important}
+
+/* eave */
+header.eave{position:sticky;top:0;z-index:30;background:var(--eave);color:var(--paper);display:flex;align-items:center;gap:var(--s4);padding:0 var(--gut);min-height:72px;box-shadow:0 12px 24px -16px #000}
+.mark{font-weight:600;font-size:var(--t2);letter-spacing:-.01em;text-decoration:none;margin-right:auto;line-height:1.2;max-width:18ch}
+header.eave nav{display:flex;gap:var(--s4)}
+header.eave nav a{text-decoration:none;font-weight:500;font-size:var(--t2);padding:var(--s2) 0;border-bottom:2px solid transparent}
+header.eave nav a:hover{border-color:#C9A892}
+.eave-actions{display:flex;gap:var(--s2)}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;min-height:48px;display:inline-flex;align-items:center;font-weight:600;padding:0 var(--s3)}
+.menu summary::-webkit-details-marker{display:none}
+.menu div{position:absolute;right:0;top:100%;background:var(--eave);padding:var(--s3);display:grid;gap:var(--s1);min-width:220px;border:1px solid rgba(243,237,228,.2)}
+.menu a{padding:var(--s2) 0;text-decoration:none;font-weight:500}
+/* home yard */
+.yard{position:relative;min-height:calc(100vh - 72px);display:flex;align-items:flex-start;color:var(--ink);overflow:hidden}
+.yard picture,.yard img.bg{position:absolute;inset:0;width:100%;height:100%}
+.yard img.bg{object-fit:cover;object-position:70% 50%}
+.yard::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,27,25,.28) 0,rgba(28,27,25,0) 55%)}
+.hang{position:relative;z-index:2;width:min(440px,calc(100% - 48px));margin:var(--s5) 0 var(--s7) var(--gut)}
+.docket{background:var(--cream);border:1px solid var(--line);box-shadow:0 24px 40px -20px rgba(28,27,25,.55);display:grid;grid-template-columns:28px 1fr}
+.docket .stub{background:
+ radial-gradient(circle at 14px 16px,transparent 5px,var(--cream) 6px) 0 0/28px 28px,
+ linear-gradient(90deg,var(--eave),var(--eave)) 0 0/8px 100% no-repeat;
+ border-right:1px dashed var(--line)}
+.docket .pad{padding:var(--s5) var(--s4) var(--s5) var(--s4)}
+.clip{width:28px;height:16px;background:#2A2A28;border-radius:0 0 4px 4px;margin:-8px auto 12px;box-shadow:0 2px 0 #111}
+.hang h1{font-size:var(--t6);line-height:1.05;font-weight:650;letter-spacing:-.03em}
+.hang .lede{margin-top:var(--s3);font-size:var(--t4);line-height:1.35;max-width:22ch}
+.sub-row{display:flex;gap:var(--s2);margin-top:var(--s4)}
+.sub-row input{flex:1;min-width:0;min-height:56px;border:2px solid var(--ink);border-radius:8px;background:#fff;padding:0 var(--s3);font-size:var(--t4);font-weight:500}
+#sub-out{min-height:48px;margin-top:var(--s3);font-weight:500}
+.hang .actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+/* strip */
+.strip{background:var(--eave);color:var(--paper);overflow:hidden;border-top:1px solid rgba(243,237,228,.12)}
+.strip-track{display:flex;gap:var(--s6);width:max-content;padding:var(--s3) 0;font-size:var(--t2);letter-spacing:.02em;animation:drift 48s linear infinite}
+.strip-track span{white-space:nowrap}
+@keyframes drift{to{transform:translateX(-50%)}}
+.strip:hover .strip-track{animation-play-state:paused}
+/* systems inside home */
+.chapter{position:relative;min-height:520px;color:#FFF8F0;display:flex;align-items:flex-end;overflow:hidden}
+.chapter img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chapter::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,27,25,.82) 0,rgba(28,27,25,.15) 55%,rgba(28,27,25,0) 100%)}
+.chapter .cap{position:relative;z-index:1;padding:var(--s8) var(--gut) var(--s6);max-width:38ch}
+.chapter h2{font-size:var(--t5);line-height:1.1;font-weight:650;letter-spacing:-.02em}
+.chapter p{margin-top:var(--s3);font-size:var(--t4);line-height:1.4}
+/* rebates */
+#rebates{background:var(--paper);padding:var(--s8) var(--gut)}
+#rebates h2{font-size:var(--t6);line-height:1.05;font-weight:650;letter-spacing:-.03em;max-width:16ch}
+#rebates .prose{margin-top:var(--s4);max-width:62ch;font-size:var(--t4);line-height:1.45}
+#rebates .prose+p{margin-top:var(--s3)}
+#rebates .actions{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}
+/* quote — act */
+#quote{background:var(--heat);color:#FFF8F0;padding:var(--s8) var(--gut)}
+#quote h2{font-size:var(--t7);line-height:0.95;font-weight:700;letter-spacing:-.04em}
+#quote .lead{margin-top:var(--s3);font-size:var(--t4);max-width:36ch}
+form.enquiry{margin-top:var(--s6);display:grid;gap:var(--s4);max-width:760px}
+.field{display:grid;gap:var(--s1)}
+.field label{font-weight:600}
+.field input,.field select,.field textarea{min-height:56px;border:2px solid #FFF8F0;border-radius:8px;background:transparent;padding:0 var(--s3);color:#FFF8F0;font-size:var(--t3)}
+.field textarea{min-height:96px;padding:var(--s3);resize:vertical}
+.field select option{color:var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.steps{display:none;font-weight:600;margin-bottom:var(--s2)}
+.form-actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2)}
+#rebate-note{min-height:24px;font-size:var(--t2)}
+/* contact */
+#contact{background:var(--eave);color:var(--paper);padding:0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr)}
+.contact-copy{padding:var(--s8) var(--gut) var(--s7) var(--gut)}
+.contact-copy h2{font-size:var(--t6);line-height:1.05;font-weight:650;letter-spacing:-.03em}
+.contact-copy p{margin-top:var(--s3);font-size:var(--t4);line-height:1.4;max-width:32ch}
+.contact-copy .actions{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}
+.areas{margin-top:var(--s6)}
+.areas h3{font-size:var(--t4);font-weight:650;margin-bottom:var(--s3)}
+.areas dl{display:grid;gap:var(--s3)}
+.areas dt{font-weight:650}
+.areas dd{margin:0;color:rgba(243,237,228,.82)}
+.door{position:relative;min-height:640px}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.faq{padding:0 var(--gut) var(--s7);max-width:900px}
+.faq h3{font-size:var(--t5);font-weight:650;letter-spacing:-.02em;margin-bottom:var(--s4)}
+.faq details{border-top:1px solid rgba(243,237,228,.2);padding:var(--s3) 0}
+.faq summary{cursor:pointer;font-weight:650;font-size:var(--t4);line-height:1.3;padding:var(--s2) 0;min-height:48px;display:flex;align-items:center}
+.faq details p{margin-top:var(--s2);max-width:62ch;color:rgba(243,237,228,.88)}
+/* thanks */
+#thanks{background:var(--paper);padding:var(--s8) var(--gut) var(--s7)}
+#thanks h2{font-size:var(--t6);line-height:1.05;font-weight:650;letter-spacing:-.03em}
+#thanks p{margin-top:var(--s3);font-size:var(--t4);max-width:36ch}
+#thanks .actions{margin-top:var(--s5)}
+footer{padding:var(--s5) var(--gut) var(--s6);display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);border-top:1px solid var(--line);background:var(--paper)}
+footer nav{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4)}
+footer a{text-decoration:none;font-weight:500}
+/* checker sheet */
+.scrim{position:fixed;inset:0;background:rgba(28,27,25,.5);z-index:40;opacity:0;pointer-events:none;transition:opacity .28s}
+.scrim.on{opacity:1;pointer-events:auto}
+#checker{position:fixed;z-index:41;background:var(--cream);color:var(--ink);padding:var(--s5);display:flex;flex-direction:column;gap:var(--s4);
+ right:0;top:0;bottom:0;width:min(440px,100%);transform:translateX(100%);transition:transform .28s ease;box-shadow:-16px 0 40px -24px #000}
+#checker.open{transform:none}
+#checker h2{font-size:var(--t5);line-height:1.1;font-weight:650;letter-spacing:-.02em;padding-right:var(--s7)}
+#checker .q{font-size:var(--t4);line-height:1.35;font-weight:500}
+.yn{display:flex;gap:var(--s2)}
+.yn .btn{flex:1}
+#c-result{font-size:var(--t4);line-height:1.4}
+#c-result b{display:block;font-size:var(--t5);letter-spacing:-.02em;margin-bottom:var(--s2)}
+#checker .close{position:absolute;top:var(--s4);right:var(--s4);min-width:48px}
+#checker .navq{display:flex;gap:var(--s2);margin-top:auto}
+@media (max-width:800px){
+ :root{--gut:16px}
+ body{font-size:17px}
+ header.eave{padding:0 var(--s3);min-height:64px;gap:var(--s2)}
+ .mark{font-size:15px;max-width:14ch}
+ header.eave nav,.eave-actions{display:none}
+ .menu{display:block}
+ .eave-actions .btn.heat{padding:var(--s2) var(--s3)}
+ .yard{min-height:0;height:auto;display:block}
+ .yard picture,.yard img.bg{height:30vh;min-height:160px;max-height:200px;position:relative}
+ .yard::after{background:linear-gradient(0deg,rgba(28,27,25,.55) 0,rgba(28,27,25,0) 50%)}
+ .hang{width:auto;margin:-48px var(--s3) var(--s5);max-width:none}
+ .docket .pad{padding:var(--s3)}
+ .hang h1{font-size:32px}
+ .sub-row input,.sub-row .btn{min-height:48px}
+ #sub-out{min-height:0;margin-top:var(--s2)}
+ .hang .lede{font-size:17px;margin-top:var(--s2)}
+ .sub-row{flex-direction:column}
+ .chapter{min-height:420px}
+ .chapter h2{font-size:32px}
+ .chapter p{font-size:20px}
+ .chapter .cap{padding:var(--s7) var(--s3) var(--s5)}
+ #rebates,#quote,#thanks{padding:var(--s7) var(--s3)}
+ #rebates h2{font-size:36px}
+ #rebates .prose{font-size:20px}
+ #quote h2{font-size:56px}
+ .pair{grid-template-columns:1fr}
+ .steps{display:block}
+ .phone-only,.phone-back{display:flex!important}
+
+ .step{display:none;gap:var(--s4)}
+ .step.on{display:grid}
+ .contact-grid{grid-template-columns:1fr}
+ .door{min-height:320px}
+ .contact-copy{padding:var(--s7) var(--s3) var(--s5)}
+ .contact-copy h2{font-size:36px}
+ .faq{padding:0 var(--s3) var(--s6)}
+ .faq h3{font-size:28px}
+ footer{padding:var(--s4) var(--s3) var(--s5)}
+ #checker{inset:auto 0 0 0;width:auto;height:min(92vh,100%);transform:translateY(100%);border-radius:24px 24px 0 0;padding-bottom:var(--s6)}
+ #checker.open{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .strip-track{transform:none;flex-wrap:wrap;width:auto;padding-left:var(--gut)}
+ #checker{transform:none;display:none}
+ #checker.open{display:flex}
+ .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<header class="eave">
+ <a class="mark" href="#home">Melbourne heating &amp; cooling</a>
+ <nav aria-label="Main">
+  <a href="#systems-split">Split</a>
+  <a href="#systems-ducted">Ducted</a>
+  <a href="#rebates">Rebates</a>
+  <a href="#quote">Get a quote</a>
+  <a href="#contact">Contact</a>
+ </nav>
+ <div class="eave-actions">
+  <button class="btn ghost" type="button" data-call>Call now</button>
+  <a class="btn heat" href="#quote">Get a quote</a>
+ </div>
+ <details class="menu"><summary>Menu</summary>
+  <div>
+   <a href="#systems-split">Split systems</a>
+   <a href="#systems-ducted">Ducted systems</a>
+   <a href="#rebates">Rebates</a>
+   <a href="#quote">Get a quote</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </details>
+</header>
+
+<main>
+<section class="page" id="home" data-feeling="clear">
+ <div class="yard">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/hero-m.webp">
+   <source media="(max-width:1100px)" srcset="images/hero-960.webp">
+   <img class="bg" src="images/hero-1600.webp" width="1600" height="900" alt="A Melbourne brick-veneer house at late sun, with a split-system outdoor unit beside the front wall and a lemon tree in the garden" fetchpriority="high">
+  </picture>
+  <div class="hang">
+   <div class="docket">
+    <div class="stub" aria-hidden="true"></div>
+    <div class="pad">
+     <div class="clip" aria-hidden="true"></div>
+     <h1>A clear answer for your suburb, then a quote.</h1>
+     <p class="lede">Heating and cooling for Melbourne homes. Check the list, then ask us to quote.</p>
+     <form id="finder" novalidate>
+      <label class="vh" for="suburb">Your suburb</label>
+      <div class="sub-row">
+       <input id="suburb" name="suburb" type="text" value="Brunswick" list="suburb-list" autocomplete="address-level2" aria-describedby="sub-out">
+       <button class="btn" type="submit">Check suburb</button>
+      </div>
+      <p id="sub-out" aria-live="polite"></p>
+     </form>
+     <div class="actions">
+      <a class="btn heat" href="#quote" id="to-quote">Get a quote for Brunswick</a>
+      <button class="btn ghost" type="button" data-open-checker>Check a rebate</button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="strip" aria-hidden="true">
+  <div class="strip-track" id="strip"></div>
+ </div>
+ <figure class="chapter" id="systems-split">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/living-720.webp">
+   <img src="images/living-1400.webp" width="1400" height="788" alt="A living room in the same house, with a wall-mounted reverse-cycle split system above a sofa and late sun through the curtains" loading="lazy">
+  </picture>
+  <figcaption class="cap">
+   <h2>A split system treats one room, or an open living area.</h2>
+   <p>An indoor unit on the wall, an outdoor unit on a pad. Heating and cooling from the same system.</p>
+  </figcaption>
+ </figure>
+ <figure class="chapter" id="systems-ducted">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/ducted-560.webp">
+   <img src="images/ducted-900.webp" width="900" height="675" alt="A ceiling vent for a ducted reverse-cycle system, in a room with the same tan brick and late sun" loading="lazy">
+  </picture>
+  <figcaption class="cap">
+   <h2>A ducted system treats the whole house.</h2>
+   <p>Air travels through the ceiling to each room. The quote looks at the size of the house, not only the living room.</p>
+  </figcaption>
+ </figure>
+</section>
+
+<section class="page" id="rebates" data-feeling="confident">
+ <h2>A published discount, confirmed on the quote.</h2>
+ <p class="prose">Victorian Energy Upgrades lists an indicative discount of up to $1,610 when a non-ducted gas space heater is replaced with an efficient reverse-cycle air conditioner, and up to $5,530 when a ducted, whole-of-home gas heater is replaced with an efficient reverse-cycle system.</p>
+ <p class="prose">Those figures are published by the Victorian Government as indicative. The exact discount is confirmed on the quote, and it has to be applied by an accredited provider. A short check will tell you which published row, if any, matches what you have now.</p>
+ <div class="actions">
+  <button class="btn heat" type="button" data-open-checker>Check what may apply</button>
+  <a class="btn ghost" href="#quote">Skip to a quote</a>
+ </div>
+</section>
+
+<section class="page" id="quote" data-feeling="ready">
+ <h2>Ask for a quote.</h2>
+ <p class="lead">The suburb you already checked is on the form. If you ran the rebate check, that sits here too.</p>
+ <form class="enquiry" id="enquiry" novalidate>
+  <input type="hidden" name="source" value="site">
+  <p class="steps" id="step-label">Step 1 of 2</p>
+  <div class="step on" id="step-1" data-step="1">
+   <div class="field">
+    <label for="q-suburb">Suburb</label>
+    <input id="q-suburb" name="q-suburb" type="text" required autocomplete="address-level2">
+   </div>
+   <div class="field">
+    <label for="q-need">What do you need?</label>
+    <select id="q-need" name="q-need">
+     <option value="a split system">A split system</option>
+     <option value="a ducted system">A ducted system</option>
+     <option value="a quote, still deciding">I am still deciding</option>
+     <option value="commercial or a new build">Commercial or a new build</option>
+    </select>
+   </div>
+   <p id="rebate-note" aria-live="polite"></p>
+   <div class="form-actions phone-only">
+    <button class="btn light" type="button" id="to-step-2">Continue</button>
+   </div>
+  </div>
+  <div class="step on" id="step-2" data-step="2">
+   <div class="pair">
+    <div class="field">
+     <label for="q-name">Name</label>
+     <input id="q-name" name="q-name" type="text" required autocomplete="name">
+    </div>
+    <div class="field">
+     <label for="q-phone">Phone</label>
+     <input id="q-phone" name="q-phone" type="tel" autocomplete="tel">
+    </div>
+   </div>
+   <div class="field">
+    <label for="q-email">Email</label>
+    <input id="q-email" name="q-email" type="email" autocomplete="email">
+   </div>
+   <div class="field">
+    <label for="q-note">Anything we should know</label>
+    <textarea id="q-note" name="q-note" rows="3"></textarea>
+   </div>
+   <div class="form-actions">
+    <button class="btn ghost phone-back" type="button" id="to-step-1">Back</button>
+    <button class="btn light" type="submit">Send the enquiry</button>
+   </div>
+  </div>
+ </form>
+</section>
+
+<section class="page" id="contact" data-feeling="informed">
+ <div class="contact-grid">
+  <div class="contact-copy">
+   <h2>Call, or send the quote enquiry.</h2>
+   <p>Quotes are for homes, new builds and commercial work across the Melbourne suburbs on the list.</p>
+   <div class="actions">
+    <button class="btn light" type="button" data-call>Call now</button>
+    <a class="btn heat" href="#quote">Get a quote</a>
+   </div>
+   <div class="areas">
+    <h3>Suburbs on the list</h3>
+    <dl id="area-dl"></dl>
+   </div>
+  </div>
+  <div class="door">
+   <picture>
+    <source media="(max-width:800px)" srcset="images/door-640.webp">
+    <img src="images/door-1000.webp" width="1000" height="750" alt="The front door and verandah of the same Melbourne brick house, with the lemon tree at the left" loading="lazy">
+   </picture>
+  </div>
+ </div>
+ <div class="faq">
+  <h3>Questions people ask before a quote</h3>
+  <details>
+   <summary>What is the difference between a split system and a ducted system?</summary>
+   <p>A split system treats one room or an open living area, with an indoor unit on the wall and an outdoor unit outside. A ducted system treats the whole house, with air travelling through the ceiling to each room.</p>
+  </details>
+  <details>
+   <summary>How do Victorian Energy Upgrades discounts work?</summary>
+   <p>The program publishes indicative discounts for replacing older heating with an efficient reverse-cycle air conditioner. The work has to be done with an accredited provider, and the exact discount is confirmed on the quote. The checker on this page uses those published figures, and does not invent an amount if your answers do not match a published row.</p>
+  </details>
+  <details>
+   <summary>Do I need to be home for a quote?</summary>
+   <p>A thorough quote usually needs a look at the house, so the system is sized properly. Send the enquiry first and a time can be arranged from there.</p>
+  </details>
+ </div>
+</section>
+
+<section class="page" id="thanks" data-feeling="settled">
+ <h2>We’ve got your enquiry.</h2>
+ <p id="thanks-body">When you send an enquiry, it finishes on this page, with the suburb and the request kept together. We’ll read it and come back to you.</p>
+ <div class="actions">
+  <a class="btn" href="#home">Back to the start</a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <nav aria-label="Pages">
+  <a href="#home">Home</a>
+  <a href="#systems-split">Split</a>
+  <a href="#systems-ducted">Ducted</a>
+  <a href="#rebates">Rebates</a>
+  <a href="#quote">Get a quote</a>
+  <a href="#contact">Contact</a>
+  <a href="#thanks">Thank you</a>
+ </nav>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<div id="checker" role="dialog" aria-modal="true" aria-labelledby="c-title" hidden>
+ <button class="btn ghost close" type="button" id="c-close" aria-label="Close the rebate checker">Close</button>
+ <h2 id="c-title">Rebate check</h2>
+ <p class="q" id="c-q"></p>
+ <div class="yn" id="c-yn">
+  <button class="btn" type="button" data-ans="yes">Yes</button>
+  <button class="btn ghost" type="button" data-ans="no">No</button>
+ </div>
+ <div id="c-result" hidden></div>
+ <div class="navq">
+  <button class="btn ghost" type="button" id="c-back">Back</button>
+  <button class="btn heat" type="button" id="c-to-quote" hidden>Add this to my quote</button>
+ </div>
+</div>
+<datalist id="suburb-list"></datalist>
+
+<script>
+(function(){
+var IN={
+ "Inner":["Melbourne","Carlton","Fitzroy","Collingwood","Richmond","South Yarra","Prahran","St Kilda","Elwood","Port Melbourne","South Melbourne","Docklands","North Melbourne","Parkville","Abbotsford","Windsor"],
+ "North":["Brunswick","Brunswick East","Brunswick West","Coburg","Preston","Reservoir","Thornbury","Northcote","Pascoe Vale","Glenroy","Heidelberg","Ivanhoe","Greensborough","Eltham","Craigieburn","Epping","Bundoora"],
+ "East":["Kew","Hawthorn","Camberwell","Balwyn","Box Hill","Doncaster","Glen Waverley","Mount Waverley","Chadstone","Malvern","Ashburton","Burwood","Ringwood","Croydon","Lilydale"],
+ "South":["Caulfield","Elsternwick","Brighton","Bentleigh","Oakleigh","Clayton","Mentone","Cheltenham","Mordialloc","Dandenong","Frankston","Berwick","Pakenham"],
+ "West":["Footscray","Yarraville","Williamstown","Seddon","Altona","Werribee","Point Cook","Hoppers Crossing","Sunshine","St Albans","Melton","Essendon","Moonee Ponds","Ascot Vale","Sunbury"]
+};
+var OUT=["Geelong","Geelong West","Ballarat","Bendigo","Shepparton","Warrnambool","Traralgon","Mildura","Torquay","Ocean Grove","Albury"];
+var QS=[
+ "Is this a home in Victoria?",
+ "Are you taking out a gas heater?",
+ "Is that gas heater a ducted, whole-of-home system?",
+ "Do you want a ducted system for the whole home?"
+];
+var $=function(i){return document.getElementById(i)};
+var S={sub:"Brunswick",ok:true,rebate:"",need:"",ans:[],qi:0};
+function norm(s){return s.trim().toLowerCase().replace(/\s+/g," ").replace(/\bvic(toria)?\b/,"").replace(/\d{4}/,"").trim()}
+var FLAT=[];
+Object.keys(IN).forEach(function(k){IN[k].forEach(function(n){FLAT.push({n:n,g:k})})});
+function findSub(q){
+ var t=norm(q); if(!t) return null;
+ for(var i=0;i<FLAT.length;i++) if(norm(FLAT[i].n)===t) return {hit:FLAT[i],in:true};
+ for(var j=0;j<OUT.length;j++) if(norm(OUT[j])===t) return {hit:{n:OUT[j]},in:false};
+ for(var k=0;k<FLAT.length;k++) if(norm(FLAT[k].n).indexOf(t)===0 && t.length>2) return {hit:FLAT[k],in:true};
+ return {hit:{n:q.trim()},in:null};
+}
+function setSub(name,ok){
+ S.sub=name; S.ok=ok;
+ $("suburb").value=name;
+ $("q-suburb").value=name;
+ $("to-quote").textContent="Get a quote for "+name;
+}
+function announce(name,ok){
+ var el=$("sub-out");
+ if(ok===true) el.textContent=name+" is on the list. You can ask for a quote from here.";
+ else if(ok===false) el.textContent=name+" is not on the list. You can still send an enquiry and we will tell you if we can help.";
+ else el.textContent="We could not place “"+name+"”. Try a suburb such as Brunswick, Footscray or Glen Waverley.";
+}
+function check(q){
+ var r=findSub(q);
+ if(!r||r.in===null){announce((r&&r.hit.n)||q,null);return}
+ setSub(r.hit.n,r.in); announce(r.hit.n,r.in);
+}
+$("finder").addEventListener("submit",function(e){e.preventDefault();check($("suburb").value)});
+$("suburb").addEventListener("change",function(){check(this.value)});
+$("q-suburb").addEventListener("change",function(){check(this.value)});
+
+var dl=$("suburb-list"), names=[];
+FLAT.forEach(function(s){names.push(s.n); var o=document.createElement("option"); o.value=s.n; dl.appendChild(o)});
+OUT.forEach(function(n){var o=document.createElement("option"); o.value=n; dl.appendChild(o)});
+var strip=$("strip"), line=names.join("  ·  ")+"  ·  ";
+strip.innerHTML="<span>"+line+"</span><span>"+line+"</span>";
+var dlAreas=$("area-dl");
+Object.keys(IN).forEach(function(k){
+ var dt=document.createElement("dt"); dt.textContent=k;
+ var dd=document.createElement("dd"); dd.textContent=IN[k].join(", ");
+ dlAreas.appendChild(dt); dlAreas.appendChild(dd);
+});
+
+/* rebate checker */
+var lastFocus=null;
+function result(){
+ var a=S.ans;
+ if(a[0]==="no"){
+  return {title:"This check is for Victorian Energy Upgrades.", body:"That program is for Victorian homes and businesses. You can still ask for a quote."};
+ }
+ if(a[1]==="no"){
+  return {title:"A discount may still apply.", body:"The published rows we use here are for replacing a gas heater. Other upgrades can attract a discount too, and the amount is confirmed on the quote, without a figure shown here."};
+ }
+ if(a[2]==="yes" && a[3]==="yes"){
+  return {title:"Up to $5,530, indicative.", body:"Victorian Energy Upgrades lists an indicative discount of up to $5,530 when a ducted, whole-of-home gas heater is replaced with an efficient ducted reverse-cycle air conditioner at 22.4 kW. The exact discount is confirmed on the quote by an accredited provider."};
+ }
+ if(a[2]==="yes" && a[3]==="no"){
+  return {title:"Up to $2,940, indicative.", body:"Victorian Energy Upgrades lists an indicative discount of up to $2,940 for a multi-split system with a 10 kW outdoor unit, or up to $2,520 for four split systems, when a ducted gas heater is taken out. The exact discount is confirmed on the quote."};
+ }
+ if(a[2]==="no" && a[3]==="no"){
+  return {title:"$630 to $1,610, indicative.", body:"Victorian Energy Upgrades lists an indicative discount of $630 to $1,610 when a non-ducted, room gas heater is replaced with an efficient 3 kW to 9 kW reverse-cycle air conditioner. The exact discount is confirmed on the quote."};
+ }
+ return {title:"A discount may still apply.", body:"There is no published row on the Victorian Energy Upgrades page for replacing a room gas heater with a ducted system. The amount, if any, is confirmed on the quote, so this check does not show a dollar figure."};
+}
+function renderQ(){
+ var atEnd=S.qi>=QS.length;
+ $("c-q").hidden=atEnd;
+ $("c-yn").hidden=atEnd;
+ $("c-result").hidden=!atEnd;
+ $("c-to-quote").hidden=!atEnd;
+ $("c-back").hidden=S.qi===0 && !atEnd;
+ if(!atEnd){
+  $("c-q").textContent=QS[S.qi];
+  $("c-yn").querySelector("[data-ans=yes]").focus();
+ } else {
+  var r=result();
+  S.rebate=r.title+" "+r.body;
+  $("c-result").innerHTML="<b>"+r.title+"</b>"+r.body;
+  $("c-to-quote").focus();
+ }
+}
+function openChecker(){
+ lastFocus=document.activeElement;
+ S.ans=[]; S.qi=0;
+ $("scrim").hidden=false; $("scrim").classList.add("on");
+ $("checker").hidden=false;
+ requestAnimationFrame(function(){ $("checker").classList.add("open"); renderQ(); });
+}
+function closeChecker(){
+ $("checker").classList.remove("open");
+ $("scrim").classList.remove("on");
+ setTimeout(function(){ $("checker").hidden=true; $("scrim").hidden=true; if(lastFocus) lastFocus.focus(); }, 280);
+}
+document.querySelectorAll("[data-open-checker]").forEach(function(b){b.addEventListener("click",openChecker)});
+$("c-close").addEventListener("click",closeChecker);
+$("scrim").addEventListener("click",closeChecker);
+$("c-yn").addEventListener("click",function(e){
+ var b=e.target.closest("[data-ans]"); if(!b) return;
+ S.ans[S.qi]=b.dataset.ans; S.qi++;
+ if(S.qi===1 && S.ans[0]==="no") S.qi=QS.length;
+ if(S.qi===2 && S.ans[1]==="no") S.qi=QS.length;
+ renderQ();
+});
+$("c-back").addEventListener("click",function(){
+ if(S.qi>=QS.length){S.qi=QS.length-1;S.ans.pop()}
+ else if(S.qi>0){S.qi--;S.ans.pop()}
+ renderQ();
+});
+$("c-to-quote").addEventListener("click",function(){
+ $("rebate-note").textContent=result().title+" The exact amount is confirmed on the quote.";
+ if(S.ans[3]==="yes") $("q-need").value="a ducted system";
+ if(S.ans[3]==="no" && S.ans[2]==="no") $("q-need").value="a split system";
+ closeChecker();
+ $("quote").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+});
+document.addEventListener("keydown",function(e){
+ if(e.key==="Escape" && !$("checker").hidden) closeChecker();
+});
+
+/* form: two-step on phone, one view on desktop */
+function isPhone(){return window.matchMedia("(max-width:800px)").matches}
+function showStep(n){
+ if(!isPhone()){
+  $("step-1").classList.add("on"); $("step-2").classList.add("on"); $("step-label").style.display="none";
+  return;
+ }
+ $("step-label").textContent="Step "+n+" of 2";
+ $("step-1").classList.toggle("on",n===1);
+ $("step-2").classList.toggle("on",n===2);
+ if(n===2) $("q-name").focus();
+}
+showStep(1);
+window.addEventListener("resize",function(){showStep(isPhone()?(($("step-2").classList.contains("on")&&!$("step-1").classList.contains("on"))?2:1):1)});
+$("to-step-2").addEventListener("click",function(){
+ if(!$("q-suburb").value.trim()){$("q-suburb").focus();return}
+ showStep(2);
+});
+$("to-step-1").addEventListener("click",function(){showStep(1);$("q-suburb").focus()});
+$("enquiry").addEventListener("submit",function(e){
+ e.preventDefault();
+ if(!$("q-name").value.trim()){$("q-name").focus();return}
+ if(!$("q-phone").value.trim() && !$("q-email").value.trim()){$("q-phone").focus();return}
+ function esc(t){return t.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
+ var need=$("q-need").value, sub=$("q-suburb").value.trim(), name=$("q-name").value.trim();
+ var bit=S.rebate?" The rebate check you ran has been kept with the enquiry.":"";
+ $("thanks-body").textContent="Thanks, "+name+". We’ve got your enquiry for "+need+" in "+sub+"."+bit+" We’ll read it and come back to you.";
+ $("thanks").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+ $("thanks").querySelector("a").focus();
+});
+
+document.querySelectorAll("[data-call]").forEach(function(b){
+ b.addEventListener("click",function(){ $("contact").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"}); });
+});
+
+setSub("Brunswick",true); announce("Brunswick",true);
+
+/* hide the visually-hidden suburb label hack — already a real label in the row via clip. keep it. */
+})();
+</script>
+</body>
+</html>
