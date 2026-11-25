@@ -1,6 +1,6 @@
 # Prompt — Psychotherapy practice, Wix Studio upgrade (concept)
 
-Upwork 2125386467324668677. An established Australian psychotherapist wants a Wix Studio designer to elevate the visual identity, design and user experience of a professional practice website. The business name, live site, colour direction and written copy are withheld until shortlist. This page invents no practice name and presents a concept direction only, ready for their colour and copy when those arrive. Marked as a concept in the page title only. This is bid proof, not the later paid homepage trial.
+Upwork 2125386467324668677. An established Australian psychotherapist wants a Wix Studio designer to elevate the visual identity, design and user experience of a professional practice website. The business name, live site, colour direction and written copy are withheld until shortlist. This page invents no practice name and presents a concept direction only, ready for their colour and copy when those arrive. Marked as a concept in the page title and in a visible line under the doorway: “Website concept for a Wix Studio upgrade.” This is bid proof, not the later paid homepage trial.
 
 ## Coverage checklist
 
@@ -11,7 +11,7 @@ Upwork 2125386467324668677. An established Australian psychotherapist wants a Wi
 | Navigation and enquiry path, no booking engine | header nav, `#enquire` |
 | Identity direction without a fake name: typography, mark, imagery | aperture mark, "Practice", whole page |
 | Responsive desktop, tablet and mobile | proofs at 1440, 3440 and 390 |
-| No health or outcome claims; concept label; noindex | copy, title, robots |
+| No health or outcome claims; concept label; noindex | `#arrive` line “Website concept for a Wix Studio upgrade.”; title; robots |
 
 Full checklist in COVERAGE.md.
 
@@ -48,7 +48,7 @@ Client wants customers to feel they have found a calm, considered practice, and 
 
 **Sell / hook**
 - Desire: someone considering this practice wants to feel it is a serious, calm place, and to know how to get in touch without hunting.
-- Hook: in the first viewport, a doorway into a quiet room, a 56px sentence on the wall, and Enquire already in reach.
+- Hook: in the first viewport, a doorway into a quiet room, the visible concept line, a 56px sentence on the wall, and Enquire already in reach.
 - Objection killers: "Is this a generic wellness site?" (architectural rooms, no spiritual props, no card grid); "Will this invent a brand they did not ask for?" (no practice name, typography and an aperture mark only, colour left open for theirs); "Can people actually get in touch?" (a short written enquiry, working, with a plain reply).
 - Proof: the client's own brief — an established Australian practice, copy and a colour direction already in hand, a partially developed Wix Studio site, and a later paid trial on the first homepage sections.
 - The one conversion action: Enquire. It sits in the header, under the doorway, at the end of the appointment walk, and as the form itself.
@@ -58,7 +58,7 @@ Client wants customers to feel they have found a calm, considered practice, and 
 #### Arrive — still
 - Feeling word: still
 - Inner voice: “This room has space for me.”
-- Design levers: a left-locked doorway aperture, a 56px sentence on the wall, generous wall around the opening, Enquire close at hand.
+- Design levers: a left-locked doorway aperture, the visible concept line, a 56px sentence on the wall, generous wall around the opening, Enquire close at hand.
 
 #### Explore — considered
 - Feeling word: considered
@@ -101,4 +101,4 @@ The threshold. You arrive at a doorway and see the room before you read a word. 
 
 One reference photograph (a spare consulting room, cool grey-white walls, pale grey floor, a blue-grey armchair, a tall window, a deep doorway, mid-morning daylight) generated first. The threshold, the chair by the window, the writing table and the passage were generated from it so light, walls, floor and chair match. Checked against the brief: Australian professional practice, calm and contemporary, no text, no logos, not a spa, not a hospital, no earth tones. WebP, 720px variants for phones, lazy-loaded below the fold.
 
-Phone first view is 60 KB (61,569 bytes); desktop first view is 72 KB (73,703 bytes). Final proofs are at DPR 2.
+Phone first view is 60 KB (61,739 bytes); desktop first view is 72 KB (73,873 bytes). Final proofs are at DPR 2.
