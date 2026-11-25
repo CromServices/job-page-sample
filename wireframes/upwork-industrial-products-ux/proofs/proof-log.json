@@ -1,0 +1,119 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 7870,
+  "first_view_bytes": 85943,
+  "sections": [
+   [
+    "home",
+    98,
+    1448
+   ],
+   [
+    "find",
+    1545.875,
+    941
+   ],
+   [
+    "product",
+    2487.265625,
+    2637
+   ],
+   [
+    "enquire",
+    5124.15625,
+    903
+   ],
+   [
+    "about",
+    6027.34375,
+    604
+   ],
+   [
+    "contact",
+    6631.734375,
+    1125
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-25-upwork-2125408085095096554/wireframe/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 7870,
+  "first_view_bytes": 85943,
+  "sections": [
+   [
+    "home",
+    98,
+    1448
+   ],
+   [
+    "find",
+    1545.875,
+    941
+   ],
+   [
+    "product",
+    2487.265625,
+    2637
+   ],
+   [
+    "enquire",
+    5124.15625,
+    903
+   ],
+   [
+    "about",
+    6027.34375,
+    604
+   ],
+   [
+    "contact",
+    6631.734375,
+    1125
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-25-upwork-2125408085095096554/wireframe/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 7836,
+  "first_view_bytes": 85943,
+  "sections": [
+   [
+    "home",
+    154,
+    1171
+   ],
+   [
+    "find",
+    1324.75,
+    1117
+   ],
+   [
+    "product",
+    2442.140625,
+    2569
+   ],
+   [
+    "enquire",
+    5010.8125,
+    891
+   ],
+   [
+    "about",
+    5902,
+    658
+   ],
+   [
+    "contact",
+    6560.390625,
+    1114
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/director/bids-2026-11-25-upwork-2125408085095096554/wireframe/proofs/phone-390.png"
+ }
+]
