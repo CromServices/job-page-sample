@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Concept: A professional practice</title>
+<style>
+@font-face{font-family:"Plus Jakarta Sans";src:url(fonts/plus-jakarta-sans.woff2) format("woff2");font-weight:100 800;font-display:swap}
+:root{
+ --paper:#F5F7FB;--wall:#E8EDF6;--ink:#161C2C;--blue:#2C4A8C;--muted:#3A4458;--line:#C5CEE0;--sky:#D9E4F7;--rose:#B54A6C;
+ --t1:14px;--t2:16px;--t3:18px;--t4:24px;--t5:36px;--t6:56px;--t7:56px;
+ --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:96px;
+ --font:"Plus Jakarta Sans",system-ui,sans-serif;--gut:clamp(24px,5vw,112px);--measure:36rem;--opening:28rem
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--wall);color:var(--ink);font:400 var(--t3)/1.6 var(--font);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,figure,ul{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--s2) var(--s4);border:2px solid var(--ink);border-radius:0;background:var(--ink);color:var(--paper);font-weight:600;font-size:var(--t3);line-height:1.2;text-decoration:none;cursor:pointer;text-align:center;white-space:normal}
+.btn:hover{background:var(--blue);border-color:var(--blue)}
+.btn.quiet{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.quiet:hover{background:var(--ink);color:var(--paper)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%)}
+.skip{position:absolute;left:var(--s3);top:-5rem;background:var(--ink);color:var(--paper);padding:var(--s2) var(--s3);z-index:40;text-decoration:none}
+.skip:focus{top:var(--s3)}
+
+header.site{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:var(--s4);padding:0 var(--gut);min-height:72px;background:var(--paper);border-bottom:1px solid var(--line)}
+.mark{display:flex;align-items:center;gap:var(--s2);text-decoration:none;margin-right:auto;font-weight:600;font-size:var(--t2);letter-spacing:-.02em;line-height:1}
+.mark svg{width:28px;height:36px;flex:none;display:block}
+header.site nav{display:flex;align-items:center;gap:var(--s4)}
+header.site nav a{text-decoration:none;font-weight:500;padding:var(--s2) 0;border-bottom:2px solid transparent}
+header.site nav a[aria-current="page"]{border-bottom-color:var(--blue)}
+#menu-btn{display:none}
+
+#arrive{padding:var(--s5) var(--gut) var(--s8);background:var(--wall)}
+.opening{width:min(var(--opening),100%);margin:0}
+.opening img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center}
+#arrive .opening{width:min(20.25rem,100%)}
+#arrive .measure{max-width:46rem;padding-top:var(--s5)}
+h1,h2{font-weight:600;letter-spacing:-.03em;line-height:1.15}
+h1{font-size:var(--t6)}
+#arrive .lead{margin-top:var(--s4);max-width:34em}
+#arrive .act{margin-top:var(--s5);display:flex;gap:var(--s3);flex-wrap:wrap}
+
+.measure{max-width:var(--measure)}
+#practice{padding:var(--s8) var(--gut);background:var(--paper)}
+#practice .opening{width:min(36rem,100%);margin:var(--s6) 0 0}
+#practice .opening img{aspect-ratio:4/3}
+#practice h2{font-size:var(--t5)}
+#practice .lead{margin-top:var(--s4)}
+
+#appointment{padding:var(--s8) var(--gut);background:var(--wall)}
+#appointment h2{font-size:var(--t5)}
+#appointment .lead{margin-top:var(--s4);max-width:34em}
+#appointment .opening{width:min(var(--opening),100%);margin:var(--s6) 0}
+#appointment .opening img{aspect-ratio:3/4}
+.walk{max-width:var(--measure);margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line)}
+.walk h3{font-size:var(--t4);font-weight:600;letter-spacing:-.02em}
+.walk .lead{margin-top:var(--s3)}
+.walk-controls{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s4)}
+
+#enquire{padding:var(--s8) var(--gut) var(--s6);background:var(--sky)}
+#enquire h2{font-size:var(--t6)}
+#enquire .lead{margin-top:var(--s4);max-width:34em}
+#enquire .opening{width:min(48rem,100%);margin:var(--s6) 0 0}
+#enquire .opening img{aspect-ratio:16/9;object-fit:cover}
+.desk{max-width:32rem;margin-top:var(--s6);padding:var(--s6);background:var(--paper);border-top:12px solid var(--ink)}
+form{display:flex;flex-direction:column;align-items:stretch;gap:var(--s1)}
+form label{font-weight:600;margin-top:var(--s3)}
+form input,form textarea{width:100%;min-height:48px;padding:var(--s2) var(--s3);border:1px solid var(--line);background:var(--paper);border-radius:0}
+form textarea{min-height:8rem;resize:vertical;line-height:1.5;padding:var(--s3)}
+form input:focus,form textarea:focus{outline:3px solid var(--blue);outline-offset:0;border-color:var(--blue)}
+form .err{color:#8A1C38;font-weight:500;margin:var(--s3) 0 0}
+form .btn{margin-top:var(--s4);align-self:flex-start}
+#thanks{max-width:32rem;margin-top:var(--s6);padding:var(--s6);background:var(--paper);border-top:12px solid var(--ink)}
+#thanks p{font-size:var(--t4);font-weight:600;letter-spacing:-.02em;line-height:1.3}
+#thanks .btn{margin-top:var(--s4)}
+
+#after{padding:var(--s8) var(--gut);background:var(--paper)}
+#after p{max-width:34em}
+#after .mark-end{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s6);font-weight:600}
+
+@media (max-width:800px){
+ :root{--t3:17px;--t4:22px;--t5:28px;--t6:36px;--t7:36px;--gut:clamp(20px,6vw,32px)}
+ header.site{min-height:64px;flex-wrap:wrap;padding-top:var(--s2);padding-bottom:var(--s2)}
+ #menu-btn{display:inline-flex;margin-left:auto}
+ header.site nav{display:none;flex-basis:100%;flex-direction:column;align-items:flex-start;gap:0;padding:var(--s2) 0 var(--s3)}
+ header.site nav.open{display:flex}
+ header.site nav a{padding:var(--s3) 0;width:100%;border-bottom:1px solid var(--line)}
+ header.site nav a[aria-current="page"]{border-bottom-color:var(--blue)}
+ #arrive{padding-top:var(--s4);padding-bottom:var(--s6)}
+ #arrive .opening{width:min(18.5rem,100%)}
+ #arrive .measure{padding-top:var(--s4)}
+ #practice,#appointment,#enquire,#after{padding-top:var(--s6);padding-bottom:var(--s6)}
+ .desk,#thanks{padding:var(--s5)}
+}
+@media (min-width:1600px){
+ :root{--gut:clamp(96px,10vw,400px)}
+}
+@media (min-width:2400px){
+ :root{--gut:clamp(200px,12vw,520px)}
+ #arrive .opening{width:min(26rem,100%)}
+ #arrive .opening img{aspect-ratio:1/1}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .btn{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#arrive">Skip to content</a>
+<header class="site">
+ <a class="mark" href="#arrive">
+  <svg viewBox="0 0 28 36" aria-hidden="true" focusable="false">
+   <rect x="1" y="1" width="26" height="34" fill="none" stroke="currentColor" stroke-width="1.75"/>
+   <rect x="7" y="6" width="14" height="24" fill="none" stroke="currentColor" stroke-width="1.75"/>
+  </svg>
+  <span>Practice</span>
+ </a>
+ <button type="button" class="btn quiet" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+ <nav id="site-nav" aria-label="Site">
+  <a href="#arrive">Practice</a>
+  <a href="#appointment">The appointment</a>
+  <a href="#enquire">Enquire</a>
+ </nav>
+</header>
+
+<section class="page" id="arrive" data-feeling="still">
+ <figure class="opening">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/threshold-720.webp">
+   <img src="images/threshold-1100.webp" width="864" height="1152" alt="A deep doorway opens into a quiet consulting room, where a blue-grey armchair sits in daylight from a tall window">
+  </picture>
+ </figure>
+ <div class="measure">
+  <h1>There is room here, and a clear way to write in.</h1>
+  <p class="lead">This is a professional psychotherapy practice in Australia. The rooms are unhurried. If it feels like the right place, leave a note, and a reply will come.</p>
+  <p class="act"><a class="btn" href="#enquire">Enquire</a></p>
+ </div>
+</section>
+
+<section class="page" id="practice" data-feeling="considered">
+ <div class="measure">
+  <h2>A practice that leaves you space.</h2>
+  <p class="lead">The work is psychotherapy, held in a quiet room, at a time you agree together. The site, the rooms and the way you get in touch should feel like the same place: considered, uncluttered, and ready for your own words.</p>
+ </div>
+ <figure class="opening">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/passage-720.webp">
+   <img src="images/passage-1200.webp" width="1152" height="864" alt="Looking through a second doorway, down a pale passage, toward a tall window and trees in daylight" loading="lazy">
+  </picture>
+ </figure>
+</section>
+
+<section class="page" id="appointment" data-feeling="sure">
+ <div class="measure">
+  <h2>The appointment.</h2>
+  <p class="lead">Appointments are arranged by enquiry, not by an open calendar. The first visit is a conversation, in a quiet room, at an agreed time.</p>
+ </div>
+ <figure class="opening">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/chair-720.webp">
+   <img src="images/chair-1100.webp" width="864" height="1152" alt="The same blue-grey armchair beside a tall window, with morning light on a pale floor" loading="lazy">
+  </picture>
+ </figure>
+ <div class="walk" id="walk">
+  <h3 id="walk-title">Before you write</h3>
+  <p class="lead" id="walk-copy">A short note is enough to begin. Say what would help to know, or simply ask for a time.</p>
+  <p class="walk-controls">
+   <button type="button" class="btn quiet" id="walk-back" disabled>Back</button>
+   <button type="button" class="btn" id="walk-next">Next</button>
+  </p>
+  <p class="vh" id="walk-live" aria-live="polite"></p>
+ </div>
+</section>
+
+<section class="page" id="enquire" data-feeling="ready">
+ <div class="measure">
+  <h2>Leave a note.</h2>
+  <p class="lead">Name, an email address, and whatever you would like to say. Appointments are arranged from there.</p>
+ </div>
+ <figure class="opening">
+  <picture>
+   <source media="(max-width:800px)" srcset="images/desk-720.webp">
+   <img src="images/desk-1400.webp" width="1280" height="720" alt="A simple writing table by the window in the same room, with a blank sheet of paper and a pen" loading="lazy">
+  </picture>
+ </figure>
+ <form class="desk" id="enquire-form" novalidate>
+  <p class="err" id="form-err" role="alert" hidden></p>
+  <label for="nm">Your name</label>
+  <input id="nm" name="name" type="text" autocomplete="name" required maxlength="120">
+  <label for="em">Email</label>
+  <input id="em" name="email" type="email" autocomplete="email" required maxlength="160">
+  <label for="nt">A note</label>
+  <textarea id="nt" name="note" required maxlength="2000"></textarea>
+  <button type="submit" class="btn">Send the note</button>
+ </form>
+ <div id="thanks" hidden>
+  <p>Thank you. A reply will come to the address you gave.</p>
+  <button type="button" class="btn quiet" id="again">Write another note</button>
+ </div>
+</section>
+
+<section class="page" id="after" data-feeling="held">
+ <p>A reply comes to the address you gave. Appointments are arranged from there.</p>
+ <p class="mark-end">
+  <svg viewBox="0 0 28 36" width="20" height="26" aria-hidden="true" focusable="false">
+   <rect x="1" y="1" width="26" height="34" fill="none" stroke="currentColor" stroke-width="1.75"/>
+   <rect x="7" y="6" width="14" height="24" fill="none" stroke="currentColor" stroke-width="1.75"/>
+  </svg>
+  <span>Practice</span>
+ </p>
+</section>
+
+<script>
+(function(){
+  var nav=document.getElementById('site-nav');
+  var btn=document.getElementById('menu-btn');
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var sections=['arrive','appointment','enquire'].map(function(id){return document.getElementById(id)});
+  function closeMenu(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu'}
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.textContent=open?'Close':'Menu';
+  });
+  links.forEach(function(a){a.addEventListener('click',closeMenu)});
+  function current(){
+    var y=window.scrollY+96;
+    var id='arrive';
+    sections.forEach(function(s){if(s&&s.offsetTop<=y)id=s.id});
+    links.forEach(function(a){
+      var on=a.getAttribute('href')==='#'+id;
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+  }
+  current();
+  window.addEventListener('scroll',current,{passive:true});
+
+  var steps=[
+    {t:'Before you write',c:'A short note is enough to begin. Say what would help to know, or simply ask for a time.'},
+    {t:'When you come in',c:'You are met, and you sit down. The appointment is the conversation, without hurry.'},
+    {t:'After you write',c:'A reply comes to the address you gave, with a time if one is offered, or a question if one is needed.'}
+  ];
+  var i=0;
+  var title=document.getElementById('walk-title');
+  var copy=document.getElementById('walk-copy');
+  var live=document.getElementById('walk-live');
+  var back=document.getElementById('walk-back');
+  var next=document.getElementById('walk-next');
+  function show(n){
+    i=n;
+    title.textContent=steps[i].t;
+    copy.textContent=steps[i].c;
+    live.textContent=steps[i].t;
+    back.disabled=i===0;
+    next.disabled=i===steps.length-1;
+  }
+  back.addEventListener('click',function(){if(i>0)show(i-1)});
+  next.addEventListener('click',function(){if(i<steps.length-1)show(i+1)});
+
+  var form=document.getElementById('enquire-form');
+  var err=document.getElementById('form-err');
+  var thanks=document.getElementById('thanks');
+  var again=document.getElementById('again');
+  function emailOk(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('nm').value.trim();
+    var email=document.getElementById('em').value.trim();
+    var note=document.getElementById('nt').value.trim();
+    var msg='';
+    if(!name)msg='Please add your name.';
+    else if(!email)msg='Please add an email address.';
+    else if(!emailOk(email))msg='Please check the email address.';
+    else if(!note)msg='Please add a note.';
+    if(msg){err.hidden=false;err.textContent=msg;return}
+    err.hidden=true;err.textContent='';
+    form.hidden=true;
+    thanks.hidden=false;
+    thanks.querySelector('p').focus&&thanks.setAttribute('tabindex','-1');
+    thanks.focus();
+  });
+  again.addEventListener('click',function(){
+    form.reset();
+    thanks.hidden=true;
+    form.hidden=false;
+    document.getElementById('nm').focus();
+  });
+})();
+</script>
+</body>
+</html>
