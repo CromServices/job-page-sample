@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Concept: RR Fisher</title>
+<link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Roboto;src:url(fonts/roboto.woff2) format("woff2");font-weight:400 700;font-display:swap}
+:root{
+  --paper:#FAFAFA;--white:#FFFFFF;--ink:#111111;--muted:#3A3A3A;--line:#D5D7DA;--brand:#FF7100;
+  --font:Roboto,system-ui,sans-serif;
+  --t1:15px;--t2:16px;--t3:18px;--t4:24px;--t5:32px;--t6:40px;--t7:48px;
+  --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;
+  --r:8px;--gut:clamp(20px,5vw,72px);--max:52rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--t3)/1.5 var(--font);-webkit-font-smoothing:antialiased}
+@media (max-width:700px){body{font-size:17px}}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ul,figure{margin:0}
+button,input,textarea{font:inherit;color:inherit}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:var(--s3);top:-48px;background:var(--ink);color:var(--white);padding:var(--s2) var(--s3);border-radius:var(--r);z-index:20}
+.skip:focus{top:var(--s3)}
+.mast{position:sticky;top:0;z-index:8;background:var(--white);border-bottom:2px solid var(--ink);padding:var(--s3) var(--gut);display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap}
+.logo{height:64px;width:auto}
+@media (max-width:700px){.logo{height:48px}}
+.nav{display:flex;flex-wrap:wrap;gap:var(--s2);margin-left:auto}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 var(--s3);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--muted)}
+.page{padding:var(--s6) var(--gut) var(--s7);border-top:1px solid var(--line);scroll-margin-top:128px}
+.page > *{max-width:var(--max)}
+.hook{font-size:var(--t6);line-height:1.15;font-weight:700;letter-spacing:-0.02em;max-width:18ch}
+.open{margin:0 0 var(--s3);color:var(--muted);font-weight:400;font-size:var(--t2)}
+.lead{margin-top:var(--s4);max-width:42ch;color:var(--ink)}
+.hero{margin:var(--s4) 0 0;background:var(--white);border:1px solid var(--line)}
+.hero img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.kicker{margin-top:var(--s6);font-weight:700;font-size:var(--t4)}
+.rows{list-style:none;padding:0;margin:var(--s4) 0 0;border-top:2px solid var(--ink)}
+.row{display:flex;flex-direction:column;align-items:flex-start;width:100%;gap:var(--s1);padding:var(--s4) 0;border:0;border-bottom:2px solid var(--line);border-radius:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer;font:inherit}
+.row strong{font-size:var(--t4);font-weight:700;letter-spacing:-0.02em}
+.row span{color:var(--muted);font-size:var(--t3)}
+.row:hover strong{color:var(--ink)}
+.row.static{cursor:default}
+.trail{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3);align-items:center;font-size:var(--t2);font-weight:500;margin-bottom:var(--s5)}
+.trail button{border:0;background:none;padding:0;min-height:44px;font:inherit;font-weight:500;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.trail .here{color:var(--ink);text-decoration:none;font-weight:700}
+.scr{font-size:var(--t5);line-height:1.2;font-weight:700;letter-spacing:-0.02em}
+.sub{margin-top:var(--s2);font-size:var(--t4);font-weight:500}
+.photo{margin:var(--s5) 0;background:var(--white);border:1px solid var(--line)}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.prose{display:flex;flex-direction:column;gap:var(--s4);max-width:46ch}
+.facts{list-style:none;padding:0;margin:var(--s5) 0 0;border-top:2px solid var(--ink)}
+.facts li{padding:var(--s3) 0;border-bottom:1px solid var(--line);max-width:46ch}
+.facts b{display:block;font-weight:700;margin-bottom:var(--s1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 var(--s4);border:2px solid var(--ink);border-radius:var(--r);background:var(--brand);color:var(--ink);font-weight:700;font-size:var(--t3);cursor:pointer;text-align:center;text-decoration:none}
+.btn.ink{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.act{padding-top:var(--s6)}
+.field{display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s4)}
+.field .name{font-weight:500}
+.field .ctl{width:100%;min-height:56px;padding:var(--s2) var(--s3);border:2px solid var(--ink);border-radius:var(--r);background:var(--white);font-size:var(--t3)}
+textarea.ctl{min-height:120px;resize:vertical;line-height:1.45}
+.about{color:var(--ink);max-width:42ch;display:flex;flex-direction:column;gap:var(--s4)}
+.places{display:flex;flex-direction:column;gap:var(--s5);margin-top:var(--s5)}
+.place .city{font-weight:700;font-size:var(--t4)}
+.place a{display:inline-block;min-height:44px;font-weight:500}
+.fine{margin-top:var(--s5);color:var(--muted);max-width:42ch}
+.confirm{margin-top:var(--s4);padding:var(--s4);background:var(--white);border:2px solid var(--ink);border-radius:var(--r);max-width:42ch}
+.site-foot{padding:var(--s5) var(--gut);border-top:2px solid var(--ink);background:var(--white);font-size:var(--t2);color:var(--muted)}
+.mast,.page,.site-foot{padding-left:max(var(--gut),calc(50% - var(--max)/2));padding-right:max(var(--gut),calc(50% - var(--max)/2))}
+</style>
+</head>
+<body>
+<a class="skip" href="#home">Skip to content</a>
+<header class="mast">
+  <a href="#home" aria-label="R.R. Fisher, home"><img class="logo" src="source/assets/logo.svg" width="211" height="64" alt="R.R. Fisher"></a>
+  <nav class="nav" aria-label="Site">
+    <a href="#home">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="page" id="home" data-feeling="sure">
+  <p class="open">Website concept for RR Fisher</p>
+  <h1 class="hook">We help industry power ahead.</h1>
+  <figure class="hero">
+    <img src="source/assets/home-coupling-720.webp" srcset="source/assets/home-coupling-720.webp 720w, source/assets/home-coupling-1200.webp 1200w" sizes="(max-width:700px) 100vw, 52rem" width="720" height="405" alt="A jaw coupling with two metal hubs and a black elastomeric ring, photographed on a cool white ground.">
+  </figure>
+  <p class="lead">In power transmission, conveyor, and vibratory equipment supply we connect vital parts with important work, keeping New Zealand and Australia manufacturers moving onward.</p>
+  <h2 class="kicker">Our products</h2>
+  <ul class="rows" id="families">
+    <li><button type="button" class="row" data-open="couplings"><strong>Couplings</strong><span>R+W, Cross &amp; Morse, Miki Pulley</span></button></li>
+    <li><button type="button" class="row" data-open="clutches"><strong>Clutches</strong><span>Cross &amp; Morse, Miki Pulley</span></button></li>
+    <li><button type="button" class="row" data-open="vibratory"><strong>Vibratory</strong><span>Italvibras</span></button></li>
+    <li><button type="button" class="row" data-open="controllers"><strong>Controllers</strong><span>REOVIB MFS 368</span></button></li>
+  </ul>
+</section>
+
+<section class="page" id="find" data-feeling="oriented">
+  <nav class="trail" id="trail" aria-label="You are here"></nav>
+  <h2 class="scr" id="find-title">Shaft Couplings</h2>
+  <div id="find-body"></div>
+</section>
+
+<section class="page" id="product" data-feeling="steady">
+  <nav class="trail" aria-label="You are here">
+    <button type="button" data-open="couplings">Products</button>
+    <button type="button" data-open="couplings">Couplings</button>
+    <button type="button" data-open="cross">Shaft Couplings</button>
+    <span class="here">GE Series</span>
+  </nav>
+  <h2 class="scr">‘GE’ Series Couplings Low Backlash Jaw Couplings</h2>
+  <p class="sub">GE Series Elastomeric Couplings</p>
+  <figure class="photo">
+    <img src="source/assets/ge-coupling-720.webp" srcset="source/assets/ge-coupling-720.webp 720w, source/assets/ge-coupling-1200.webp 1200w" sizes="(max-width:700px) 100vw, 52rem" width="720" height="540" alt="A jaw coupling with two metal hubs and a black elastomeric ring, photographed on a cool white ground." loading="lazy">
+  </figure>
+  <div class="prose">
+    <p>The couplings are equally suited to horizontal or vertical shaft applications, providing positive power transmission and absorbing torsional, vibration and impact loads. The standard elastomeric ring is a black thermoplastic rubber of 94 Shore A hardness selected for its resistance to wear, oil, chemicals, ozone and hydrolysis, which makes it suitable for tropical climates. Standard couplings can work in environments with temperature range –40°C to +125°C and withstand +150°C for short periods.</p>
+    <p>The teeth of the gear ring are of involute form to prevent high stress concentrations in reduced surfaces, and crowned to avoid edge pressure on the teeth. The circular apertures on each hub are precision-machined to provide positive torque transmission with minimum backlash.</p>
+    <p>For increased torsional rigidity two alternative gear rings are available, both of 96 Shore A hardness: a red thermoplastic rubber element, and a yellow polyurethane element recommended for the aluminium hubs. GE plain bore couplings are manufactured in two materials, Grade 250 cast iron for normal industrial applications, and aluminium where weight and inertias must be kept to a minimum. Two styles of hub are offered: ‘A’ style with hub diameter reduced below flange diameter to minimise weight; and ‘B’ style with hub diameter basically the same as the flange diameter to accommodate larger diameter shafts of electric motors and gear units. Different styles of hub can be mixed to accommodate differing shaft requirements. The hubs are identified by the maximum bore which can be accommodated, and hub style, i.e. GE24A is an ‘A’ type hub capable of max. bore size 24 mm.</p>
+  </div>
+  <ul class="facts">
+    <li><b>Applications</b> Horizontal or vertical shafts; torsional, vibration and impact loads absorbed.</li>
+    <li><b>Standard ring</b> Black thermoplastic rubber, 94 Shore A.</li>
+    <li><b>Temperature</b> –40°C to +125°C, +150°C for short periods.</li>
+    <li><b>Alternative rings</b> 96 Shore A: red thermoplastic rubber, or yellow polyurethane for aluminium hubs.</li>
+    <li><b>Hub materials</b> Grade 250 cast iron, or aluminium.</li>
+    <li><b>Hub styles</b> A, reduced diameter; B, diameter matches the flange. Styles can be mixed. GE24A is an ‘A’ type hub capable of a maximum bore of 24 mm.</li>
+  </ul>
+  <p class="act"><a class="btn" href="#enquire">Enquire now</a></p>
+</section>
+
+<section class="page" id="enquire" data-feeling="ready">
+  <h2 class="hook">Enquire now.</h2>
+  <p class="lead">Please fill in the form and we will get back to you shortly regarding your enquiry.</p>
+  <p class="fine" id="about-product">About ‘GE’ Series Couplings Low Backlash Jaw Couplings.</p>
+  <form id="enq-form" action="#enquire" method="get">
+    <div class="field"><span class="name" id="n1">Name</span><input class="ctl" type="text" aria-labelledby="n1" name="name" autocomplete="name"></div>
+    <div class="field"><span class="name" id="e1">Email</span><input class="ctl" type="email" aria-labelledby="e1" name="email" autocomplete="email" required></div>
+    <div class="field"><span class="name" id="p1">Phone</span><input class="ctl" type="tel" aria-labelledby="p1" name="phone" autocomplete="tel" required></div>
+    <div class="field"><span class="name" id="m1">Message</span><textarea class="ctl" aria-labelledby="m1" name="message"></textarea></div>
+    <p class="act"><button class="btn" type="submit">Enquire now</button></p>
+  </form>
+  <div class="confirm" id="enq-ok" hidden>
+    <p>Thank you. We will get back to you shortly regarding your enquiry.</p>
+  </div>
+</section>
+
+<section class="page" id="about" data-feeling="informed">
+  <h2 class="scr">About us</h2>
+  <div class="about">
+    <p>For over 70 years, RR Fisher has helped industry move forward with enduring peace of mind. Our range of power transmission, conveyor, and vibratory products ensures machinery works to peak efficiency across a wide range of demanding environments.</p>
+    <p>Now with a head office in Palmerston North and branches in Auckland, Christchurch, and Sydney, we can efficiently serve and supply a wide range of customers across both countries.</p>
+    <p>With products serving bulk handling, food processing, mining, and manufacturing automation, we will continue to move with the times, improving our processes and increasing our range to deliver the best results for New Zealand and Australian manufacturers.</p>
+  </div>
+</section>
+
+<section class="page" id="contact" data-feeling="settled">
+  <h2 class="scr">Contact</h2>
+  <div class="places">
+    <div class="place">
+      <div class="city">Sydney</div>
+      <p>Level 4 / 29 Kiora Road, Miranda, NSW 2228</p>
+      <p><a href="tel:+61295404533">+61 2 9540 4533</a></p>
+    </div>
+    <div class="place">
+      <div class="city">Palmerston North</div>
+      <p>680 Tremain Ave, Palmerston North 4414</p>
+      <p><a href="tel:0800235877">0800 235 877</a></p>
+    </div>
+  </div>
+  <form id="ct-form" action="#contact" method="get">
+    <div class="field"><span class="name" id="n2">Name</span><input class="ctl" type="text" aria-labelledby="n2" name="name" autocomplete="name"></div>
+    <div class="field"><span class="name" id="e2">Email</span><input class="ctl" type="email" aria-labelledby="e2" name="email" autocomplete="email" required></div>
+    <div class="field"><span class="name" id="p2">Phone number</span><input class="ctl" type="tel" aria-labelledby="p2" name="phone" autocomplete="tel" required></div>
+    <div class="field"><span class="name" id="c2">Company name</span><input class="ctl" type="text" aria-labelledby="c2" name="company" autocomplete="organization"></div>
+    <div class="field"><span class="name" id="m2">Message</span><textarea class="ctl" aria-labelledby="m2" name="message"></textarea></div>
+    <p class="act"><button class="btn" type="submit">Enquire now</button></p>
+  </form>
+  <div class="confirm" id="ct-ok" hidden>
+    <p>Thank you. We will get back to you shortly regarding your enquiry.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <p>RR Fisher supplies and manufactures power transmission and materials handling equipment to a wide range of industries throughout Australasia.</p>
+</footer>
+
+<script>
+(function(){
+  const groups={
+    couplings:{
+      title:"Couplings",
+      trail:[["Products","home"]],
+      rows:[
+        {k:"rw",name:"R+W",note:"Precision Couplings and Industrial Couplings"},
+        {k:"cross",name:"Cross & Morse",note:"Shaft Couplings"},
+        {k:"miki",name:"Miki Pulley",note:"SERVOFLEX, SPRFLEX, STARFLEX, SERVORIGID"}
+      ]
+    },
+    rw:{
+      title:"R+W",
+      trail:[["Products","home"],["Couplings","couplings"]],
+      blocks:[
+        {h:"Precision Couplings",items:["Bellows Couplings","Miniature Bellows Couplings","Servo Disc Couplings","Elastomer Couplings","Torque Limiters","Line Shafts"]},
+        {h:"Industrial Couplings",items:["Safety Couplings","Disc Pack Couplings","Flexible Gear Couplings","Metal Bellows Couplings"]}
+      ]
+    },
+    cross:{
+      title:"Shaft Couplings",
+      trail:[["Products","home"],["Couplings","couplings"],["Cross & Morse","couplings"]],
+      products:[
+        {name:"‘GE’ Series Couplings Low Backlash Jaw Couplings",go:"product"},
+        {name:"‘L’ Series Jaw Couplings"},
+        {name:"KE Series Elastomeric Couplings"},
+        {name:"Roller Chain Coupings and Delrin® Chain Couplings"},
+        {name:"GFA and GFAS Gear Couplings"},
+        {name:"‘GF’ Series Polymer Gear Couplings"},
+        {name:"Morflex Elastomeric Disc Drive Couplings"},
+        {name:"Crossflex Disc Couplings"}
+      ]
+    },
+    miki:{
+      title:"Miki Pulley",
+      trail:[["Products","home"],["Couplings","couplings"]],
+      items:["SERVOFLEX","SERVOFLEX SFR","SPRFLEX","STARFLEX","SERVORIGID","CONTACTLESSLINK・PROSPINE","BAUMANNFLEX","PARAFLEX","SCHMIDT","BELLOWFLEX","CENTAFLEX"]
+    },
+    clutches:{
+      title:"Clutches",
+      trail:[["Products","home"]],
+      blocks:[
+        {h:"Cross & Morse",items:["Overload Clutches","Freewheel Clutches","Torque Limiters"]},
+        {h:"Miki Pulley",items:["Torque Limiters","Electromagnetic Clutches & Brakes","Electromagnetic Spring-Actuated Brakes"]}
+      ]
+    },
+    vibratory:{
+      title:"Vibratory",
+      trail:[["Products","home"]],
+      blocks:[
+        {h:"Italvibras",items:["Foot mounted electric vibrators","Flanged electric vibrators","Mechanical vibrators","High-frequency electric vibrators","Electromagnetic"]}
+      ]
+    },
+    controllers:{
+      title:"Controllers",
+      trail:[["Products","home"]],
+      note:"The published controllers page covers the REOVIB MFS 368: a wide input voltage range of 99 V to 264 V, a consistent output voltage of 250 V max, and models with a max. output current of 3 A, 6 A or 8 A, in IP20 and IP54 versions.",
+      items:["REOVIB MFS 368"]
+    }
+  };
+
+  let skipScroll=true;
+  const title=document.getElementById("find-title");
+  const body=document.getElementById("find-body");
+  const trail=document.getElementById("trail");
+
+  function renderTrail(steps, here){
+    trail.innerHTML="";
+    steps.forEach(([label,key])=>{
+      const b=document.createElement("button");
+      b.type="button";
+      b.textContent=label;
+      b.addEventListener("click",()=>openKey(key));
+      trail.appendChild(b);
+    });
+    const hereEl=document.createElement("span");
+    hereEl.className="here";
+    hereEl.textContent=here;
+    trail.appendChild(hereEl);
+  }
+
+  function rowBtn(name, note, onClick){
+    const b=document.createElement(onClick?"button":"div");
+    if(onClick){b.type="button";b.addEventListener("click",onClick)}
+    b.className=onClick?"row":"row static";
+    const s=document.createElement("strong");
+    s.textContent=name;
+    b.appendChild(s);
+    if(note){
+      const n=document.createElement("span");
+      n.textContent=note;
+      b.appendChild(n);
+    }
+    return b;
+  }
+
+  function ulRows(children){
+    const ul=document.createElement("ul");
+    ul.className="rows";
+    children.forEach(ch=>{
+      const li=document.createElement("li");
+      li.appendChild(ch);
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  function openKey(key){
+    if(key==="home"){ location.hash="home"; return; }
+    if(key==="product"){ location.hash="product"; return; }
+    const g=groups[key];
+    if(!g) return;
+    title.textContent=g.title;
+    renderTrail(g.trail, g.title);
+    body.innerHTML="";
+    if(g.rows){
+      body.appendChild(ulRows(g.rows.map(r=>rowBtn(r.name,r.note,()=>openKey(r.k)))));
+    }
+    if(g.blocks){
+      g.blocks.forEach(block=>{
+        const h=document.createElement("h3");
+        h.className="kicker";
+        h.textContent=block.h;
+        body.appendChild(h);
+        body.appendChild(ulRows(block.items.map(name=>rowBtn(name))));
+      });
+    }
+    if(g.products){
+      body.appendChild(ulRows(g.products.map(p=>rowBtn(p.name,null,p.go?()=>openKey(p.go):null))));
+    }
+    if(g.items && !g.blocks){
+      body.appendChild(ulRows(g.items.map(name=>rowBtn(name))));
+    }
+    if(g.note){
+      const p=document.createElement("p");
+      p.className="fine";
+      p.style.marginTop="24px";
+      p.textContent=g.note;
+      body.appendChild(p);
+    }
+    if(!skipScroll) document.getElementById("find").scrollIntoView({block:"start"});
+  }
+
+  document.querySelectorAll("[data-open]").forEach(el=>{
+    el.addEventListener("click",()=>openKey(el.getAttribute("data-open")));
+  });
+
+  openKey("cross");
+  skipScroll=false;
+  if(location.hash && location.hash!=="#"){
+    const el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView();
+  }
+
+  function bindForm(form, ok){
+    form.addEventListener("submit",e=>{
+      e.preventDefault();
+      form.hidden=true;
+      ok.hidden=false;
+    });
+  }
+  bindForm(document.getElementById("enq-form"), document.getElementById("enq-ok"));
+  bindForm(document.getElementById("ct-form"), document.getElementById("ct-ok"));
+})();
+</script>
+</body>
+</html>
