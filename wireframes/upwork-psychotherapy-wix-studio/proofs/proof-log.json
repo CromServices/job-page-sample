@@ -2,32 +2,32 @@
  {
   "name": "desktop-1440",
   "width": "1440",
-  "css_height": 4776,
-  "first_view_bytes": 73703,
+  "css_height": 4773,
+  "first_view_bytes": 73873,
   "sections": [
    [
     "arrive",
     72,
-    911
+    908
    ],
    [
     "practice",
-    983.171875,
+    979.96875,
     853
    ],
    [
     "appointment",
-    1835.75,
+    1832.546875,
     1233
    ],
    [
     "enquire",
-    3069.046875,
+    3065.84375,
     1380
    ],
    [
     "after",
-    4449.421875,
+    4446.21875,
     326
    ]
   ],
@@ -36,32 +36,32 @@
  {
   "name": "desktop-3440",
   "width": "3440",
-  "css_height": 4760,
-  "first_view_bytes": 73703,
+  "css_height": 4773,
+  "first_view_bytes": 73873,
   "sections": [
    [
     "arrive",
     72,
-    895
+    908
    ],
    [
     "practice",
-    967.171875,
+    979.96875,
     853
    ],
    [
     "appointment",
-    1819.75,
+    1832.546875,
     1233
    ],
    [
     "enquire",
-    3053.046875,
+    3065.84375,
     1380
    ],
    [
     "after",
-    4433.421875,
+    4446.21875,
     326
    ]
   ],
@@ -70,32 +70,32 @@
  {
   "name": "phone-390",
   "width": "390",
-  "css_height": 3889,
-  "first_view_bytes": 61569,
+  "css_height": 3885,
+  "first_view_bytes": 61739,
   "sections": [
    [
     "arrive",
     65,
-    828
+    823
    ],
    [
     "practice",
-    892.578125,
+    888.296875,
     653
    ],
    [
     "appointment",
-    1545.484375,
+    1541.203125,
     1060
    ],
    [
     "enquire",
-    2605.796875,
+    2601.515625,
     1058
    ],
    [
     "after",
-    3663.359375,
+    3659.078125,
     226
    ]
   ],
