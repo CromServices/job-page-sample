@@ -1,0 +1,104 @@
+[
+ {
+  "name": "desktop-1440",
+  "width": "1440",
+  "css_height": 3948,
+  "first_view_bytes": 119897,
+  "sections": [
+   [
+    "home",
+    0,
+    900
+   ],
+   [
+    "directors",
+    900,
+    769
+   ],
+   [
+    "about",
+    1669,
+    755
+   ],
+   [
+    "space",
+    2424,
+    908
+   ],
+   [
+    "contact",
+    3331.875,
+    527
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-26/contra-powerhouse-casting/proofs/desktop-1440.png"
+ },
+ {
+  "name": "desktop-3440",
+  "width": "3440",
+  "css_height": 3668,
+  "first_view_bytes": 119897,
+  "sections": [
+   [
+    "home",
+    0,
+    900
+   ],
+   [
+    "directors",
+    900,
+    489
+   ],
+   [
+    "about",
+    1389,
+    755
+   ],
+   [
+    "space",
+    2144,
+    908
+   ],
+   [
+    "contact",
+    3051.875,
+    527
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-26/contra-powerhouse-casting/proofs/desktop-3440.png"
+ },
+ {
+  "name": "phone-390",
+  "width": "390",
+  "css_height": 5179,
+  "first_view_bytes": 119897,
+  "sections": [
+   [
+    "home",
+    0,
+    900
+   ],
+   [
+    "directors",
+    900,
+    2368
+   ],
+   [
+    "about",
+    3268.1875,
+    872
+   ],
+   [
+    "space",
+    4140.375,
+    445
+   ],
+   [
+    "contact",
+    4585.3125,
+    505
+   ]
+  ],
+  "file": "/workspace/crom/projects/crom-desk/02-working/production/wireframe-2026-11-26/contra-powerhouse-casting/proofs/phone-390.png"
+ }
+]
