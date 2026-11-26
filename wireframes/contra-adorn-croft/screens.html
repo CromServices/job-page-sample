@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Adorn Croft product page: polish concept</title>
+<style>
+:root{
+  --bg:#f6f3ee;
+  --ink:#1c1916;
+  --muted:#6a635c;
+  --line:#ddd6cc;
+  --paper:#fffcf8;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font:400 16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+main{max-width:1320px;margin:0 auto;padding:32px 20px 80px}
+h1{
+  margin:0 0 28px;
+  font-size:clamp(22px,3vw,32px);
+  font-weight:600;
+  letter-spacing:-0.03em;
+  line-height:1.2;
+}
+.frames{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(200px,390px);
+  gap:28px;
+  align-items:start;
+}
+@media (max-width:800px){
+  .frames{grid-template-columns:1fr;gap:36px}
+  main{padding:24px 16px 64px}
+}
+figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+img{display:block;width:100%;height:auto}
+figcaption{
+  margin:0;
+  padding:10px 14px 12px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>Adorn Croft product page: polish concept</h1>
+  <div class="frames">
+    <figure>
+      <img src="desktop.jpg" width="1600" height="8125" alt="Desktop layout of the Adorn Croft product page polish concept">
+      <figcaption>Desktop</figcaption>
+    </figure>
+    <figure>
+      <img src="mobile.jpg" width="780" height="21708" alt="Mobile layout of the Adorn Croft product page polish concept">
+      <figcaption>Mobile</figcaption>
+    </figure>
+  </div>
+</main>
+</body>
+</html>
